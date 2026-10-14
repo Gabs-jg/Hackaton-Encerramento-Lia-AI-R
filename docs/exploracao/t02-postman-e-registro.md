@@ -7,6 +7,8 @@ Branch deste trabalho: `test/t02-t05-t06-exploracao-camile`.
 
 Preparação das coleções e padrão de registro para a exploração. As coleções incluem somente categorias das tarefas 05 e 06. Os quatro integrantes ainda precisam validar o uso do padrão; a tarefa 02 não está concluída apenas por gerar os arquivos. Não há execução da API registrada.
 
+Preparação realizada em 14/10/2026: duas coleções importadas no workspace pessoal da Camille; Postman Desktop Agent 0.5.2 instalado e iniciado para uso pela versão web; Vault local acessível. A configuração do segredo `lia_api_key` pelo usuário e a execução do piloto ainda estão pendentes.
+
 ## Configuração
 
 1. Importar os arquivos de `tests/postman/t05-exploracao-camille.postman_collection.json` e `t06-exploracao-camille.postman_collection.json` no Postman.
