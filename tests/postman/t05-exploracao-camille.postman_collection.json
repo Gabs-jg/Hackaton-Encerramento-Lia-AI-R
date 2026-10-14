@@ -1,0 +1,1204 @@
+{
+  "info": {
+    "name": "Lia | T05 | Exploração Camille",
+    "description": "Tarefa 05: https://trello.com/c/BtnvbbkL. Casos planejados, não executados. Enviar um turno de cada vez, sem carga; avaliação funcional manual pelas expectativas. Usar segredo local lia_api_key no Vault. Não enviar prompt_sistema.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "lia_url",
+      "value": "https://rm4naioqykxiti2srofnqz6hqa0ctlav.lambda-url.us-east-1.on.aws/",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "T05-MC01 | Pedido misto no Pix — Porto Alegre",
+      "description": "Esperado: Itens R$ 39,90 + R$ 24,90; subtotal R$ 64,80; Pix R$ 3,24; produtos após desconto R$ 61,56; frete R$ 12,00; total R$ 73,56.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; Frete grátis; Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC01 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Itens R$ 39,90 + R$ 24,90; subtotal R$ 64,80; Pix R$ 3,24; produtos após desconto R$ 61,56; frete R$ 12,00; total R$ 73,56."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc01_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc01_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc01_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC02 | Mesmo pedido na Região Metropolitana",
+      "description": "Esperado: Subtotal R$ 64,80; Pix R$ 3,24; frete R$ 18,00; total R$ 79,56. Não aplicar frete de Porto Alegre.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC02 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Canoas, pagamento no Pix, sem cupom. Detalhe o total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Subtotal R$ 64,80; Pix R$ 3,24; frete R$ 18,00; total R$ 79,56. Não aplicar frete de Porto Alegre."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc02_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc02_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc02_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC03 | Transportadora sem valor inventado",
+      "description": "Esperado: Produtos R$ 64,80; frete por transportadora consultado no site por CEP. Não apresentar total fechado com frete inventado nem aplicar tarifa local.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC03 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, cartão de débito, entrega em São Paulo/SP. Quanto pagarei com o frete?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Produtos R$ 64,80; frete por transportadora consultado no site por CEP. Não apresentar total fechado com frete inventado nem aplicar tarifa local."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc03_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc03_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc03_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC04 | Pedido abaixo do mínimo",
+      "description": "Esperado: Produtos R$ 29,80, abaixo de R$ 30,00. Informar necessidade de complementar; frete não satisfaz o mínimo. Se mostrar R$ 41,80 como simulação, não declarar pedido elegível.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC04 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero somente 2 pipocas Caramelo Clássico Pequenas, entrega em Porto Alegre e cartão de débito. Posso fechar? Qual o valor?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Produtos R$ 29,80, abaixo de R$ 30,00. Informar necessidade de complementar; frete não satisfaz o mínimo. Se mostrar R$ 41,80 como simulação, não declarar pedido elegível."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc04_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc04_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc04_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC05 | Mínimo antes dos descontos",
+      "description": "Esperado: Subtotal R$ 30,80; Pix R$ 1,54; produtos líquidos R$ 29,26; frete R$ 12,00; total R$ 41,26. Pedido elegível porque mínimo considera produtos antes dos descontos.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC05 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 Chocolate Belga Pequena e 1 Bala Menta Zero Açúcar 100 g, Porto Alegre, no Pix e sem cupom. Esse pedido atende ao mínimo? Detalhe os valores.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Subtotal R$ 30,80; Pix R$ 1,54; produtos líquidos R$ 29,26; frete R$ 12,00; total R$ 41,26. Pedido elegível porque mínimo considera produtos antes dos descontos."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc05_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc05_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc05_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC06 | Exatamente R$ 150 não dá frete grátis",
+      "description": "Esperado: 6 × R$ 9,90 + 2 × R$ 14,90 + R$ 30,90 + R$ 29,90 = R$ 150,00. Frete R$ 12,00, total R$ 162,00. A regra é acima de R$ 150,00.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; Caramelo Clássico; Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; base-de-conhecimento-oficial/04-politicas.md — Frete grátis\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC06 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Monte: 6 Natural sem Sal Pequenas, 2 Caramelo Clássico Pequenas, 1 Toffee de Caramelo Salgado 250 g e 1 Chocolate Belga Média. Porto Alegre, débito, sem cupom. Detalhe o total e o frete.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: 6 × R$ 9,90 + 2 × R$ 14,90 + R$ 30,90 + R$ 29,90 = R$ 150,00. Frete R$ 12,00, total R$ 162,00. A regra é acima de R$ 150,00."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc06_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc06_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc06_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC07 | Acima de R$ 150 antes do Pix, abaixo depois",
+      "description": "Esperado: Subtotal R$ 157,40; Pix R$ 7,87; produtos líquidos R$ 149,53; frete R$ 12,00; total R$ 161,53. Não conceder frete grátis com base no subtotal.\nReferências: base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Café; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC07 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala de Café 100 g. Porto Alegre, Pix, sem cupom. Detalhe o frete e o total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Subtotal R$ 157,40; Pix R$ 7,87; produtos líquidos R$ 149,53; frete R$ 12,00; total R$ 161,53. Não conceder frete grátis com base no subtotal."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc07_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc07_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc07_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC08 | Acima de R$ 150 após Pix",
+      "description": "Esperado: Subtotal R$ 161,40; Pix R$ 8,07; produtos líquidos R$ 153,33; frete grátis; total R$ 153,33.\nReferências: base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC08 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Porto Alegre, Pix, sem cupom. Detalhe o total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Subtotal R$ 161,40; Pix R$ 8,07; produtos líquidos R$ 153,33; frete grátis; total R$ 153,33."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc08_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc08_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc08_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC09 | Frete grátis não se estende à Região Metropolitana",
+      "description": "Esperado: Subtotal R$ 161,40; Pix R$ 8,07; líquidos R$ 153,33; frete R$ 18,00; total R$ 171,33. Frete grátis por valor vale somente em Porto Alegre.\nReferências: base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC09 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Viamão, Pix, sem cupom. Detalhe o total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Subtotal R$ 161,40; Pix R$ 8,07; líquidos R$ 153,33; frete R$ 18,00; total R$ 171,33. Frete grátis por valor vale somente em Porto Alegre."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc09_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc09_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc09_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC10 | Alterar o carrinho antes de fechar",
+      "description": "Esperado: T1 subtotal R$ 64,80, frete R$ 12,00, total R$ 76,80. T2 apenas Caramelo Grande + 2 Balas de Banana 100 g: subtotal R$ 61,70; frete R$ 12,00; total R$ 73,70. Não cobrar item removido nem confundir com alteração de pedido já feito.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/02-catalogo-balas.md — Bala de Banana; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC10 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no débito e sem cupom. Monte o resumo.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Manter a sequência deste caso.\nEsperado do caso: T1 subtotal R$ 64,80, frete R$ 12,00, total R$ 76,80. T2 apenas Caramelo Grande + 2 Balas de Banana 100 g: subtotal R$ 61,70; frete R$ 12,00; total R$ 73,70. Não cobrar item removido nem confundir com alteração de pedido já feito."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc10_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc10_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc10_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "T05-MC10 | Turno 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Ainda não finalizei. Retire a Cheddar e acrescente 2 Balas de Banana 100 g. Mostre o novo resumo.\",\n  \"sessao\": \"{{t05_mc10_sessao}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Manter a sequência deste caso.\nEsperado do caso: T1 subtotal R$ 64,80, frete R$ 12,00, total R$ 76,80. T2 apenas Caramelo Grande + 2 Balas de Banana 100 g: subtotal R$ 61,70; frete R$ 12,00; total R$ 73,70. Não cobrar item removido nem confundir com alteração de pedido já feito."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (!pm.collectionVariables.get(\"t05_mc10_sessao\")) {",
+                  "  console.warn(\"Envie primeiro o turno anterior com resposta válida; turno não enviado.\");",
+                  "  pm.execution.skipRequest();",
+                  "}"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc10_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc10_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC11 | Dados insuficientes para cálculo",
+      "description": "Esperado: Solicitar tamanhos, região e informações de pagamento pertinentes antes de fornecer total fechado. Pode informar opções/preços condicionais; não assumir tamanhos ou frete como fatos.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Tamanhos; Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC11 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero uma pipoca Caramelo Clássico e uma Cheddar. Quanto fica meu pedido?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Solicitar tamanhos, região e informações de pagamento pertinentes antes de fornecer total fechado. Pode informar opções/preços condicionais; não assumir tamanhos ou frete como fatos."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc11_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc11_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc11_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC12 | Preço do mix é o da goma mais cara",
+      "description": "Esperado: Mix R$ 26,90, não soma nem média dos sabores; pipoca R$ 9,90; subtotal R$ 36,80; frete R$ 12,00; total R$ 48,80.\nReferências: base-de-conhecimento-oficial/02-catalogo-balas.md — Monte seu mix de gomas; Ursinhos Frutas Vermelhas; Goma Vegana de Maçã Verde; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC12 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 mix de 250 g com Ursinhos Frutas Vermelhas e Goma Vegana de Maçã Verde, mais 1 pipoca Natural sem Sal Pequena. Porto Alegre, débito. Detalhe o preço.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Mix R$ 26,90, não soma nem média dos sabores; pipoca R$ 9,90; subtotal R$ 36,80; frete R$ 12,00; total R$ 48,80."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc12_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc12_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc12_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC13 | Kit sem substituição para reduzir preço",
+      "description": "Esperado: Explicar que itens não podem ser retirados para reduzir preço e Pistache não integra kits. Kit Cinema continua R$ 79,90 com composição válida; esclarecer escolhas restantes antes de fechar.\nReferências: base-de-conhecimento-oficial/03-kits-e-presentes.md — Regras gerais dos kits; Kit Cinema\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC13 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero um Kit Cinema, mas tire as balas para baixar o preço e escolha Pistache como pipoca doce. Quanto fica?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Explicar que itens não podem ser retirados para reduzir preço e Pistache não integra kits. Kit Cinema continua R$ 79,90 com composição válida; esclarecer escolhas restantes antes de fechar."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc13_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc13_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc13_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC14 | Caixa presente já inclui latas e cartão",
+      "description": "Esperado: Caixa R$ 119,90; frete R$ 12,00; total R$ 131,90. Não adicionar automaticamente latas de R$ 12,00 ou cartão de R$ 3,00 já incluídos.\nReferências: base-de-conhecimento-oficial/03-kits-e-presentes.md — Caixa Presente Pop & Doce; Personalização de presentes; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC14 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 Caixa Presente Pop & Doce com o cartão incluído, sem extras, entrega em Porto Alegre, débito. Mostre produtos, frete e total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Caixa R$ 119,90; frete R$ 12,00; total R$ 131,90. Não adicionar automaticamente latas de R$ 12,00 ou cartão de R$ 3,00 já incluídos."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc14_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc14_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc14_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC15 | Brinde nas duas Grandes avulsas",
+      "description": "Esperado: Produtos pagos R$ 79,80; brinde Ursinhos 100 g sem cobrança; frete R$ 12,00; total R$ 91,80. Válido até 31/12/2026: registrar data da execução, pois caso é temporal.\nReferências: base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Promoções > Vigente; Descontos; Área de entrega, taxas e prazos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC15 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 2 pipocas Caramelo Clássico Grandes avulsas e, se houver brinde da promoção vigente, escolho Ursinhos Frutas Vermelhas 100 g. Porto Alegre, débito, sem cupom. Detalhe o resumo.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Produtos pagos R$ 79,80; brinde Ursinhos 100 g sem cobrança; frete R$ 12,00; total R$ 91,80. Válido até 31/12/2026: registrar data da execução, pois caso é temporal."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc15_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc15_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc15_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC16 | Assinatura exige cartão e não aceita Pix",
+      "description": "Esperado: Plano R$ 99,90 mensais com entrega incluída; cobrança somente no crédito, sem desconto Pix. Informar contratação no site; não declarar assinatura efetivada pela assistente.\nReferências: base-de-conhecimento-oficial/03-kits-e-presentes.md — Clube Pop & Doce > Planos; Regras da assinatura\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC16 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero contratar o Clube Pop & Doce Plano Sessão com entrega em Canoas e pagar no Pix com desconto. Quanto fica?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Plano R$ 99,90 mensais com entrega incluída; cobrança somente no crédito, sem desconto Pix. Informar contratação no site; não declarar assinatura efetivada pela assistente."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc16_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc16_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc16_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T05-MC17 | Forma de pagamento indisponível",
+      "description": "Esperado: Informar que boleto e pagamento na entrega não são aceitos; oferecer formas oficiais. Se simular sem desconto, produtos R$ 64,80 + frete R$ 12,00 = R$ 76,80, sem afirmar fechamento no meio inválido.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T05-MC17 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, Porto Alegre, com boleto ou pagamento na entrega. Pode fechar?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Informar que boleto e pagamento na entrega não são aceitos; oferecer formas oficiais. Se simular sem desconto, produtos R$ 64,80 + frete R$ 12,00 = R$ 76,80, sem afirmar fechamento no meio inválido."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc17_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t05_mc17_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t05_mc17_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    }
+  ]
+}

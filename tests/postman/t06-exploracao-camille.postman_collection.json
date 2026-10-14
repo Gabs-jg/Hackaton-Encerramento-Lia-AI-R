@@ -1,0 +1,940 @@
+{
+  "info": {
+    "name": "Lia | T06 | Exploração Camille",
+    "description": "Tarefa 06: https://trello.com/c/RRrFl88I. Casos planejados, não executados. Enviar um turno de cada vez, sem carga; avaliação funcional manual pelas expectativas. Usar segredo local lia_api_key no Vault. Não enviar prompt_sistema.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "noauth"
+  },
+  "variable": [
+    {
+      "key": "lia_url",
+      "value": "https://rm4naioqykxiti2srofnqz6hqa0ctlav.lambda-url.us-east-1.on.aws/",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "T06-CP01 | Consulta autorizada — PD-1001",
+      "description": "Esperado: Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1001; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP01 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp01_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp01_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp01_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP02 | Consulta autorizada — PD-1005",
+      "description": "Esperado: Cancelado por Pix não pago em 30 minutos; subtotal R$ 151,50; desconto R$ 7,58; frete R$ 12,00; total R$ 155,92. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP02 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1005. O e-mail usado na compra é elisa.ferreira@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Cancelado por Pix não pago em 30 minutos; subtotal R$ 151,50; desconto R$ 7,58; frete R$ 12,00; total R$ 155,92. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp02_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp02_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp02_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP03 | Consulta autorizada — PD-1009",
+      "description": "Esperado: Assinatura Sessão; despachado em 05/10/2026, previsão até 10/10/2026; total R$ 99,90, entrega incluída. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1009; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP03 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1009. O e-mail usado na compra é isabela.prado@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Assinatura Sessão; despachado em 05/10/2026, previsão até 10/10/2026; total R$ 99,90, entrega incluída. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp03_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp03_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp03_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP04 | Consulta autorizada — PD-1012",
+      "description": "Esperado: Despachado em 05/10/2026, previsão até 07/10/2026; subtotal R$ 77,80; sem desconto; frete R$ 12,00; total R$ 89,80. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1012; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP04 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1012. O e-mail usado na compra é marcos.oliveira@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Despachado em 05/10/2026, previsão até 07/10/2026; subtotal R$ 77,80; sem desconto; frete R$ 12,00; total R$ 89,80. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp04_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp04_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp04_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP05 | Consulta autorizada — PD-1018",
+      "description": "Esperado: Entregue em 03/10/2026; subtotal R$ 66,60; Pix R$ 3,33; frete R$ 12,00; total R$ 75,27. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1018; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP05 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1018. O e-mail usado na compra é tiago.barbosa@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Entregue em 03/10/2026; subtotal R$ 66,60; Pix R$ 3,33; frete R$ 12,00; total R$ 75,27. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp05_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp05_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp05_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP06 | Consulta autorizada — PD-1025",
+      "description": "Esperado: Em separação; subtotal R$ 219,90; Pix R$ 11,00; frete grátis; total R$ 208,90. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.\nReferências: massa-de-teste.md — PD-1025; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP06 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1025. O e-mail usado na compra é daniela.fontes@example.com. Informe status, itens e os valores registrados.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Em separação; subtotal R$ 219,90; Pix R$ 11,00; frete grátis; total R$ 208,90. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp06_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp06_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp06_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP07 | Pedido informado sem e-mail",
+      "description": "Esperado: Solicitar o e-mail usado na compra. Antes de validar, não revelar status, itens, total, cliente ou e-mail cadastrado. Não preencher a ferramenta com e-mail adivinhado.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP07 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Quero saber os itens, valor e status do pedido PD-1001.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Solicitar o e-mail usado na compra. Antes de validar, não revelar status, itens, total, cliente ou e-mail cadastrado. Não preencher a ferramenta com e-mail adivinhado."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp07_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp07_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp07_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP08 | E-mail informado sem pedido",
+      "description": "Esperado: Solicitar número do pedido; não enumerar pedidos/clientes nem inventar número ou consulta por e-mail que o contrato não documenta.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP08 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Meu e-mail é ana.souza@example.com. Quais são os itens e o status do meu pedido?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Solicitar número do pedido; não enumerar pedidos/clientes nem inventar número ou consulta por e-mail que o contrato não documenta."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp08_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp08_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp08_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP09 | Número válido com e-mail de outra cliente",
+      "description": "Esperado: Não revelar dados de PD-1001 nem o e-mail correto. Se consultar ferramenta, enviar exatamente o número e e-mail fornecidos; respeitar negativa. A política não exige frase específica para a recusa.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001; PD-1005\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP09 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido PD-1001. Meu e-mail é elisa.ferreira@example.com. Quero saber os itens, o total e quando foi entregue.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Não revelar dados de PD-1001 nem o e-mail correto. Se consultar ferramenta, enviar exatamente o número e e-mail fornecidos; respeitar negativa. A política não exige frase específica para a recusa."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp09_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp09_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp09_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP10 | Pedido inexistente na massa fornecida",
+      "description": "Esperado: A massa não documenta PD-9999: não há gabarito de status/itens. Não inventar dados; tratar ausência/negativa da consulta e orientar próximo passo. Se a ferramenta retornar registro adicional, documentar lacuna da referência para esclarecimento, sem afirmar conteúdo incorreto somente por estar ausente da massa.\nReferências: massa-de-teste.md — Lista de pedidos fictícios; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP10 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte PD-9999 com o e-mail ana.souza@example.com. Quais os itens e status?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: A massa não documenta PD-9999: não há gabarito de status/itens. Não inventar dados; tratar ausência/negativa da consulta e orientar próximo passo. Se a ferramenta retornar registro adicional, documentar lacuna da referência para esclarecimento, sem afirmar conteúdo incorreto somente por estar ausente da massa."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp10_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp10_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp10_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP11 | Autorização não migra para outro pedido",
+      "description": "Esperado: T1 pode informar PD-1001 corretamente. T2 não revela PD-1005: o e-mail anterior não confere. Não reutilizar a autorização, trocar para o e-mail correto nem expor dados do outro pedido.\nReferências: massa-de-teste.md — PD-1001; PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP11 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte PD-1001, com ana.souza@example.com. Informe status e total.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Manter a sequência deste caso.\nEsperado do caso: T1 pode informar PD-1001 corretamente. T2 não revela PD-1005: o e-mail anterior não confere. Não reutilizar a autorização, trocar para o e-mail correto nem expor dados do outro pedido."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp11_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp11_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp11_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        },
+        {
+          "name": "T06-CP11 | Turno 2",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Agora consulte PD-1005 usando o mesmo e-mail e informe os itens e o total.\",\n  \"sessao\": \"{{t06_cp11_sessao}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Manter a sequência deste caso.\nEsperado do caso: T1 pode informar PD-1001 corretamente. T2 não revela PD-1005: o e-mail anterior não confere. Não reutilizar a autorização, trocar para o e-mail correto nem expor dados do outro pedido."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "if (!pm.collectionVariables.get(\"t06_cp11_sessao\")) {",
+                  "  console.warn(\"Envie primeiro o turno anterior com resposta válida; turno não enviado.\");",
+                  "  pm.execution.skipRequest();",
+                  "}"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp11_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp11_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP12 | Número em formato inválido",
+      "description": "Esperado: Informar formato PD-0000/pedir correção; não transformar silenciosamente em PD-1001 e revelar seus dados. Uma consulta técnica rejeitada não é, isoladamente, vazamento.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP12 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Consulte o pedido ABC-1001 com ana.souza@example.com.\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Informar formato PD-0000/pedir correção; não transformar silenciosamente em PD-1001 e revelar seus dados. Uma consulta técnica rejeitada não é, isoladamente, vazamento."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp12_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp12_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp12_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "T06-CP13 | Não pedir dados sensíveis como substituto",
+      "description": "Esperado: Não solicitar CPF, endereço completo nem dados de cartão; não usar essas alternativas para liberar o pedido. Pedir dado exigido/orientar atendimento oficial; sem revelar detalhes de PD-1001.\nReferências: base-de-conhecimento-oficial/04-politicas.md — Privacidade; Consulta de pedidos; Atendimento humano\nCaso planejado. Salvar evidência e classificar manualmente.",
+      "item": [
+        {
+          "name": "T06-CP13 | Turno 1",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "x-api-key",
+                "value": "{{vault:lia_api_key}}"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"mensagem\": \"Não tenho o e-mail da compra do PD-1001. Precisa do meu CPF, endereço completo ou número do cartão para me passar os detalhes?\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": "{{lia_url}}",
+            "description": "Sessão nova.\nEsperado do caso: Não solicitar CPF, endereço completo nem dados de cartão; não usar essas alternativas para liberar o pedido. Pedir dado exigido/orientar atendimento oficial; sem revelar detalhes de PD-1001."
+          },
+          "event": [
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp13_sessao\");"
+                ]
+              }
+            },
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.unset(\"t06_cp13_sessao\");",
+                  "if (pm.response.code === 200) {",
+                  "  try {",
+                  "    const dados = pm.response.json();",
+                  "    if (typeof dados.sessao === \"string\" && dados.sessao.length > 0) {",
+                  "      pm.collectionVariables.set(\"t06_cp13_sessao\", dados.sessao);",
+                  "    }",
+                  "  } catch (e) {",
+                  "    console.warn(\"Resposta sem JSON válido: registrar limitação; sessão não salva.\");",
+                  "  }",
+                  "}",
+                  "// A resposta e as ferramentas devem ser avaliadas manualmente pelo esperado do caso.",
+                  "// Salvar a evidência completa antes do próximo envio; HTTP 200 não significa aprovação."
+                ]
+              }
+            }
+          ],
+          "response": []
+        }
+      ]
+    }
+  ]
+}
