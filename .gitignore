@@ -1,0 +1,19 @@
+# Credenciais e configurações locais
+.env
+.env.*
+!.env.example
+*.local.json
+*.local.yaml
+*.local.yml
+
+# Ambientes, dependências e caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+node_modules/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
