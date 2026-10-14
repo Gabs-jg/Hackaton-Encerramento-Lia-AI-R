@@ -6,7 +6,7 @@ Projeto de Quality Engineering para avaliar a assistente de vendas Lia, propor m
 
 ## Situação Inicial
 
-O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor [@Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)) e a estrutura inicial de trabalho. Os testes exploratórios começarão em breve utilizando o *framework* do Postman. A suíte automatizada, os critérios de aprovação e o método de avaliação ainda serão definidos pela equipe da *Squad* 2, composta por Camille Marcele P. de Araújo, Fernanda B. dos Santos, Gustavo L. Brasileiro e João Gabriel O. Magalhães.
+O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor [Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)) e a estrutura inicial de trabalho. Os testes exploratórios começarão em breve utilizando o *framework* do Postman. A suíte automatizada, os critérios de aprovação e o método de avaliação ainda serão definidos pela equipe da *Squad* 2, composta por Camille Marcele P. de Araújo, Fernanda B. dos Santos, Gustavo L. Brasileiro e João Gabriel O. Magalhães.
 
 ## Arquitetura do Projeto
 
