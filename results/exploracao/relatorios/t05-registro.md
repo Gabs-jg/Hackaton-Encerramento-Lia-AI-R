@@ -46,7 +46,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; Frete grátis; Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC01/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:50:14.766Z`; sessão `80df78b9-8e5e-41f9-9266-220f62a2a1be`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC01/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:50:14.766Z`; sessão `80df78b9-8e5e-41f9-9266-220f62a2a1be`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -61,7 +61,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC02/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:54:37.309Z`; sessão `ebf8ca2d-0bc1-4c67-ae57-6286878216df`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC02/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:54:37.309Z`; sessão `ebf8ca2d-0bc1-4c67-ae57-6286878216df`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -76,7 +76,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC03/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:56:08.197Z`; sessão `4032a24f-279c-4b58-b7bb-16b6ee8230ca`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC03/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:56:08.197Z`; sessão `4032a24f-279c-4b58-b7bb-16b6ee8230ca`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -91,7 +91,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC04/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:57:21.488Z`; sessão `657d0d50-3667-40fd-ae6d-2c3f5a645b5c`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC04/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:57:21.488Z`; sessão `657d0d50-3667-40fd-ae6d-2c3f5a645b5c`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -106,7 +106,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC05/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:58:49.876Z`; sessão `236a988c-e49f-4be3-99d4-4d1a7efc3076`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC05/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:58:49.876Z`; sessão `236a988c-e49f-4be3-99d4-4d1a7efc3076`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -121,7 +121,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; Caramelo Clássico; Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; base-de-conhecimento-oficial/04-politicas.md — Frete grátis
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC06/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:59:06.326Z`; sessão `3bda62a9-781f-469c-bf78-d680c4a8cc91`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC06/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:59:06.326Z`; sessão `3bda62a9-781f-469c-bf78-d680c4a8cc91`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -136,7 +136,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Café; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC07/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:59:50.398Z`; sessão `767292ba-f599-4356-8b7f-cec3b3597ed8`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC07/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T01:59:50.398Z`; sessão `767292ba-f599-4356-8b7f-cec3b3597ed8`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -151,7 +151,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC08/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:02:16.738Z`; sessão `50e160aa-7c9f-4e10-9c72-018100f57975`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC08/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:02:16.738Z`; sessão `50e160aa-7c9f-4e10-9c72-018100f57975`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -166,7 +166,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC09/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:04:08.620Z`; sessão `bfcb2638-d3b7-4f96-a4ea-731318a9b80f`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC09/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:04:08.620Z`; sessão `bfcb2638-d3b7-4f96-a4ea-731318a9b80f`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -181,9 +181,9 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/02-catalogo-balas.md — Bala de Banana; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:06:02.298Z`; sessão `b872c053-6853-4386-b953-0e60678b6e5e`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC10/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:06:02.298Z`; sessão `b872c053-6853-4386-b953-0e60678b6e5e`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
-- [T2 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-02.json) — HTTP 200; coleta `2026-10-15T02:11:33.647Z`; sessão `b872c053-6853-4386-b953-0e60678b6e5e`.
+- [T2 · entrada e resposta completas](../t05/evidencias/T05-MC10/exec-01-turno-02.json) — HTTP 200; coleta `2026-10-15T02:11:33.647Z`; sessão `b872c053-6853-4386-b953-0e60678b6e5e`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -198,7 +198,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Tamanhos; Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC11/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:12:23.380Z`; sessão `c5bdc6ec-6847-49fe-b1e3-ae75188c0ae9`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC11/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:12:23.380Z`; sessão `c5bdc6ec-6847-49fe-b1e3-ae75188c0ae9`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -213,7 +213,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/02-catalogo-balas.md — Monte seu mix de gomas; Ursinhos Frutas Vermelhas; Goma Vegana de Maçã Verde; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC12/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:12:48.075Z`; sessão `1bddc28f-94d5-425e-bf17-3e4c11c5ef01`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC12/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:12:48.075Z`; sessão `1bddc28f-94d5-425e-bf17-3e4c11c5ef01`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -228,7 +228,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/03-kits-e-presentes.md — Regras gerais dos kits; Kit Cinema
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC13/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:13:44.435Z`; sessão `ad86c6db-b33a-42b1-a0d6-75b9f5bd7a07`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC13/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:13:44.435Z`; sessão `ad86c6db-b33a-42b1-a0d6-75b9f5bd7a07`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -243,7 +243,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/03-kits-e-presentes.md — Caixa Presente Pop & Doce; Personalização de presentes; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC14/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:13:56.656Z`; sessão `c7203b17-ff08-403e-9267-d7f4d23714b6`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC14/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:13:56.656Z`; sessão `c7203b17-ff08-403e-9267-d7f4d23714b6`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -258,7 +258,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Promoções > Vigente; Descontos; Área de entrega, taxas e prazos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC15/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:14:19.511Z`; sessão `3ff03549-e18d-4a51-a989-2b0fe3cc88ff`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC15/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:14:19.511Z`; sessão `3ff03549-e18d-4a51-a989-2b0fe3cc88ff`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -273,7 +273,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/03-kits-e-presentes.md — Clube Pop & Doce > Planos; Regras da assinatura
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC16/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:15:20.166Z`; sessão `a3f3175a-57b6-46d8-9c01-51646829d0ce`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC16/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:15:20.166Z`; sessão `a3f3175a-57b6-46d8-9c01-51646829d0ce`.
   Ferramentas expostas: base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -288,7 +288,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t05/evidencias/T05-MC17/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:15:38.119Z`; sessão `d5e595d2-4793-42d9-a322-27f2b0dc5bd8`.
+- [T1 · entrada e resposta completas](../t05/evidencias/T05-MC17/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:15:38.119Z`; sessão `d5e595d2-4793-42d9-a322-27f2b0dc5bd8`.
   Ferramentas expostas: base-pop-e-doce___Retrieve, base-pop-e-doce___Retrieve. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -299,6 +299,6 @@ Revisar fontes, classificação e severidades com Gabriel antes de aprovar o PR.
 
 ## Evidências complementares e preparação
 
-- [Turno manual adicional: retirada da Cheddar](t05/evidencias/T05-MANUAL-01/retirada-cheddar.json): retornou Caramelo Grande a R$ 29,90 e total R$ 41,90, alegando faltar R$ 0,10 para o mínimo. O preço oficial é R$ 39,90 e atende ao mínimo. Sem desconto, somado ao frete de Porto Alegre, daria R$ 51,90; a conversa anterior incompleta impede validar pagamento e descontos desse turno isolado. Evidência complementar, não MC10 nem caso extra no denominador.
-- [Erro de preparação](t05/evidencias/configuracao/json-invalido.json): HTTP 400 por corpo JSON inválido durante edição assistida. Causa do envio, não defeito da Lia; excluído dos 17 casos funcionais. Não foi timeout.
+- [Turno manual adicional: retirada da Cheddar](../t05/evidencias/T05-MANUAL-01/retirada-cheddar.json): retornou Caramelo Grande a R$ 29,90 e total R$ 41,90, alegando faltar R$ 0,10 para o mínimo. O preço oficial é R$ 39,90 e atende ao mínimo. Sem desconto, somado ao frete de Porto Alegre, daria R$ 51,90; a conversa anterior incompleta impede validar pagamento e descontos desse turno isolado. Evidência complementar, não MC10 nem caso extra no denominador.
+- [Erro de preparação](../t05/evidencias/configuracao/json-invalido.json): HTTP 400 por corpo JSON inválido durante edição assistida. Causa do envio, não defeito da Lia; excluído dos 17 casos funcionais. Não foi timeout.
 - No T2 de MC10 a entrada capturada é o template com variável de sessão do Postman; `sessaoEsperadaNaResolucaoDaVariavel` registra a sessão esperada. A sessão retornada foi comparada ao T1, mas não há captura do corpo resolvido no tráfego.

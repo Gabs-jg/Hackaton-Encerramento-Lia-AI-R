@@ -18,7 +18,8 @@ O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor 
 | `tests/` | Código e configurações da suíte automatizada |
 | `tests/postman/` | Coleções importáveis com casos, turnos e exemplos de respostas, sem credenciais |
 | `results/` | Evidências, resultados das execuções e comparação dos *prompts* |
-| `results/exploracao/` | Relatórios, JSON consolidado e evidências por caso, execução e turno |
+| `results/exploracao/` | JSON consolidado e evidências por caso, execução e turno |
+| `results/exploracao/relatorios/` | Análise de esperado × obtido, classificação e conclusões da exploração |
 | `results/red-team/` | Registro das tentativas adversariais e as respectivas evidências |
 | `prompts/` | Versões do *prompt* de sistema, seguidas das alterações |
 | `docs/` | Decisões, tabelas de regras, pareceres e materiais da apresentação |
@@ -38,7 +39,7 @@ Responsáveis, tarefas e critérios de conclusão ficam no [quadro de execução
 3. Escolher a tarefa e o caso. Enviar **T1** e depois **T2**, quando existir, um turno por vez. Cada caso inicia sem `sessao`; os scripts mantêm a sessão apenas nos turnos do mesmo caso.
 4. Para consultar uma execução anterior sem reenviar, abrir o exemplo salvo na requisição. Esses exemplos incluem respostas incorretas; o gabarito é a base oficial e a massa de teste.
 
-As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](docs/exploracao/t06-casos.md). Os relatórios [T05](results/exploracao/t05-registro.md) e [T06](results/exploracao/t06-registro.md) registram esperado × obtido, classificação e links das evidências. O [JSON de resultados](results/exploracao/t05-t06-resultados.json) reúne os 30 casos e 32 turnos, com origem Postman/curl identificada. A coleção foi montada a partir dessas evidências, preservadas também nos JSONs individuais.
+As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](docs/exploracao/t06-casos.md). Os relatórios [T05](results/exploracao/relatorios/t05-registro.md) e [T06](results/exploracao/relatorios/t06-registro.md) registram esperado × obtido, classificação e links das evidências. O [JSON de resultados](results/exploracao/t05-t06-resultados.json) reúne os 30 casos e 32 turnos, com origem Postman/curl identificada. A coleção foi montada a partir dessas evidências, preservadas também nos JSONs individuais.
 
 ## Regras de Avaliação
 

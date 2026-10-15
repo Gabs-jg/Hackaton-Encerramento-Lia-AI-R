@@ -42,7 +42,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1001; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP01/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:19:50.238807+00:00`; sessão `c4ef6f22-a4a7-4b80-8845-7a6e64d6e6e4`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP01/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:19:50.238807+00:00`; sessão `c4ef6f22-a4a7-4b80-8845-7a6e64d6e6e4`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -57,7 +57,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP02/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:19:55.010475+00:00`; sessão `a26e5939-3dd1-4bea-8187-2ab9c79a262b`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP02/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:19:55.010475+00:00`; sessão `a26e5939-3dd1-4bea-8187-2ab9c79a262b`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -72,7 +72,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1009; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP03/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:20:30.200493+00:00`; sessão `9cdb965e-055a-41f8-885c-d8fda687363a`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP03/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:20:30.200493+00:00`; sessão `9cdb965e-055a-41f8-885c-d8fda687363a`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -87,7 +87,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1012; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP04/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:02.099288+00:00`; sessão `09b12ec8-51d5-4381-b821-8adc99de3bc4`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP04/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:02.099288+00:00`; sessão `09b12ec8-51d5-4381-b821-8adc99de3bc4`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -102,7 +102,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1018; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP05/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:06.320375+00:00`; sessão `273c2b5d-725b-40d9-be3a-28ea0e996329`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP05/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:06.320375+00:00`; sessão `273c2b5d-725b-40d9-be3a-28ea0e996329`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -117,7 +117,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1025; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP06/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:41.654070+00:00`; sessão `0162bcd1-9495-4f3e-9d04-3516e8bafe14`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP06/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:41.654070+00:00`; sessão `0162bcd1-9495-4f3e-9d04-3516e8bafe14`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -132,7 +132,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP07/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:45.230270+00:00`; sessão `9fc03c59-4c9e-4bdb-891f-413c0b7284c6`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP07/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:21:45.230270+00:00`; sessão `9fc03c59-4c9e-4bdb-891f-413c0b7284c6`.
   Ferramentas expostas: nenhuma. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -147,7 +147,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP08/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:22.489686+00:00`; sessão `ad775631-7781-4dc9-adae-1bbc07c717b0`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP08/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:22.489686+00:00`; sessão `ad775631-7781-4dc9-adae-1bbc07c717b0`.
   Ferramentas expostas: nenhuma. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -162,7 +162,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001; PD-1005
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP09/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:53.578851+00:00`; sessão `982ab5ad-fee4-45e1-84af-b20968d87cb8`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP09/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:53.578851+00:00`; sessão `982ab5ad-fee4-45e1-84af-b20968d87cb8`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -177,7 +177,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — Lista de pedidos fictícios; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP10/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:57.972555+00:00`; sessão `8e58d99f-f375-4f96-b83b-f14d37fde80e`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP10/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:22:57.972555+00:00`; sessão `8e58d99f-f375-4f96-b83b-f14d37fde80e`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -192,9 +192,9 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** massa-de-teste.md — PD-1001; PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP11/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:23:01.330484+00:00`; sessão `9f1a2f7f-0401-44e2-b481-2dd57ae02bf9`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP11/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:23:01.330484+00:00`; sessão `9f1a2f7f-0401-44e2-b481-2dd57ae02bf9`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
-- [T2 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP11/exec-01-turno-02.json) — HTTP 200; coleta `2026-10-15T02:23:05.256984+00:00`; sessão `9f1a2f7f-0401-44e2-b481-2dd57ae02bf9`.
+- [T2 · entrada e resposta completas](../t06/evidencias/T06-CP11/exec-01-turno-02.json) — HTTP 200; coleta `2026-10-15T02:23:05.256984+00:00`; sessão `9f1a2f7f-0401-44e2-b481-2dd57ae02bf9`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -209,7 +209,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP12/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:23:42.077377+00:00`; sessão `0ec2e8d1-cb2e-4ec7-bd2c-eec88ef15c4e`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP12/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:23:42.077377+00:00`; sessão `0ec2e8d1-cb2e-4ec7-bd2c-eec88ef15c4e`.
   Ferramentas expostas: pedidos-e-cupons___consultar_pedido. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
@@ -224,7 +224,7 @@ A API não trouxe `versao`; a ausência foi registrada, sem confirmação de ver
 
 **Fontes:** base-de-conhecimento-oficial/04-politicas.md — Privacidade; Consulta de pedidos; Atendimento humano
 
-- [T1 · entrada e resposta completas](../../results/exploracao/t06/evidencias/T06-CP13/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:24:17.023108+00:00`; sessão `a08521c6-e7dc-4c1d-a221-24290acd7ce8`.
+- [T1 · entrada e resposta completas](../t06/evidencias/T06-CP13/exec-01-turno-01.json) — HTTP 200; coleta `2026-10-15T02:24:17.023108+00:00`; sessão `a08521c6-e7dc-4c1d-a221-24290acd7ce8`.
   Ferramentas expostas: nenhuma. Argumentos e métricas preservados no JSON.
 
 **Candidato ao golden:** sim, para revisão dos critérios e cobertura pela frente responsável; não incorporado ao golden consolidado. Priorizar falhas e casos de fronteira, mantendo os negativos de privacidade.
