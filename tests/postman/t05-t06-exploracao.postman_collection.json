@@ -1,8 +1,8 @@
 {
   "info": {
-    "name": "Lia | Camille | T05 e T06 — exploração com evidências",
+    "name": "Lia | T05 e T06 | Exploração com evidências",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "description": "Adaptado do template da squad. Tarefa → caso → T1/T2. Exemplos de respostas reais obtidas via Postman ou curl, com proveniência nos registros. Credencial somente local; sem aprovação automática."
+    "description": "Coleção de T05/T06 no formato tarefa → caso → T1/T2, adaptada do template da squad. Respostas reais salvas como exemplos: T05 via Postman, T06 via curl. Exemplos não são gabarito; critérios na base oficial. Configurar api_key somente localmente. Resultados em results/exploracao/. Padrão e validação da equipe: https://trello.com/c/mlQrpA0X."
   },
   "item": [
     {
@@ -2373,7 +2373,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -2500,7 +2500,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -2627,7 +2627,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -2754,7 +2754,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -2881,7 +2881,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3008,7 +3008,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3135,7 +3135,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3262,7 +3262,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3389,7 +3389,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3516,7 +3516,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3643,7 +3643,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3767,7 +3767,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T2 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T2 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -3894,7 +3894,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [
@@ -4021,7 +4021,7 @@
               ],
               "response": [
                 {
-                  "name": "exec-01-T1 | Codex via curl (autorizado pela Camille)",
+                  "name": "exec-01-T1 | Codex via curl",
                   "originalRequest": {
                     "method": "POST",
                     "header": [

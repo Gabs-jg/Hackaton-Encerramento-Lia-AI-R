@@ -1,8 +1,8 @@
-# T05 — Casos de exploração da Camille
+# T05 — Casos de exploração
 
 Trello: https://trello.com/c/BtnvbbkL
 
-**Estado:** exploração executada; classificação e evidências no [registro da tarefa](../../results/exploracao/t05-registro-camille.md). Base de referência: commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Estes são candidatos da exploração, sujeitos à revisão; não constituem o golden consolidado.
+**Estado:** exploração executada; classificação e evidências no [registro da tarefa](../../results/exploracao/t05-registro.md). Base de referência: commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Estes são candidatos da exploração, sujeitos à revisão; não constituem o golden consolidado.
 
 Usar prompt original (sem `prompt_sistema`). Caso novo sem `sessao`; turnos do mesmo caso usam somente a sessão retornada. Resultado é avaliado pelo critério, sem exigir frase idêntica. Fontes abaixo indicam arquivo e seção exatos.
 
@@ -16,7 +16,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; Cheddar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Formas de pagamento; Frete grátis; Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC02 — Mesmo pedido na Região Metropolitana
 
@@ -28,7 +28,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; Cheddar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Área de entrega, taxas e prazos; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC03 — Transportadora sem valor inventado
 
@@ -40,7 +40,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; Cheddar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Área de entrega, taxas e prazos; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC04 — Pedido abaixo do mínimo
 
@@ -52,7 +52,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Pedido mínimo.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC05 — Mínimo antes dos descontos
 
@@ -64,7 +64,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Chocolate Belga; [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Menta Zero Açúcar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Pedido mínimo; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC06 — Exatamente R$ 150 não dá frete grátis
 
@@ -76,7 +76,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Natural sem Sal; Caramelo Clássico; Chocolate Belga; [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Toffee de Caramelo Salgado; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Frete grátis.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC07 — Acima de R$ 150 antes do Pix, abaixo depois
 
@@ -88,7 +88,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Toffee de Caramelo Salgado; Bala de Banana; Café; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Frete grátis; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC08 — Acima de R$ 150 após Pix
 
@@ -100,7 +100,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Frete grátis; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC09 — Frete grátis não se estende à Região Metropolitana
 
@@ -112,7 +112,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Frete grátis; Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC10 — Alterar o carrinho antes de fechar
 
@@ -126,7 +126,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; Cheddar; [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Bala de Banana; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC11 — Dados insuficientes para cálculo
 
@@ -138,7 +138,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Tamanhos; Caramelo Clássico; Cheddar; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Área de entrega, taxas e prazos; Formas de pagamento.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC12 — Preço do mix é o da goma mais cara
 
@@ -150,7 +150,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/02-catalogo-balas.md](../../base-de-conhecimento-oficial/02-catalogo-balas.md) — Monte seu mix de gomas; Ursinhos Frutas Vermelhas; Goma Vegana de Maçã Verde; [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Natural sem Sal; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Pedido mínimo; Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC13 — Kit sem substituição para reduzir preço
 
@@ -162,7 +162,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/03-kits-e-presentes.md](../../base-de-conhecimento-oficial/03-kits-e-presentes.md) — Regras gerais dos kits; Kit Cinema.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC14 — Caixa presente já inclui latas e cartão
 
@@ -174,7 +174,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/03-kits-e-presentes.md](../../base-de-conhecimento-oficial/03-kits-e-presentes.md) — Caixa Presente Pop & Doce; Personalização de presentes; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC15 — Brinde nas duas Grandes avulsas
 
@@ -186,7 +186,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Promoções > Vigente; Descontos; Área de entrega, taxas e prazos.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC16 — Assinatura exige cartão e não aceita Pix
 
@@ -198,7 +198,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/03-kits-e-presentes.md](../../base-de-conhecimento-oficial/03-kits-e-presentes.md) — Clube Pop & Doce > Planos; Regras da assinatura.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.
 
 ## T05-MC17 — Forma de pagamento indisponível
 
@@ -210,4 +210,4 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Formas de pagamento; [base-de-conhecimento-oficial/01-catalogo-pipocas.md](../../base-de-conhecimento-oficial/01-catalogo-pipocas.md) — Caramelo Clássico; Cheddar.
 
-**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro-camille.md) pelo ID deste caso.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t05-registro.md) pelo ID deste caso.

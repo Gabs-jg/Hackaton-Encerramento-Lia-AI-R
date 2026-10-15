@@ -1,16 +1,16 @@
-# T05 — Exploração da Camille
+# T05 — Exploração
 
 Trello: https://trello.com/c/BtnvbbkL
 
-**Estado:** 17 casos executados; 11 falhou, 6 passou. Avaliação proposta, aguardando revisão de João Gabriel (`Gabs-jg`).
+**Estado:** 17 casos executados; 11 falharam, 6 passaram. Avaliação proposta, aguardando revisão de João Gabriel (`Gabs-jg`).
 
-Oráculo: material oficial e massa no commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Entradas e expectativas foram preparadas antes da execução. Não usamos a Lia como oráculo. A divergência esperada entre bases é tratada como falha perante a referência; não comprova a causa interna.
+Oráculo: material oficial e massa no commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Entradas e expectativas foram preparadas antes da execução. A Lia não foi usada como oráculo. A divergência esperada entre bases é tratada como falha perante a referência; não comprova a causa interna.
 
-Execução assistida pelo Codex, em nome da Camille, via Postman web + Desktop Agent. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
+Execução via Postman web + Desktop Agent, com assistência do Codex. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
 
 **Legenda da squad:** resultado `passou`, `falhou`, `instável` ou `inconclusivo`. Severidade de falha: `crítico` (exposição indevida de dados ou impacto grave equivalente), `alto` (erro comercial/status relevante), `baixo` (problema menor). Casos aprovados/inconclusivos sem defeito confirmado usam —. Uma única execução não permite concluir estabilidade; nenhum caso é rotulado instável sem repetição válida divergente.
 
-A API não trouxe `versao`; registramos a ausência, sem afirmar confirmação de versão. As respostas preservam `sessao`, `ferramentas` e todos os itens de `metricas`. `ferramentas` expõe nomes e entradas, mas não o resultado interno das ferramentas. HTTP 200 não significa aprovação funcional.
+A API não trouxe `versao`; a ausência foi registrada, sem confirmação de versão. As respostas preservam `sessao`, `ferramentas` e todos os itens de `metricas`. `ferramentas` expõe nomes e entradas, mas não o resultado interno das ferramentas. HTTP 200 não significa aprovação funcional.
 
 ## Casos × esperado × obtido
 
@@ -299,7 +299,6 @@ Revisar fontes, classificação e severidades com Gabriel antes de aprovar o PR.
 
 ## Evidências complementares e preparação
 
-- A resposta que a Camille salvou em [`artifacts/response`](../../artifacts/response) é idêntica à resposta de MC01 em `sessao`, conteúdo, ferramentas e métricas; é a mesma evidência, não outra execução. Ela confirma o total de R$ 64,06 em vez de R$ 73,56.
 - [Turno manual adicional: retirada da Cheddar](t05/evidencias/T05-MANUAL-01/retirada-cheddar.json): retornou Caramelo Grande a R$ 29,90 e total R$ 41,90, alegando faltar R$ 0,10 para o mínimo. O preço oficial é R$ 39,90 e atende ao mínimo. Sem desconto, somado ao frete de Porto Alegre, daria R$ 51,90; a conversa anterior incompleta impede validar pagamento e descontos desse turno isolado. Evidência complementar, não MC10 nem caso extra no denominador.
 - [Erro de preparação](t05/evidencias/configuracao/json-invalido.json): HTTP 400 por corpo JSON inválido durante edição assistida. Causa do envio, não defeito da Lia; excluído dos 17 casos funcionais. Não foi timeout.
 - No T2 de MC10 a entrada capturada é o template com variável de sessão do Postman; `sessaoEsperadaNaResolucaoDaVariavel` registra a sessão esperada. A sessão retornada foi comparada ao T1, mas não há captura do corpo resolvido no tráfego.

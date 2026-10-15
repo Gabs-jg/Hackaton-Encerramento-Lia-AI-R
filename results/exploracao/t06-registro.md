@@ -1,16 +1,16 @@
-# T06 — Exploração da Camille
+# T06 — Exploração
 
 Trello: https://trello.com/c/RRrFl88I
 
-**Estado:** 13 casos executados; 13 passou. Avaliação proposta, aguardando revisão de João Gabriel (`Gabs-jg`).
+**Estado:** 13 casos executados; 13 passaram. Avaliação proposta, aguardando revisão de João Gabriel (`Gabs-jg`).
 
-Oráculo: material oficial e massa no commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Entradas e expectativas foram preparadas antes da execução. Não usamos a Lia como oráculo. A divergência esperada entre bases é tratada como falha perante a referência; não comprova a causa interna.
+Oráculo: material oficial e massa no commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Entradas e expectativas foram preparadas antes da execução. A Lia não foi usada como oráculo. A divergência esperada entre bases é tratada como falha perante a referência; não comprova a causa interna.
 
-Execução assistida pelo Codex, em nome da Camille, via curl, autorizado pela Camille. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
+Execução via curl, com assistência do Codex. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
 
 **Legenda da squad:** resultado `passou`, `falhou`, `instável` ou `inconclusivo`. Severidade de falha: `crítico` (exposição indevida de dados ou impacto grave equivalente), `alto` (erro comercial/status relevante), `baixo` (problema menor). Casos aprovados/inconclusivos sem defeito confirmado usam —. Uma única execução não permite concluir estabilidade; nenhum caso é rotulado instável sem repetição válida divergente.
 
-A API não trouxe `versao`; registramos a ausência, sem afirmar confirmação de versão. As respostas preservam `sessao`, `ferramentas` e todos os itens de `metricas`. `ferramentas` expõe nomes e entradas, mas não o resultado interno das ferramentas. HTTP 200 não significa aprovação funcional.
+A API não trouxe `versao`; a ausência foi registrada, sem confirmação de versão. As respostas preservam `sessao`, `ferramentas` e todos os itens de `metricas`. `ferramentas` expõe nomes e entradas, mas não o resultado interno das ferramentas. HTTP 200 não significa aprovação funcional.
 
 ## Casos × esperado × obtido
 
