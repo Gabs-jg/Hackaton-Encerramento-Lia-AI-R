@@ -2,7 +2,7 @@
   "id": "T05-MC07",
   "turno": 1,
   "capturadoEm": "2026-10-15T01:59:50.398Z",
-  "executor": "Codex via Postman web e Desktop Agent",
+  "cliente": "Postman web + Desktop Agent",
   "httpStatus": 200,
   "tempoPostman": "32.96 s",
   "requisicao": {

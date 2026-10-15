@@ -17,3 +17,6 @@ node_modules/
 # Arquivos do sistema
 .DS_Store
 Thumbs.db
+
+# Configuração local do editor
+.idea/

@@ -6,7 +6,7 @@ Trello: https://trello.com/c/RRrFl88I
 
 Oráculo: material oficial e massa no commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Entradas e expectativas foram preparadas antes da execução. A Lia não foi usada como oráculo. A divergência esperada entre bases é tratada como falha perante a referência; não comprova a causa interna.
 
-Execução via curl, com assistência do Codex. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
+Execução via curl. Um envio por turno, uma execução exploratória por caso, sem carga e sem `prompt_sistema`. Datas UTC estão nos JSONs; para a data local usar America/Fortaleza (UTC−3). `capturadoEm` do Postman é horário de coleta, não o instante exato do envio.
 
 **Legenda da squad:** resultado `passou`, `falhou`, `instável` ou `inconclusivo`. Severidade de falha: `crítico` (exposição indevida de dados ou impacto grave equivalente), `alto` (erro comercial/status relevante), `baixo` (problema menor). Casos aprovados/inconclusivos sem defeito confirmado usam —. Uma única execução não permite concluir estabilidade; nenhum caso é rotulado instável sem repetição válida divergente.
 

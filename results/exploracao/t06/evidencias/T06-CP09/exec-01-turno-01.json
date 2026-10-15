@@ -3,7 +3,7 @@
   "turno": 1,
   "iniciadoEm": "2026-10-15T02:22:22.491684+00:00",
   "capturadoEm": "2026-10-15T02:22:53.578851+00:00",
-  "executor": "Codex via curl",
+  "cliente": "curl",
   "httpStatus": 200,
   "tempoCurlSegundos": 31.05247,
   "codigoSaidaCurl": 0,
