@@ -1,0 +1,29 @@
+{
+  "capturadoEm": "2026-10-15T01:47:52.818Z",
+  "origem": "Postman web, resposta manual já exibida; execução feita pela Camille",
+  "requisicao": {
+    "mensagem": "Agora retire a Cheddar e recalcule.",
+    "sessao": "791fdf7d-fc1b-476a-9861-59177a96a924"
+  },
+  "httpStatus": 200,
+  "tempoPostman": "4.07 s",
+  "resposta": {
+    "resposta": "Retirando a Cheddar:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- **Subtotal:** R$ 29,90\n- **Desconto:** R$ 0,00\n- **Frete:** R$ 12,00\n- **Total calculado:** **R$ 41,90**\n\nAtenção: o pedido mínimo é de **R$ 30,00 em produtos**, então faltam **R$ 0,10** para finalizar. Você pode incluir, por exemplo, um pacote de balas artesanais.",
+    "sessao": "791fdf7d-fc1b-476a-9861-59177a96a924",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 254,
+          "totalTokens": 10528,
+          "cacheReadInputTokens": 10034,
+          "cacheWriteInputTokens": 238
+        },
+        "metrics": {
+          "latencyMs": 3058
+        }
+      }
+    ]
+  }
+}

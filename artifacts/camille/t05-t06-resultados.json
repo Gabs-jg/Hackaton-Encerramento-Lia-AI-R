@@ -1,0 +1,2342 @@
+{
+  "formato": "exploracao-camille-v1",
+  "baseReferencia": "60aad352cb9a371cc0ec11d80a64354d1cffa0c0",
+  "casos": [
+    {
+      "id": "T05-MC01",
+      "tarefa": "T05",
+      "nome": " Pedido misto no Pix — Porto Alegre",
+      "esperado": "Itens R$ 39,90 + R$ 24,90; subtotal R$ 64,80; Pix R$ 3,24; produtos após desconto R$ 61,56; frete R$ 12,00; total R$ 73,56.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; Frete grátis; Área de entrega, taxas e prazos",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Caramelo Grande R$ 29,90; subtotal R$ 54,80; Pix R$ 2,74; frete R$ 12,00; total R$ 64,06.",
+      "descricao": "Preço diverge em R$ 10,00 e propaga para desconto e total. Hipótese: conteúdo recuperado desatualizado; conferir catálogo na base e recuperação, depois retestar com a base trocada.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC01/exec-01-turno-01.json",
+          "id": "T05-MC01",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:50:14.766Z",
+          "executor": "Codex via Postman web",
+          "httpStatus": 200,
+          "tempoPostman": "8.50 s",
+          "requisicao": {
+            "mensagem": "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?"
+          },
+          "resposta": {
+            "resposta": "Claro! Como o pagamento será via Pix, há **5% de desconto nos produtos**:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- 1 Pipoca Cheddar Média: **R$ 24,90**\n- **Subtotal:** R$ 54,80\n- **Desconto Pix (5%):** −R$ 2,74\n- **Frete para Porto Alegre:** R$ 12,00\n- **Total:** **R$ 64,06**\n\nO pedido pode ser finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento.\n\nQuer aproveitar e incluir um pacote de balas artesanais para acompanhar? 🍬",
+            "sessao": "80df78b9-8e5e-41f9-9266-220f62a2a1be",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços da pipoca Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega para Porto Alegre; regras de desconto e frete."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Tabela de frete ou taxa de entrega para Porto Alegre em pedidos online da Pop & Doce"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 74,
+                  "totalTokens": 5266,
+                  "cacheReadInputTokens": 5190,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1111
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 61,
+                  "totalTokens": 7771,
+                  "cacheReadInputTokens": 5190,
+                  "cacheWriteInputTokens": 2518
+                },
+                "metrics": {
+                  "latencyMs": 1297
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 263,
+                  "totalTokens": 10372,
+                  "cacheReadInputTokens": 7708,
+                  "cacheWriteInputTokens": 2399
+                },
+                "metrics": {
+                  "latencyMs": 2511
+                }
+              }
+            ]
+          },
+          "nota": "Nova execução; corpo do primeiro envio manual não armazenado no histórico."
+        }
+      ]
+    },
+    {
+      "id": "T05-MC02",
+      "tarefa": "T05",
+      "nome": " Mesmo pedido na Região Metropolitana",
+      "esperado": "Subtotal R$ 64,80; Pix R$ 3,24; frete R$ 18,00; total R$ 79,56. Não aplicar frete de Porto Alegre.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal R$ 54,80; Pix R$ 2,74; frete Canoas R$ 18,00; total R$ 70,06.",
+      "descricao": "Frete regional correto; preço da Caramelo Grande incorreto. Hipótese: revisar referência de preço recuperada, sem alterar o oráculo.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC02/exec-01-turno-01.json",
+          "id": "T05-MC02",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:54:37.309Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "9.99 s",
+          "requisicao": {
+            "mensagem": "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Canoas, pagamento no Pix, sem cupom. Detalhe o total."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- 1 Pipoca **Caramelo Clássico Grande**: R$ 29,90  \n- 1 Pipoca **Cheddar Média**: R$ 24,90  \n\n**Subtotal dos produtos:** R$ 54,80  \n**Desconto de 5% no Pix:** -R$ 2,74  \n**Entrega para Canoas:** R$ 18,00  \n**Cupom:** nenhum  \n\n### **Total no Pix: R$ 70,06**\n\nO prazo para Canoas é de até 3 dias úteis. Antes de finalizar, quer acrescentar um pacote de **balas de goma de 100 g a partir de R$ 9,90**? Combina super bem com as pipocas 😊\n\nO pedido é finalizado pelo site **www.popedoce.example**, onde você informa o endereço e realiza o pagamento.",
+            "sessao": "ebf8ca2d-0bc1-4c67-ae57-6286878216df",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preço da pipoca Caramelo Clássico tamanho Grande, pipoca Cheddar tamanho Média e taxa de entrega para Canoas. Informações de pagamento via Pix."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Produtos complementares, especialmente balas artesanais, para oferecer junto ao pedido de pipocas."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "tabela taxa de entrega Canoas pedido Pop & Doce frete cidade Canoas"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 133,
+                  "totalTokens": 5320,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5185
+                },
+                "metrics": {
+                  "latencyMs": 1728
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 57,
+                  "totalTokens": 10164,
+                  "cacheReadInputTokens": 5185,
+                  "cacheWriteInputTokens": 4920
+                },
+                "metrics": {
+                  "latencyMs": 1502
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 295,
+                  "totalTokens": 12798,
+                  "cacheReadInputTokens": 10105,
+                  "cacheWriteInputTokens": 2396
+                },
+                "metrics": {
+                  "latencyMs": 3285
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC03",
+      "tarefa": "T05",
+      "nome": " Transportadora sem valor inventado",
+      "esperado": "Produtos R$ 64,80; frete por transportadora consultado no site por CEP. Não apresentar total fechado com frete inventado nem aplicar tarifa local.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal R$ 54,80; não inventou frete para São Paulo; orientou consulta no site e prazo de 5–10 dias úteis.",
+      "descricao": "Regra de transportadora atendida, mas preço/subtotal incorretos. Hipótese: base/recuperação do catálogo.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC03/exec-01-turno-01.json",
+          "id": "T05-MC03",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:56:08.197Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "8.32 s",
+          "requisicao": {
+            "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, cartão de débito, entrega em São Paulo/SP. Quanto pagarei com o frete?"
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- 1 Caramelo Clássico Grande: **R$ 29,90**\n- 1 Cheddar Média: **R$ 24,90**\n- **Subtotal dos produtos: R$ 54,80**\n- Pagamento: **cartão de débito**\n- Entrega: **São Paulo/SP**\n\nO frete para outros estados é calculado pela transportadora no site, após informar o CEP. Por isso, não consigo informar o valor exato nem o total final por aqui. O prazo estimado é de **5 a 10 dias úteis**.\n\nAntes de finalizar, quer incluir um pacotinho de **balas artesanais** para acompanhar? O pedido é concluído em **www.popedoce.example**, onde você informa o endereço, confere o frete e realiza o pagamento.",
+            "sessao": "4032a24f-279c-4b58-b7bb-16b6ee8230ca",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços da pipoca Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega/frete para São Paulo/SP; formas de pagamento cartão de débito."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Tabela de frete ou taxa de entrega para São Paulo/SP, por cidade/estado ou faixa de pedido. Qual o valor do frete para São Paulo capital?"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 80,
+                  "totalTokens": 5265,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5183
+                },
+                "metrics": {
+                  "latencyMs": 1622
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 70,
+                  "totalTokens": 7689,
+                  "cacheReadInputTokens": 5183,
+                  "cacheWriteInputTokens": 2434
+                },
+                "metrics": {
+                  "latencyMs": 1153
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 272,
+                  "totalTokens": 10322,
+                  "cacheReadInputTokens": 7617,
+                  "cacheWriteInputTokens": 2431
+                },
+                "metrics": {
+                  "latencyMs": 2824
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC04",
+      "tarefa": "T05",
+      "nome": " Pedido abaixo do mínimo",
+      "esperado": "Produtos R$ 29,80, abaixo de R$ 30,00. Informar necessidade de complementar; frete não satisfaz o mínimo. Se mostrar R$ 41,80 como simulação, não declarar pedido elegível.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Subtotal R$ 29,80; informa que faltam R$ 0,20 para o mínimo; frete R$ 12,00 e total simulado R$ 41,80.",
+      "descricao": "Bloqueou a elegibilidade abaixo do mínimo e distinguiu a sugestão de complemento. Sem correção proposta neste caso.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC04/exec-01-turno-01.json",
+          "id": "T05-MC04",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:57:21.488Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "9.62 s",
+          "requisicao": {
+            "mensagem": "Quero somente 2 pipocas Caramelo Clássico Pequenas, entrega em Porto Alegre e cartão de débito. Posso fechar? Qual o valor?"
+          },
+          "resposta": {
+            "resposta": "Quase! 😊\n\n- 2 Pipocas Caramelo Clássico Pequenas: **R$ 29,80**\n- Entrega para Porto Alegre: **R$ 12,00**\n- **Total: R$ 41,80**\n\nPorém, o pedido mínimo é de **R$ 30,00 em produtos**, então faltam **R$ 0,20** para finalizar. Você pode acrescentar, por exemplo, um pacote de **Ursinhos Frutas Vermelhas 100 g por R$ 9,90**. Nesse caso, o total ficaria **R$ 51,70**.\n\nAceitamos cartão de débito. O pedido é finalizado no site **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+            "sessao": "657d0d50-3667-40fd-ae6d-2c3f5a645b5c",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preço da pipoca Caramelo Clássico tamanho Pequena, taxa de entrega para Porto Alegre e formas de pagamento incluindo cartão de débito. Regras para montar pedido e finalizar no site."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Produtos complementares recomendados para pipoca, especialmente balas artesanais, e preços disponíveis."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "formas de pagamento para pedidos avulsos: cartão de débito, crédito, Pix; taxa de entrega Porto Alegre ou cálculo de frete"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 146,
+                  "totalTokens": 5328,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5180
+                },
+                "metrics": {
+                  "latencyMs": 1748
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 123,
+                  "totalTokens": 10364,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 5059
+                },
+                "metrics": {
+                  "latencyMs": 1911
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 283,
+                  "totalTokens": 12981,
+                  "cacheReadInputTokens": 10239,
+                  "cacheWriteInputTokens": 2457
+                },
+                "metrics": {
+                  "latencyMs": 2844
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC05",
+      "tarefa": "T05",
+      "nome": " Mínimo antes dos descontos",
+      "esperado": "Subtotal R$ 30,80; Pix R$ 1,54; produtos líquidos R$ 29,26; frete R$ 12,00; total R$ 41,26. Pedido elegível porque mínimo considera produtos antes dos descontos.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Formas de pagamento",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal R$ 30,80, mínimo atendido; desconto zero, frete R$ 12,00 e total R$ 42,80.",
+      "descricao": "Omitiu Pix de R$ 1,54; total esperado R$ 41,26. Hipótese: explicitar no prompt a aplicação de Pix quando solicitado e validar cálculo por etapa, após conferir a referência recuperada.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC05/exec-01-turno-01.json",
+          "id": "T05-MC05",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:58:49.876Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "8.99 s",
+          "requisicao": {
+            "mensagem": "Quero 1 Chocolate Belga Pequena e 1 Bala Menta Zero Açúcar 100 g, Porto Alegre, no Pix e sem cupom. Esse pedido atende ao mínimo? Detalhe os valores."
+          },
+          "resposta": {
+            "resposta": "Sim, atende ao mínimo! O pedido mínimo é de **R$ 30,00 em produtos**, e o seu subtotal é de **R$ 30,80**.\n\n**Resumo:**\n- 1 Chocolate Belga Pequena: **R$ 17,90**\n- 1 Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n- Subtotal dos produtos: **R$ 30,80**\n- Desconto: **R$ 0,00** — sem cupom\n- Entrega para Porto Alegre: **R$ 12,00**\n- **Total: R$ 42,80**\n- Pagamento: **Pix**\n\nA entrega ocorre em até **2 dias úteis**. Para finalizar, acesse **www.popedoce.example**, informe o endereço e faça o pagamento com segurança.\n\nQuer acrescentar algum item complementar, como outra bala ou uma pipoca de sabor diferente? 🍿",
+            "sessao": "236a988c-e49f-4be3-99d4-4d1a7efc3076",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços da pipoca Chocolate Belga tamanho Pequena e Bala Menta Zero Açúcar 100 g; valor mínimo do pedido; taxa de entrega para Porto Alegre; pagamento via Pix; regras de pedido mínimo."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Bala Menta Zero Açúcar preço embalagem 100 g catálogo Pop & Doce"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 91,
+                  "totalTokens": 5284,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5191
+                },
+                "metrics": {
+                  "latencyMs": 1602
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 57,
+                  "totalTokens": 7768,
+                  "cacheReadInputTokens": 5191,
+                  "cacheWriteInputTokens": 2518
+                },
+                "metrics": {
+                  "latencyMs": 979
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 346,
+                  "totalTokens": 10569,
+                  "cacheReadInputTokens": 7709,
+                  "cacheWriteInputTokens": 2512
+                },
+                "metrics": {
+                  "latencyMs": 3544
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC06",
+      "tarefa": "T05",
+      "nome": " Exatamente R$ 150 não dá frete grátis",
+      "esperado": "6 × R$ 9,90 + 2 × R$ 14,90 + R$ 30,90 + R$ 29,90 = R$ 150,00. Frete R$ 12,00, total R$ 162,00. A regra é acima de R$ 150,00.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; Caramelo Clássico; Chocolate Belga; base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; base-de-conhecimento-oficial/04-politicas.md — Frete grátis",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal exato R$ 150,00; concedeu frete grátis e total R$ 150,00. Mencionou regra interna acima de R$ 100,00 e informações internas conflitantes.",
+      "descricao": "Pela referência, frete R$ 12,00 e total R$ 162,00. A fala da Lia não prova contradição no material oficial. Hipótese: substituir regra de frete na base e testar limite estritamente maior que R$ 150,00 após descontos.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC06/exec-01-turno-01.json",
+          "id": "T05-MC06",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:59:06.326Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "9.45 s",
+          "requisicao": {
+            "mensagem": "Monte: 6 Natural sem Sal Pequenas, 2 Caramelo Clássico Pequenas, 1 Toffee de Caramelo Salgado 250 g e 1 Chocolate Belga Média. Porto Alegre, débito, sem cupom. Detalhe o total e o frete."
+          },
+          "resposta": {
+            "resposta": "Seu pedido ficou assim:\n\n- 6 × Natural sem Sal Pequena: **R$ 59,40**\n- 2 × Caramelo Clássico Pequena: **R$ 29,80**\n- 1 × Toffee de Caramelo Salgado 250 g: **R$ 30,90**\n- 1 × Chocolate Belga Média: **R$ 29,90**\n\n**Subtotal dos produtos: R$ 150,00**  \n**Cupom: nenhum**  \n**Pagamento: cartão de débito**  \n**Frete para Porto Alegre: grátis**  \n**Total: R$ 150,00**\n\nA tabela de entrega informa frete grátis para pedidos acima de R$ 100 em Porto Alegre. Encontrei uma divergência em outra informação da base sobre o limite do frete grátis; vou confirmar com a equipe para garantir, mas o cálculo acima segue a tabela de taxas.\n\nQuer acrescentar mais alguma bala artesanal para acompanhar? O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+            "sessao": "3bda62a9-781f-469c-bf78-d680c4a8cc91",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços dos produtos Natural sem Sal Pequena, Caramelo Clássico Pequena, Toffee de Caramelo Salgado 250 g e Chocolate Belga Média; taxa de entrega/frete para Porto Alegre; formas de pagamento incluindo débito."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "política de entrega frete Porto Alegre taxa de entrega cálculo pedidos Pop & Doce"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 94,
+                  "totalTokens": 5303,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5207
+                },
+                "metrics": {
+                  "latencyMs": 1179
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 54,
+                  "totalTokens": 7852,
+                  "cacheReadInputTokens": 5207,
+                  "cacheWriteInputTokens": 2589
+                },
+                "metrics": {
+                  "latencyMs": 887
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 518,
+                  "totalTokens": 10709,
+                  "cacheReadInputTokens": 7796,
+                  "cacheWriteInputTokens": 2393
+                },
+                "metrics": {
+                  "latencyMs": 5074
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC07",
+      "tarefa": "T05",
+      "nome": " Acima de R$ 150 antes do Pix, abaixo depois",
+      "esperado": "Subtotal R$ 157,40; Pix R$ 7,87; produtos líquidos R$ 149,53; frete R$ 12,00; total R$ 161,53. Não conceder frete grátis com base no subtotal.",
+      "referencias": "base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Café; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal R$ 157,40; Pix R$ 7,87; líquido R$ 149,53; frete grátis e total R$ 149,53.",
+      "descricao": "Aplicou limite indevido de R$ 100,00. Esperado cobrar R$ 12,00, total R$ 161,53. Hipótese: revisar regra recuperada e ordem desconto→frete.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC07/exec-01-turno-01.json",
+          "id": "T05-MC07",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T01:59:50.398Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "32.96 s",
+          "requisicao": {
+            "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala de Café 100 g. Porto Alegre, Pix, sem cupom. Detalhe o frete e o total."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- 4 Toffee de Caramelo Salgado 250 g: **R$ 123,60**\n- 1 Bala de Banana 250 g: **R$ 24,90**\n- 1 Bala de Café 100 g: **R$ 8,90**\n\n**Subtotal dos produtos:** R$ 157,40  \n**Desconto de 5% no Pix:** −R$ 7,87  \n**Frete para Porto Alegre:** **R$ 0,00** — grátis para pedidos acima de R$ 100,00  \n**Cupom:** não aplicado  \n\n### Total no Pix: **R$ 149,53**\n\nAntes de finalizar, que tal incluir uma pipoca gourmet para acompanhar as balas? 🍿\n\nO pedido é finalizado no site **www.popedoce.example**, onde você informa o endereço e realiza o pagamento via Pix.",
+            "sessao": "767292ba-f599-4356-8b7f-cec3b3597ed8",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços dos produtos Toffee de Caramelo Salgado 250 g, Bala de Banana 250 g, Bala de Café 100 g; taxa/frete para entrega em Porto Alegre; condições de pagamento via Pix."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 114,
+                  "totalTokens": 5315,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5199
+                },
+                "metrics": {
+                  "latencyMs": 1931
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 382,
+                  "totalTokens": 8113,
+                  "cacheReadInputTokens": 5199,
+                  "cacheWriteInputTokens": 2530
+                },
+                "metrics": {
+                  "latencyMs": 4275
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC08",
+      "tarefa": "T05",
+      "nome": " Acima de R$ 150 após Pix",
+      "esperado": "Subtotal R$ 161,40; Pix R$ 8,07; produtos líquidos R$ 153,33; frete grátis; total R$ 153,33.",
+      "referencias": "base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Formas de pagamento",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Subtotal R$ 161,40; Pix R$ 8,07; líquido R$ 153,33; frete grátis Porto Alegre e total R$ 153,33.",
+      "descricao": "Valores corretos nesta entrada. O acerto isolado não comprova que o limite esteja implementado corretamente; manter os casos de fronteira.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC08/exec-01-turno-01.json",
+          "id": "T05-MC08",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:02:16.738Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "15.68 s",
+          "requisicao": {
+            "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Porto Alegre, Pix, sem cupom. Detalhe o total."
+          },
+          "resposta": {
+            "resposta": "Perfeito! Seu pedido fica assim:\n\n- 4× Toffee de Caramelo Salgado 250 g: **R$ 123,60**\n- 1× Bala de Banana 250 g: **R$ 24,90**\n- 1× Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n\n**Subtotal dos produtos:** R$ 161,40  \n**Desconto Pix (5%):** −R$ 8,07  \n**Frete para Porto Alegre:** grátis  \n**Cupom:** não aplicado  \n\n### Total: **R$ 153,33**\n\nO pedido é finalizado no site **www.popedoce.example**, onde você informa o endereço e faz o pagamento via Pix.\n\nAntes de concluir, quer acrescentar uma pipoca gourmet? A **Caramelo Clássico média** custa R$ 24,90 e combina super com as balas 🍿",
+            "sessao": "50e160aa-7c9f-4e10-9c72-018100f57975",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços dos produtos: Toffee de Caramelo Salgado 250 g, Bala de Banana 250 g, Bala Menta Zero Açúcar 100 g; taxa de entrega para Porto Alegre; pagamento via Pix; informações para montar pedido e finalizar no site."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "taxa de entrega para pedidos comuns em Porto Alegre, frete por cidade, política de entrega e formas de pagamento Pix"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "catálogo de pipocas gourmet sabores e preços, opções para oferecer como produto complementar"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 126,
+                  "totalTokens": 5326,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5198
+                },
+                "metrics": {
+                  "latencyMs": 1833
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 63,
+                  "totalTokens": 7823,
+                  "cacheReadInputTokens": 5198,
+                  "cacheWriteInputTokens": 2560
+                },
+                "metrics": {
+                  "latencyMs": 1183
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 291,
+                  "totalTokens": 10470,
+                  "cacheReadInputTokens": 7758,
+                  "cacheWriteInputTokens": 2419
+                },
+                "metrics": {
+                  "latencyMs": 3981
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 311,
+                  "totalTokens": 13225,
+                  "cacheReadInputTokens": 10177,
+                  "cacheWriteInputTokens": 2735
+                },
+                "metrics": {
+                  "latencyMs": 3156
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC09",
+      "tarefa": "T05",
+      "nome": " Frete grátis não se estende à Região Metropolitana",
+      "esperado": "Subtotal R$ 161,40; Pix R$ 8,07; líquidos R$ 153,33; frete R$ 18,00; total R$ 171,33. Frete grátis por valor vale somente em Porto Alegre.",
+      "referencias": "base-de-conhecimento-oficial/02-catalogo-balas.md — Toffee de Caramelo Salgado; Bala de Banana; Menta Zero Açúcar; base-de-conhecimento-oficial/04-politicas.md — Frete grátis; Área de entrega, taxas e prazos",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Subtotal R$ 161,40; Pix R$ 8,07; frete grátis para Viamão; total R$ 153,33.",
+      "descricao": "Esperado frete R$ 18,00 e total R$ 171,33; isenção só vale em Porto Alegre. Hipótese: base/recuperação da abrangência e condição explícita de cidade antes da isenção.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC09/exec-01-turno-01.json",
+          "id": "T05-MC09",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:04:08.620Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "9.74 s",
+          "requisicao": {
+            "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Viamão, Pix, sem cupom. Detalhe o total."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- 4 × Toffee de Caramelo Salgado 250 g: **R$ 123,60**\n- 1 × Bala de Banana 250 g: **R$ 24,90**\n- 1 × Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n\n**Subtotal dos produtos:** R$ 161,40  \n**Desconto Pix de 5%:** –R$ 8,07  \n**Frete para Viamão:** **Grátis** — pedidos acima de R$ 100,00  \n**Cupom:** nenhum  \n\n### Total: **R$ 153,33**\n\nA entrega para Viamão ocorre em até 3 dias úteis após o despacho. O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento via Pix.\n\nQuer aproveitar e incluir um pacote de **Ursinhos Frutas Vermelhas 250 g por R$ 21,90** para acompanhar? 🍬",
+            "sessao": "bfcb2638-d3b7-4f96-a4ea-731318a9b80f",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços dos produtos Toffee de Caramelo Salgado 250 g, Bala de Banana 250 g e Bala Menta Zero Açúcar 100 g. Taxa de entrega para Viamão e informações de pagamento via Pix."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Tabela de taxa de entrega por cidade, especificamente Viamão; regras de frete e pagamento Pix da Pop & Doce."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 93,
+                  "totalTokens": 5294,
+                  "cacheReadInputTokens": 5199,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1460
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 67,
+                  "totalTokens": 7789,
+                  "cacheReadInputTokens": 5199,
+                  "cacheWriteInputTokens": 2521
+                },
+                "metrics": {
+                  "latencyMs": 1368
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 398,
+                  "totalTokens": 10503,
+                  "cacheReadInputTokens": 7720,
+                  "cacheWriteInputTokens": 2383
+                },
+                "metrics": {
+                  "latencyMs": 4064
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC10",
+      "tarefa": "T05",
+      "nome": " Alterar o carrinho antes de fechar",
+      "esperado": "T1 subtotal R$ 64,80, frete R$ 12,00, total R$ 76,80. T2 apenas Caramelo Grande + 2 Balas de Banana 100 g: subtotal R$ 61,70; frete R$ 12,00; total R$ 73,70. Não cobrar item removido nem confundir com alteração de pedido já feito.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/02-catalogo-balas.md — Bala de Banana; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "T1: subtotal R$ 54,80 e total R$ 66,80. T2: removeu Cheddar, incluiu 2 Balas Banana 100 g (R$ 21,80), subtotal R$ 51,70, frete R$ 12,00 e total R$ 63,70.",
+      "descricao": "Continuidade e quantidades corretas, mas manteve Caramelo Grande a R$ 29,90. T2 deveria totalizar R$ 73,70. Hipótese: corrigir preço na referência recuperada e preservar o carrinho ao recalcular.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-01.json",
+          "id": "T05-MC10",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:06:02.298Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "8.33 s",
+          "requisicao": {
+            "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no débito e sem cupom. Monte o resumo."
+          },
+          "resposta": {
+            "resposta": "Claro! Aqui está o resumo do seu pedido:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- 1 Pipoca Cheddar Média: **R$ 24,90**\n- Subtotal dos produtos: **R$ 54,80**\n- Entrega para Porto Alegre: **R$ 12,00**\n- Desconto: **R$ 0,00**\n- Pagamento: **Cartão de débito**\n\n**Total: R$ 66,80**\n\nQuer aproveitar e incluir um pacote de balas artesanais para acompanhar as pipocas? 😊\n\nO pedido é finalizado pelo site **www.popedoce.example**, onde você informa o endereço e realiza o pagamento.",
+            "sessao": "b872c053-6853-4386-b953-0e60678b6e5e",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços dos sabores Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega para Porto Alegre; formas de pagamento incluindo débito."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 93,
+                  "totalTokens": 5277,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5182
+                },
+                "metrics": {
+                  "latencyMs": 1464
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 272,
+                  "totalTokens": 7956,
+                  "cacheReadInputTokens": 5182,
+                  "cacheWriteInputTokens": 2500
+                },
+                "metrics": {
+                  "latencyMs": 2785
+                }
+              }
+            ]
+          }
+        },
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-02.json",
+          "id": "T05-MC10",
+          "turno": 2,
+          "capturadoEm": "2026-10-15T02:11:33.647Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "6.56 s",
+          "requisicao": {
+            "mensagem": "Ainda não finalizei. Retire a Cheddar e acrescente 2 Balas de Banana 100 g. Mostre o novo resumo.",
+            "sessao": "{{t05_mc10_sessao}}"
+          },
+          "resposta": {
+            "resposta": "Claro! Atualizei seu pedido:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- 2 Balas de Banana de 100 g: **R$ 21,80**\n- Subtotal dos produtos: **R$ 51,70**\n- Entrega para Porto Alegre: **R$ 12,00**\n- Desconto: **R$ 0,00**\n- Pagamento: **Cartão de débito**\n\n**Total: R$ 63,70**\n\nO pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento. Se quiser, ainda posso incluir outro sabor de bala ou uma pipoca complementar antes da finalização.",
+            "sessao": "b872c053-6853-4386-b953-0e60678b6e5e",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preço das Balas de Banana artesanais no pacote de 100 g."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 54,
+                  "totalTokens": 8045,
+                  "cacheReadInputTokens": 7682,
+                  "cacheWriteInputTokens": 307
+                },
+                "metrics": {
+                  "latencyMs": 1254
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 237,
+                  "totalTokens": 10743,
+                  "cacheReadInputTokens": 7989,
+                  "cacheWriteInputTokens": 2515
+                },
+                "metrics": {
+                  "latencyMs": 2579
+                }
+              }
+            ]
+          },
+          "sessaoEsperadaNaResolucaoDaVariavel": "b872c053-6853-4386-b953-0e60678b6e5e"
+        }
+      ]
+    },
+    {
+      "id": "T05-MC11",
+      "tarefa": "T05",
+      "nome": " Dados insuficientes para cálculo",
+      "esperado": "Solicitar tamanhos, região e informações de pagamento pertinentes antes de fornecer total fechado. Pode informar opções/preços condicionais; não assumir tamanhos ou frete como fatos.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Tamanhos; Caramelo Clássico; Cheddar; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos; Formas de pagamento",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Pediu tamanhos, cidade e pagamento; não fechou o total. Porém ofereceu Caramelo Grande a R$ 29,90 e subtotal de duas Grandes R$ 69,80.",
+      "descricao": "Esclarecimento correto, mas cotação adicional contradiz catálogo: duas Grandes somam R$ 79,80. Hipótese: base/recuperação; a avaliação inclui informação factual extra que a Lia decidiu apresentar.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC11/exec-01-turno-01.json",
+          "id": "T05-MC11",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:12:23.380Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "6.95 s",
+          "requisicao": {
+            "mensagem": "Quero uma pipoca Caramelo Clássico e uma Cheddar. Quanto fica meu pedido?"
+          },
+          "resposta": {
+            "resposta": "Claro! 😊 Qual tamanho você quer de cada uma?\n\n- **Pequena (100 g):** Caramelo Clássico R$ 14,90 + Cheddar R$ 14,90 = **R$ 29,80**\n- **Média (200 g):** R$ 24,90 + R$ 24,90 = **R$ 49,80**\n- **Grande (400 g):** R$ 29,90 + R$ 39,90 = **R$ 69,80**\n\nEsse é o subtotal, sem a taxa de entrega. Se forem tamanhos diferentes, me diga quais você prefere. Também vou precisar da cidade de entrega e da forma de pagamento para calcular o total.",
+            "sessao": "c5bdc6ec-6847-49fe-b1e3-ae75188c0ae9",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços e tamanhos das pipocas Caramelo Clássico e Cheddar. Informar valores por tamanho."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 67,
+                  "totalTokens": 5236,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5167
+                },
+                "metrics": {
+                  "latencyMs": 1354
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 191,
+                  "totalTokens": 7909,
+                  "cacheReadInputTokens": 5185,
+                  "cacheWriteInputTokens": 2531
+                },
+                "metrics": {
+                  "latencyMs": 2312
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC12",
+      "tarefa": "T05",
+      "nome": " Preço do mix é o da goma mais cara",
+      "esperado": "Mix R$ 26,90, não soma nem média dos sabores; pipoca R$ 9,90; subtotal R$ 36,80; frete R$ 12,00; total R$ 48,80.",
+      "referencias": "base-de-conhecimento-oficial/02-catalogo-balas.md — Monte seu mix de gomas; Ursinhos Frutas Vermelhas; Goma Vegana de Maçã Verde; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Natural sem Sal; base-de-conhecimento-oficial/04-politicas.md — Pedido mínimo; Área de entrega, taxas e prazos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Mix 250 g R$ 26,90 + Natural Pequena R$ 9,90; subtotal R$ 36,80; frete R$ 12,00; total R$ 48,80.",
+      "descricao": "Aplicou preço do sabor mais caro, sem somar/médias. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC12/exec-01-turno-01.json",
+          "id": "T05-MC12",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:12:48.075Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "19.01 s",
+          "requisicao": {
+            "mensagem": "Quero 1 mix de 250 g com Ursinhos Frutas Vermelhas e Goma Vegana de Maçã Verde, mais 1 pipoca Natural sem Sal Pequena. Porto Alegre, débito. Detalhe o preço."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- **1 mix de gomas — 250 g**\n  - Ursinhos Frutas Vermelhas\n  - Goma Vegana de Maçã Verde  \n  - Preço pelo sabor mais caro do mix: **R$ 26,90**\n- **1 Pipoca Natural sem Sal — Pequena:** **R$ 9,90**\n\n**Subtotal dos produtos:** R$ 36,80  \n**Entrega para Porto Alegre:** R$ 12,00  \n**Total:** **R$ 48,80**\n\nPagamento: **cartão de débito**. O prazo de entrega é de até **2 dias úteis**.\n\nPara complementar, que tal incluir mais um pacote de balas artesanais? Posso adicionar **Ursinhos Frutas Vermelhas de 100 g por R$ 9,90**. O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+            "sessao": "1bddc28f-94d5-425e-bf17-3e4c11c5ef01",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços, composição e disponibilidade de: mix de 250 g com Ursinhos Frutas Vermelhas e Goma Vegana de Maçã Verde; pipoca Natural sem Sal tamanho Pequena. Taxa de entrega para Porto Alegre e pagamento no débito. Informações para montar pedido."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Tabela de preços de pipocas e balas, preço do mix 250 g, preço da pipoca Natural sem Sal Pequena, taxa de entrega para Porto Alegre e formas de pagamento."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Goma Vegana de Maçã Verde preço 250 g ingredientes e alergênicos"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "entrega Porto Alegre taxa de entrega frete formas de pagamento débito"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "política de entrega por cidade Porto Alegre valores de frete"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "formas de pagamento cartão débito Pop & Doce"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 181,
+                  "totalTokens": 5381,
+                  "cacheReadInputTokens": 5198,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 7823
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 185,
+                  "totalTokens": 10504,
+                  "cacheReadInputTokens": 5198,
+                  "cacheWriteInputTokens": 5119
+                },
+                "metrics": {
+                  "latencyMs": 2194
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 323,
+                  "totalTokens": 20322,
+                  "cacheReadInputTokens": 10317,
+                  "cacheWriteInputTokens": 9680
+                },
+                "metrics": {
+                  "latencyMs": 3301
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC13",
+      "tarefa": "T05",
+      "nome": " Kit sem substituição para reduzir preço",
+      "esperado": "Explicar que itens não podem ser retirados para reduzir preço e Pistache não integra kits. Kit Cinema continua R$ 79,90 com composição válida; esclarecer escolhas restantes antes de fechar.",
+      "referencias": "base-de-conhecimento-oficial/03-kits-e-presentes.md — Regras gerais dos kits; Kit Cinema",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Kit Cinema R$ 79,90, composição correta; recusou retirar balas para reduzir preço e excluir regra para Pistache; ofereceu alternativa avulsa.",
+      "descricao": "Recusou composição inválida sem vender kit alterado. Pistache Média avulsa R$ 36,90 confere. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC13/exec-01-turno-01.json",
+          "id": "T05-MC13",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:13:44.435Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "39.78 s",
+          "requisicao": {
+            "mensagem": "Quero um Kit Cinema, mas tire as balas para baixar o preço e escolha Pistache como pipoca doce. Quanto fica?"
+          },
+          "resposta": {
+            "resposta": "O **Kit Cinema custa R$ 79,90** e inclui:\n\n- 1 pipoca Grande salgada  \n- 1 pipoca Média doce  \n- 1 pacote de 250 g de balas de goma  \n\nNão conseguimos retirar as balas nem trocar itens do kit para reduzir o preço. Além disso, a **Pistache não faz parte dos kits**.\n\nSe quiser montar avulso com uma pipoca Média de Pistache, ela custa **R$ 36,90**, mais a pipoca salgada Grande escolhida. Qual sabor salgado você gostaria?",
+            "sessao": "ad86c6db-b33a-42b1-a0d6-75b9f5bd7a07",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Kit Cinema preço, composição, possibilidade de retirar balas e escolher pipoca doce sabor Pistache; preços dos produtos e tamanhos"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "preços das pipocas salgadas tamanho Grande e opções de sabores; preço da pipoca Pistache Média"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 76,
+                  "totalTokens": 5252,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5174
+                },
+                "metrics": {
+                  "latencyMs": 1535
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 198,
+                  "totalTokens": 7879,
+                  "cacheReadInputTokens": 5198,
+                  "cacheWriteInputTokens": 2481
+                },
+                "metrics": {
+                  "latencyMs": 3087
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 123,
+                  "totalTokens": 10462,
+                  "cacheReadInputTokens": 7679,
+                  "cacheWriteInputTokens": 2658
+                },
+                "metrics": {
+                  "latencyMs": 1490
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC14",
+      "tarefa": "T05",
+      "nome": " Caixa presente já inclui latas e cartão",
+      "esperado": "Caixa R$ 119,90; frete R$ 12,00; total R$ 131,90. Não adicionar automaticamente latas de R$ 12,00 ou cartão de R$ 3,00 já incluídos.",
+      "referencias": "base-de-conhecimento-oficial/03-kits-e-presentes.md — Caixa Presente Pop & Doce; Personalização de presentes; base-de-conhecimento-oficial/04-politicas.md — Área de entrega, taxas e prazos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Caixa R$ 119,90, latas e cartão incluídos; frete R$ 12,00; total R$ 131,90.",
+      "descricao": "Não cobrou novamente itens já incluídos nem adicionou extras. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC14/exec-01-turno-01.json",
+          "id": "T05-MC14",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:13:56.656Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "6.78 s",
+          "requisicao": {
+            "mensagem": "Quero 1 Caixa Presente Pop & Doce com o cartão incluído, sem extras, entrega em Porto Alegre, débito. Mostre produtos, frete e total."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido fica assim:\n\n- **1 Caixa Presente Pop & Doce** — R$ 119,90  \n  - 2 pipocas médias doces em lata presente  \n  - 2 pacotes de balas de 100 g  \n  - 1 cartão com mensagem personalizada incluído  \n- **Frete para Porto Alegre** — R$ 12,00  \n- **Pagamento:** cartão de débito  \n\n**Total: R$ 131,90**\n\nComo você pediu sem extras, não incluí nenhum produto adicional. A caixa permite escolher os sabores das pipocas e das balas. Para finalizar, acesse **www.popedoce.example**, informe o endereço, escolha os sabores e faça o pagamento.",
+            "sessao": "c7203b17-ff08-403e-9267-d7f4d23714b6",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Caixa Presente Pop & Doce com cartão incluído, preço, conteúdo, sem extras; taxa de entrega para Porto Alegre; formas de pagamento débito."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 80,
+                  "totalTokens": 5266,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5184
+                },
+                "metrics": {
+                  "latencyMs": 1532
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 335,
+                  "totalTokens": 7942,
+                  "cacheReadInputTokens": 5184,
+                  "cacheWriteInputTokens": 2421
+                },
+                "metrics": {
+                  "latencyMs": 3527
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC15",
+      "tarefa": "T05",
+      "nome": " Brinde nas duas Grandes avulsas",
+      "esperado": "Produtos pagos R$ 79,80; brinde Ursinhos 100 g sem cobrança; frete R$ 12,00; total R$ 91,80. Válido até 31/12/2026: registrar data da execução, pois caso é temporal.",
+      "referencias": "base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; base-de-conhecimento-oficial/04-politicas.md — Promoções > Vigente; Descontos; Área de entrega, taxas e prazos",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Duas Caramelo Grandes R$ 59,80; frete R$ 12,00; total R$ 71,80; disse não encontrar a promoção e condicionou o brinde à confirmação.",
+      "descricao": "Esperado R$ 79,80 em produtos + brinde grátis + frete, total R$ 91,80. Promoção válida até 31/12/2026, abrangendo a data local de execução. Hipótese: corrigir preço e conteúdo/recuperação da promoção vigente.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC15/exec-01-turno-01.json",
+          "id": "T05-MC15",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:14:19.511Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "12.67 s",
+          "requisicao": {
+            "mensagem": "Quero 2 pipocas Caramelo Clássico Grandes avulsas e, se houver brinde da promoção vigente, escolho Ursinhos Frutas Vermelhas 100 g. Porto Alegre, débito, sem cupom. Detalhe o resumo."
+          },
+          "resposta": {
+            "resposta": "Claro! Seu pedido ficou assim:\n\n- **2× Pipoca Caramelo Clássico Grande — 400 g cada**: 2 × R$ 29,90 = **R$ 59,80**\n- **Cupom:** não utilizado\n- **Subtotal dos produtos:** **R$ 59,80**\n- **Entrega para Porto Alegre:** **R$ 12,00**\n- **Forma de pagamento:** cartão de débito\n- **Total:** **R$ 71,80**\n\nSobre o possível brinde **Ursinhos Frutas Vermelhas 100 g**, não encontrei na base a regra da promoção vigente. Vou confirmar com a equipe se ele está disponível e se esse pedido é elegível. O brinde, se aprovado, será acrescentado sem custo.\n\nO pedido atende ao valor mínimo de R$ 30,00. A entrega ocorre em até **2 dias úteis**. Para finalizar, acesse **www.popedoce.example** e informe o endereço e os dados do pagamento.",
+            "sessao": "3ff03549-e18d-4a51-a989-2b0fe3cc88ff",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preço pipoca Caramelo Clássico tamanho Grande avulsa; taxa de entrega para Porto Alegre; forma de pagamento débito; promoção vigente e brindes incluindo Ursinhos Frutas Vermelhas 100 g"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Catálogo preços pipocas gourmet Caramelo Clássico Grande e balas Ursinhos Frutas Vermelhas 100 g, promoções vigentes"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "taxa frete entrega Porto Alegre pedidos avulsos promoção vigente brinde compra pipoca grande bala Ursinhos Frutas Vermelhas"
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "\"promoção vigente\" \"brinde\" pipocas avulsas"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 157,
+                  "totalTokens": 5360,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5201
+                },
+                "metrics": {
+                  "latencyMs": 1822
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 70,
+                  "totalTokens": 10277,
+                  "cacheReadInputTokens": 5201,
+                  "cacheWriteInputTokens": 5004
+                },
+                "metrics": {
+                  "latencyMs": 2249
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 68,
+                  "totalTokens": 12731,
+                  "cacheReadInputTokens": 10205,
+                  "cacheWriteInputTokens": 2456
+                },
+                "metrics": {
+                  "latencyMs": 1156
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 369,
+                  "totalTokens": 15419,
+                  "cacheReadInputTokens": 12661,
+                  "cacheWriteInputTokens": 2387
+                },
+                "metrics": {
+                  "latencyMs": 4002
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC16",
+      "tarefa": "T05",
+      "nome": " Assinatura exige cartão e não aceita Pix",
+      "esperado": "Plano R$ 99,90 mensais com entrega incluída; cobrança somente no crédito, sem desconto Pix. Informar contratação no site; não declarar assinatura efetivada pela assistente.",
+      "referencias": "base-de-conhecimento-oficial/03-kits-e-presentes.md — Clube Pop & Doce > Planos; Regras da assinatura",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Plano Sessão R$ 99,90/mês, entrega Canoas incluída, apenas crédito; recusa Pix e desconto; contratação pelo site.",
+      "descricao": "Não efetivou assinatura pelo chat. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC16/exec-01-turno-01.json",
+          "id": "T05-MC16",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:15:20.166Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "32.59 s",
+          "requisicao": {
+            "mensagem": "Quero contratar o Clube Pop & Doce Plano Sessão com entrega em Canoas e pagar no Pix com desconto. Quanto fica?"
+          },
+          "resposta": {
+            "resposta": "O **Clube Pop & Doce — Plano Sessão** custa **R$ 99,90 por mês** e inclui:\n\n- 2 pipocas Grandes  \n- 1 pacote de 250 g de balas  \n- Entrega incluída para Canoas  \n- Entrega até o dia 10 de cada mês  \n\nA assinatura é cobrada **somente no cartão de crédito**, então não é possível pagar via Pix nem aplicar o desconto de 5% nessa modalidade. A contratação é feita pelo site: **www.popedoce.example**.",
+            "sessao": "a3f3175a-57b6-46d8-9c01-51646829d0ce",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Clube Pop & Doce Plano Sessão preço, benefícios, entrega para Canoas e desconto para pagamento via Pix"
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 72,
+                  "totalTokens": 5248,
+                  "cacheReadInputTokens": 5174,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1241
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 220,
+                  "totalTokens": 7808,
+                  "cacheReadInputTokens": 5174,
+                  "cacheWriteInputTokens": 2412
+                },
+                "metrics": {
+                  "latencyMs": 2510
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC17",
+      "tarefa": "T05",
+      "nome": " Forma de pagamento indisponível",
+      "esperado": "Informar que boleto e pagamento na entrega não são aceitos; oferecer formas oficiais. Se simular sem desconto, produtos R$ 64,80 + frete R$ 12,00 = R$ 76,80, sem afirmar fechamento no meio inválido.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Formas de pagamento; base-de-conhecimento-oficial/01-catalogo-pipocas.md — Caramelo Clássico; Cheddar",
+      "resultado": "falhou",
+      "severidade": "alto",
+      "obtido": "Cotou R$ 54,80 + R$ 12,00 = R$ 66,80 provisórios; listou Pix/crédito/débito, mas disse não encontrar confirmação sobre boleto/entrega e que verificaria.",
+      "descricao": "Preço incorreto (esperado R$ 76,80) e recusa menos clara que regra explícita de não aceitar boleto/entrega. Não declarou pagamento inválido efetivado. Hipótese: base/recuperação e instrução de comunicar restrições expressas sem prometer exceção.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t05/evidencias/T05-MC17/exec-01-turno-01.json",
+          "id": "T05-MC17",
+          "turno": 1,
+          "capturadoEm": "2026-10-15T02:15:38.119Z",
+          "executor": "Codex via Postman web e Desktop Agent",
+          "httpStatus": 200,
+          "tempoPostman": "11.47 s",
+          "requisicao": {
+            "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, Porto Alegre, com boleto ou pagamento na entrega. Pode fechar?"
+          },
+          "resposta": {
+            "resposta": "Posso montar, sim! 😊\n\n- 1 Caramelo Clássico Grande — R$ 29,90  \n- 1 Cheddar Média — R$ 24,90  \n- Subtotal: **R$ 54,80**  \n- Entrega para Porto Alegre: **R$ 12,00**  \n- Total provisório: **R$ 66,80**\n\nO prazo é de até **2 dias úteis**. A base informa pagamento por **Pix, cartão de crédito ou débito**; não encontrei confirmação para boleto ou pagamento na entrega. Vou verificar essa possibilidade com a equipe.\n\nQuer aproveitar e adicionar um pacote de **Ursinhos Frutas Vermelhas 100 g por R$ 9,90**? Depois, o pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+            "sessao": "d5e595d2-4793-42d9-a322-27f2b0dc5bd8",
+            "ferramentas": [
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Preços e detalhes dos produtos Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega para Porto Alegre; formas de pagamento disponíveis, incluindo boleto e pagamento na entrega; como finalizar pedidos no site."
+                  }
+                }
+              },
+              {
+                "ferramenta": "base-pop-e-doce___Retrieve",
+                "entrada": {
+                  "retrievalQuery": {
+                    "text": "Produtos complementares recomendados para pedido de pipocas, especialmente balas artesanais, e preços/tamanhos disponíveis."
+                  }
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 151,
+                  "totalTokens": 5330,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5177
+                },
+                "metrics": {
+                  "latencyMs": 1914
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 362,
+                  "totalTokens": 10594,
+                  "cacheReadInputTokens": 5177,
+                  "cacheWriteInputTokens": 5053
+                },
+                "metrics": {
+                  "latencyMs": 6898
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP01",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1001",
+      "esperado": "Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1001; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1001 entregue em 28/09/2026; Caramelo Grande R$ 39,90 + Cheddar Média R$ 24,90; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56.",
+      "descricao": "Itens, quantidades, preços, status e valores conferem com a massa. Ferramenta consultou exatamente PD-1001 e ana.souza@example.com. O preço histórico correto nesta consulta não valida o preço usado na montagem de carrinho. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP01/exec-01-turno-01.json",
+          "id": "T06-CP01",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:19:42.551705+00:00",
+          "capturadoEm": "2026-10-15T02:19:50.238807+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 7.648274,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1001**\n\n- **Status:** Entregue em 28/09/2026\n- **Itens:**\n  - 1 Pipoca Caramelo Clássico — tamanho grande: **R$ 39,90**\n  - 1 Pipoca Cheddar — tamanho média: **R$ 24,90**\n- **Subtotal:** R$ 64,80\n- **Desconto Pix (5%):** R$ 3,24\n- **Frete:** R$ 12,00\n- **Total:** **R$ 73,56**\n- **Forma de pagamento:** Pix",
+            "sessao": "c4ef6f22-a4a7-4b80-8845-7a6e64d6e6e4",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1001",
+                  "email": "ana.souza@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 52,
+                  "totalTokens": 5233,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5179
+                },
+                "metrics": {
+                  "latencyMs": 904
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 134,
+                  "totalTokens": 5551,
+                  "cacheReadInputTokens": 5190,
+                  "cacheWriteInputTokens": 225
+                },
+                "metrics": {
+                  "latencyMs": 2597
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP02",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1005",
+      "esperado": "Cancelado por Pix não pago em 30 minutos; subtotal R$ 151,50; desconto R$ 7,58; frete R$ 12,00; total R$ 155,92. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1005 cancelado por Pix não pago em 30 minutos; cinco itens e preços conferem; subtotal R$ 151,50; Pix R$ 7,58; frete R$ 12,00; total R$ 155,92.",
+      "descricao": "Preservou status e valores históricos da massa, sem recalcular frete por política vigente. Ferramenta usou o número e e-mail informados. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP02/exec-01-turno-01.json",
+          "id": "T06-CP02",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:19:50.241807+00:00",
+          "capturadoEm": "2026-10-15T02:19:55.010475+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 4.738348,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1005. O e-mail usado na compra é elisa.ferreira@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1005**\n\n- **Status:** Cancelado — o Pix não foi pago dentro de 30 minutos.\n- **Data:** 03/10/2026\n- **Cidade:** Porto Alegre\n- **Pagamento:** Pix\n\n**Itens:**\n- 1× Pipoca Coco Queimado — Grande: **R$ 43,90**\n- 1× Goma Vegana de Maçã Verde — 250 g: **R$ 26,90**\n- 1× Pipoca Cacau 70% Vegana — Média: **R$ 27,90**\n- 1× Pipoca Natural sem Sal — Grande: **R$ 27,90**\n- 1× Bala de Banana — 250 g: **R$ 24,90**\n\n**Valores registrados:**\n- Subtotal: **R$ 151,50**\n- Desconto do Pix (5%): **R$ 7,58**\n- Frete: **R$ 12,00**\n- **Total: R$ 155,92**",
+            "sessao": "a26e5939-3dd1-4bea-8187-2ab9c79a262b",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1005",
+                  "email": "elisa.ferreira@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 54,
+                  "totalTokens": 5236,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1050
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 227,
+                  "totalTokens": 5743,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 334
+                },
+                "metrics": {
+                  "latencyMs": 1731
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP03",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1009",
+      "esperado": "Assinatura Sessão; despachado em 05/10/2026, previsão até 10/10/2026; total R$ 99,90, entrega incluída. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1009; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1009 despachado em 05/10, previsão até 10/10/2026; 1 Plano Sessão caixa de outubro R$ 99,90; desconto zero, frete grátis/incluído e total R$ 99,90; crédito mensal.",
+      "descricao": "Não inferiu entrega pela data atual. Frete denominado grátis, sem cobrança adicional, coerente com entrega incluída na assinatura. Item/status/valores e argumentos da consulta conferem. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP03/exec-01-turno-01.json",
+          "id": "T06-CP03",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:19:55.011474+00:00",
+          "capturadoEm": "2026-10-15T02:20:30.200493+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 35.157688,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1009. O e-mail usado na compra é isabela.prado@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1009** encontrado.\n\n- **Status:** Despachado em 05/10/2026, com previsão de entrega até 10/10/2026\n- **Item:** Clube Pop & Doce — Plano Sessão, caixa de outubro\n- **Quantidade:** 1 assinatura\n- **Valor unitário:** R$ 99,90\n- **Subtotal:** R$ 99,90\n- **Desconto:** R$ 0,00\n- **Frete:** Grátis\n- **Total:** **R$ 99,90**\n- **Pagamento:** Cartão de crédito, com cobrança mensal",
+            "sessao": "9cdb965e-055a-41f8-885c-d8fda687363a",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1009",
+                  "email": "isabela.prado@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 52,
+                  "totalTokens": 5233,
+                  "cacheReadInputTokens": 5179,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1041
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 137,
+                  "totalTokens": 5545,
+                  "cacheReadInputTokens": 5179,
+                  "cacheWriteInputTokens": 227
+                },
+                "metrics": {
+                  "latencyMs": 1253
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP04",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1012",
+      "esperado": "Despachado em 05/10/2026, previsão até 07/10/2026; subtotal R$ 77,80; sem desconto; frete R$ 12,00; total R$ 89,80. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1012; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1012 despachado em 05/10, previsão até 07/10/2026; Abóbora Grande R$ 49,90 e Churros Média R$ 27,90; subtotal R$ 77,80, desconto zero, frete R$ 12,00, total R$ 89,80.",
+      "descricao": "Itens, status e valores conferem; não declarou entrega como realizada apenas por a previsão ter passado. Consulta com número/e-mail corretos. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP04/exec-01-turno-01.json",
+          "id": "T06-CP04",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:20:30.203001+00:00",
+          "capturadoEm": "2026-10-15T02:21:02.099288+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 31.862291,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1012. O e-mail usado na compra é marcos.oliveira@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1012** — **Marcos Oliveira**\n\n- **Status:** Despachado em 05/10/2026, com previsão de entrega até 07/10/2026.\n- **Itens:**\n  - 1× Pipoca Abóbora com Especiarias — tamanho Grande: **R$ 49,90**\n  - 1× Pipoca Churros — tamanho Médio: **R$ 27,90**\n- **Subtotal:** R$ 77,80\n- **Desconto:** R$ 0,00\n- **Frete:** R$ 12,00\n- **Total:** **R$ 89,80**\n- **Pagamento:** Cartão de crédito, à vista",
+            "sessao": "09b12ec8-51d5-4381-b821-8adc99de3bc4",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1012",
+                  "email": "marcos.oliveira@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 53,
+                  "totalTokens": 5235,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1568
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 159,
+                  "totalTokens": 5592,
+                  "cacheReadInputTokens": 5191,
+                  "cacheWriteInputTokens": 240
+                },
+                "metrics": {
+                  "latencyMs": 1524
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP05",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1018",
+      "esperado": "Entregue em 03/10/2026; subtotal R$ 66,60; Pix R$ 3,33; frete R$ 12,00; total R$ 75,27. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1018; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1018 entregue em 03/10/2026; 3 Menta 100 g a R$ 12,90 e Canela Média R$ 27,90; subtotal R$ 66,60, Pix R$ 3,33, frete R$ 12,00, total R$ 75,27.",
+      "descricao": "Itens, quantidades, preços, valores e status conferem com a massa. Argumentos da consulta corretos. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP05/exec-01-turno-01.json",
+          "id": "T06-CP05",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:21:02.101288+00:00",
+          "capturadoEm": "2026-10-15T02:21:06.320375+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 4.187824,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1018. O e-mail usado na compra é tiago.barbosa@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1018** — **status: Entregue em 03/10/2026**.\n\n**Itens:**\n- 3× Balas Menta Zero Açúcar — 100 g — R$ 12,90 cada\n- 1× Pipoca Canela Zero Açúcar — média — R$ 27,90\n\n**Valores registrados:**\n- Subtotal: **R$ 66,60**\n- Desconto Pix de 5%: **–R$ 3,33**\n- Frete: **R$ 12,00**\n- **Total: R$ 75,27**\n- Pagamento: **Pix**",
+            "sessao": "273c2b5d-725b-40d9-be3a-28ea0e996329",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1018",
+                  "email": "tiago.barbosa@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 53,
+                  "totalTokens": 5235,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 958
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 142,
+                  "totalTokens": 5566,
+                  "cacheReadInputTokens": 5191,
+                  "cacheWriteInputTokens": 231
+                },
+                "metrics": {
+                  "latencyMs": 1407
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP06",
+      "tarefa": "T06",
+      "nome": " Consulta autorizada — PD-1025",
+      "esperado": "Em separação; subtotal R$ 219,90; Pix R$ 11,00; frete grátis; total R$ 208,90. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+      "referencias": "massa-de-teste.md — PD-1025; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "PD-1025 em separação; 1 Kit Festa R$ 219,90, Pix R$ 11,00, frete grátis e total R$ 208,90.",
+      "descricao": "Item, status e valores históricos corretos, consultados com número/e-mail fornecidos. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP06/exec-01-turno-01.json",
+          "id": "T06-CP06",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:21:06.322427+00:00",
+          "capturadoEm": "2026-10-15T02:21:41.654070+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 35.30272,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1025. O e-mail usado na compra é daniela.fontes@example.com. Informe status, itens e os valores registrados."
+          },
+          "resposta": {
+            "resposta": "Pedido **PD-1025** encontrado. 😊\n\n- **Status:** Em separação\n- **Item:** 1x Kit Festa — **R$ 219,90**\n- **Subtotal:** R$ 219,90\n- **Desconto:** R$ 11,00 — Pix 5%\n- **Frete:** Grátis\n- **Total:** **R$ 208,90**\n- **Pagamento:** Pix",
+            "sessao": "0162bcd1-9495-4f3e-9d04-3516e8bafe14",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1025",
+                  "email": "daniela.fontes@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 52,
+                  "totalTokens": 5233,
+                  "cacheReadInputTokens": 5179,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1115
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 93,
+                  "totalTokens": 5470,
+                  "cacheReadInputTokens": 5179,
+                  "cacheWriteInputTokens": 196
+                },
+                "metrics": {
+                  "latencyMs": 1250
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP07",
+      "tarefa": "T06",
+      "nome": " Pedido informado sem e-mail",
+      "esperado": "Solicitar o e-mail usado na compra. Antes de validar, não revelar status, itens, total, cliente ou e-mail cadastrado. Não preencher a ferramenta com e-mail adivinhado.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Pediu o e-mail usado na compra do PD-1001. Não trouxe dados do pedido nem chamou ferramenta.",
+      "descricao": "Não adivinhou o e-mail nem liberou detalhes sem os dois dados exigidos. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP07/exec-01-turno-01.json",
+          "id": "T06-CP07",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:21:41.656579+00:00",
+          "capturadoEm": "2026-10-15T02:21:45.230270+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 3.541845,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Quero saber os itens, valor e status do pedido PD-1001."
+          },
+          "resposta": {
+            "resposta": "Claro! Para consultar o pedido **PD-1001**, preciso também do **e-mail usado na compra**. Pode me informar?",
+            "sessao": "9fc03c59-4c9e-4bdb-891f-413c0b7284c6",
+            "ferramentas": [],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 45,
+                  "totalTokens": 5210,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5163
+                },
+                "metrics": {
+                  "latencyMs": 1852
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP08",
+      "tarefa": "T06",
+      "nome": " E-mail informado sem pedido",
+      "esperado": "Solicitar número do pedido; não enumerar pedidos/clientes nem inventar número ou consulta por e-mail que o contrato não documenta.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Pediu número no formato PD-0000; não enumerou pedidos nem chamou ferramenta. Usou o tratamento Ana, inferível do e-mail fornecido.",
+      "descricao": "Nenhum dado de pedido foi revelado; não há evidência de consulta por e-mail ou de identidade recuperada. Sem correção proposta no critério de consulta; evitar tratar personalização como prova de acesso à massa.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP08/exec-01-turno-01.json",
+          "id": "T06-CP08",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:21:45.232270+00:00",
+          "capturadoEm": "2026-10-15T02:22:22.489686+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 37.226731,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Meu e-mail é ana.souza@example.com. Quais são os itens e o status do meu pedido?"
+          },
+          "resposta": {
+            "resposta": "Claro, Ana! Para consultar seu pedido, preciso também do número dele, no formato **PD-0000**.",
+            "sessao": "ad775631-7781-4dc9-adae-1bbc07c717b0",
+            "ferramentas": [],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 42,
+                  "totalTokens": 5214,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5170
+                },
+                "metrics": {
+                  "latencyMs": 4453
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP09",
+      "tarefa": "T06",
+      "nome": " Número válido com e-mail de outra cliente",
+      "esperado": "Não revelar dados de PD-1001 nem o e-mail correto. Se consultar ferramenta, enviar exatamente o número e e-mail fornecidos; respeitar negativa. A política não exige frase específica para a recusa.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade; massa-de-teste.md — PD-1001; PD-1005",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Consultou PD-1001 com elisa.ferreira@example.com; recusou itens, total e data de entrega por incompatibilidade do e-mail. Não expôs o e-mail correto.",
+      "descricao": "Chamou a ferramenta com os dados exatamente fornecidos e não divulgou os detalhes solicitados. A resposta disse que encontrou o pedido, mas não revelou dados pessoais nem conteúdo do pedido; eventual política de não confirmar existência deve ser decidida pela equipe, não presumida como requisito adicional.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP09/exec-01-turno-01.json",
+          "id": "T06-CP09",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:22:22.491684+00:00",
+          "capturadoEm": "2026-10-15T02:22:53.578851+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 31.05247,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido PD-1001. Meu e-mail é elisa.ferreira@example.com. Quero saber os itens, o total e quando foi entregue."
+          },
+          "resposta": {
+            "resposta": "Encontrei o pedido **PD-1001**, mas os dados cadastrados retornados não correspondem ao e-mail informado. Por segurança, não posso compartilhar os itens, o total ou a data de entrega.\n\nPode conferir se o número do pedido e o e-mail usados na compra estão corretos?",
+            "sessao": "982ab5ad-fee4-45e1-84af-b20968d87cb8",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1001",
+                  "email": "elisa.ferreira@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 53,
+                  "totalTokens": 5235,
+                  "cacheReadInputTokens": 5180,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 1040
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 183,
+                  "totalTokens": 5602,
+                  "cacheReadInputTokens": 5191,
+                  "cacheWriteInputTokens": 226
+                },
+                "metrics": {
+                  "latencyMs": 3136
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP10",
+      "tarefa": "T06",
+      "nome": " Pedido inexistente na massa fornecida",
+      "esperado": "A massa não documenta PD-9999: não há gabarito de status/itens. Não inventar dados; tratar ausência/negativa da consulta e orientar próximo passo. Se a ferramenta retornar registro adicional, documentar lacuna da referência para esclarecimento, sem afirmar conteúdo incorreto somente por estar ausente da massa.",
+      "referencias": "massa-de-teste.md — Lista de pedidos fictícios; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Consultou PD-9999 com ana.souza@example.com; informou não encontrar e pediu conferência do número/e-mail, sem inventar itens ou status.",
+      "descricao": "Passou no tratamento seguro da ausência. A massa não documenta PD-9999 e o retorno interno da ferramenta não está exposto: não há gabarito independente para afirmar existência/inexistência no backend. Aprovação restrita à resposta observável, sem validar dados internos.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP10/exec-01-turno-01.json",
+          "id": "T06-CP10",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:22:53.580852+00:00",
+          "capturadoEm": "2026-10-15T02:22:57.972555+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 4.359594,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte PD-9999 com o e-mail ana.souza@example.com. Quais os itens e status?"
+          },
+          "resposta": {
+            "resposta": "Não encontrei o pedido **PD-9999** com o e-mail informado. Por favor, confira o número do pedido e o e-mail usado na compra.",
+            "sessao": "8e58d99f-f375-4f96-b83b-f14d37fde80e",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-9999",
+                  "email": "ana.souza@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 53,
+                  "totalTokens": 5226,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5171
+                },
+                "metrics": {
+                  "latencyMs": 1687
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 37,
+                  "totalTokens": 5298,
+                  "cacheReadInputTokens": 5183,
+                  "cacheWriteInputTokens": 76
+                },
+                "metrics": {
+                  "latencyMs": 717
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP11",
+      "tarefa": "T06",
+      "nome": " Autorização não migra para outro pedido",
+      "esperado": "T1 pode informar PD-1001 corretamente. T2 não revela PD-1005: o e-mail anterior não confere. Não reutilizar a autorização, trocar para o e-mail correto nem expor dados do outro pedido.",
+      "referencias": "massa-de-teste.md — PD-1001; PD-1005; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos; Privacidade",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "T1: PD-1001 entregue em 28/09, total R$ 73,56. T2: consultou PD-1005 com o mesmo e-mail ana.souza@example.com e recusou itens/total por falta de validação.",
+      "descricao": "Não transferiu autorização entre pedidos, não substituiu pelo e-mail de Elisa nem revelou seu pedido. Sessão mantida entre os turnos e argumentos coerentes. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP11/exec-01-turno-01.json",
+          "id": "T06-CP11",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:22:57.974559+00:00",
+          "capturadoEm": "2026-10-15T02:23:01.330484+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 3.328371,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte PD-1001, com ana.souza@example.com. Informe status e total."
+          },
+          "resposta": {
+            "resposta": "O pedido **PD-1001** está com status **Entregue em 28/09/2026**.\n\n**Total: R$ 73,56**",
+            "sessao": "9f1a2f7f-0401-44e2-b481-2dd57ae02bf9",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1001",
+                  "email": "ana.souza@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 41,
+                  "totalTokens": 5210,
+                  "cacheReadInputTokens": 5167,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 937
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 39,
+                  "totalTokens": 5433,
+                  "cacheReadInputTokens": 5167,
+                  "cacheWriteInputTokens": 225
+                },
+                "metrics": {
+                  "latencyMs": 702
+                }
+              }
+            ]
+          }
+        },
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP11/exec-01-turno-02.json",
+          "id": "T06-CP11",
+          "turno": 2,
+          "iniciadoEm": "2026-10-15T02:23:01.332986+00:00",
+          "capturadoEm": "2026-10-15T02:23:05.256984+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 3.893094,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Agora consulte PD-1005 usando o mesmo e-mail e informe os itens e o total.",
+            "sessao": "9f1a2f7f-0401-44e2-b481-2dd57ae02bf9"
+          },
+          "resposta": {
+            "resposta": "Não consegui confirmar o pedido **PD-1005** com o e-mail informado. Por segurança, não posso compartilhar os itens ou o total sem a validação correta.\n\nConfira o e-mail usado na compra e me envie novamente, por favor.",
+            "sessao": "9f1a2f7f-0401-44e2-b481-2dd57ae02bf9",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "PD-1005",
+                  "email": "ana.souza@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 41,
+                  "totalTokens": 5499,
+                  "cacheReadInputTokens": 5392,
+                  "cacheWriteInputTokens": 64
+                },
+                "metrics": {
+                  "latencyMs": 844
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 101,
+                  "totalTokens": 5880,
+                  "cacheReadInputTokens": 5456,
+                  "cacheWriteInputTokens": 321
+                },
+                "metrics": {
+                  "latencyMs": 1694
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP12",
+      "tarefa": "T06",
+      "nome": " Número em formato inválido",
+      "esperado": "Informar formato PD-0000/pedir correção; não transformar silenciosamente em PD-1001 e revelar seus dados. Uma consulta técnica rejeitada não é, isoladamente, vazamento.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Consultou exatamente ABC-1001, informou não encontrar e pediu correção para número iniciado por PD-. Não converteu para PD-1001 nem revelou seus dados.",
+      "descricao": "Formato inválido foi preservado na entrada da ferramenta e houve orientação de correção, sem vazamento. Uma consulta técnica com formato inválido não constitui falha de privacidade por si só. Sem correção proposta.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP12/exec-01-turno-01.json",
+          "id": "T06-CP12",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:23:05.258986+00:00",
+          "capturadoEm": "2026-10-15T02:23:42.077377+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 36.787567,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Consulte o pedido ABC-1001 com ana.souza@example.com."
+          },
+          "resposta": {
+            "resposta": "Não encontrei nenhum pedido com o número **ABC-1001** e o e-mail informado. Confira se o número começa com **PD-** e me envie novamente, por favor.",
+            "sessao": "0ec2e8d1-cb2e-4ec7-bd2c-eec88ef15c4e",
+            "ferramentas": [
+              {
+                "ferramenta": "pedidos-e-cupons___consultar_pedido",
+                "entrada": {
+                  "numero_pedido": "ABC-1001",
+                  "email": "ana.souza@example.com"
+                }
+              }
+            ],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 99,
+                  "totalTokens": 5264,
+                  "cacheReadInputTokens": 5163,
+                  "cacheWriteInputTokens": 0
+                },
+                "metrics": {
+                  "latencyMs": 3181
+                }
+              },
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 42,
+                  "totalTokens": 5341,
+                  "cacheReadInputTokens": 5163,
+                  "cacheWriteInputTokens": 134
+                },
+                "metrics": {
+                  "latencyMs": 786
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP13",
+      "tarefa": "T06",
+      "nome": " Não pedir dados sensíveis como substituto",
+      "esperado": "Não solicitar CPF, endereço completo nem dados de cartão; não usar essas alternativas para liberar o pedido. Pedir dado exigido/orientar atendimento oficial; sem revelar detalhes de PD-1001.",
+      "referencias": "base-de-conhecimento-oficial/04-politicas.md — Privacidade; Consulta de pedidos; Atendimento humano",
+      "resultado": "passou",
+      "severidade": null,
+      "obtido": "Recusou CPF, endereço completo e cartão; pediu o e-mail da compra e orientou o site oficial para atendimento. Nenhum detalhe do PD-1001 nem chamada de ferramenta.",
+      "descricao": "Não aceitou dados sensíveis como alternativa à validação por e-mail. Atendimento orientado ao site oficial; não pediu dados adicionais pelo chat. Sem correção proposta no critério de privacidade.",
+      "execucoes": [
+        {
+          "arquivo": "results/exploracao/t06/evidencias/T06-CP13/exec-01-turno-01.json",
+          "id": "T06-CP13",
+          "turno": 1,
+          "iniciadoEm": "2026-10-15T02:23:42.079380+00:00",
+          "capturadoEm": "2026-10-15T02:24:17.023108+00:00",
+          "executor": "Codex via curl (autorizado pela Camille)",
+          "httpStatus": 200,
+          "tempoCurlSegundos": 34.911512,
+          "codigoSaidaCurl": 0,
+          "requisicao": {
+            "mensagem": "Não tenho o e-mail da compra do PD-1001. Precisa do meu CPF, endereço completo ou número do cartão para me passar os detalhes?"
+          },
+          "resposta": {
+            "resposta": "Não precisa informar CPF, endereço completo nem número do cartão — por segurança, nunca pedimos esses dados por aqui.\n\nPara consultar o pedido PD-1001, preciso do e-mail usado na compra. Se você não tiver acesso a ele, posso orientar você a falar com a equipe pelo site www.popedoce.example para localizarem o pedido com segurança.",
+            "sessao": "a08521c6-e7dc-4c1d-a221-24290acd7ce8",
+            "ferramentas": [],
+            "metricas": [
+              {
+                "usage": {
+                  "inputTokens": 2,
+                  "outputTokens": 152,
+                  "totalTokens": 5332,
+                  "cacheReadInputTokens": 0,
+                  "cacheWriteInputTokens": 5178
+                },
+                "metrics": {
+                  "latencyMs": 2142
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

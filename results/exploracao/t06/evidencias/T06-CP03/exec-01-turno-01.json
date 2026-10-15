@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP03",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:19:55.011474+00:00",
+  "capturadoEm": "2026-10-15T02:20:30.200493+00:00",
+  "executor": "Codex via curl (autorizado pela Camille)",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 35.157688,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1009. O e-mail usado na compra é isabela.prado@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1009** encontrado.\n\n- **Status:** Despachado em 05/10/2026, com previsão de entrega até 10/10/2026\n- **Item:** Clube Pop & Doce — Plano Sessão, caixa de outubro\n- **Quantidade:** 1 assinatura\n- **Valor unitário:** R$ 99,90\n- **Subtotal:** R$ 99,90\n- **Desconto:** R$ 0,00\n- **Frete:** Grátis\n- **Total:** **R$ 99,90**\n- **Pagamento:** Cartão de crédito, com cobrança mensal",
+    "sessao": "9cdb965e-055a-41f8-885c-d8fda687363a",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1009",
+          "email": "isabela.prado@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 52,
+          "totalTokens": 5233,
+          "cacheReadInputTokens": 5179,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1041
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 137,
+          "totalTokens": 5545,
+          "cacheReadInputTokens": 5179,
+          "cacheWriteInputTokens": 227
+        },
+        "metrics": {
+          "latencyMs": 1253
+        }
+      }
+    ]
+  }
+}

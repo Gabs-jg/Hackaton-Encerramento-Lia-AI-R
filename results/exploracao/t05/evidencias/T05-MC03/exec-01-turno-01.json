@@ -1,0 +1,71 @@
+{
+  "id": "T05-MC03",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:56:08.197Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "8.32 s",
+  "requisicao": {
+    "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, cartão de débito, entrega em São Paulo/SP. Quanto pagarei com o frete?"
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido fica assim:\n\n- 1 Caramelo Clássico Grande: **R$ 29,90**\n- 1 Cheddar Média: **R$ 24,90**\n- **Subtotal dos produtos: R$ 54,80**\n- Pagamento: **cartão de débito**\n- Entrega: **São Paulo/SP**\n\nO frete para outros estados é calculado pela transportadora no site, após informar o CEP. Por isso, não consigo informar o valor exato nem o total final por aqui. O prazo estimado é de **5 a 10 dias úteis**.\n\nAntes de finalizar, quer incluir um pacotinho de **balas artesanais** para acompanhar? O pedido é concluído em **www.popedoce.example**, onde você informa o endereço, confere o frete e realiza o pagamento.",
+    "sessao": "4032a24f-279c-4b58-b7bb-16b6ee8230ca",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços da pipoca Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega/frete para São Paulo/SP; formas de pagamento cartão de débito."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Tabela de frete ou taxa de entrega para São Paulo/SP, por cidade/estado ou faixa de pedido. Qual o valor do frete para São Paulo capital?"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 80,
+          "totalTokens": 5265,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5183
+        },
+        "metrics": {
+          "latencyMs": 1622
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 70,
+          "totalTokens": 7689,
+          "cacheReadInputTokens": 5183,
+          "cacheWriteInputTokens": 2434
+        },
+        "metrics": {
+          "latencyMs": 1153
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 272,
+          "totalTokens": 10322,
+          "cacheReadInputTokens": 7617,
+          "cacheWriteInputTokens": 2431
+        },
+        "metrics": {
+          "latencyMs": 2824
+        }
+      }
+    ]
+  }
+}

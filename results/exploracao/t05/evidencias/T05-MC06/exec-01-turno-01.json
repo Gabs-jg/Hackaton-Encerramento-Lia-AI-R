@@ -1,0 +1,71 @@
+{
+  "id": "T05-MC06",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:59:06.326Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "9.45 s",
+  "requisicao": {
+    "mensagem": "Monte: 6 Natural sem Sal Pequenas, 2 Caramelo Clássico Pequenas, 1 Toffee de Caramelo Salgado 250 g e 1 Chocolate Belga Média. Porto Alegre, débito, sem cupom. Detalhe o total e o frete."
+  },
+  "resposta": {
+    "resposta": "Seu pedido ficou assim:\n\n- 6 × Natural sem Sal Pequena: **R$ 59,40**\n- 2 × Caramelo Clássico Pequena: **R$ 29,80**\n- 1 × Toffee de Caramelo Salgado 250 g: **R$ 30,90**\n- 1 × Chocolate Belga Média: **R$ 29,90**\n\n**Subtotal dos produtos: R$ 150,00**  \n**Cupom: nenhum**  \n**Pagamento: cartão de débito**  \n**Frete para Porto Alegre: grátis**  \n**Total: R$ 150,00**\n\nA tabela de entrega informa frete grátis para pedidos acima de R$ 100 em Porto Alegre. Encontrei uma divergência em outra informação da base sobre o limite do frete grátis; vou confirmar com a equipe para garantir, mas o cálculo acima segue a tabela de taxas.\n\nQuer acrescentar mais alguma bala artesanal para acompanhar? O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+    "sessao": "3bda62a9-781f-469c-bf78-d680c4a8cc91",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços dos produtos Natural sem Sal Pequena, Caramelo Clássico Pequena, Toffee de Caramelo Salgado 250 g e Chocolate Belga Média; taxa de entrega/frete para Porto Alegre; formas de pagamento incluindo débito."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "política de entrega frete Porto Alegre taxa de entrega cálculo pedidos Pop & Doce"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 94,
+          "totalTokens": 5303,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5207
+        },
+        "metrics": {
+          "latencyMs": 1179
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 54,
+          "totalTokens": 7852,
+          "cacheReadInputTokens": 5207,
+          "cacheWriteInputTokens": 2589
+        },
+        "metrics": {
+          "latencyMs": 887
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 518,
+          "totalTokens": 10709,
+          "cacheReadInputTokens": 7796,
+          "cacheWriteInputTokens": 2393
+        },
+        "metrics": {
+          "latencyMs": 5074
+        }
+      }
+    ]
+  }
+}

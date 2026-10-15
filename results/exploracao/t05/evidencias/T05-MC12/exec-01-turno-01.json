@@ -1,0 +1,103 @@
+{
+  "id": "T05-MC12",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:12:48.075Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "19.01 s",
+  "requisicao": {
+    "mensagem": "Quero 1 mix de 250 g com Ursinhos Frutas Vermelhas e Goma Vegana de Maçã Verde, mais 1 pipoca Natural sem Sal Pequena. Porto Alegre, débito. Detalhe o preço."
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido fica assim:\n\n- **1 mix de gomas — 250 g**\n  - Ursinhos Frutas Vermelhas\n  - Goma Vegana de Maçã Verde  \n  - Preço pelo sabor mais caro do mix: **R$ 26,90**\n- **1 Pipoca Natural sem Sal — Pequena:** **R$ 9,90**\n\n**Subtotal dos produtos:** R$ 36,80  \n**Entrega para Porto Alegre:** R$ 12,00  \n**Total:** **R$ 48,80**\n\nPagamento: **cartão de débito**. O prazo de entrega é de até **2 dias úteis**.\n\nPara complementar, que tal incluir mais um pacote de balas artesanais? Posso adicionar **Ursinhos Frutas Vermelhas de 100 g por R$ 9,90**. O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+    "sessao": "1bddc28f-94d5-425e-bf17-3e4c11c5ef01",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços, composição e disponibilidade de: mix de 250 g com Ursinhos Frutas Vermelhas e Goma Vegana de Maçã Verde; pipoca Natural sem Sal tamanho Pequena. Taxa de entrega para Porto Alegre e pagamento no débito. Informações para montar pedido."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Tabela de preços de pipocas e balas, preço do mix 250 g, preço da pipoca Natural sem Sal Pequena, taxa de entrega para Porto Alegre e formas de pagamento."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Goma Vegana de Maçã Verde preço 250 g ingredientes e alergênicos"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "entrega Porto Alegre taxa de entrega frete formas de pagamento débito"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "política de entrega por cidade Porto Alegre valores de frete"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "formas de pagamento cartão débito Pop & Doce"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 181,
+          "totalTokens": 5381,
+          "cacheReadInputTokens": 5198,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 7823
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 185,
+          "totalTokens": 10504,
+          "cacheReadInputTokens": 5198,
+          "cacheWriteInputTokens": 5119
+        },
+        "metrics": {
+          "latencyMs": 2194
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 323,
+          "totalTokens": 20322,
+          "cacheReadInputTokens": 10317,
+          "cacheWriteInputTokens": 9680
+        },
+        "metrics": {
+          "latencyMs": 3301
+        }
+      }
+    ]
+  }
+}

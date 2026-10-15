@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP01",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:19:42.551705+00:00",
+  "capturadoEm": "2026-10-15T02:19:50.238807+00:00",
+  "executor": "Codex via curl (autorizado pela Camille)",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 7.648274,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1001**\n\n- **Status:** Entregue em 28/09/2026\n- **Itens:**\n  - 1 Pipoca Caramelo Clássico — tamanho grande: **R$ 39,90**\n  - 1 Pipoca Cheddar — tamanho média: **R$ 24,90**\n- **Subtotal:** R$ 64,80\n- **Desconto Pix (5%):** R$ 3,24\n- **Frete:** R$ 12,00\n- **Total:** **R$ 73,56**\n- **Forma de pagamento:** Pix",
+    "sessao": "c4ef6f22-a4a7-4b80-8845-7a6e64d6e6e4",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1001",
+          "email": "ana.souza@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 52,
+          "totalTokens": 5233,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5179
+        },
+        "metrics": {
+          "latencyMs": 904
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 134,
+          "totalTokens": 5551,
+          "cacheReadInputTokens": 5190,
+          "cacheWriteInputTokens": 225
+        },
+        "metrics": {
+          "latencyMs": 2597
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T06-CP07",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:21:41.656579+00:00",
+  "capturadoEm": "2026-10-15T02:21:45.230270+00:00",
+  "executor": "Codex via curl (autorizado pela Camille)",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 3.541845,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Quero saber os itens, valor e status do pedido PD-1001."
+  },
+  "resposta": {
+    "resposta": "Claro! Para consultar o pedido **PD-1001**, preciso também do **e-mail usado na compra**. Pode me informar?",
+    "sessao": "9fc03c59-4c9e-4bdb-891f-413c0b7284c6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 45,
+          "totalTokens": 5210,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5163
+        },
+        "metrics": {
+          "latencyMs": 1852
+        }
+      }
+    ]
+  }
+}

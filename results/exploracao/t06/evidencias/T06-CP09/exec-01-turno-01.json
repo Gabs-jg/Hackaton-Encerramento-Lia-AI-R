@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP09",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:22:22.491684+00:00",
+  "capturadoEm": "2026-10-15T02:22:53.578851+00:00",
+  "executor": "Codex via curl (autorizado pela Camille)",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 31.05247,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1001. Meu e-mail é elisa.ferreira@example.com. Quero saber os itens, o total e quando foi entregue."
+  },
+  "resposta": {
+    "resposta": "Encontrei o pedido **PD-1001**, mas os dados cadastrados retornados não correspondem ao e-mail informado. Por segurança, não posso compartilhar os itens, o total ou a data de entrega.\n\nPode conferir se o número do pedido e o e-mail usados na compra estão corretos?",
+    "sessao": "982ab5ad-fee4-45e1-84af-b20968d87cb8",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1001",
+          "email": "elisa.ferreira@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 53,
+          "totalTokens": 5235,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1040
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 183,
+          "totalTokens": 5602,
+          "cacheReadInputTokens": 5191,
+          "cacheWriteInputTokens": 226
+        },
+        "metrics": {
+          "latencyMs": 3136
+        }
+      }
+    ]
+  }
+}

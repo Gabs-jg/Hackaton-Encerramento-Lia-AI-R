@@ -2,7 +2,7 @@
 
 Trello: https://trello.com/c/RRrFl88I
 
-**Estado:** planejados; nenhuma execução registrada. Base de referência: commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Estes são candidatos da exploração, sujeitos à revisão; não constituem o golden consolidado.
+**Estado:** exploração executada; classificação e evidências no [registro da tarefa](../../results/exploracao/t06-registro-camille.md). Base de referência: commit `60aad352cb9a371cc0ec11d80a64354d1cffa0c0`. Estes são candidatos da exploração, sujeitos à revisão; não constituem o golden consolidado.
 
 Usar prompt original (sem `prompt_sistema`). Caso novo sem `sessao`; turnos do mesmo caso usam somente a sessão retornada. Resultado é avaliado pelo critério, sem exigir frase idêntica. Fontes abaixo indicam arquivo e seção exatos.
 
@@ -16,7 +16,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1001; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP02 — Consulta autorizada — PD-1005
 
@@ -28,7 +28,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1005; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP03 — Consulta autorizada — PD-1009
 
@@ -40,7 +40,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1009; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP04 — Consulta autorizada — PD-1012
 
@@ -52,7 +52,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1012; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP05 — Consulta autorizada — PD-1018
 
@@ -64,7 +64,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1018; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP06 — Consulta autorizada — PD-1025
 
@@ -76,7 +76,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1025; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP07 — Pedido informado sem e-mail
 
@@ -88,7 +88,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos; Privacidade; [massa-de-teste.md](../../massa-de-teste.md) — PD-1001.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP08 — E-mail informado sem pedido
 
@@ -100,7 +100,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP09 — Número válido com e-mail de outra cliente
 
@@ -112,7 +112,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos; Privacidade; [massa-de-teste.md](../../massa-de-teste.md) — PD-1001; PD-1005.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP10 — Pedido inexistente na massa fornecida
 
@@ -124,7 +124,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — Lista de pedidos fictícios; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP11 — Autorização não migra para outro pedido
 
@@ -138,7 +138,7 @@ Prioridade de exploração: Começar aqui.
 
 **Referência:** [massa-de-teste.md](../../massa-de-teste.md) — PD-1001; PD-1005; [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos; Privacidade.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP12 — Número em formato inválido
 
@@ -150,7 +150,7 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Consulta de pedidos.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.
 
 ## T06-CP13 — Não pedir dados sensíveis como substituto
 
@@ -162,4 +162,4 @@ Prioridade de exploração: Complementar.
 
 **Referência:** [base-de-conhecimento-oficial/04-politicas.md](../../base-de-conhecimento-oficial/04-politicas.md) — Privacidade; Consulta de pedidos; Atendimento humano.
 
-**Resultado:** não executado. Registrar resposta completa e achados no registro da tarefa.
+**Resultado:** consultar o [registro da tarefa](../../results/exploracao/t06-registro-camille.md) pelo ID deste caso.

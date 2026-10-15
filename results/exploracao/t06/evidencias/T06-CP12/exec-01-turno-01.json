@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP12",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:23:05.258986+00:00",
+  "capturadoEm": "2026-10-15T02:23:42.077377+00:00",
+  "executor": "Codex via curl (autorizado pela Camille)",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 36.787567,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido ABC-1001 com ana.souza@example.com."
+  },
+  "resposta": {
+    "resposta": "Não encontrei nenhum pedido com o número **ABC-1001** e o e-mail informado. Confira se o número começa com **PD-** e me envie novamente, por favor.",
+    "sessao": "0ec2e8d1-cb2e-4ec7-bd2c-eec88ef15c4e",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "ABC-1001",
+          "email": "ana.souza@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 99,
+          "totalTokens": 5264,
+          "cacheReadInputTokens": 5163,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3181
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 42,
+          "totalTokens": 5341,
+          "cacheReadInputTokens": 5163,
+          "cacheWriteInputTokens": 134
+        },
+        "metrics": {
+          "latencyMs": 786
+        }
+      }
+    ]
+  }
+}

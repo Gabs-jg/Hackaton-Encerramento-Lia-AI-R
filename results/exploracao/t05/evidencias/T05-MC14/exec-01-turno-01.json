@@ -1,0 +1,51 @@
+{
+  "id": "T05-MC14",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:13:56.656Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "6.78 s",
+  "requisicao": {
+    "mensagem": "Quero 1 Caixa Presente Pop & Doce com o cartão incluído, sem extras, entrega em Porto Alegre, débito. Mostre produtos, frete e total."
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido fica assim:\n\n- **1 Caixa Presente Pop & Doce** — R$ 119,90  \n  - 2 pipocas médias doces em lata presente  \n  - 2 pacotes de balas de 100 g  \n  - 1 cartão com mensagem personalizada incluído  \n- **Frete para Porto Alegre** — R$ 12,00  \n- **Pagamento:** cartão de débito  \n\n**Total: R$ 131,90**\n\nComo você pediu sem extras, não incluí nenhum produto adicional. A caixa permite escolher os sabores das pipocas e das balas. Para finalizar, acesse **www.popedoce.example**, informe o endereço, escolha os sabores e faça o pagamento.",
+    "sessao": "c7203b17-ff08-403e-9267-d7f4d23714b6",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Caixa Presente Pop & Doce com cartão incluído, preço, conteúdo, sem extras; taxa de entrega para Porto Alegre; formas de pagamento débito."
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 80,
+          "totalTokens": 5266,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5184
+        },
+        "metrics": {
+          "latencyMs": 1532
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 335,
+          "totalTokens": 7942,
+          "cacheReadInputTokens": 5184,
+          "cacheWriteInputTokens": 2421
+        },
+        "metrics": {
+          "latencyMs": 3527
+        }
+      }
+    ]
+  }
+}

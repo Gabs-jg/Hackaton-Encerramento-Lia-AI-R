@@ -1,0 +1,72 @@
+{
+  "id": "T05-MC01",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:50:14.766Z",
+  "executor": "Codex via Postman web",
+  "httpStatus": 200,
+  "tempoPostman": "8.50 s",
+  "requisicao": {
+    "mensagem": "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?"
+  },
+  "resposta": {
+    "resposta": "Claro! Como o pagamento será via Pix, há **5% de desconto nos produtos**:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- 1 Pipoca Cheddar Média: **R$ 24,90**\n- **Subtotal:** R$ 54,80\n- **Desconto Pix (5%):** −R$ 2,74\n- **Frete para Porto Alegre:** R$ 12,00\n- **Total:** **R$ 64,06**\n\nO pedido pode ser finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento.\n\nQuer aproveitar e incluir um pacote de balas artesanais para acompanhar? 🍬",
+    "sessao": "80df78b9-8e5e-41f9-9266-220f62a2a1be",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços da pipoca Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega para Porto Alegre; regras de desconto e frete."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Tabela de frete ou taxa de entrega para Porto Alegre em pedidos online da Pop & Doce"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 74,
+          "totalTokens": 5266,
+          "cacheReadInputTokens": 5190,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1111
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 61,
+          "totalTokens": 7771,
+          "cacheReadInputTokens": 5190,
+          "cacheWriteInputTokens": 2518
+        },
+        "metrics": {
+          "latencyMs": 1297
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 263,
+          "totalTokens": 10372,
+          "cacheReadInputTokens": 7708,
+          "cacheWriteInputTokens": 2399
+        },
+        "metrics": {
+          "latencyMs": 2511
+        }
+      }
+    ]
+  },
+  "nota": "Nova execução; corpo do primeiro envio manual não armazenado no histórico."
+}

@@ -1,0 +1,71 @@
+{
+  "id": "T05-MC09",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:04:08.620Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "9.74 s",
+  "requisicao": {
+    "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Viamão, Pix, sem cupom. Detalhe o total."
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido fica assim:\n\n- 4 × Toffee de Caramelo Salgado 250 g: **R$ 123,60**\n- 1 × Bala de Banana 250 g: **R$ 24,90**\n- 1 × Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n\n**Subtotal dos produtos:** R$ 161,40  \n**Desconto Pix de 5%:** –R$ 8,07  \n**Frete para Viamão:** **Grátis** — pedidos acima de R$ 100,00  \n**Cupom:** nenhum  \n\n### Total: **R$ 153,33**\n\nA entrega para Viamão ocorre em até 3 dias úteis após o despacho. O pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento via Pix.\n\nQuer aproveitar e incluir um pacote de **Ursinhos Frutas Vermelhas 250 g por R$ 21,90** para acompanhar? 🍬",
+    "sessao": "bfcb2638-d3b7-4f96-a4ea-731318a9b80f",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços dos produtos Toffee de Caramelo Salgado 250 g, Bala de Banana 250 g e Bala Menta Zero Açúcar 100 g. Taxa de entrega para Viamão e informações de pagamento via Pix."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Tabela de taxa de entrega por cidade, especificamente Viamão; regras de frete e pagamento Pix da Pop & Doce."
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 93,
+          "totalTokens": 5294,
+          "cacheReadInputTokens": 5199,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1460
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 67,
+          "totalTokens": 7789,
+          "cacheReadInputTokens": 5199,
+          "cacheWriteInputTokens": 2521
+        },
+        "metrics": {
+          "latencyMs": 1368
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 398,
+          "totalTokens": 10503,
+          "cacheReadInputTokens": 7720,
+          "cacheWriteInputTokens": 2383
+        },
+        "metrics": {
+          "latencyMs": 4064
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "T05-MC05",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:58:49.876Z",
+  "executor": "Codex via Postman web e Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "8.99 s",
+  "requisicao": {
+    "mensagem": "Quero 1 Chocolate Belga Pequena e 1 Bala Menta Zero Açúcar 100 g, Porto Alegre, no Pix e sem cupom. Esse pedido atende ao mínimo? Detalhe os valores."
+  },
+  "resposta": {
+    "resposta": "Sim, atende ao mínimo! O pedido mínimo é de **R$ 30,00 em produtos**, e o seu subtotal é de **R$ 30,80**.\n\n**Resumo:**\n- 1 Chocolate Belga Pequena: **R$ 17,90**\n- 1 Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n- Subtotal dos produtos: **R$ 30,80**\n- Desconto: **R$ 0,00** — sem cupom\n- Entrega para Porto Alegre: **R$ 12,00**\n- **Total: R$ 42,80**\n- Pagamento: **Pix**\n\nA entrega ocorre em até **2 dias úteis**. Para finalizar, acesse **www.popedoce.example**, informe o endereço e faça o pagamento com segurança.\n\nQuer acrescentar algum item complementar, como outra bala ou uma pipoca de sabor diferente? 🍿",
+    "sessao": "236a988c-e49f-4be3-99d4-4d1a7efc3076",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços da pipoca Chocolate Belga tamanho Pequena e Bala Menta Zero Açúcar 100 g; valor mínimo do pedido; taxa de entrega para Porto Alegre; pagamento via Pix; regras de pedido mínimo."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Bala Menta Zero Açúcar preço embalagem 100 g catálogo Pop & Doce"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 91,
+          "totalTokens": 5284,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5191
+        },
+        "metrics": {
+          "latencyMs": 1602
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "totalTokens": 7768,
+          "cacheReadInputTokens": 5191,
+          "cacheWriteInputTokens": 2518
+        },
+        "metrics": {
+          "latencyMs": 979
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 346,
+          "totalTokens": 10569,
+          "cacheReadInputTokens": 7709,
+          "cacheWriteInputTokens": 2512
+        },
+        "metrics": {
+          "latencyMs": 3544
+        }
+      }
+    ]
+  }
+}
