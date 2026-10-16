@@ -1,0 +1,46 @@
+{
+  "id": "T05-EX01",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T16:26:18.964857+00:00",
+  "fim_utc": "2026-10-16T16:26:21.248814+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Monte apenas um orçamento, sem concluir compra: 1 Caramelo Clássico Grande e 1 Cheddar Média para Porto Alegre, no Pix, sem cupom. Mostre preços, subtotal, desconto, frete e total."
+  },
+  "criterio_esperado": "S64,80; Pix3,24; líquido61,56; frete12; total73,56.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Cheddar",
+    "base-de-conhecimento-oficial/02-catalogo-balas.md#Bala de Banana",
+    "base-de-conhecimento-oficial/04-politicas.md#Pedido mínimo",
+    "base-de-conhecimento-oficial/04-politicas.md#Descontos",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.284,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá! 👋 Sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! Que alegria ter você por aqui! 😊\n\nQue tal montar um pedido delicioso? Para começarmos, você gostaria de um Caramelo Clássico Grande e uma Cheddar Média? 😉 Me diga a quantidade que você quer de cada um e qual a sua cidade de entrega (Porto Alegre já está definida!). Assim, posso te mostrar o orçamento!",
+    "sessao": "05678df9-cdc1-4bb3-81c2-6b14f8eb9901",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 579,
+          "outputTokens": 94,
+          "totalTokens": 673
+        },
+        "metrics": {
+          "latencyMs": 588
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "c1c02a44c03e2836bfa298834a0547393cea05632eb984bde90e25cc270b924d"
+}

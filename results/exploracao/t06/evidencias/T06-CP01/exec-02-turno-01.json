@@ -1,0 +1,38 @@
+{
+  "id": "T06-CP01",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T20:37:50.895500+00:00",
+  "fim_utc": "2026-10-16T20:37:53.855337+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados."
+  },
+  "criterio_esperado": "Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+  "referencias": "massa-de-teste.md — PD-1001; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.96,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! É um prazer te atender! \n\nO que você gostaria de pedir hoje? Pipoca deliciosa ou uma bala artesanal pra adoçar o dia? 😉\n",
+    "sessao": "157a81ba-f76b-4ef8-8f29-4831005e6442",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 566,
+          "outputTokens": 55,
+          "totalTokens": 621
+        },
+        "metrics": {
+          "latencyMs": 659
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "9c3a7f0c422d91fc6ccbbc56c626b5d027b55b5283c92764417644acd8006e32"
+}

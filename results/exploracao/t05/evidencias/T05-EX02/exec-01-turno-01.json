@@ -1,0 +1,44 @@
+{
+  "id": "T05-EX02",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T16:26:31.158662+00:00",
+  "fim_utc": "2026-10-16T16:26:38.861052+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Faça um orçamento sem comprar: 3 Chocolate Belga Grandes e 1 Caramelo Clássico Pequena, em Porto Alegre, no Pix e sem cupom. Sem adicionar itens pagos extras. Detalhe tudo."
+  },
+  "criterio_esperado": "S3x49,90+14,90=164,60; Pix8,23; líquido156,37>150; frete0; total156,37. Eventual brinde não aumenta conta.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Chocolate Belga",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/04-politicas.md#Frete grátis",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 7.703,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! Que legal que você nos procurou! ✨\n\nEntão, vamos lá! Você gostaria de 3 Chocolates Belga Grandes e 1 Caramelo Clássico Pequeno, certo? Tudo bem para mim! 😋\n\nPara fazer um orçamento certeiro, preciso saber qual a cidade de entrega: Porto Alegre. E como você prefere pagar, Pix? 😉\n\nEm seguida, vou calcular tudo para você e mostrar o valor total. Fica fácil, viu? 😉\n",
+    "sessao": "1c5ad0cd-8064-484f-9eaf-d81a337857e2",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 576,
+          "outputTokens": 120,
+          "totalTokens": 696
+        },
+        "metrics": {
+          "latencyMs": 4142
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "60330de013fbbb29484ea28ada3a9cd3ec2bfac0fd8793d67a7f5019a675a7f6"
+}

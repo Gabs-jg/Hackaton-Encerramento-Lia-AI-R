@@ -1,0 +1,45 @@
+{
+  "id": "T05-EX02",
+  "turno": 3,
+  "inicio_utc": "2026-10-16T16:26:40.896661+00:00",
+  "fim_utc": "2026-10-16T16:26:43.317141+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Volte o Caramelo Pequena e troque para Viamão. São os mesmos 3 Chocolate Belga Grandes mais 1 Caramelo Pequena, no Pix. Pedido alto deve dispensar frete, certo?",
+    "sessao": "1c5ad0cd-8064-484f-9eaf-d81a337857e2"
+  },
+  "criterio_esperado": "S164,60; Pix8,23; líquido156,37; Viamão frete18 mesmo acima150; total174,37.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Chocolate Belga",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/04-politicas.md#Frete grátis",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.42,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Combinado! 🥳 Voltamos o Caramelo Pequeno e mudamos a entrega para Viamão. 😉\n\nVamos recalcular o pedido:\n\n*   3 Chocolates Belga Grandes: R$ 24,00\n*   1 Caramelo Clássico Pequeno: R$ 12,00\n\n**Subtotal:** R$ 36,00\n\n**Taxa de Entrega:** R$ 0,00 (Pedidos com valor acima de R$ 50,00 são entregues sem taxa!) 🤩\n\n**Total:** R$ 36,00\n\nQue bom que seu pedido é alto! 🚀 O pedido é finalizado no nosso site: www.popedoce.example, onde você completa o endereço e realiza o pagamento via Pix. 😉 Alguma coisa mais em que posso ajudar?",
+    "sessao": "1c5ad0cd-8064-484f-9eaf-d81a337857e2",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 959,
+          "outputTokens": 183,
+          "totalTokens": 1142
+        },
+        "metrics": {
+          "latencyMs": 1290
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "879837ae164895324d1c5550a8ef09ca01dbb6af4e204271244fcd4a30eb7672"
+}

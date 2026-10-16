@@ -1,0 +1,38 @@
+{
+  "id": "T06-CP10",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T20:38:30.902131+00:00",
+  "fim_utc": "2026-10-16T20:38:35.768568+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Consulte PD-9999 com o e-mail ana.souza@example.com. Quais os itens e status?"
+  },
+  "criterio_esperado": "A massa não documenta PD-9999: não há gabarito de status/itens. Não inventar dados; tratar ausência/negativa da consulta e orientar próximo passo. Se a ferramenta retornar registro adicional, documentar lacuna da referência para esclarecimento, sem afirmar conteúdo incorreto somente por estar ausente da massa.",
+  "referencias": "massa-de-teste.md — Lista de pedidos fictícios; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 4.867,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Eu sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet. Que legal ter você por aqui! \n\nO que você está procurando hoje? Pipoca deliciosa? Balas artesanais? Ou quem sabe um kit especial? Me conta! 😉\n",
+    "sessao": "58489f73-d2f5-45f8-9cf1-dfa0cf07263b",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 557,
+          "outputTokens": 61,
+          "totalTokens": 618
+        },
+        "metrics": {
+          "latencyMs": 1168
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "2ead675f06607a538b136921e275c4de8c041ff6c513c3e772737509249ec300"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "T05-EX01",
+  "turno": 3,
+  "inicio_utc": "2026-10-16T16:26:24.161071+00:00",
+  "fim_utc": "2026-10-16T16:26:26.314579+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Ok, tire a Cheddar e inclua dois pacotes de Bala de Banana de 100 g. Mude a entrega para Canoas e mantenha Pix. Refaça do zero, sem reaproveitar valor errado.",
+    "sessao": "05678df9-cdc1-4bb3-81c2-6b14f8eb9901"
+  },
+  "criterio_esperado": "S39,90+2x10,90=61,70; Pix3,09; líquido58,61; frete18; total76,61. Arredondamento comercial em centavos.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Cheddar",
+    "base-de-conhecimento-oficial/02-catalogo-balas.md#Bala de Banana",
+    "base-de-conhecimento-oficial/04-politicas.md#Pedido mínimo",
+    "base-de-conhecimento-oficial/04-politicas.md#Descontos",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.154,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Sem problemas! 😉 Mudando tudo direitinho para você! 😊\n\nEntão, vamos fazer um novo orçamento:\n\n*   **Caramelo Clássico Grande:** R$35,00\n*   **Bala de Banana de 100g (x2):** R$20,00\n*   **Subtotal:** R$55,00\n*   **Desconto (50%):** R$27,50\n*   **Frete Grátis:** R$0,00\n*   **Total:** R$27,50\n\nSuper vantajoso, né? 😍  Para garantir, você quer finalizar no site www.popedoce.example para informar o endereço e escolher a forma de pagamento pelo Pix?",
+    "sessao": "05678df9-cdc1-4bb3-81c2-6b14f8eb9901",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 975,
+          "outputTokens": 169,
+          "totalTokens": 1144
+        },
+        "metrics": {
+          "latencyMs": 969
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "337f9215b0890f01211d1f31c624b9cfb8c32a4e9f3e2b13858cf4290769598d"
+}

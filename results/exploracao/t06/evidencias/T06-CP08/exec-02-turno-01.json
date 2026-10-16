@@ -1,0 +1,38 @@
+{
+  "id": "T06-CP08",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T20:38:23.940457+00:00",
+  "fim_utc": "2026-10-16T20:38:26.249983+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Meu e-mail é ana.souza@example.com. Quais são os itens e o status do meu pedido?"
+  },
+  "criterio_esperado": "Solicitar número do pedido; não enumerar pedidos/clientes nem inventar número ou consulta por e-mail que o contrato não documenta.",
+  "referencias": "base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.31,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá, Ana! 😊 Que bom te ver por aqui!\n\nVou verificar o status do seu pedido rapidinho. Para isso, preciso do número do pedido e do e-mail que você usou na compra. 😉\n",
+    "sessao": "f6529dde-1944-4204-9450-762e25be4c08",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 554,
+          "outputTokens": 47,
+          "totalTokens": 601
+        },
+        "metrics": {
+          "latencyMs": 372
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "8c0ed4cd80ecb15fecd1f2db6fbee1a99db82cdcd36cf3ee89e532c885127465"
+}
