@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP10",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:22:53.580852+00:00",
+  "capturadoEm": "2026-10-15T02:22:57.972555+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.359594,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte PD-9999 com o e-mail ana.souza@example.com. Quais os itens e status?"
+  },
+  "resposta": {
+    "resposta": "Não encontrei o pedido **PD-9999** com o e-mail informado. Por favor, confira o número do pedido e o e-mail usado na compra.",
+    "sessao": "8e58d99f-f375-4f96-b83b-f14d37fde80e",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-9999",
+          "email": "ana.souza@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 53,
+          "totalTokens": 5226,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5171
+        },
+        "metrics": {
+          "latencyMs": 1687
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 37,
+          "totalTokens": 5298,
+          "cacheReadInputTokens": 5183,
+          "cacheWriteInputTokens": 76
+        },
+        "metrics": {
+          "latencyMs": 717
+        }
+      }
+    ]
+  }
+}

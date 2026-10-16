@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP11",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:22:57.974559+00:00",
+  "capturadoEm": "2026-10-15T02:23:01.330484+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 3.328371,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte PD-1001, com ana.souza@example.com. Informe status e total."
+  },
+  "resposta": {
+    "resposta": "O pedido **PD-1001** está com status **Entregue em 28/09/2026**.\n\n**Total: R$ 73,56**",
+    "sessao": "9f1a2f7f-0401-44e2-b481-2dd57ae02bf9",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1001",
+          "email": "ana.souza@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 41,
+          "totalTokens": 5210,
+          "cacheReadInputTokens": 5167,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 937
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 39,
+          "totalTokens": 5433,
+          "cacheReadInputTokens": 5167,
+          "cacheWriteInputTokens": 225
+        },
+        "metrics": {
+          "latencyMs": 702
+        }
+      }
+    ]
+  }
+}

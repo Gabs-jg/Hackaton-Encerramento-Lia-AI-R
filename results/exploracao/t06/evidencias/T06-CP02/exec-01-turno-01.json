@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP02",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:19:50.241807+00:00",
+  "capturadoEm": "2026-10-15T02:19:55.010475+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.738348,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1005. O e-mail usado na compra é elisa.ferreira@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1005**\n\n- **Status:** Cancelado — o Pix não foi pago dentro de 30 minutos.\n- **Data:** 03/10/2026\n- **Cidade:** Porto Alegre\n- **Pagamento:** Pix\n\n**Itens:**\n- 1× Pipoca Coco Queimado — Grande: **R$ 43,90**\n- 1× Goma Vegana de Maçã Verde — 250 g: **R$ 26,90**\n- 1× Pipoca Cacau 70% Vegana — Média: **R$ 27,90**\n- 1× Pipoca Natural sem Sal — Grande: **R$ 27,90**\n- 1× Bala de Banana — 250 g: **R$ 24,90**\n\n**Valores registrados:**\n- Subtotal: **R$ 151,50**\n- Desconto do Pix (5%): **R$ 7,58**\n- Frete: **R$ 12,00**\n- **Total: R$ 155,92**",
+    "sessao": "a26e5939-3dd1-4bea-8187-2ab9c79a262b",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1005",
+          "email": "elisa.ferreira@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 54,
+          "totalTokens": 5236,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1050
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 227,
+          "totalTokens": 5743,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 334
+        },
+        "metrics": {
+          "latencyMs": 1731
+        }
+      }
+    ]
+  }
+}

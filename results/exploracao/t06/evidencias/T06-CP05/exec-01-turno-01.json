@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP05",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:21:02.101288+00:00",
+  "capturadoEm": "2026-10-15T02:21:06.320375+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.187824,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1018. O e-mail usado na compra é tiago.barbosa@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1018** — **status: Entregue em 03/10/2026**.\n\n**Itens:**\n- 3× Balas Menta Zero Açúcar — 100 g — R$ 12,90 cada\n- 1× Pipoca Canela Zero Açúcar — média — R$ 27,90\n\n**Valores registrados:**\n- Subtotal: **R$ 66,60**\n- Desconto Pix de 5%: **–R$ 3,33**\n- Frete: **R$ 12,00**\n- **Total: R$ 75,27**\n- Pagamento: **Pix**",
+    "sessao": "273c2b5d-725b-40d9-be3a-28ea0e996329",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1018",
+          "email": "tiago.barbosa@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 53,
+          "totalTokens": 5235,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 958
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 142,
+          "totalTokens": 5566,
+          "cacheReadInputTokens": 5191,
+          "cacheWriteInputTokens": 231
+        },
+        "metrics": {
+          "latencyMs": 1407
+        }
+      }
+    ]
+  }
+}

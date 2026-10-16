@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP04",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:20:30.203001+00:00",
+  "capturadoEm": "2026-10-15T02:21:02.099288+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 31.862291,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1012. O e-mail usado na compra é marcos.oliveira@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1012** — **Marcos Oliveira**\n\n- **Status:** Despachado em 05/10/2026, com previsão de entrega até 07/10/2026.\n- **Itens:**\n  - 1× Pipoca Abóbora com Especiarias — tamanho Grande: **R$ 49,90**\n  - 1× Pipoca Churros — tamanho Médio: **R$ 27,90**\n- **Subtotal:** R$ 77,80\n- **Desconto:** R$ 0,00\n- **Frete:** R$ 12,00\n- **Total:** **R$ 89,80**\n- **Pagamento:** Cartão de crédito, à vista",
+    "sessao": "09b12ec8-51d5-4381-b821-8adc99de3bc4",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1012",
+          "email": "marcos.oliveira@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 53,
+          "totalTokens": 5235,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1568
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 159,
+          "totalTokens": 5592,
+          "cacheReadInputTokens": 5191,
+          "cacheWriteInputTokens": 240
+        },
+        "metrics": {
+          "latencyMs": 1524
+        }
+      }
+    ]
+  }
+}

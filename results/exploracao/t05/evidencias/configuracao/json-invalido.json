@@ -1,0 +1,9 @@
+{
+  "capturadoEm": "2026-10-15T01:49:44.750Z",
+  "httpStatus": 400,
+  "observado": {
+    "erro": "O corpo precisa ser um JSON válido"
+  },
+  "causa": "Erro de edição do corpo no Postman durante a restauração do caso; não é falha funcional da Lia.",
+  "resultado": "Inconclusivo de preparação; excluído dos 30 casos avaliados"
+}

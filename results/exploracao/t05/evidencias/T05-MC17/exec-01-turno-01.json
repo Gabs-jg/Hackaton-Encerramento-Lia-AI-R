@@ -1,0 +1,59 @@
+{
+  "id": "T05-MC17",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:15:38.119Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "11.47 s",
+  "requisicao": {
+    "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, Porto Alegre, com boleto ou pagamento na entrega. Pode fechar?"
+  },
+  "resposta": {
+    "resposta": "Posso montar, sim! 😊\n\n- 1 Caramelo Clássico Grande — R$ 29,90  \n- 1 Cheddar Média — R$ 24,90  \n- Subtotal: **R$ 54,80**  \n- Entrega para Porto Alegre: **R$ 12,00**  \n- Total provisório: **R$ 66,80**\n\nO prazo é de até **2 dias úteis**. A base informa pagamento por **Pix, cartão de crédito ou débito**; não encontrei confirmação para boleto ou pagamento na entrega. Vou verificar essa possibilidade com a equipe.\n\nQuer aproveitar e adicionar um pacote de **Ursinhos Frutas Vermelhas 100 g por R$ 9,90**? Depois, o pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+    "sessao": "d5e595d2-4793-42d9-a322-27f2b0dc5bd8",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços e detalhes dos produtos Caramelo Clássico tamanho Grande e Cheddar tamanho Média; taxa de entrega para Porto Alegre; formas de pagamento disponíveis, incluindo boleto e pagamento na entrega; como finalizar pedidos no site."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Produtos complementares recomendados para pedido de pipocas, especialmente balas artesanais, e preços/tamanhos disponíveis."
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 151,
+          "totalTokens": 5330,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5177
+        },
+        "metrics": {
+          "latencyMs": 1914
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 362,
+          "totalTokens": 10594,
+          "cacheReadInputTokens": 5177,
+          "cacheWriteInputTokens": 5053
+        },
+        "metrics": {
+          "latencyMs": 6898
+        }
+      }
+    ]
+  }
+}

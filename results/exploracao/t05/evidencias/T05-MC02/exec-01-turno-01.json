@@ -1,0 +1,79 @@
+{
+  "id": "T05-MC02",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:54:37.309Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "9.99 s",
+  "requisicao": {
+    "mensagem": "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Canoas, pagamento no Pix, sem cupom. Detalhe o total."
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido fica assim:\n\n- 1 Pipoca **Caramelo Clássico Grande**: R$ 29,90  \n- 1 Pipoca **Cheddar Média**: R$ 24,90  \n\n**Subtotal dos produtos:** R$ 54,80  \n**Desconto de 5% no Pix:** -R$ 2,74  \n**Entrega para Canoas:** R$ 18,00  \n**Cupom:** nenhum  \n\n### **Total no Pix: R$ 70,06**\n\nO prazo para Canoas é de até 3 dias úteis. Antes de finalizar, quer acrescentar um pacote de **balas de goma de 100 g a partir de R$ 9,90**? Combina super bem com as pipocas 😊\n\nO pedido é finalizado pelo site **www.popedoce.example**, onde você informa o endereço e realiza o pagamento.",
+    "sessao": "ebf8ca2d-0bc1-4c67-ae57-6286878216df",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preço da pipoca Caramelo Clássico tamanho Grande, pipoca Cheddar tamanho Média e taxa de entrega para Canoas. Informações de pagamento via Pix."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Produtos complementares, especialmente balas artesanais, para oferecer junto ao pedido de pipocas."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "tabela taxa de entrega Canoas pedido Pop & Doce frete cidade Canoas"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 133,
+          "totalTokens": 5320,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5185
+        },
+        "metrics": {
+          "latencyMs": 1728
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 57,
+          "totalTokens": 10164,
+          "cacheReadInputTokens": 5185,
+          "cacheWriteInputTokens": 4920
+        },
+        "metrics": {
+          "latencyMs": 1502
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 295,
+          "totalTokens": 12798,
+          "cacheReadInputTokens": 10105,
+          "cacheWriteInputTokens": 2396
+        },
+        "metrics": {
+          "latencyMs": 3285
+        }
+      }
+    ]
+  }
+}

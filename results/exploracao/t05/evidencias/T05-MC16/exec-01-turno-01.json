@@ -1,0 +1,51 @@
+{
+  "id": "T05-MC16",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:15:20.166Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "32.59 s",
+  "requisicao": {
+    "mensagem": "Quero contratar o Clube Pop & Doce Plano Sessão com entrega em Canoas e pagar no Pix com desconto. Quanto fica?"
+  },
+  "resposta": {
+    "resposta": "O **Clube Pop & Doce — Plano Sessão** custa **R$ 99,90 por mês** e inclui:\n\n- 2 pipocas Grandes  \n- 1 pacote de 250 g de balas  \n- Entrega incluída para Canoas  \n- Entrega até o dia 10 de cada mês  \n\nA assinatura é cobrada **somente no cartão de crédito**, então não é possível pagar via Pix nem aplicar o desconto de 5% nessa modalidade. A contratação é feita pelo site: **www.popedoce.example**.",
+    "sessao": "a3f3175a-57b6-46d8-9c01-51646829d0ce",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Clube Pop & Doce Plano Sessão preço, benefícios, entrega para Canoas e desconto para pagamento via Pix"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 72,
+          "totalTokens": 5248,
+          "cacheReadInputTokens": 5174,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1241
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 220,
+          "totalTokens": 7808,
+          "cacheReadInputTokens": 5174,
+          "cacheWriteInputTokens": 2412
+        },
+        "metrics": {
+          "latencyMs": 2510
+        }
+      }
+    ]
+  }
+}

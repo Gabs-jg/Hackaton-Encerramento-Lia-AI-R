@@ -1,0 +1,71 @@
+{
+  "id": "T05-MC13",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:13:44.435Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "39.78 s",
+  "requisicao": {
+    "mensagem": "Quero um Kit Cinema, mas tire as balas para baixar o preço e escolha Pistache como pipoca doce. Quanto fica?"
+  },
+  "resposta": {
+    "resposta": "O **Kit Cinema custa R$ 79,90** e inclui:\n\n- 1 pipoca Grande salgada  \n- 1 pipoca Média doce  \n- 1 pacote de 250 g de balas de goma  \n\nNão conseguimos retirar as balas nem trocar itens do kit para reduzir o preço. Além disso, a **Pistache não faz parte dos kits**.\n\nSe quiser montar avulso com uma pipoca Média de Pistache, ela custa **R$ 36,90**, mais a pipoca salgada Grande escolhida. Qual sabor salgado você gostaria?",
+    "sessao": "ad86c6db-b33a-42b1-a0d6-75b9f5bd7a07",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Kit Cinema preço, composição, possibilidade de retirar balas e escolher pipoca doce sabor Pistache; preços dos produtos e tamanhos"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "preços das pipocas salgadas tamanho Grande e opções de sabores; preço da pipoca Pistache Média"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 76,
+          "totalTokens": 5252,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5174
+        },
+        "metrics": {
+          "latencyMs": 1535
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 198,
+          "totalTokens": 7879,
+          "cacheReadInputTokens": 5198,
+          "cacheWriteInputTokens": 2481
+        },
+        "metrics": {
+          "latencyMs": 3087
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 123,
+          "totalTokens": 10462,
+          "cacheReadInputTokens": 7679,
+          "cacheWriteInputTokens": 2658
+        },
+        "metrics": {
+          "latencyMs": 1490
+        }
+      }
+    ]
+  }
+}

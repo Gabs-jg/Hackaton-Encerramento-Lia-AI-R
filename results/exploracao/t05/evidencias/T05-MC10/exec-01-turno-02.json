@@ -1,0 +1,53 @@
+{
+  "id": "T05-MC10",
+  "turno": 2,
+  "capturadoEm": "2026-10-15T02:11:33.647Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "6.56 s",
+  "requisicao": {
+    "mensagem": "Ainda não finalizei. Retire a Cheddar e acrescente 2 Balas de Banana 100 g. Mostre o novo resumo.",
+    "sessao": "{{t05_mc10_sessao}}"
+  },
+  "resposta": {
+    "resposta": "Claro! Atualizei seu pedido:\n\n- 1 Pipoca Caramelo Clássico Grande: **R$ 29,90**\n- 2 Balas de Banana de 100 g: **R$ 21,80**\n- Subtotal dos produtos: **R$ 51,70**\n- Entrega para Porto Alegre: **R$ 12,00**\n- Desconto: **R$ 0,00**\n- Pagamento: **Cartão de débito**\n\n**Total: R$ 63,70**\n\nO pedido é finalizado em **www.popedoce.example**, onde você informa o endereço e realiza o pagamento. Se quiser, ainda posso incluir outro sabor de bala ou uma pipoca complementar antes da finalização.",
+    "sessao": "b872c053-6853-4386-b953-0e60678b6e5e",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preço das Balas de Banana artesanais no pacote de 100 g."
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 54,
+          "totalTokens": 8045,
+          "cacheReadInputTokens": 7682,
+          "cacheWriteInputTokens": 307
+        },
+        "metrics": {
+          "latencyMs": 1254
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 237,
+          "totalTokens": 10743,
+          "cacheReadInputTokens": 7989,
+          "cacheWriteInputTokens": 2515
+        },
+        "metrics": {
+          "latencyMs": 2579
+        }
+      }
+    ]
+  },
+  "sessaoEsperadaNaResolucaoDaVariavel": "b872c053-6853-4386-b953-0e60678b6e5e"
+}

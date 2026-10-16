@@ -1,0 +1,91 @@
+{
+  "id": "T05-MC08",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:02:16.738Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "15.68 s",
+  "requisicao": {
+    "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala Menta Zero Açúcar 100 g. Porto Alegre, Pix, sem cupom. Detalhe o total."
+  },
+  "resposta": {
+    "resposta": "Perfeito! Seu pedido fica assim:\n\n- 4× Toffee de Caramelo Salgado 250 g: **R$ 123,60**\n- 1× Bala de Banana 250 g: **R$ 24,90**\n- 1× Bala Menta Zero Açúcar 100 g: **R$ 12,90**\n\n**Subtotal dos produtos:** R$ 161,40  \n**Desconto Pix (5%):** −R$ 8,07  \n**Frete para Porto Alegre:** grátis  \n**Cupom:** não aplicado  \n\n### Total: **R$ 153,33**\n\nO pedido é finalizado no site **www.popedoce.example**, onde você informa o endereço e faz o pagamento via Pix.\n\nAntes de concluir, quer acrescentar uma pipoca gourmet? A **Caramelo Clássico média** custa R$ 24,90 e combina super com as balas 🍿",
+    "sessao": "50e160aa-7c9f-4e10-9c72-018100f57975",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preços dos produtos: Toffee de Caramelo Salgado 250 g, Bala de Banana 250 g, Bala Menta Zero Açúcar 100 g; taxa de entrega para Porto Alegre; pagamento via Pix; informações para montar pedido e finalizar no site."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "taxa de entrega para pedidos comuns em Porto Alegre, frete por cidade, política de entrega e formas de pagamento Pix"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "catálogo de pipocas gourmet sabores e preços, opções para oferecer como produto complementar"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 126,
+          "totalTokens": 5326,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5198
+        },
+        "metrics": {
+          "latencyMs": 1833
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 63,
+          "totalTokens": 7823,
+          "cacheReadInputTokens": 5198,
+          "cacheWriteInputTokens": 2560
+        },
+        "metrics": {
+          "latencyMs": 1183
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 291,
+          "totalTokens": 10470,
+          "cacheReadInputTokens": 7758,
+          "cacheWriteInputTokens": 2419
+        },
+        "metrics": {
+          "latencyMs": 3981
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 311,
+          "totalTokens": 13225,
+          "cacheReadInputTokens": 10177,
+          "cacheWriteInputTokens": 2735
+        },
+        "metrics": {
+          "latencyMs": 3156
+        }
+      }
+    ]
+  }
+}

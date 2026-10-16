@@ -1,0 +1,99 @@
+{
+  "id": "T05-MC15",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T02:14:19.511Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "12.67 s",
+  "requisicao": {
+    "mensagem": "Quero 2 pipocas Caramelo Clássico Grandes avulsas e, se houver brinde da promoção vigente, escolho Ursinhos Frutas Vermelhas 100 g. Porto Alegre, débito, sem cupom. Detalhe o resumo."
+  },
+  "resposta": {
+    "resposta": "Claro! Seu pedido ficou assim:\n\n- **2× Pipoca Caramelo Clássico Grande — 400 g cada**: 2 × R$ 29,90 = **R$ 59,80**\n- **Cupom:** não utilizado\n- **Subtotal dos produtos:** **R$ 59,80**\n- **Entrega para Porto Alegre:** **R$ 12,00**\n- **Forma de pagamento:** cartão de débito\n- **Total:** **R$ 71,80**\n\nSobre o possível brinde **Ursinhos Frutas Vermelhas 100 g**, não encontrei na base a regra da promoção vigente. Vou confirmar com a equipe se ele está disponível e se esse pedido é elegível. O brinde, se aprovado, será acrescentado sem custo.\n\nO pedido atende ao valor mínimo de R$ 30,00. A entrega ocorre em até **2 dias úteis**. Para finalizar, acesse **www.popedoce.example** e informe o endereço e os dados do pagamento.",
+    "sessao": "3ff03549-e18d-4a51-a989-2b0fe3cc88ff",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preço pipoca Caramelo Clássico tamanho Grande avulsa; taxa de entrega para Porto Alegre; forma de pagamento débito; promoção vigente e brindes incluindo Ursinhos Frutas Vermelhas 100 g"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Catálogo preços pipocas gourmet Caramelo Clássico Grande e balas Ursinhos Frutas Vermelhas 100 g, promoções vigentes"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "taxa frete entrega Porto Alegre pedidos avulsos promoção vigente brinde compra pipoca grande bala Ursinhos Frutas Vermelhas"
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "\"promoção vigente\" \"brinde\" pipocas avulsas"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 157,
+          "totalTokens": 5360,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5201
+        },
+        "metrics": {
+          "latencyMs": 1822
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 70,
+          "totalTokens": 10277,
+          "cacheReadInputTokens": 5201,
+          "cacheWriteInputTokens": 5004
+        },
+        "metrics": {
+          "latencyMs": 2249
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 68,
+          "totalTokens": 12731,
+          "cacheReadInputTokens": 10205,
+          "cacheWriteInputTokens": 2456
+        },
+        "metrics": {
+          "latencyMs": 1156
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 369,
+          "totalTokens": 15419,
+          "cacheReadInputTokens": 12661,
+          "cacheWriteInputTokens": 2387
+        },
+        "metrics": {
+          "latencyMs": 4002
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "T06-CP06",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:21:06.322427+00:00",
+  "capturadoEm": "2026-10-15T02:21:41.654070+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 35.30272,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1025. O e-mail usado na compra é daniela.fontes@example.com. Informe status, itens e os valores registrados."
+  },
+  "resposta": {
+    "resposta": "Pedido **PD-1025** encontrado. 😊\n\n- **Status:** Em separação\n- **Item:** 1x Kit Festa — **R$ 219,90**\n- **Subtotal:** R$ 219,90\n- **Desconto:** R$ 11,00 — Pix 5%\n- **Frete:** Grátis\n- **Total:** **R$ 208,90**\n- **Pagamento:** Pix",
+    "sessao": "0162bcd1-9495-4f3e-9d04-3516e8bafe14",
+    "ferramentas": [
+      {
+        "ferramenta": "pedidos-e-cupons___consultar_pedido",
+        "entrada": {
+          "numero_pedido": "PD-1025",
+          "email": "daniela.fontes@example.com"
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 52,
+          "totalTokens": 5233,
+          "cacheReadInputTokens": 5179,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1115
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 93,
+          "totalTokens": 5470,
+          "cacheReadInputTokens": 5179,
+          "cacheWriteInputTokens": 196
+        },
+        "metrics": {
+          "latencyMs": 1250
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T06-CP08",
+  "turno": 1,
+  "iniciadoEm": "2026-10-15T02:21:45.232270+00:00",
+  "capturadoEm": "2026-10-15T02:22:22.489686+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 37.226731,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "Meu e-mail é ana.souza@example.com. Quais são os itens e o status do meu pedido?"
+  },
+  "resposta": {
+    "resposta": "Claro, Ana! Para consultar seu pedido, preciso também do número dele, no formato **PD-0000**.",
+    "sessao": "ad775631-7781-4dc9-adae-1bbc07c717b0",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 42,
+          "totalTokens": 5214,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5170
+        },
+        "metrics": {
+          "latencyMs": 4453
+        }
+      }
+    ]
+  }
+}

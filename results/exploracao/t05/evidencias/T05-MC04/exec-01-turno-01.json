@@ -1,0 +1,79 @@
+{
+  "id": "T05-MC04",
+  "turno": 1,
+  "capturadoEm": "2026-10-15T01:57:21.488Z",
+  "cliente": "Postman web + Desktop Agent",
+  "httpStatus": 200,
+  "tempoPostman": "9.62 s",
+  "requisicao": {
+    "mensagem": "Quero somente 2 pipocas Caramelo Clássico Pequenas, entrega em Porto Alegre e cartão de débito. Posso fechar? Qual o valor?"
+  },
+  "resposta": {
+    "resposta": "Quase! 😊\n\n- 2 Pipocas Caramelo Clássico Pequenas: **R$ 29,80**\n- Entrega para Porto Alegre: **R$ 12,00**\n- **Total: R$ 41,80**\n\nPorém, o pedido mínimo é de **R$ 30,00 em produtos**, então faltam **R$ 0,20** para finalizar. Você pode acrescentar, por exemplo, um pacote de **Ursinhos Frutas Vermelhas 100 g por R$ 9,90**. Nesse caso, o total ficaria **R$ 51,70**.\n\nAceitamos cartão de débito. O pedido é finalizado no site **www.popedoce.example**, onde você informa o endereço e faz o pagamento.",
+    "sessao": "657d0d50-3667-40fd-ae6d-2c3f5a645b5c",
+    "ferramentas": [
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Preço da pipoca Caramelo Clássico tamanho Pequena, taxa de entrega para Porto Alegre e formas de pagamento incluindo cartão de débito. Regras para montar pedido e finalizar no site."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "Produtos complementares recomendados para pipoca, especialmente balas artesanais, e preços disponíveis."
+          }
+        }
+      },
+      {
+        "ferramenta": "base-pop-e-doce___Retrieve",
+        "entrada": {
+          "retrievalQuery": {
+            "text": "formas de pagamento para pedidos avulsos: cartão de débito, crédito, Pix; taxa de entrega Porto Alegre ou cálculo de frete"
+          }
+        }
+      }
+    ],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 146,
+          "totalTokens": 5328,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 5180
+        },
+        "metrics": {
+          "latencyMs": 1748
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 123,
+          "totalTokens": 10364,
+          "cacheReadInputTokens": 5180,
+          "cacheWriteInputTokens": 5059
+        },
+        "metrics": {
+          "latencyMs": 1911
+        }
+      },
+      {
+        "usage": {
+          "inputTokens": 2,
+          "outputTokens": 283,
+          "totalTokens": 12981,
+          "cacheReadInputTokens": 10239,
+          "cacheWriteInputTokens": 2457
+        },
+        "metrics": {
+          "latencyMs": 2844
+        }
+      }
+    ]
+  }
+}
