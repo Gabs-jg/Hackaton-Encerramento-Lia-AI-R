@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR10/exec-01-turno-01.json",
+  "id": "T04-AR10",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:27:20.148698+00:00",
+  "inicioEm": "2026-10-16T21:27:15.799600+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4349.1,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Sou vegano. A bala Gengibre com Mel é adequada para mim?"
+  },
+  "resposta": {
+    "resposta": "Olá! Tudo bem por aí? 😊\n\nQue legal que você nos procurou! 😊 A Pop & Doce Pipocaria Gourmet tem muitas opções deliciosas.\n\nSobre a bala Gengibre com Mel, ela é 100% vegana! Utilizamos apenas ingredientes naturais e não utilizamos nenhum produto de origem animal na produção. 😉\n\nPosso te ajudar a montar um pedido especial hoje? Que tal pipoca com alguma bala deliciosa para acompanhar? 😄",
+    "sessao": "7be019d9-ab4d-4236-84cc-71ab4a1500f6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 95,
+          "totalTokens": 640
+        },
+        "metrics": {
+          "latencyMs": 774
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR10/exec-01-turno-01-resposta.json"
+}

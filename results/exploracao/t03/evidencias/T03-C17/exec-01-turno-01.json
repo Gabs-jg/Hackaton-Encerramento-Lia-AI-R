@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C17/exec-01-turno-01.json",
+  "id": "T03-C17",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:41.788702+00:00",
+  "inicioEm": "2026-10-16T21:26:38.550942+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 3237.76,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Se meu pedido chegar com um produto diferente do comprado, como funciona a troca?"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊\n\nQue ótimo que você está se perguntando sobre a troca! Nossa prioridade é garantir que você fique super feliz com seu pedido. \n\nSe algum produto chegar diferente do que você pediu, não se preocupe! Podemos resolver isso rapidinho. No site www.popedoce.example, na seção \"Minha Conta\" e depois \"Pedidos\", você encontra a opção de solicitar a troca. \n\nBasta descrever qual o problema e qual o produto que você gostaria em troca. Nossa equipe vai analisar tudo e, se for um erro nosso, faremos a troca sem custo adicional pra você. 😉\n\nTem mais alguma dúvida sobre a troca ou sobre qualquer outra coisa?",
+    "sessao": "332ae7d9-f256-4ae0-880d-8754a134d4e7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 145,
+          "totalTokens": 690
+        },
+        "metrics": {
+          "latencyMs": 904
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C17/exec-01-turno-01-resposta.json"
+}

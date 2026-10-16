@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR05/exec-01-turno-01.json",
+  "id": "T04-AR05",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:59.089677+00:00",
+  "inicioEm": "2026-10-16T21:26:54.799601+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4290.08,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Tenho restrição a glúten. Posso comer a pipoca Cookies & Cream?"
+  },
+  "resposta": {
+    "resposta": "Oi! 🤩 Sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet. Que legal que você nos procurou! 😊\n\nComo posso te ajudar hoje? Quer saber mais sobre nossos produtos, montar um pedido especial ou tem alguma dúvida? \n",
+    "sessao": "c56d4f3f-7679-445e-99b7-80ea18af5f4e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 548,
+          "outputTokens": 57,
+          "totalTokens": 605
+        },
+        "metrics": {
+          "latencyMs": 427
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR05/exec-01-turno-01-resposta.json"
+}

@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C04/exec-01-turno-01.json",
+  "id": "T03-C04",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:25:53.953618+00:00",
+  "inicioEm": "2026-10-16T21:25:49.222679+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4730.94,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são os pirulitos disponíveis?"
+  },
+  "resposta": {
+    "resposta": "Oi! 😊 Que legal que você veio conhecer nossos pirulitos!\n\nA gente tem uma variedade incrível:\n\n*   **Pirulito de Morango:** Delicioso e fofinho, com um toque de morango cremoso.\n*   **Pirulito de Chocolate:** Para os chocólatras de plantão, com um sabor intenso de chocolate ao leite.\n*   **Pirulito de Limão:** Refrescante e azedinho, perfeito para alegrar qualquer dia!\n*   **Pirulito de Maracujá:** Com um sabor tropical e marcante.\n\nQual deles te chamou mais a atenção? 😉",
+    "sessao": "e33febf9-962b-454f-a355-e2a5087758f6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 538,
+          "outputTokens": 138,
+          "totalTokens": 676
+        },
+        "metrics": {
+          "latencyMs": 842
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C04/exec-01-turno-01-resposta.json"
+}

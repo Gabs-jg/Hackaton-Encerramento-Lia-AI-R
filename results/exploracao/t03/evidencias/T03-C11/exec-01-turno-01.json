@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C11/exec-01-turno-01.json",
+  "id": "T03-C11",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:19.649507+00:00",
+  "inicioEm": "2026-10-16T21:26:14.963250+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4686.26,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Vocês têm Menta Zero Açúcar em pacote de 250g?"
+  },
+  "resposta": {
+    "resposta": "Oi! 😊 Que bom ter você por aqui!\n\nSim, temos Menta Zero Açúcar no pacote de 250g! É super refrescante e perfeita para qualquer ocasião. 😉\n\nQuer adicionar mais alguma coisa ao seu pedido? Que tal um pacote de balas artesanais para combinar com a pipoca? 🍬🍿",
+    "sessao": "d6de78b2-fdfa-424f-977f-e1749ddce39d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 546,
+          "outputTokens": 68,
+          "totalTokens": 614
+        },
+        "metrics": {
+          "latencyMs": 466
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C11/exec-01-turno-01-resposta.json"
+}

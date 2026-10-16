@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C08/exec-01-turno-01.json",
+  "id": "T03-C08",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:07.055030+00:00",
+  "inicioEm": "2026-10-16T21:26:03.673512+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 3381.52,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as pipocas que são veganas ou que são zero açúcar?"
+  },
+  "resposta": {
+    "resposta": "Oi! Tudo bem por aí? 😊\n\nNossa, que legal que você tá se interessando pelas nossas pipocas! 😊\n\nTemos algumas opções deliciosas que são veganas e zero açúcar:\n\n**Pipoca Vegana:** A gente faz com óleo vegetal e temperos naturais super saborosos! 😋 Temos opções como:\n*   **Cheddar:** Super cremosa e com aquele cheddar que você ama!\n*   **Siracha Limão:** Uma explosão de sabores cítricos e picantes!\n*   **Brócolis:** Surpreendentemente gostosa, com um toque de brócolis!\n\n**Pipoca Zero Açúcar:**  Nossas pipocas zero açúcar são feitas com adoçantes naturais e uma variedade de sabores incríveis:\n*   **Chocolate Amargo:** Para os chocólatras de plantão! 🍫\n*   **Canela & Sal:** Um clássico que nunca falha!\n*   **Pimenta do Reino:** Para quem gosta de um toque picantinho! 🔥\n\nQuer saber mais sobre algum sabor específico ou montar um kit especial? 😉",
+    "sessao": "7dab805b-242b-459b-887b-8172a0d0a2f0",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 236,
+          "totalTokens": 781
+        },
+        "metrics": {
+          "latencyMs": 1227
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C08/exec-01-turno-01-resposta.json"
+}

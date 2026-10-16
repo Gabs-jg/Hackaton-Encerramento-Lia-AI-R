@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR01/exec-01-turno-01.json",
+  "id": "T04-AR01",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:45.098967+00:00",
+  "inicioEm": "2026-10-16T21:26:41.791368+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 3307.6,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as pipocas que não leva ingredientes alergênicos na receita?"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Que legal que você está interessado nas nossas pipocas!\n\nAs pipocas que não levamos ingredientes que podem causar alergia são as de:\n\n*   **Queijo Parmesão:** Sabor delicioso e sem lactose!\n*   **Chocolate Belga:** Uma combinação perfeita para você! 🥰\n*   **Coco Ralado:** Refrescante e irresistível!\n*   **Limão Siciliano:** Uma explosão de sabor cítrico! 🍋\n\nElas são feitas com muito carinho e atenção, como todas as nossas pipocas, para garantir a segurança de você. 😉\n\nPosso te ajudar com mais alguma coisa? Quer conhecer mais alguma opção ou montar um pedido especial?",
+    "sessao": "0c5db5ba-2b8e-4171-877e-0ad7e9411f6b",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 148,
+          "totalTokens": 693
+        },
+        "metrics": {
+          "latencyMs": 821
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR01/exec-01-turno-01-resposta.json"
+}
