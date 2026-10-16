@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C10/exec-01-turno-01.json",
+  "id": "T03-C10",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:14.961006+00:00",
+  "inicioEm": "2026-10-16T21:26:11.131053+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 3829.95,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quanto custa a pipoca Caramelo Clássico de 400 g?"
+  },
+  "resposta": {
+    "resposta": "Oi! 😊 A pipoca Caramelo Clássico de 400g custa R$ 29,90! Quer experimentar com um pacote de balas artesanais para acompanhar? 😉",
+    "sessao": "bea618e7-d4e5-4493-b8c6-4df1f792b3cd",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 548,
+          "outputTokens": 43,
+          "totalTokens": 591
+        },
+        "metrics": {
+          "latencyMs": 378
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C10/exec-01-turno-01-resposta.json"
+}

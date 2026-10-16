@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C15/exec-01-turno-01.json",
+  "id": "T03-C15",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:35.663343+00:00",
+  "inicioEm": "2026-10-16T21:26:31.486076+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4177.27,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quanto custa a grande?"
+  },
+  "resposta": {
+    "resposta": "Oi! 😊 Prazer em te atender! A nossa pipoca Grande custa R$ 24,90. Uma delícia pra você se jogar! 😉 Quer adicionar alguma bala artesanal pra acompanhar? Temos opções incríveis!",
+    "sessao": "0bc85c00-df85-4f1f-b6e4-8bdb91119868",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 535,
+          "outputTokens": 49,
+          "totalTokens": 584
+        },
+        "metrics": {
+          "latencyMs": 404
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C15/exec-01-turno-01-resposta.json"
+}

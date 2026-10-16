@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C06/exec-01-turno-01.json",
+  "id": "T03-C06",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:25:59.516734+00:00",
+  "inicioEm": "2026-10-16T21:25:56.683258+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 2833.48,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as pipocas doces disponíveis?"
+  },
+  "resposta": {
+    "resposta": "Oi! 😊 Que legal que você veio conhecer a Pop & Doce!\n\nNossas pipocas doces são super especiais! Temos:\n\n*   **Chocolate Belga:** Com chocolate meio amargo de alta qualidade 🍫\n*   **Caramelo Salgado:** Uma combinação perfeita de doce e sal! 🤤\n*   **Morango com Creme:** Uma explosão de sabor de morango cremoso! 🍓\n*   **Doce de Leite:** Simplesmente irresistível! 😋\n\nQual dessas te chamou mais a atenção? Ou você quer saber mais sobre alguma delas? 😉",
+    "sessao": "46426025-c494-41f4-b713-8e3aee2b7f42",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 539,
+          "outputTokens": 129,
+          "totalTokens": 668
+        },
+        "metrics": {
+          "latencyMs": 760
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C06/exec-01-turno-01-resposta.json"
+}

@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C03/exec-01-turno-01.json",
+  "id": "T03-C03",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:25:49.220606+00:00",
+  "inicioEm": "2026-10-16T21:25:44.618772+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4601.84,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as balas duras disponíveis?"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Boas-vindas à Pop & Doce Pipocaria Gourmet!\n\nNós temos várias balas duras deliciosas! Atualmente, temos:\n\n*   **Chocolate com Morango:** Um clássico irresistível! 🍓\n*   **Limão Siciliano:** Para quem ama um toque cítrico e refrescante! 🍋\n*   **Maracujá:** Uma explosão de sabor tropical! 🥭\n*   **Cassis:** Uma opção sofisticada e elegante! 🍇\n\nQual dessas te chamou mais a atenção? Ou você gostaria de saber mais sobre alguma delas? 😉",
+    "sessao": "6f845a1a-8c7f-4aa4-8db7-9b9132fac9a7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 538,
+          "outputTokens": 129,
+          "totalTokens": 667
+        },
+        "metrics": {
+          "latencyMs": 934
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C03/exec-01-turno-01-resposta.json"
+}

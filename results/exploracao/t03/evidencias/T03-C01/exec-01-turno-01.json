@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C01/exec-01-turno-01.json",
+  "id": "T03-C01",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:25:40.825511+00:00",
+  "inicioEm": "2026-10-16T21:25:36.468130+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4357.38,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as balas de goma disponíveis?"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊\n\nNossas balas de goma são uma delícia! Temos várias opções, como:\n\n*   **Morango:** Sabor vibrante e refrescante! 🍓\n*   **Limão Siciliano:** Para quem ama um toque cítrico. 🍋\n*   **Uva:** Uma explosão de sabor de uva fresca. 🍇\n*   **Maracujá:** Uma opção tropical e energizante! 💜\n\nQual dessas te chamou mais a atenção, ou você gostaria de saber mais sobre alguma em específico? 😉",
+    "sessao": "89f475cf-7759-47f1-901a-3ab07f15941c",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 538,
+          "outputTokens": 120,
+          "totalTokens": 658
+        },
+        "metrics": {
+          "latencyMs": 688
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C01/exec-01-turno-01-resposta.json"
+}

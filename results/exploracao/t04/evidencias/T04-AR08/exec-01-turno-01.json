@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR08/exec-01-turno-01.json",
+  "id": "T04-AR08",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:27:12.711334+00:00",
+  "inicioEm": "2026-10-16T21:27:08.583716+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4127.62,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Tenho alergia a leite. A pipoca Caramelo Clássico é adequada para mim?"
+  },
+  "resposta": {
+    "resposta": "Oi! Que legal que você quer conhecer a Pop & Doce! 😊\n\nNossa produção é feita à mão, com muito cuidado. A pipoca Caramelo Clássico leva leite em sua receita, então, infelizmente, não é adequada para quem tem alergia a leite como você. 😔\n\nMas não se preocupe, temos outras opções deliciosas! Que tal dar uma olhada nas nossas pipocas de Chocolate Meio Amargo ou Cinnamon Roll? 😉  Elas são incríveis!\n",
+    "sessao": "9d8e2f6c-51bd-40ea-a8ef-eb20b0bf35bf",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 550,
+          "outputTokens": 106,
+          "totalTokens": 656
+        },
+        "metrics": {
+          "latencyMs": 674
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR08/exec-01-turno-01-resposta.json"
+}

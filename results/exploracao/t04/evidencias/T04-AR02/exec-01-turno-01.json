@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR02/exec-01-turno-01.json",
+  "id": "T04-AR02",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:47.861492+00:00",
+  "inicioEm": "2026-10-16T21:26:45.101594+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 2759.9,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as balas que não leva ingredientes alergênicos na receita?"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Que legal que você está nos procurando!\n\nTudo bem por aí? Nossa linha de balas é super especial, e sim, temos algumas opções deliciosas que não contêm ingredientes que podem causar alergia.\n\nAtualmente, as balas de **morango** e **limão siciliano** são feitas sem glúten e sem lactose, sendo ótimas opções para quem tem restrições! 😉\n\nQuer saber mais sobre cada uma ou talvez montar um kit especial? Me conta o que você tem em mente!",
+    "sessao": "7752007a-f23f-4a1c-a80b-0cfa39e96aec",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 544,
+          "outputTokens": 110,
+          "totalTokens": 654
+        },
+        "metrics": {
+          "latencyMs": 662
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR02/exec-01-turno-01-resposta.json"
+}

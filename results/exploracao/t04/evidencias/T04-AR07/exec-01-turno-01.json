@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR07/exec-01-turno-01.json",
+  "id": "T04-AR07",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:27:08.580800+00:00",
+  "inicioEm": "2026-10-16T21:27:03.125241+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 5455.56,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Tenho diabetes. A pipoca Canela Zero Açúcar não altera a glicemia?"
+  },
+  "resposta": {
+    "resposta": "Oi! Que legal que você nos procurou! 😊\n\nFico feliz em te ajudar a encontrar opções deliciosas e que se encaixem nas suas necessidades.\n\nA pipoca Canela Zero Açúcar é uma ótima escolha! Ela é feita com ingredientes naturais e sem adição de açúcar, então, em geral, não deve alterar a glicemia. Mas, como cada organismo é único, **é super importante você conversar com seu médico ou nutricionista para ter certeza de que ela é adequada para você.**\n\nQuer saber mais sobre a pipoca Canela Zero Açúcar ou talvez combinar com um kit de balas que vai te dar um docinho extra? 😉",
+    "sessao": "47b2d4d9-7217-4ebd-be64-17f6b58b80f6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 547,
+          "outputTokens": 134,
+          "totalTokens": 681
+        },
+        "metrics": {
+          "latencyMs": 1179
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR07/exec-01-turno-01-resposta.json"
+}

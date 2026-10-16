@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C13/exec-01-turno-01.json",
+  "id": "T03-C13",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:26:27.617355+00:00",
+  "inicioEm": "2026-10-16T21:26:23.121052+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4496.31,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais assinaturas vocês oferecem e como funciona cada uma?"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊\n\nQue legal que você está nos conhecendo! A Pop & Doce Pipocaria Gourmet tem algumas assinaturas super gostosas que entregamos na sua casa! 😉\n\nTemos três opções:\n\n*   **Mini Pop:** A mais básica e perfeita para você experimentar nossos sabores! Você recebe uma seleção de 3 sabores de pipoca gourmet por mês, em embalagens individuais. O valor é R$ 69,90 por mês.\n*   **Pop Completa:** Para quem ama pipoca e quer descobrir novos sabores! Você recebe 6 sabores diferentes de pipoca gourmet por mês, em embalagens maiores, perfeitas para compartilhar. O valor é R$ 119,90 por mês.\n*   **Pop Premium:** Para os verdadeiros apaixonados por pipoca! Você recebe 8 sabores exclusivos de pipoca gourmet por mês, incluindo alguns sabores especiais e limitados. O valor é R$ 169,90 por mês.\n\nTodas as assinaturas incluem frete grátis para todo o Brasil! 🚀\n\nQual delas te chamou mais a atenção? Ou você tem alguma dúvida sobre as opções? 🥰",
+    "sessao": "693ffb1a-aab6-4ab9-ae8b-9e2e189cba7d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 542,
+          "outputTokens": 247,
+          "totalTokens": 789
+        },
+        "metrics": {
+          "latencyMs": 1220
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C13/exec-01-turno-01-resposta.json"
+}

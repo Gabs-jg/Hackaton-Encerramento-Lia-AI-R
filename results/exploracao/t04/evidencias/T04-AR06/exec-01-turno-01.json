@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t04/evidencias/T04-AR06/exec-01-turno-01.json",
+  "id": "T04-AR06",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:27:03.122353+00:00",
+  "inicioEm": "2026-10-16T21:26:59.092701+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 4029.65,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Sou vegano. Posso comer Ursinhos Frutas Vermelhas?"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Seja muito bem-vindo(a) à Pop & Doce Pipocaria Gourmet! Que legal que você nos procurou! \n\nFico super feliz em te atender. 😊\n\nE então, o que você gostaria de pedir hoje? Pipoca, balas, ou quem sabe um kit especial? Me conta as suas preferências! 😉\n",
+    "sessao": "b4bd075f-aeb1-429f-a919-eee069f35fb0",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 73,
+          "totalTokens": 618
+        },
+        "metrics": {
+          "latencyMs": 481
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t04/evidencias/T04-AR06/exec-01-turno-01-resposta.json"
+}

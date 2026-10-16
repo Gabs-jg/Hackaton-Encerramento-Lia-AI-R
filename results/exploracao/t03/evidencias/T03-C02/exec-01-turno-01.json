@@ -1,0 +1,33 @@
+{
+  "arquivo": "results/exploracao/t03/evidencias/T03-C02/exec-01-turno-01.json",
+  "id": "T03-C02",
+  "turno": 1,
+  "capturadoEm": "2026-10-16T21:25:44.615434+00:00",
+  "inicioEm": "2026-10-16T21:25:40.827443+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoClienteMs": 3787.99,
+  "curlExitCode": 0,
+  "erroTransporte": null,
+  "requisicao": {
+    "mensagem": "Quais são as balas mastigáveis disponíveis?"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Que bom ter você por aqui!\n\nAtualmente, temos três sabores de balas mastigáveis super gostosas: Morango, Limão Siciliano e Chocolate com Coco. 🥰\n\nQuer dar uma olhadinha nos detalhes de cada um? 😉",
+    "sessao": "cf56aa6c-9da6-405e-a966-4e169d687888",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 539,
+          "outputTokens": 54,
+          "totalTokens": 593
+        },
+        "metrics": {
+          "latencyMs": 517
+        }
+      }
+    ]
+  },
+  "arquivoResposta": "results/exploracao/t03/evidencias/T03-C02/exec-01-turno-01-resposta.json"
+}
