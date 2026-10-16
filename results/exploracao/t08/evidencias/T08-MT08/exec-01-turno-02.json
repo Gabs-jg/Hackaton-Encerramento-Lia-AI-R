@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT08",
+  "idOriginal": "MT-08",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:41:47.057305+00:00",
+  "capturadoEm": "2026-10-16T17:41:49.201933+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.128742,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "meu email é marcos.oliveira@example.com",
+    "sessao": "f4a27c8b-01e8-433c-8bbf-e616376421d6"
+  },
+  "resposta": {
+    "resposta": "Só um momento enquanto consulto seu pedido! ⏳\n\nSei que você pediu um pacote grande de pipoca doce de brigadeiro e um pote pequeno de balas de morango. Tudo certo por aqui! 🥳\n\nO seu pedido já está embalado e está a caminho! A entrega é para Belo Horizonte e o prazo estimado é de 2 dias úteis.\n\nPosso te ajudar com mais alguma coisa? 😊",
+    "sessao": "f4a27c8b-01e8-433c-8bbf-e616376421d6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 609,
+          "outputTokens": 87,
+          "totalTokens": 696
+        },
+        "metrics": {
+          "latencyMs": 1145
+        }
+      }
+    ]
+  }
+}

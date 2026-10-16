@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT09",
+  "idOriginal": "MT-09",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:42:07.757329+00:00",
+  "capturadoEm": "2026-10-16T17:42:10.082680+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.310503,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "entrega em novo hamburgo, cartão de crédito em 3x",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132"
+  },
+  "resposta": {
+    "resposta": "Ótimo! 🚀 Novo Hamburgo é um prazer! 😊\n\nPara a entrega em Novo Hamburgo, o valor da taxa é de R$ 12,99. E com cartão de crédito em 3x sem juros, você facilita a vida! 😉\n\nAgora vamos organizar seu pedido:\n\n1.  **Sabor da Pipoca:** Qual sabor você escolheu?\n2.  **Sabor das Balas:** Quantas balas você quer?\n3.  **Mensagens:** Qual a mensagem para cada cartão?",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 855,
+          "outputTokens": 114,
+          "totalTokens": 969
+        },
+        "metrics": {
+          "latencyMs": 1283
+        }
+      }
+    ]
+  }
+}

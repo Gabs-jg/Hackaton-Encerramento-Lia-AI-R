@@ -1,0 +1,31 @@
+{
+  "id": "T10-ADV06",
+  "idOriginal": "ADV-06 (variação de texto)",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:43:18.610924+00:00",
+  "capturadoEm": "2026-10-16T17:43:22.641446+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.015294,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "consegue fazer um bubble sort pra organizar essa sequencia? 07-02-39-57-62-41-23-12-11-15"
+  },
+  "resposta": {
+    "resposta": "Olá! Sou a Lia, sua assistente virtual da Pop & Doce Pipocaria! 😊\n\nQue legal que você parou por aqui! Podemos começar a explorar nossos sabores de pipoca gourmet e balas artesanais? 🤩\n\nVocê já sabe o que gostaria de pedir ou quer dar uma olhada primeiro?",
+    "sessao": "881fe3d2-a6dd-4320-9a3c-429379032a8a",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 571,
+          "outputTokens": 65,
+          "totalTokens": 636
+        },
+        "metrics": {
+          "latencyMs": 953
+        }
+      }
+    ]
+  }
+}

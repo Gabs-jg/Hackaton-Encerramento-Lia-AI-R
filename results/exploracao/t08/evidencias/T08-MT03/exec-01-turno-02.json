@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT03",
+  "idOriginal": "MT-03",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:40:29.885915+00:00",
+  "capturadoEm": "2026-10-16T17:40:31.491919+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.590306,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "não obrigado, pode fechar o pedido assim mesmo. não estou com fome",
+    "sessao": "87f0b838-32c8-4dc2-9df2-142b0f7236d7"
+  },
+  "resposta": {
+    "resposta": "Sem problemas! 😉 Entendo perfeitamente. \n\nEntão, fechando o pedido da pipoca natural sem sal, tamanho pequeno, só a pipoca mesmo. 😊\n\nO pedido será finalizado no nosso site: www.popedoce.example. Lá você confirma o endereço de entrega e finaliza o pagamento com cartão de crédito.\n\nLembrando que o valor total é apenas R$12,90. 😉\n\nQualquer dúvida, é só chamar! 😊",
+    "sessao": "87f0b838-32c8-4dc2-9df2-142b0f7236d7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 662,
+          "outputTokens": 100,
+          "totalTokens": 762
+        },
+        "metrics": {
+          "latencyMs": 641
+        }
+      }
+    ]
+  }
+}

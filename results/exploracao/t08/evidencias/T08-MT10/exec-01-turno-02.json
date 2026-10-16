@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT10",
+  "idOriginal": "MT-10",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:42:18.337782+00:00",
+  "capturadoEm": "2026-10-16T17:42:19.795833+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.442656,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "entrega porto alegre, cartão de crédito",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124"
+  },
+  "resposta": {
+    "resposta": "Direto para Porto Alegre! 🥳 Ótima escolha!\n\nSó preciso confirmar a forma de entrega. Você prefere entrega normal ou expressa? 😉 E qual o seu cartão de crédito? (Só para verificar as opções de parcelamento, sem precisar passar os dados aqui!)",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 624,
+          "outputTokens": 58,
+          "totalTokens": 682
+        },
+        "metrics": {
+          "latencyMs": 452
+        }
+      }
+    ]
+  }
+}

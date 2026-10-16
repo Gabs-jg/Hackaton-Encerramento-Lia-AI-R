@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT08",
+  "idOriginal": "MT-08",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:41:41.667134+00:00",
+  "capturadoEm": "2026-10-16T17:41:46.056650+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.372668,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero saber do meu pedido, PD-1001"
+  },
+  "resposta": {
+    "resposta": "Olá! 😊 Que bom te ver por aqui!\n\nCom prazer, vou te ajudar a verificar o seu pedido PD-1001. Só preciso do seu e-mail que você usou na compra para consultar. 😉",
+    "sessao": "f4a27c8b-01e8-433c-8bbf-e616376421d6",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 541,
+          "outputTokens": 47,
+          "totalTokens": 588
+        },
+        "metrics": {
+          "latencyMs": 1244
+        }
+      }
+    ]
+  }
+}

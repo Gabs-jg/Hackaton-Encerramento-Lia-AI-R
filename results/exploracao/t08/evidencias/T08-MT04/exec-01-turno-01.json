@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT04",
+  "idOriginal": "MT-04",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:40:37.384409+00:00",
+  "capturadoEm": "2026-10-16T17:40:41.474963+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.075733,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero o kit festa"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊\n\nQue legal que você se interessou pelo nosso kit festa! Temos vários opções super gostosas e divertidas. 😉\n\nQuer me dizer qual tipo de sabor de pipoca e bala você prefere para o kit? Podemos montar algo totalmente personalizado para a sua festa! 🥳",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 533,
+          "outputTokens": 63,
+          "totalTokens": 596
+        },
+        "metrics": {
+          "latencyMs": 632
+        }
+      }
+    ]
+  }
+}

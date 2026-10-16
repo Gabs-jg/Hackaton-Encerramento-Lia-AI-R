@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT10",
+  "idOriginal": "MT-10",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:42:20.796753+00:00",
+  "capturadoEm": "2026-10-16T17:42:22.724072+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.912482,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "bota mais uma de cheddar pequena",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124"
+  },
+  "resposta": {
+    "resposta": "Combinado! Uma cheddar pequena mais, hein? 😉\n\nAgora sim, temos:\n\n*   6 pipocas de cheddar médias\n*   1 pipoca de cheddar pequena\n\nPosso finalizar o pedido por aqui ou você prefere ir no site www.popedoce.example para finalizar? 😉",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 698,
+          "outputTokens": 62,
+          "totalTokens": 760
+        },
+        "metrics": {
+          "latencyMs": 912
+        }
+      }
+    ]
+  }
+}

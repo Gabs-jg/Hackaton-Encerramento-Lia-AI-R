@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT09",
+  "idOriginal": "MT-09",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:41:56.558484+00:00",
+  "capturadoEm": "2026-10-16T17:42:00.521497+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 3.948592,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero a caixa presente pop & doce"
+  },
+  "resposta": {
+    "resposta": "Olá! Eu sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! 😊 Que bom ter você por aqui!\n\nA nossa Caixa Presente é simplesmente incrível, cheia de delícias para você compartilhar! 🤩\n\nMe conta, o que você gostaria de incluir nessa caixa especial? Pipoca de qual sabor você prefere? E quais balas artesanais te deixariam ainda mais feliz? 😉\n",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 536,
+          "outputTokens": 88,
+          "totalTokens": 624
+        },
+        "metrics": {
+          "latencyMs": 873
+        }
+      }
+    ]
+  }
+}

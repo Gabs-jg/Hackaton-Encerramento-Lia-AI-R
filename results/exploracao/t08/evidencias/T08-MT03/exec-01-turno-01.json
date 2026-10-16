@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT03",
+  "idOriginal": "MT-03",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:40:25.009460+00:00",
+  "capturadoEm": "2026-10-16T17:40:28.884927+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 3.860248,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero uma pipoca natural sem sal, pequena. no crédito a vista, por favor"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊 Que bom ter você por aqui! 😊\n\nEntão você quer uma pipoca natural sem sal, tamanho pequeno, né? Perfeito! Ficou ótima escolha! 😋\n\nE para acompanhar essa pipoca deliciosa, que tal dar uma olhada nas nossas balas artesanais? Temos sabores incríveis! 😉\n\nPara finalizar o pedido, qual a sua cidade de entrega e você prefere pagar no crédito ou à vista?",
+    "sessao": "87f0b838-32c8-4dc2-9df2-142b0f7236d7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 546,
+          "outputTokens": 92,
+          "totalTokens": 638
+        },
+        "metrics": {
+          "latencyMs": 639
+        }
+      }
+    ]
+  }
+}

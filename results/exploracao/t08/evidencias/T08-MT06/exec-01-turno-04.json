@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT06",
+  "idOriginal": "MT-06",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:41:16.616043+00:00",
+  "capturadoEm": "2026-10-16T17:41:18.698035+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.066817,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "e a bala ursinhos frutas vermelhas, é vegana?",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea"
+  },
+  "resposta": {
+    "resposta": "Boa pergunta! 🧐 A bala URSINHOS frutas vermelhas, infelizmente, não é vegana. Ela contém mel como ingrediente. 😔\n\nMas não se preocupe! Temos outras balas veganas super saborosas, como a de jabuticaba, que é uma explosão de sabor tropical! 🌴\n\nQuer dar uma olhada nas nossas opções veganas de balas? 😉",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 866,
+          "outputTokens": 83,
+          "totalTokens": 949
+        },
+        "metrics": {
+          "latencyMs": 1050
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT10",
+  "idOriginal": "MT-10",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:42:11.099446+00:00",
+  "capturadoEm": "2026-10-16T17:42:17.336931+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 6.222233,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero 6 pipoca de cheddar média"
+  },
+  "resposta": {
+    "resposta": "Oi! Que legal que você veio à Pop & Doce! 🤩\n\nEntão, você quer 6 pipocas de cheddar médias, certo? Perfeito, vamos preparar isso! 😊\n\nMe conta, você quer que eu finalize o pedido aqui ou prefere ir direto pro nosso site www.popedoce.example para finalizar? 😉",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 537,
+          "outputTokens": 70,
+          "totalTokens": 607
+        },
+        "metrics": {
+          "latencyMs": 2343
+        }
+      }
+    ]
+  }
+}

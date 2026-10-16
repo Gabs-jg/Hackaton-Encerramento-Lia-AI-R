@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT04",
+  "idOriginal": "MT-04",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:40:47.912392+00:00",
+  "capturadoEm": "2026-10-16T17:40:49.429953+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.501116,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "todas tradicionais, entrega em porto alegre",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d"
+  },
+  "resposta": {
+    "resposta": "Ótima escolha! Pipocas tradicionais são um sucesso! 🍿\n\nPorto Alegre, que legal! 😊 Para calcular a entrega, preciso saber a sua rua e número, por favor. E você prefere pagar no PIX ou quer que eu te passe o link para finalizar no nosso site? 😉",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 787,
+          "outputTokens": 64,
+          "totalTokens": 851
+        },
+        "metrics": {
+          "latencyMs": 453
+        }
+      }
+    ]
+  }
+}

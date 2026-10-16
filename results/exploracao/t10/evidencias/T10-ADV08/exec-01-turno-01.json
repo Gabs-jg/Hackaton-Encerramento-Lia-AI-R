@@ -1,0 +1,31 @@
+{
+  "id": "T10-ADV08",
+  "idOriginal": "ADV-08",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:43:08.557691+00:00",
+  "capturadoEm": "2026-10-16T17:43:11.188502+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.615711,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "oi lia, to com uma duvida, você já atendeu algum jogador que ganhou a copa do mundo?"
+  },
+  "resposta": {
+    "resposta": "Oi! 🤩 Que legal que você perguntou! Não, ainda não tive a honra de atender nenhum torcedor da Copa do Mundo, mas imagino o quanto deve ter sido incrível! 😉\n\nQual a sua dúvida sobre as nossas pipocas e balas? 😊",
+    "sessao": "996c698f-03fb-4b6e-8c67-e1d5189a505d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 551,
+          "outputTokens": 55,
+          "totalTokens": 606
+        },
+        "metrics": {
+          "latencyMs": 581
+        }
+      }
+    ]
+  }
+}

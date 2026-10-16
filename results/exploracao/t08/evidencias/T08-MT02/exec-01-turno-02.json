@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT02",
+  "idOriginal": "MT-02",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:40:11.214646+00:00",
+  "capturadoEm": "2026-10-16T17:40:18.065832+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 6.834852,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "na verdade troca pro kit happy hour",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489"
+  },
+  "resposta": {
+    "resposta": "Entendi! Trocar o kit cinema pelo Happy Hour, que legal! 🥰\n\nO kit Happy Hour tem pipoca com sabor de cheddar, pó de páprica defumada e 8 balas de morango. É perfeito para um bate-papo animado!\n\nQuer prosseguir com a troca ou tem mais alguma dúvida sobre o kit Happy Hour? 😉",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 674,
+          "outputTokens": 76,
+          "totalTokens": 750
+        },
+        "metrics": {
+          "latencyMs": 5831
+        }
+      }
+    ]
+  }
+}

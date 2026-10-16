@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT05",
+  "idOriginal": "MT-05",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:41:00.363418+00:00",
+  "capturadoEm": "2026-10-16T17:41:02.209706+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.83123,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "e dá pra usar os dois?",
+    "sessao": "f645e720-c82f-4129-bbd2-27b8a312bd55"
+  },
+  "resposta": {
+    "resposta": "Boa pergunta! 👍 Você pode sim usar os dois, mas o cupom NATAL2025 só dá desconto em um valor total do pedido. 😅\n\nQuer levar as duas pipocas (uma de chocolate belga e uma de Blackpop) e aproveitar o desconto do NATAL2025? 😊",
+    "sessao": "f645e720-c82f-4129-bbd2-27b8a312bd55",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 778,
+          "outputTokens": 66,
+          "totalTokens": 844
+        },
+        "metrics": {
+          "latencyMs": 745
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT01",
+  "idOriginal": "MT-01",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:40:01.561934+00:00",
+  "capturadoEm": "2026-10-16T17:40:03.310571+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.733315,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "ah e bota mais 2 de cheddar média tbm",
+    "sessao": "6ecd9b15-deb2-4f87-8063-392628cc1b76"
+  },
+  "resposta": {
+    "resposta": "Sem problemas! 😉 Adicionei mais 2 pipocas de cheddar média ao seu pedido.\n\nAgora, para completar a sua experiência deliciosa, que tal adicionar algumas balas artesanais? Temos sabores incríveis, como morango e chocolate! 🍓🍫\n\nQual a sua cidade de entrega e como você prefere pagar? 😊",
+    "sessao": "6ecd9b15-deb2-4f87-8063-392628cc1b76",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 624,
+          "outputTokens": 68,
+          "totalTokens": 692
+        },
+        "metrics": {
+          "latencyMs": 700
+        }
+      }
+    ]
+  }
+}

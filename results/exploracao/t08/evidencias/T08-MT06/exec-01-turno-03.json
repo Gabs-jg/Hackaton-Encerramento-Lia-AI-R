@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT06",
+  "idOriginal": "MT-06",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:41:14.018382+00:00",
+  "capturadoEm": "2026-10-16T17:41:15.615431+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.583141,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "me indica uma doce então",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea"
+  },
+  "resposta": {
+    "resposta": "Hmm, que tal nossas balas de morango artesanais? 🍓 São feitas com morangos frescos e um toque de mel, o sabor é incrível! 😋\n\nJá pensou em combinar a pipoca de caramelo com uma dessas balas? Uma dupla deliciosa! 😉",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 786,
+          "outputTokens": 58,
+          "totalTokens": 844
+        },
+        "metrics": {
+          "latencyMs": 538
+        }
+      }
+    ]
+  }
+}

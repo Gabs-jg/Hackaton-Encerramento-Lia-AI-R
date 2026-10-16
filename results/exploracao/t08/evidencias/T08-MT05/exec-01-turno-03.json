@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT05",
+  "idOriginal": "MT-05",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:40:57.792455+00:00",
+  "capturadoEm": "2026-10-16T17:40:59.362783+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.555052,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "e o blackpop, rola?",
+    "sessao": "f645e720-c82f-4129-bbd2-27b8a312bd55"
+  },
+  "resposta": {
+    "resposta": "Blackpop? 🤩 Essa pipoca é especial demais! Temos sim! 😍\n\nEla é feita com chocolate preto intenso, flor de sal e um toque de especiarias. É uma explosão de sabor! 😋\n\nQuer adicionar uma Blackpop ao seu pedido? 😊",
+    "sessao": "f645e720-c82f-4129-bbd2-27b8a312bd55",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 705,
+          "outputTokens": 57,
+          "totalTokens": 762
+        },
+        "metrics": {
+          "latencyMs": 547
+        }
+      }
+    ]
+  }
+}

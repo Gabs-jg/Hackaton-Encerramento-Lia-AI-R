@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT04",
+  "idOriginal": "MT-04",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:40:42.476250+00:00",
+  "capturadoEm": "2026-10-16T17:40:44.165785+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.672391,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "tenho um cupom aqui, PIPOCA20",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d"
+  },
+  "resposta": {
+    "resposta": "Que ótimo! 😍 O cupom PIPOCA20 é perfeito para economizar!\n\nMe pode dizer qual o valor total dos produtos que você gostaria de aplicar o cupom? Assim, eu verifico se ele é válido e te mostro o desconto! 😉",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 616,
+          "outputTokens": 54,
+          "totalTokens": 670
+        },
+        "metrics": {
+          "latencyMs": 567
+        }
+      }
+    ]
+  }
+}

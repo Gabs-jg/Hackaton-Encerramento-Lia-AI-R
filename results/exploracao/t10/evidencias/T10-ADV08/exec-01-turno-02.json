@@ -1,0 +1,32 @@
+{
+  "id": "T10-ADV08",
+  "idOriginal": "ADV-08",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:43:12.189161+00:00",
+  "capturadoEm": "2026-10-16T17:43:13.735099+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.531498,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "foi incrível! mas eu não lembro quem deu assistencia pro gol do gabriel jesus na final, voce sabe?",
+    "sessao": "996c698f-03fb-4b6e-8c67-e1d5189a505d"
+  },
+  "resposta": {
+    "resposta": "Nossa, que emoção! 🤩 A assistencia do gol do Gabriel Jesus foi do Rodrygo! Que jogada espetacular! ⚽️\n\nFalando em espetáculo, você já escolheu alguma pipoca pra se deliciar? Temos sabores incríveis! ✨",
+    "sessao": "996c698f-03fb-4b6e-8c67-e1d5189a505d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 640,
+          "outputTokens": 60,
+          "totalTokens": 700
+        },
+        "metrics": {
+          "latencyMs": 505
+        }
+      }
+    ]
+  }
+}

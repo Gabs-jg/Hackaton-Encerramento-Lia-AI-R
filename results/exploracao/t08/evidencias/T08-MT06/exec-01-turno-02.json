@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT06",
+  "idOriginal": "MT-06",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:41:11.153266+00:00",
+  "capturadoEm": "2026-10-16T17:41:13.002361+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.832545,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero uma de caramelo clássico grande",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea"
+  },
+  "resposta": {
+    "resposta": "Show de bola! Uma de caramelo clássico grande, combinação perfeita! 🤩\n\nSó pra confirmar, você gostaria da embalagem grande da pipoca de caramelo clássico? Ela tem 500g e é perfeita para compartilhar (ou não! 😉).\n\nPara finalizar o seu pedido, que tal uma embaladinha de balas de goma artesanais para acompanhar a pipoca? Elas são irresistíveis! 😊",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 684,
+          "outputTokens": 88,
+          "totalTokens": 772
+        },
+        "metrics": {
+          "latencyMs": 837
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT03",
+  "idOriginal": "MT-03",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:40:32.501797+00:00",
+  "capturadoEm": "2026-10-16T17:40:33.901555+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.38444,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "entrega em gravataí",
+    "sessao": "87f0b838-32c8-4dc2-9df2-142b0f7236d7"
+  },
+  "resposta": {
+    "resposta": "Beleza! Gravatáí! 🚀 Já anotei!\n\nSó mais uma coisinha rapidinho: você gostaria de confirmar o endereço completo em Gravatáí para garantir que a entrega vá para o lugar certo? 😉",
+    "sessao": "87f0b838-32c8-4dc2-9df2-142b0f7236d7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 777,
+          "outputTokens": 48,
+          "totalTokens": 825
+        },
+        "metrics": {
+          "latencyMs": 402
+        }
+      }
+    ]
+  }
+}
