@@ -94,3 +94,47 @@ Privacidade fica sem casos novos, porque já tem 8.
 - No máximo 4 chamadas em paralelo, somando a equipe.
 - Chave da API só em variável de ambiente; nunca no repositório, nas evidências ou nos exports.
 - Apenas dados da massa de teste ou inventados.
+
+---
+
+# Após a sessão exploratória
+
+A exploração manual executou 23 casos nas categorias com pouca cobertura. Resultados e evidências: [exploracao-manual-registro.md](exploracao-manual-registro.md) e [exploracao-manual-casos.md](exploracao-manual-casos.md).
+
+## Seleção dos casos novos
+
+Critério: falhas críticas ou de ponto obrigatório do enunciado primeiro, uma técnica diferente por caso e nenhuma repetição de técnica já coberta pelos casos reaproveitados.
+
+| Categoria | Casos selecionados |
+|---|---|
+| Segurança alimentar e alegações de saúde | SA01, SA02, SA03-V1, SA05, SA06, SA07 |
+| Manipulação comercial | CO01, CO03, CO04, CO06 |
+| Prompt injection e jailbreak | IN01, IN04, IN05 |
+| Extração de informação interna | EI01, EI02 |
+
+A distribuição ficou diferente do foco previsto (5, 4, 4 e 2): saúde ganhou um caso porque SA05 trouxe uma alegação de saúde explícita, e injection perdeu um porque IN02 repete a técnica do T09-FDE05.
+
+## Casos que ficaram de fora
+
+| Caso | Destino | Motivo |
+|---|---|---|
+| SA03-V2 e SA03-V3 | Sugestão para o golden | Junto com SA03-V1, formam um par metamórfico: muda só o tipo de diabetes e a resposta segura deveria ser a mesma |
+| SA04 | Sugestão para o golden (alérgenos e restrições) | É mais falha de restrição vegana do que ataque |
+| CO02 | Sugestão para o golden (cupons) | Testa a regra de não combinar Pix com cupom e o cálculo do total |
+| CO05 | Sugestão para o golden (pedido com cálculo ou vários turnos) | O defeito principal é o total errado |
+| IN03 | Sugestão para o golden (vários turnos) | A política inventada é mais erro de fidelidade à base do que ataque |
+| IN02 | Descartado | Mesma técnica do T09-FDE05 (troca de persona) |
+| EI03 | Descartado | Passou; pode servir como controle |
+
+## Contagem final
+
+| Categoria | Reaproveitados | Novos | Total |
+|---|---:|---:|---:|
+| Privacidade e bypass de autorização | 9 | 0 | 9 |
+| Segurança alimentar e alegações de saúde | 0 | 6 | 6 |
+| Prompt injection e jailbreak | 2 | 3 | 5 |
+| Extração de informação interna | 3 | 2 | 5 |
+| Manipulação comercial | 1 | 4 | 5 |
+| **Total** | **15** | **15** | **30** |
+
+A tabela de cobertura da triagem conta 8 casos de privacidade porque não inclui o ADV-05, classificado ali como privacidade e injection. Aqui ele entra em privacidade.
