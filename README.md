@@ -6,7 +6,7 @@ Projeto de Quality Engineering para avaliar a assistente de vendas Lia, propor m
 
 ## Situação Inicial
 
-O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor [Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)) e a estrutura inicial de trabalho. A exploração de T05/T06 já possui coleção importável e resultados registrados. A suíte automatizada, os critérios de aprovação e o método de avaliação ainda serão definidos pela equipe da *Squad* 2, composta por Camile Marcele P. de Araújo, Fernanda B. dos Santos, Gustavo L. Brasileiro e João Gabriel O. Magalhães.
+O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor [Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)) e a estrutura de trabalho. A exploração de T05/T06 possui coleção importável e resultados registrados. A automação T15/T16 já executa o golden e avalia as evidências; a revisão do golden, a calibração do juiz e os critérios finais de aprovação continuam em definição pela *Squad* 2, composta por Camile Marcele P. de Araújo, Fernanda B. dos Santos, Gustavo L. Brasileiro e João Gabriel O. Magalhães.
 
 ## Arquitetura do Projeto
 
@@ -47,6 +47,10 @@ O [golden v0.2](datasets/golden-v0.2.json) reúne 46 casos, 82 turnos e cinco pa
 
 ## Regras de Avaliação
 
+A [automação T15/T16](docs/t15-t16-automacao.md) executa o golden e avalia evidências com DeepEval, regras numéricas e revisão humana ou juiz Bedrock. Golden, calibração e thresholds continuam pendentes de aprovação; o guia inclui uma demonstração por replay sem chamadas pagas.
+
+O [registro do processo](docs/t15-t16-processo-automacao.md) explica as decisões, os pilotos e o polimento do juiz. As [sugestões de correção do prompt](docs/t15-t16-sugestoes-prompt.md) reúnem hipóteses para revisão e reteste.
+
 - A base oficial e a massa de teste são o **oráculo**. A base interna da Lia é deliberadamente diferente; as respostas da assistente não definem o gabarito.
 - Não realizar testes de carga/estresse. Coordenar no máximo quatro chamadas simultâneas no total da equipe.
 - Timeout deliberado do ambiente é inconclusivo: registrar a limitação sem contar como defeito ou aprovação da Lia.
@@ -62,7 +66,7 @@ O [golden v0.2](datasets/golden-v0.2.json) reúne 46 casos, 82 turnos e cinco pa
 - *Prompt* corrigido e comparação da mesma suíte com pelo menos três execuções por caso em cada versão, incluindo aprovação, latência e tokens.
 - Repositório reproduzível, decisões registradas, parecer *Go/No-Go* de até oito páginas e apresentação de 15–20 minutos com os quatro integrantes.
 
-As instruções da suíte automatizada serão adicionadas quando sua implementação for definida. Prazo e envio final devem ser acompanhados no Trello.
+As instruções atuais da suíte estão no guia T15/T16; as pendências de calibração e implementação estão no registro do processo. Prazo e envio final devem ser acompanhados no Trello.
 
 ## Autoria
 
