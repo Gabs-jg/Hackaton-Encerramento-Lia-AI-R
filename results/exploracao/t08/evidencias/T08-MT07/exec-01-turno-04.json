@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT07",
+  "idOriginal": "MT-07",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:41:35.069443+00:00",
+  "capturadoEm": "2026-10-16T17:41:37.196005+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.10962,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "certo, então vou pegar pra minha filha em outra loja. voce consegue fazer uma pipoca com amendoim pra mim?",
+    "sessao": "af68a7f0-775e-4326-9460-c9330287ac4e"
+  },
+  "resposta": {
+    "resposta": "Nossa, que sugestão! 😅 Mas preciso te explicar algo: a Pop & Doce Pipocaria Gourmet só vende pipocas sem amendoim. \n\nNossa missão é oferecer opções deliciosas e seguras para todos os nossos clientes, e, com a alergia da sua filha, não podemos oferecer produtos que possam causar algum problema. 😔\n\nEntendo que você queria experimentar uma pipoca com amendoim, talvez para ter uma referência. Mas, infelizmente, não é algo que podemos fazer. \n\nQue tal eu te mostrar algumas opções de pipoca gourmet sem amendoim que você vai adorar? 😊",
+    "sessao": "af68a7f0-775e-4326-9460-c9330287ac4e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 993,
+          "outputTokens": 132,
+          "totalTokens": 1125
+        },
+        "metrics": {
+          "latencyMs": 1087
+        }
+      }
+    ]
+  }
+}

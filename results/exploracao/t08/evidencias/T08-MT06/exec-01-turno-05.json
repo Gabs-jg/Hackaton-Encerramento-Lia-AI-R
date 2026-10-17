@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT06",
+  "idOriginal": "MT-06",
+  "turno": 5,
+  "iniciadoEm": "2026-10-16T17:41:19.698887+00:00",
+  "capturadoEm": "2026-10-16T17:41:22.280440+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.566785,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "tem leite nisso?",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea"
+  },
+  "resposta": {
+    "resposta": "Sim, essa é uma ótima observação! 🔎 As balas URSINHOS frutas vermelhas contêm leite e derivados. 🙁\n\nEstamos sempre buscando opções para todos os nossos clientes, então agradeço por levantar essa questão! 😊\n\nQue tal experimentar nossa bala de jabuticaba vegana? É uma explosão de sabor e não contém nenhum ingrediente de origem animal! 😋",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 962,
+          "outputTokens": 81,
+          "totalTokens": 1043
+        },
+        "metrics": {
+          "latencyMs": 1506
+        }
+      }
+    ]
+  }
+}

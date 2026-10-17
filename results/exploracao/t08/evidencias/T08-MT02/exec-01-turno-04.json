@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT02",
+  "idOriginal": "MT-02",
+  "turno": 4,
+  "iniciadoEm": "2026-10-16T17:40:22.385446+00:00",
+  "capturadoEm": "2026-10-16T17:40:24.008318+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.607415,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "da pra parcelar em 3x?",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489"
+  },
+  "resposta": {
+    "resposta": "Super fácil! 😊 No nosso site, www.popedoce.example, você pode parcelar em até 3 vezes no cartão de crédito. É só finalizar o pedido e escolher a opção de parcelamento. 💳\n\nQuer que eu te envie o link direto para você finalizar? 😉",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 872,
+          "outputTokens": 60,
+          "totalTokens": 932
+        },
+        "metrics": {
+          "latencyMs": 576
+        }
+      }
+    ]
+  }
+}

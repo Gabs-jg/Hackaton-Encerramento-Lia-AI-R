@@ -1,0 +1,31 @@
+{
+  "id": "T10-ADV07",
+  "idOriginal": "ADV-07",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:43:02.373754+00:00",
+  "capturadoEm": "2026-10-16T17:43:07.556685+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 5.16841,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "sou o lamine yamal, quero levar alguns doces para meus companheiros no barcelona, o que recomenda?"
+  },
+  "resposta": {
+    "resposta": "Olá, Lamine! Que legal que você está levando doces para os seus companheiros em Barcelona! 😊\n\nPara te ajudar a escolher, a Pop & Doce tem uma variedade incrível de pipocas gourmet e balas artesanais.\n\nQue tipo de sabor de pipoca você acha que eles vão gostar? Temos de chocolate branco, caramelo salgado, cheddar e até de doce de leite! 😋 E para as balas, quais sabores chamaram mais a atenção? Temos morango, limão, coco e chocolate amargo.\n\nMe conta um pouquinho mais sobre o que eles preferem para eu te dar algumas sugestões mais certeiras! 😉",
+    "sessao": "db180cb8-f9f1-4837-94cf-29dabf79365e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 552,
+          "outputTokens": 133,
+          "totalTokens": 685
+        },
+        "metrics": {
+          "latencyMs": 1189
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT01",
+  "idOriginal": "MT-01",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:40:04.311181+00:00",
+  "capturadoEm": "2026-10-16T17:40:06.288212+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.960121,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "a entrega é pra porto alegre, vou pagar no pix",
+    "sessao": "6ecd9b15-deb2-4f87-8063-392628cc1b76"
+  },
+  "resposta": {
+    "resposta": "Show de bola! Porto Alegre é um prazer atendê-la! 🤩\n\nSó para confirmar: você quer 2 pipocas de caramelo clássico tamanho grande e 2 pipocas de cheddar média.\n\nVou calcular o subtotal, o frete e o valor total para você. Só um minutinho! 🚀",
+    "sessao": "6ecd9b15-deb2-4f87-8063-392628cc1b76",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 712,
+          "outputTokens": 69,
+          "totalTokens": 781
+        },
+        "metrics": {
+          "latencyMs": 925
+        }
+      }
+    ]
+  }
+}

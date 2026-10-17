@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT10",
+  "idOriginal": "MT-10",
+  "turno": 5,
+  "iniciadoEm": "2026-10-16T17:42:26.280370+00:00",
+  "capturadoEm": "2026-10-16T17:42:28.057211+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.76197,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "tira a pequena então",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124"
+  },
+  "resposta": {
+    "resposta": "Entendi! Sem problemas, vamos só com as médias então! 😉\n\nAgora temos:\n\n*   6 pipocas de cheddar médias\n\nE para acompanhar a pipoca, que tal levar um pacote delicioso de balas artesanais? Temos várias opções, qual te agrada mais? 🍬😊",
+    "sessao": "6dfd9124-3156-4655-aebc-35eb18d10124",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 857,
+          "outputTokens": 60,
+          "totalTokens": 917
+        },
+        "metrics": {
+          "latencyMs": 442
+        }
+      }
+    ]
+  }
+}

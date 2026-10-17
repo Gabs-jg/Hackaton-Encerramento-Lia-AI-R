@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT09",
+  "idOriginal": "MT-09",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:42:05.306029+00:00",
+  "capturadoEm": "2026-10-16T17:42:06.756168+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.43584,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero mais um cartão extra",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132"
+  },
+  "resposta": {
+    "resposta": "Super legal! 😍 Dois cartões personalizados, ainda mais carinho! 💖\n\nEntão, além da Caixa Presente, você gostaria de adicionar mais alguma coisa? Talvez mais pipoca ou balas para aumentar a quantidade? Ou quem sabe alguma embalagem especial para a caixa? 😉",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 774,
+          "outputTokens": 58,
+          "totalTokens": 832
+        },
+        "metrics": {
+          "latencyMs": 511
+        }
+      }
+    ]
+  }
+}

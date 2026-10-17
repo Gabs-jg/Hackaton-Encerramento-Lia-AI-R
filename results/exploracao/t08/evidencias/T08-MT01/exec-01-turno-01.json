@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT01",
+  "idOriginal": "MT-01",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:39:56.022751+00:00",
+  "capturadoEm": "2026-10-16T17:40:00.560214+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.509199,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "oi, quero 2 pipocas de caramelo clássico tamanho grande"
+  },
+  "resposta": {
+    "resposta": "Oi! Que ótimo que você escolheu a Pop & Doce! 😄\n\nDuas pipocas de caramelo clássico tamanho grande, hum? Perfeito! 😋\n\nPara garantir que está tudo perfeito para você, qual a sua cidade de entrega? E como você prefere pagar?",
+    "sessao": "6ecd9b15-deb2-4f87-8063-392628cc1b76",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 543,
+          "outputTokens": 60,
+          "totalTokens": 603
+        },
+        "metrics": {
+          "latencyMs": 816
+        }
+      }
+    ]
+  }
+}

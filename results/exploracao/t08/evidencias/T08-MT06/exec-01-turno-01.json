@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT06",
+  "idOriginal": "MT-06",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:41:05.903196+00:00",
+  "capturadoEm": "2026-10-16T17:41:10.152642+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 4.234493,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "sou vegano, quais pipocas eu posso comer?"
+  },
+  "resposta": {
+    "resposta": "Oi! Que legal que você se interessa pelas nossas pipocas! 😊\n\nÓtima pergunta! Temos algumas opções deliciosas para você, que é vegano. As nossas pipocas de milho orgânico com azeite extra virgem e ervas finas são 100% veganas e super saborosas. 😋 Já as pipocas de cheddar e as de chocolate com especiarias, utilizamos ingredientes que podem conter derivados de leite (manteiga), então, nesse caso, não são adequadas para você.\n\nPosso te mostrar mais detalhes sobre as opções veganas da nossa linha? 😉",
+    "sessao": "a5292601-5854-4d42-84dd-c2499bc27cea",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 540,
+          "outputTokens": 127,
+          "totalTokens": 667
+        },
+        "metrics": {
+          "latencyMs": 1004
+        }
+      }
+    ]
+  }
+}

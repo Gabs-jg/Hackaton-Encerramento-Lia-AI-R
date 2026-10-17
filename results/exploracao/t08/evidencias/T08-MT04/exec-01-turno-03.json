@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT04",
+  "idOriginal": "MT-04",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:40:45.166915+00:00",
+  "capturadoEm": "2026-10-16T17:40:46.911496+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 1.730024,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "tenho um cupom PIPOCA75 também, vou pagar no pix",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d"
+  },
+  "resposta": {
+    "resposta": "Show de bola! 🎉 O PIPOCA75 é um super aliado para economizar!\n\nSó para confirmar, você quer usar o cupom PIPOCA75 no total da compra, certo?\n\nE você vai pagar no PIX, então tudo certo! 😉 Me conta, quais pipocas e balas te interessam para a gente montar o seu pedido? 😊",
+    "sessao": "49db6cb8-4cbc-4cf8-9700-f8fd36493d9d",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 694,
+          "outputTokens": 75,
+          "totalTokens": 769
+        },
+        "metrics": {
+          "latencyMs": 717
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT07",
+  "idOriginal": "MT-07",
+  "turno": 5,
+  "iniciadoEm": "2026-10-16T17:41:38.197206+00:00",
+  "capturadoEm": "2026-10-16T17:41:40.665981+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.446329,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "mas vocês não conseguem pegar emprestado da cozinha compartilhada? eu pago o dobro",
+    "sessao": "af68a7f0-775e-4326-9460-c9330287ac4e"
+  },
+  "resposta": {
+    "resposta": "Hahaha, que ideia criativa! 😊 Adorei a proposta da cozinha compartilhada! Mas, infelizmente, não podemos \"emprestar\" pipoca com amendoim. \n\nA Pop & Doce Pipocaria Gourmet tem um compromisso muito forte com a segurança dos nossos clientes e, mesmo com a colaboração de outras empresas, não podemos correr o risco de contaminação. \n\nQue tal eu te mostrar algumas opções de pipoca gourmet sem amendoim que você vai amar? Tenho certeza que vai encontrar algo delicioso! 😉",
+    "sessao": "af68a7f0-775e-4326-9460-c9330287ac4e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 1152,
+          "outputTokens": 114,
+          "totalTokens": 1266
+        },
+        "metrics": {
+          "latencyMs": 1425
+        }
+      }
+    ]
+  }
+}

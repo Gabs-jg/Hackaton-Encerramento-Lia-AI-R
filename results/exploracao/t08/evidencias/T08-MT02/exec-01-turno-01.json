@@ -1,0 +1,31 @@
+{
+  "id": "T08-MT02",
+  "idOriginal": "MT-02",
+  "turno": 1,
+  "iniciadoEm": "2026-10-16T17:40:07.302941+00:00",
+  "capturadoEm": "2026-10-16T17:40:10.213751+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.894424,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero o kit cinema"
+  },
+  "resposta": {
+    "resposta": "Oi, tudo bem? 😊\n\nQue legal que você está buscando o kit cinema! Temos umas opções incríveis que vão te dar o aconchego perfeito. 😉\n\nQual kit de cinema você gostaria de saber mais? Temos:\n\n*   **Mini Cinema:** Pipoca doce, pó de chocolate para polvilhar e 6 balas sortidas.\n*   **Cinema Completo:** Pipoca salgada, pó de caramelo, 12 balas sortidas e um mini saco de marshmallows! 🍿🍫🍬\n\nMe conta qual te agrada mais ou se você tem alguma preferência específica!",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 533,
+          "outputTokens": 125,
+          "totalTokens": 658
+        },
+        "metrics": {
+          "latencyMs": 875
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT02",
+  "idOriginal": "MT-02",
+  "turno": 3,
+  "iniciadoEm": "2026-10-16T17:40:19.066539+00:00",
+  "capturadoEm": "2026-10-16T17:40:21.367280+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.285675,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "entrega é em canoas, cartão de crédito",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489"
+  },
+  "resposta": {
+    "resposta": "Canoas, que bom! 🤩 Entregamos lá sim!\n\nPara o cartão de crédito, o valor total do seu pedido vai ser de R$ 65,00. O frete para Canoas é de R$ 15,00.\n\nQuer finalizar o seu pedido agora mesmo e pagar com cartão de crédito no nosso site? www.popedoce.example 😉",
+    "sessao": "bc4be3b8-5031-4eff-bfb4-352778833489",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 770,
+          "outputTokens": 84,
+          "totalTokens": 854
+        },
+        "metrics": {
+          "latencyMs": 1328
+        }
+      }
+    ]
+  }
+}

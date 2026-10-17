@@ -1,0 +1,32 @@
+{
+  "id": "T08-MT09",
+  "idOriginal": "MT-09",
+  "turno": 2,
+  "iniciadoEm": "2026-10-16T17:42:01.522884+00:00",
+  "capturadoEm": "2026-10-16T17:42:04.305426+00:00",
+  "cliente": "curl",
+  "httpStatus": 200,
+  "tempoCurlSegundos": 2.768213,
+  "codigoSaidaCurl": 0,
+  "requisicao": {
+    "mensagem": "quero com laço de cetim e um cartão com mensagem personalizada",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132"
+  },
+  "resposta": {
+    "resposta": "Que maravilha! 🥰 Um laço de cetim e um cartão personalizado, perfeito para deixar a presente ainda mais especial! \n\nEntão, vamos lá:\n\n1.  **Pipoca:** Quais sabores de pipoca você gostaria? Temos doce de leite, cheddar, chocolate, ervas finas, e muitos outros!\n2.  **Balas:** Quantas balas você gostaria? Temos sabores como morango, limão, coco e mais.\n3.  **Mensagem:** Qual seria a mensagem que você gostaria de colocar no cartão? 😊",
+    "sessao": "397c6e7e-f4c0-48fb-ad9c-2ae07abfa132",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 645,
+          "outputTokens": 115,
+          "totalTokens": 760
+        },
+        "metrics": {
+          "latencyMs": 1716
+        }
+      }
+    ]
+  }
+}
