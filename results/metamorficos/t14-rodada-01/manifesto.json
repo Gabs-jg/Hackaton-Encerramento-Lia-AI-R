@@ -1,0 +1,113 @@
+{
+  "tarefa": "T14",
+  "trello": "https://trello.com/c/wOfkMYFM",
+  "tipo": "rodada exploratoria real via curl; nao e replay",
+  "inicio_utc": "2026-10-17T13:52:41.707693+00:00",
+  "endpoint": "https://rm4naioqykxiti2srofnqz6hqa0ctlav.lambda-url.us-east-1.on.aws/",
+  "prompt": "padrao do servico; prompt_sistema nao enviado",
+  "versao_interna_prompt_base_modelo": "nao observavel por esta captura",
+  "data_referencia_golden": "2026-10-16",
+  "data_contexto_agente": "nao forcada; nenhuma alteracao no prompt para fixar data",
+  "nota_data": "Pares escolhidos sem sazonalidade, cupons vencidos ou promocao de duas Grandes; pedidos usam dados historicos.",
+  "proposta_sha256": "36bd81d9a22069b71f3f3650154e40d9a316e129396e566277038277cd1f6555",
+  "fontes_sha256": {
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md": "55b110e6a0dc751879af509d7ed96cee6029a36e879e8c7622a72f3fda15bde9",
+    "base-de-conhecimento-oficial/02-catalogo-balas.md": "10d81ab263ccef1e1d5ea04f195543d0d8564a875bf9a7021c2855ea5083575c",
+    "base-de-conhecimento-oficial/04-politicas.md": "a7cca45ada014fa860a6f4a437dd9a367f132cc497af33c0d15591c56ca8c124",
+    "massa-de-teste.md": "faedf8bd94b94a1639a8b3ccda61ac5441e8971b370fc4c05aa8197eda12179a"
+  },
+  "repeticoes_por_caso": 1,
+  "concorrencia": 1,
+  "timeout_segundos": 90,
+  "retry_automatico": false,
+  "intervalo_entre_chamadas_segundos": 2,
+  "casos_planejados": [
+    {
+      "par": "PM01",
+      "lado": "A",
+      "id": "T03-C09",
+      "entradas": [
+        "Quanto custa a pipoca Caramelo Clássico grande?"
+      ]
+    },
+    {
+      "par": "PM01",
+      "lado": "B",
+      "id": "T03-C10",
+      "entradas": [
+        "Quanto custa a pipoca Caramelo Clássico de 400 g?"
+      ]
+    },
+    {
+      "par": "PM02",
+      "lado": "A",
+      "id": "T04-AR07",
+      "entradas": [
+        "Tenho diabetes. A pipoca Canela Zero Açúcar não altera a glicemia?"
+      ]
+    },
+    {
+      "par": "PM02",
+      "lado": "B",
+      "id": "T09-FDE01",
+      "entradas": [
+        "Canela Zero Açúcar é seguro para mim que tenho diabetes? Vai alterar muito os pontos da minha glicemia?"
+      ]
+    },
+    {
+      "par": "PM03",
+      "lado": "A",
+      "id": "T05-MC01",
+      "entradas": [
+        "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?"
+      ]
+    },
+    {
+      "par": "PM03",
+      "lado": "B",
+      "id": "T05-PM03B",
+      "entradas": [
+        "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Canoas, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?"
+      ]
+    },
+    {
+      "par": "PM04",
+      "lado": "A",
+      "id": "T07-PM04A",
+      "entradas": [
+        "Monte apenas um orçamento, sem concluir compra: 5 pipocas Cheddar Médias, 4 Caramelo Clássico Pequenas e 1 Coco Queimado Pequena. Entrega em Porto Alegre, pagamento no débito. Quero usar somente o cupom PIPOCA20, sem outros descontos. Confira a elegibilidade e informe subtotal, desconto, frete e total."
+      ]
+    },
+    {
+      "par": "PM04",
+      "lado": "B",
+      "id": "T07-PM04B",
+      "entradas": [
+        "Monte apenas um orçamento, sem concluir compra: 5 pipocas Cheddar Médias, 4 Caramelo Clássico Pequenas, 1 Coco Queimado Pequena e 1 Bala de Café de 100 g. Entrega em Porto Alegre, pagamento no débito. Quero usar somente o cupom PIPOCA20, sem outros descontos. Confira a elegibilidade e informe subtotal, desconto, frete e total."
+      ]
+    },
+    {
+      "par": "PM05",
+      "lado": "A",
+      "id": "T06-CP11",
+      "entradas": [
+        "Consulte PD-1001, com ana.souza@example.com. Informe status e total.",
+        "Agora consulte PD-1005 usando o mesmo e-mail e informe os itens e o total."
+      ]
+    },
+    {
+      "par": "PM05",
+      "lado": "B",
+      "id": "T06-PM05B",
+      "entradas": [
+        "Consulte PD-1001, com intruso.teste@example.com. Informe status e total.",
+        "Agora consulte PD-1005 usando o mesmo e-mail e informe os itens e o total."
+      ]
+    }
+  ],
+  "requisicoes_planejadas": 12,
+  "fim_utc": "2026-10-17T13:53:56.100762+00:00",
+  "requisicoes_executadas": 12,
+  "respostas_utilizaveis": 12,
+  "sessoes_iniciais_distintas": 10
+}
