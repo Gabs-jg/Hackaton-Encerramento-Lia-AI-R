@@ -41,6 +41,10 @@ Responsáveis, tarefas e critérios de conclusão ficam no [quadro de execução
 
 As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](docs/exploracao/t06-casos.md). Os relatórios [T05](results/exploracao/relatorios/t05-registro.md) e [T06](results/exploracao/relatorios/t06-registro.md) registram esperado × obtido, classificação e links das evidências. O [JSON de resultados](results/exploracao/t05-t06-resultados.json) reúne os 30 casos e 32 turnos, com origem Postman/curl identificada. A coleção foi montada a partir dessas evidências, preservadas também nos JSONs individuais.
 
+## Golden e pares metamórficos
+
+O [golden v0.2](datasets/golden-v0.2.json) reúne 46 casos, 82 turnos e cinco pares metamórficos, pendentes de revisão. Consulte a [organização e as pendências de T13/T14](docs/t13-t14-golden.md) e o [relatório da rodada exploratória dos pares](results/metamorficos/relatorios/t14-registro.md). A rodada dos pares não substitui a execução integral da suíte.
+
 ## Regras de Avaliação
 
 - A base oficial e a massa de teste são o **oráculo**. A base interna da Lia é deliberadamente diferente; as respostas da assistente não definem o gabarito.
