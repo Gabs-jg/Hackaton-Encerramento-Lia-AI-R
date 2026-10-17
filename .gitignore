@@ -20,3 +20,8 @@ Thumbs.db
 
 # Configuração local do editor
 .idea/
+
+# Saídas locais da automação e estado DeepEval
+results/piloto-t15/
+results/automacao/
+.deepeval/
