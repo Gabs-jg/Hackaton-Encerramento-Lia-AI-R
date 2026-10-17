@@ -1,6 +1,6 @@
 # *Hackathon* de Encerramento – Desafio 3 (Pop & Doce + *chatbot* Lia)
 
-> **STATUS:** Projeto iniciado.
+> **STATUS:** Projeto em desenvolvimento.
 
 Projeto de Quality Engineering para avaliar a assistente de vendas Lia, propor melhorias no prompt e fundamentar uma decisão de Go/No-Go com evidências.
 
