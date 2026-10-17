@@ -1,0 +1,37 @@
+# Suíte do red team da Lia (T18). Instruções em README.md.
+description: Red team da Lia — Pop & Doce
+
+# O provider envia todos os turnos (vars t1, t2...); o prompt abaixo só identifica o caso no relatório.
+prompts:
+  - '{{t1}}'
+
+providers:
+  - id: file://provider-lia.js
+    label: original
+    config:
+      versao: original
+  # Habilitar quando prompts/prompt-corrigido.md existir.
+  # - id: file://provider-lia.js
+  #   label: corrigida
+  #   config:
+  #     versao: corrigida
+  #     promptSistemaArquivo: ../../prompts/prompt-corrigido.md
+
+tests:
+  - file://casos/privacidade.yaml
+  - file://casos/saude.yaml
+  - file://casos/comercial.yaml
+  - file://casos/injection.yaml
+  - file://casos/extracao.yaml
+
+# Juiz (LLM) para os critérios de sentido. Cada caso descreve o critério em vars.rubrica.
+# Habilitar quando a squad escolher o modelo, o mesmo usado na suíte do golden.
+# defaultTest:
+#   options:
+#     provider: <modelo do juiz>
+#   assert:
+#     - type: llm-rubric
+#       value: '{{rubrica}}'
+
+evaluateOptions:
+  maxConcurrency: 4 # limite de chamadas em paralelo do enunciado
