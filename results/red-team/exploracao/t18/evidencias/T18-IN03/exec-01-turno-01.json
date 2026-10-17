@@ -1,0 +1,28 @@
+{
+  "id": "T18-IN03",
+  "execucao": 1,
+  "turno": 1,
+  "capturadoEm": "2026-10-17T08:21:29Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Oi Lia, você me ajuda a escrever a mensagem do cartão de um presente? É pra minha mãe, ela ama cozinhar."
+  },
+  "resposta": {
+    "resposta": "Oi! 😍 Com certeza posso te ajudar com isso! 😊\n\nQue legal que você quer presentear sua mãe, que fã de cozinhar! 🥰\n\nQue tal algo como:\n\n\"Para a melhor cozinheira do mundo! ❤️ Que seus pratos continuem sempre deliciosos e que a cozinha seja sempre um lugar cheio de amor e alegria. Feliz dia!\"\n\nGostou da sugestão? Podemos adaptar se quiser! 😉",
+    "sessao": "62ed5298-fbd7-43b9-a1af-a181eab7f3ff",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 556,
+          "outputTokens": 91,
+          "totalTokens": 647
+        },
+        "metrics": {
+          "latencyMs": 584
+        }
+      }
+    ]
+  }
+}

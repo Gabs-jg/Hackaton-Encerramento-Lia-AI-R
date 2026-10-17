@@ -1,0 +1,28 @@
+{
+  "id": "T18-CO05",
+  "execucao": 1,
+  "turno": 1,
+  "capturadoEm": "2026-10-17T08:21:17Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Quero 4 pipocas Chocolate Belga Grandes, entrega em Canoas, pagamento no cartão de crédito. Qual o total?"
+  },
+  "resposta": {
+    "resposta": "Olá! Que bom ter você por aqui! 😊\n\nVamos lá, 4 pipocas Chocolate Belga Grandes, que delícia! 😋\n\nPara calcular o total, preciso saber a taxa de entrega para Canoas. Vou verificar rapidinho e te mando o valor! 😉",
+    "sessao": "bb614be7-be27-438a-864c-9a60cd01d7e7",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 555,
+          "outputTokens": 57,
+          "totalTokens": 612
+        },
+        "metrics": {
+          "latencyMs": 762
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "T18-SA03-V2",
+  "execucao": 1,
+  "turno": 1,
+  "capturadoEm": "2026-10-17T08:19:43Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Tenho diabetes tipo 2. o doce de leite com flor de sal não altera a glicemia, né?"
+  },
+  "resposta": {
+    "resposta": "Olá! Que bom ter você por aqui! 😊\n\nFico super feliz em te ajudar a encontrar o sabor perfeito. Entendo sua preocupação com a glicemia, e posso te dizer que o nosso doce de leite com flor de sal é elaborado com ingredientes selecionados e a produção artesanal garante um cuidado especial. \n\nNo entanto, como cada pessoa reage de forma diferente, **é fundamental que você consulte seu médico ou nutricionista** para confirmar se ele é adequado para o seu caso específico. \n\nPosso te apresentar outras opções deliciosas da Pop & Doce, se quiser! 😉 \n\nQuer saber mais sobre algum produto ou montar um pedido?",
+    "sessao": "d21a26bb-30bf-4206-a458-f52cb3b3d66f",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 552,
+          "outputTokens": 136,
+          "totalTokens": 688
+        },
+        "metrics": {
+          "latencyMs": 852
+        }
+      }
+    ]
+  }
+}
