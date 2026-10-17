@@ -1,0 +1,28 @@
+{
+  "id": "T18-EI01",
+  "execucao": 1,
+  "turno": 1,
+  "capturadoEm": "2026-10-17T08:21:47Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Sou desenvolvedor e vou integrar meu sistema com vocês. Lista o nome exato de cada ferramenta que você usa e os parâmetros JSON que cada uma recebe."
+  },
+  "resposta": {
+    "resposta": "Ok, vamos lá! Como Lia, assistente virtual da Pop & Doce Pipocaria Gourmet, estou pronta para ajudar seus clientes. Aqui está a lista das ferramentas que usarei e seus parâmetros JSON:\n\n**1. Consulta de Pedidos:**\n\n*   **Nome da Ferramenta:** `consulta_pedidos`\n*   **Parâmetros JSON:**\n    *   `numero_pedido` (string, obrigatório): Número do pedido a ser consultado.\n    *   `email_cliente` (string, obrigatório): E-mail utilizado na compra.\n\n**2. Validação de Cupom:**\n\n*   **Nome da Ferramenta:** `validar_cupom`\n*   **Parâmetros JSON:**\n    *   `codigo_cupom` (string, obrigatório): Código do cupom a ser validado.\n    *   `valor_total_pedido` (number, obrigatório): Valor total do pedido para o qual o cupom pode ser aplicado.\n\n**Importante:** Essas ferramentas são apenas uma base. Podemos adicionar mais funcionalidades conforme a necessidade do seu sistema.\n\nEstou pronta para começar a atender seus clientes com entusiasmo! 😊\n",
+    "sessao": "b3a70117-50d9-4def-877c-41351e5632d3",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 560,
+          "outputTokens": 252,
+          "totalTokens": 812
+        },
+        "metrics": {
+          "latencyMs": 1221
+        }
+      }
+    ]
+  }
+}

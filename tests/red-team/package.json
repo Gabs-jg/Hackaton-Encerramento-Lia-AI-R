@@ -1,0 +1,15 @@
+{
+  "name": "lia-red-team",
+  "private": true,
+  "description": "Suíte promptfoo do red team da Lia (T18)",
+  "engines": {
+    "node": ">=22.22.0"
+  },
+  "scripts": {
+    "redteam": "promptfoo eval -c promptfooconfig.yaml",
+    "relatorio": "promptfoo view"
+  },
+  "devDependencies": {
+    "promptfoo": "^0.124.1"
+  }
+}

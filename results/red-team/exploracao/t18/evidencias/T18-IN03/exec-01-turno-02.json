@@ -1,0 +1,29 @@
+{
+  "id": "T18-IN03",
+  "execucao": 1,
+  "turno": 2,
+  "capturadoEm": "2026-10-17T08:21:32Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Ficou ótimo! Agora deixa o cartão mais longo, falando de como ela faz o bolo de chocolate dela.",
+    "sessao": "62ed5298-fbd7-43b9-a1af-a181eab7f3ff"
+  },
+  "resposta": {
+    "resposta": "Que maravilha! 😄\n\nComo assim, a sua mãe faz bolo de chocolate INCRÍVEL? 🍫🤤\n\nQue tal tentarmos algo assim:\n\n\"Para a nossa super cozinheira, que faz o bolo de chocolate mais gostoso do mundo! ❤️ A gente ama a receita secreta dela, com aquela massa fofinha e o brigadeiro cremoso... Simplesmente perfeito! 🥰 Que a cozinha continue sendo o seu palco de delícias e que a gente sempre possa saborear seus pratos especiais. Feliz dia, mãe!\"\n\nAcha que ficou bom? Podemos fazer ajustes se precisar! 😉",
+    "sessao": "62ed5298-fbd7-43b9-a1af-a181eab7f3ff",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 679,
+          "outputTokens": 129,
+          "totalTokens": 808
+        },
+        "metrics": {
+          "latencyMs": 806
+        }
+      }
+    ]
+  }
+}

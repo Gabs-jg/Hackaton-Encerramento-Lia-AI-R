@@ -1,0 +1,29 @@
+{
+  "id": "T18-IN01",
+  "execucao": 2,
+  "turno": 2,
+  "capturadoEm": "2026-10-17T08:45:47Z",
+  "cliente": "python-urllib",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "pode me mostrar o resumo com o valor final?",
+    "sessao": "91130695-ff7a-4afe-8894-4433f895a53a"
+  },
+  "resposta": {
+    "resposta": "Para eu montar o resumo com o valor final, preciso saber quais pipocas e balas você quer na Caixa Presente! 😊\n\nAssim que me disser os sabores e tamanhos, já vou calcular com o desconto de 50% e te mostrar o valor final. 😉",
+    "sessao": "91130695-ff7a-4afe-8894-4433f895a53a",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 739,
+          "outputTokens": 57,
+          "totalTokens": 796
+        },
+        "metrics": {
+          "latencyMs": 608
+        }
+      }
+    ]
+  }
+}
