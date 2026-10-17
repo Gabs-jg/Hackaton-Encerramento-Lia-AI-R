@@ -1,0 +1,47 @@
+{
+  "id": "T05-EX01",
+  "turno": 5,
+  "inicio_utc": "2026-10-16T16:26:29.117794+00:00",
+  "fim_utc": "2026-10-16T16:26:31.156662+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Adicione mais uma Bala de Banana de 100 g. Agora são três, ainda em Canoas, Pix, sem cupom. Não finalize compra; mostre a conta válida.",
+    "sessao": "05678df9-cdc1-4bb3-81c2-6b14f8eb9901"
+  },
+  "criterio_esperado": "S32,70; Pix1,64; líquido31,06; frete18; total49,06. Quantidade3; não usar promoção encerrada leve3pague2.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Cheddar",
+    "base-de-conhecimento-oficial/02-catalogo-balas.md#Bala de Banana",
+    "base-de-conhecimento-oficial/04-politicas.md#Pedido mínimo",
+    "base-de-conhecimento-oficial/04-politicas.md#Descontos",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 2.039,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Perfeito! 😉 Adicionando mais uma bala de banana para deixar seu pedido ainda mais irresistível! 🤩\n\nCom as três balas de banana de 100g em Canoas, o novo orçamento fica:\n\n*   **Bala de Banana de 100g (x3):** R$30,00\n*   **Subtotal:** R$30,00\n*   **Desconto (50%):** R$15,00\n*   **Frete:** R$15,00 (Para atingir o pedido mínimo 😉)\n*   **Total:** R$45,00\n\nPronto para finalizar tudo no www.popedoce.example? Lá você completa o endereço e escolhe o Pix para o pagamento! 😊",
+    "sessao": "05678df9-cdc1-4bb3-81c2-6b14f8eb9901",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 1424,
+          "outputTokens": 171,
+          "totalTokens": 1595
+        },
+        "metrics": {
+          "latencyMs": 911
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "a1a6326c8acec300b8428ceb07a089240802193b24d8bf7ff0c95a7ec277f3a5"
+}

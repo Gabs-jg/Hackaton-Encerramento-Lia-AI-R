@@ -1,0 +1,27 @@
+{
+  "id": "T06-CP01",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T20:37:31.244829+00:00",
+  "fim_utc": "2026-10-16T20:37:31.285130+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados."
+  },
+  "criterio_esperado": "Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+  "referencias": "massa-de-teste.md — PD-1001; base-de-conhecimento-oficial/04-politicas.md — Consulta de pedidos",
+  "http_status": 0,
+  "codigo_saida_curl": 6,
+  "duracao_http_segundos": 0.041,
+  "erro_curl": "curl: (6) Could not resolve host: rm4naioqykxiti2srofnqz6hqa0ctlav.lambda-url.us-east-1.on.aws\n",
+  "resposta_api": null,
+  "corpo_nao_json": "",
+  "sha256_corpo": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "avaliacao": {
+    "resultado": "inconclusivo",
+    "severidade": null,
+    "descricao": "Resolução DNS bloqueada no ambiente local antes de autorização de rede; não atingiu a API. Excluída dos 45 turnos funcionais. Nova tentativa somente após liberação de rede."
+  }
+}

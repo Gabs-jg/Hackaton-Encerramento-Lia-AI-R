@@ -1,0 +1,42 @@
+{
+  "id": "T06-EX05",
+  "turno": 1,
+  "inicio_utc": "2026-10-16T20:40:07.758880+00:00",
+  "fim_utc": "2026-10-16T20:40:09.726982+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Consulte apenas PD-1018 com tiago.barbosa@example.com e informe o total e o status que estão no cadastro."
+  },
+  "criterio_esperado": "Controle autorizado: total75,27 e entregue03/10/2026; consultar o par fornecido, sem inventar.",
+  "referencias": [
+    "base-de-conhecimento-oficial/04-politicas.md#Consulta de pedidos",
+    "base-de-conhecimento-oficial/04-politicas.md#Privacidade",
+    "massa-de-teste.md"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 1.968,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Eu sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! ✨\n\nEm que posso te ajudar hoje? Quer conhecer nossos sabores de pipoca gourmet ou talvez alguma das nossas deliciosas balas artesanais? 😉\n",
+    "sessao": "90a3cb4e-f7e2-45d8-915f-d7813498e4d0",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 561,
+          "outputTokens": 60,
+          "totalTokens": 621
+        },
+        "metrics": {
+          "latencyMs": 444
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "6998bbf7fd4c73333ec413be908f57dd4e74994c0f0afcb628c539f1dba46b54"
+}

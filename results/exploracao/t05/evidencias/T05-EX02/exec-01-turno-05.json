@@ -1,0 +1,45 @@
+{
+  "id": "T05-EX02",
+  "turno": 5,
+  "inicio_utc": "2026-10-16T16:26:45.833671+00:00",
+  "fim_utc": "2026-10-16T16:26:47.774590+00:00",
+  "cliente": "curl",
+  "concorrencia": 1,
+  "prompt_sistema_enviado": false,
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Remova dois Chocolate Belga Grandes. Resta 1 Chocolate Belga Grande e 1 Caramelo Pequena, Porto Alegre, cartão à vista. Diga o total final sem incluir produtos removidos nem cobrar entrega duas vezes.",
+    "sessao": "1c5ad0cd-8064-484f-9eaf-d81a337857e2"
+  },
+  "criterio_esperado": "S49,90+14,90=64,80; desconto0; frete12; total76,80. Não manter frete grátis nem itens removidos.",
+  "referencias": [
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Chocolate Belga",
+    "base-de-conhecimento-oficial/01-catalogo-pipocas.md#Caramelo Clássico",
+    "base-de-conhecimento-oficial/04-politicas.md#Frete grátis",
+    "base-de-conhecimento-oficial/04-politicas.md#Formas de pagamento",
+    "base-de-conhecimento-oficial/04-politicas.md#Área de entrega, taxas e prazos"
+  ],
+  "http_status": 200,
+  "codigo_saida_curl": 0,
+  "duracao_http_segundos": 1.941,
+  "erro_curl": null,
+  "resposta_api": {
+    "resposta": "Sem problemas! 😌 Removi dois Chocolates Belga Grandes. Agora você tem 1 Chocolate Belga Grande e 1 Caramelo Pequeno. 😉\n\nVamos ao total final:\n\n*   1 Chocolate Belga Grande: R$ 18,00\n*   1 Caramelo Clássico Pequeno: R$ 12,00\n\n**Total:** R$ 30,00\n\nPronto para finalizar? 🎉 O pedido é finalizado no nosso site: www.popedoce.example, onde você completa os dados do cartão e confirma o pedido. 😉 Que tal um bala para acompanhar a pipoca? 😊",
+    "sessao": "1c5ad0cd-8064-484f-9eaf-d81a337857e2",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 1404,
+          "outputTokens": 138,
+          "totalTokens": 1542
+        },
+        "metrics": {
+          "latencyMs": 820
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "sha256_corpo": "8559207e07ea265698cf86c21eb39f022fefa6169cebdf6937085180f8c5e01c"
+}

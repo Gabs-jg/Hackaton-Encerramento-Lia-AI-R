@@ -1,0 +1,205 @@
+{
+  "formato": "manifesto-t06-reteste-v1",
+  "arquivos": [
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP01/exec-02-turno-01.json",
+      "sha256": "db660a68f33d121aad7ce7222f475e12c6de90c7f04e032fc386592285990738"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP02/exec-02-turno-01.json",
+      "sha256": "291e9488eaa5962aeb3c3fba0c1d23a1eb4b48ca23d07e8914944448b5bea402"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP03/exec-02-turno-01.json",
+      "sha256": "c59c1524ca4989db8ec955554c1bb45de4228b5fa4b9fd8b61b1af614e55acc2"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP04/exec-02-turno-01.json",
+      "sha256": "f2d80433b1da9f9922d14fa34442ffa46de21cff915f196f81ff207cdebc3a10"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP05/exec-02-turno-01.json",
+      "sha256": "5b4931c6fdbd3717e43288f591d86245f2e19d527947ca135fd9ceff45d6ffb8"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP06/exec-02-turno-01.json",
+      "sha256": "fa70dc522b3e4bac97f196ef03977a15e6ef9dd61297d501cd3501fdf993dac9"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP07/exec-02-turno-01.json",
+      "sha256": "5a380dbaf376dd263bee4d87780e020671c872f09d05c0b82d782dd049c44adf"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP08/exec-02-turno-01.json",
+      "sha256": "2ae395a5f82f994e9d379222ecbfd793a82b8d5597f7997967bff4d09a704717"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP09/exec-02-turno-01.json",
+      "sha256": "cc847b39088439cc2449f762ba47c77c83907c4b3f2ad12e434d5d1f94c41e33"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP10/exec-02-turno-01.json",
+      "sha256": "4b4c66ccedff6340313cbc74f1ac1069630d8788d751a679164639acf0688c4c"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP11/exec-02-turno-01.json",
+      "sha256": "61a30326f382ea1eb1b2cbd6ccc0d18c4fd258dd11ad34e0dba726c168d3b065"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP11/exec-02-turno-02.json",
+      "sha256": "b0e5f4e77f9b809a29d4a2a2f643e7db5746471b61cc5a158da80738dabb8e94"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP12/exec-02-turno-01.json",
+      "sha256": "b94d48e4cd0bccdabe4c1dcf06de96a543d9506f46f5c479241fd363d7838331"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-CP13/exec-02-turno-01.json",
+      "sha256": "ec570fd8c7027eebb69704d2c5f67368506f526554f8b3b3e58cd7b23aa11419"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX01/exec-02-turno-01.json",
+      "sha256": "5971636d3f2d7d6ff9e0c0baf4a856dbd7be44a9b6e7cb1e60e872080d0634e1"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX01/exec-02-turno-02.json",
+      "sha256": "b66c407a1115923873b16a726a9edad79bb941f3733b4b7e6ea1b0e8d7948e28"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX01/exec-02-turno-03.json",
+      "sha256": "6382210ded5df558732ddfa823cda6f35b719769df646f747d43f4e847971e5b"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX01/exec-02-turno-04.json",
+      "sha256": "92f4fdf29793a384de2da74005eecd6ba54123539ba0636320e5a309f961d289"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX02/exec-02-turno-01.json",
+      "sha256": "39be6aea5e67f8680a52d4e16a0a284aa89abb424a0e0aea6df45f9d4064a494"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX02/exec-02-turno-02.json",
+      "sha256": "211f06373d2e6de3e106ebb6c20cf22d83d29b65c5d500e46eb58cc020734cc9"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX02/exec-02-turno-03.json",
+      "sha256": "fe1c8b52e11be680339e83a586dfaedf3730db813ea0405ccd4af35e71e7cf3b"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX02/exec-02-turno-04.json",
+      "sha256": "b22f32f9aa5d15aa1aa5757fba04cf6bc8f73e8d2f4d990526510a1b71973a7d"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX03/exec-02-turno-01.json",
+      "sha256": "fd84647a9977fce08a14a496bce7529b3927b4341999715334ec4d68d412be45"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX03/exec-02-turno-02.json",
+      "sha256": "30867fd7d3ff7a6c2d935870df7bea101bd2721414b0d046250be74090ac440d"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX03/exec-02-turno-03.json",
+      "sha256": "ddd2b4e25675d55db05c0c5b2f99a8144900db560c217d2f4713c6e068a22ee0"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX03/exec-02-turno-04.json",
+      "sha256": "f8c7a8e899f59b87a53784744f7c2eb27bea4d7809cd9b8ee3e45a099426dc04"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX04/exec-02-turno-01.json",
+      "sha256": "6f057a7ca9435b17663c1b84b42ea56253cbdba9610398d262961f5d5a659760"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX04/exec-02-turno-02.json",
+      "sha256": "9d1d8c3f78e0de5b159b6e6803295afba63e8814e39e18b386d6c8d9528bcf98"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX04/exec-02-turno-03.json",
+      "sha256": "207a51b97c0f5e12bc3b2e524f40aa79c51b048475d60b86605fa92b578f1f3b"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX04/exec-02-turno-04.json",
+      "sha256": "adce8770a5d488258ee5942e02de10f97b6d00f39e6a8391d80b5726ff60fe44"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX05/exec-01-turno-01.json",
+      "sha256": "f3047869a20f8f81ccaad99dfb107eed6daf55edabe5b775628246ab2a761383"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX05/exec-01-turno-02.json",
+      "sha256": "44c888206f866b5484f24d73e998d93b557cc31290b247ce424c4ef73122fec7"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX05/exec-01-turno-03.json",
+      "sha256": "d087d5665b7934634c6c19b9c561d8f1d8ff4bca559a3cb7c8c68d1407b86166"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX06/exec-01-turno-01.json",
+      "sha256": "538be851f4c87ad163b992be18eaeadaeecc14b1d1f9a3a76001323a15bf4e4e"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX06/exec-01-turno-02.json",
+      "sha256": "0c78d282e444eec61900ed334a5f79707af40f131961297fceaf4c30f3680e90"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX06/exec-01-turno-03.json",
+      "sha256": "ec2d380216b1d35758f831ff0533c08a7d6b8d87c46c04789103fd69f5688961"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX07/exec-01-turno-01.json",
+      "sha256": "04ecfd3a6c11b70f9ff805df00d4c7992d37614fa0f30bf4f54e8243d3c81508"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX07/exec-01-turno-02.json",
+      "sha256": "e414aac4ce720e35824e9e35d483912889a3ee7789fc806fa0773cecf857b839"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX07/exec-01-turno-03.json",
+      "sha256": "0b0a8c165ae6224b0d0c555390e84e879248e1fe81d51496cae9e4c5a87fd71f"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX08/exec-01-turno-01.json",
+      "sha256": "a7628c1d6f29ca955b1ed00e3155d29ffc680061fe160c03dcbb627a384adb98"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX08/exec-01-turno-02.json",
+      "sha256": "96025a2c9aa1a2e71d8eaeea59005923226950bb2c1e7697ea5933b15026f07f"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX08/exec-01-turno-03.json",
+      "sha256": "17412f7053f50ff1a10414d42af6c34fb48492083bcaee7fd7baf7fae5d0aa6c"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX09/exec-01-turno-01.json",
+      "sha256": "9092182462c75bc1e87c207c5b167a1a1380a543dca924e37d76f5f70cc5d9b8"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX09/exec-01-turno-02.json",
+      "sha256": "637d9aa60764021250b5da340e17324820215aaa584cc5dcab49453c07644ff6"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/T06-EX09/exec-01-turno-03.json",
+      "sha256": "4e0be405cfc3b30ae9f337ab7df1e6499c519df3c8962aa6774cb03fe59c3828"
+    },
+    {
+      "arquivo": "results/exploracao/t06-reteste-2026-10-16-resultados.json",
+      "sha256": "070247ef7dc07be939ee9fc0fb8bdc51b9607d90ac2d81d21f90a66688009c86"
+    },
+    {
+      "arquivo": "results/exploracao/t06/evidencias/ambiente/t06-reteste-2026-10-16-dns.json",
+      "sha256": "ea0fdd5fcf359d893e1252f834ae26e68a5f99317c85b8b3019d38c902714011"
+    }
+  ],
+  "fontes": [
+    {
+      "arquivo": "massa-de-teste.md",
+      "sha256": "6b3c5fe63fa5b08aafe82a120d2af7c39f31b68e870fe7e3230efe4b9b864e25"
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "sha256": "554144a060a51c601589629c416c6324366099ac9b5ca462145bef933331e6a6"
+    }
+  ],
+  "sha256_registro_anterior": "0c960f86d7d322fcbeea2521bc6ddb1600613d0e12a70a99ae40000ddf5a00f3",
+  "normalizacao_fontes": "SHA-256 do conteúdo UTF-8 com quebras LF, conforme versionado pelo Git."
+}
