@@ -94,3 +94,7 @@ Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FD
 * **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
 * **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)**
 * **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
+
+## Golden e pares metamórficos
+
+O [golden atual](datasets/golden-v0.3.json), revisão 0.3.1, reúne 48 casos, 86 turnos e cinco pares, pendentes de revisão. A [convenção provisória de arredondamento](docs/t13-t15-convencao-arredondamento.md) é decisão da equipe. Consulte a [documentação T13/T14](docs/t13-t14-golden.md). O [golden v0.2](datasets/golden-v0.2.json) permanece como referência histórica; suas evidências não comprovam a execução dos novos casos.
