@@ -36,124 +36,28 @@ Hackaton-Encerramento-Lia-AI-R/
 ├── requirements-juiz.txt
 ├── requirements-t15.txt
 ├── base-de-conhecimento-oficial/      # Oráculo de dados oficiais da empresa
-│   ├── 01-catalogo-pipocas.md
-│   ├── 02-catalogo-balas.md
-│   ├── 03-kits-e-presentes.md
-│   ├── 04-politicas.md
-│   ├── 05-perguntas-frequentes.md
-│   └── 06-sobre-a-empresa.md
 ├── datasets/                          # Datasets de avaliação automatizada
-│   ├── .gitkeep
-│   ├── golden-v0.2.json
-│   ├── golden-v0.3.json
-│   ├── t15-piloto.json
 │   └── pilotos/
 ├── prompts/                           # Iterações e versões do prompt de sistema
-│   └── .gitkeep
 ├── docs/                              # Documentação técnica, decisões e critérios
-│   ├── decisoes.md
-│   ├── riscos-criterios-corrigidos.md
-│   ├── t12-criterios-golden.md
-│   ├── t13-t14-golden.md
-│   ├── t13-t15-convencao-arredondamento.md
-│   ├── t15-executor-piloto.md
-│   ├── t15-t16-automacao.md
-│   ├── t15-t16-processo-automacao.md
-│   ├── t15-t16-sugestoes-prompt.md
 │   └── exploracao/                    # Casos de exploração documentados
-│       ├── t03-casos.md
-│       ├── t04-casos.md
-│       ├── t05-casos.md
-│       └── t06-casos.md
 ├── tests/                             # Infraestrutura e código da suíte de testes
-│   ├── .gitkeep
 │   ├── __init__.py
 │   ├── automacao/                     # Engine de testes automatizados e Juiz LLM
-│   │   ├── __init__.py
-│   │   ├── avaliacao.py
-│   │   ├── avaliar.py
-│   │   ├── calibrar.py
-│   │   ├── casos.py
-│   │   ├── cliente.py
-│   │   ├── executar.py
-│   │   ├── funcional.py
-│   │   ├── golden.py
-│   │   ├── juiz.py
-│   │   ├── julgamentos.py
-│   │   ├── orcamento.py
-│   │   ├── registros.py
-│   │   ├── test_executor.py
-│   │   ├── test_golden.py
-│   │   ├── test_integracao_v03.py
 │   │   ├── config/
-│   │   │   ├── avaliacao-golden-v0.2.json
-│   │   │   └── avaliacao-provisoria.json
 │   │   └── fixtures/
-│   │       ├── calibracao-juiz-proposta.json
-│   │       └── prompt-integracao.txt
 │   ├── postman/                       # Coleções de API do Postman
-│   │   ├── .gitkeep
-│   │   ├── t03-t04-exploracao.postman_collection.json
-│   │   ├── t05-t06-exploracao.postman_collection.json
-│   │   ├── t08-t10-exploracao.postman_collection.json
-│   │   └── t18-red-team.postman_collection.json
 │   └── red-team/                      # Suite de segurança adversarial (Promptfoo)
-│       ├── package-lock.json
-│       ├── package.json
-│       ├── promptfooconfig.yaml
-│       ├── provider-lia.js
 │       ├── assercoes/
-│       │   ├── ferramentas.js
-│       │   └── privacidade.js
 │       └── casos/
-│           ├── comercial.yaml
-│           ├── extracao.yaml
-│           ├── injection.yaml
-│           ├── privacidade.yaml
-│           └── saude.yaml
 └── results/                           # Evidências, logs de execução e relatórios
-    ├── .gitkeep
     ├── exploracao/                    # Resultados da fase exploratória
-    │   ├── t03-t04-resultados.json
-    │   ├── t05-t06-complementar-2026-10-16-resultados.json
-    │   ├── t05-t06-resultados.json
-    │   ├── t06-reteste-2026-10-16-manifesto.json
-    │   ├── t06-reteste-2026-10-16-resultados.json
-    │   ├── t07-t09-resultados.json
-    │   ├── t08-t10-resultados.json
     │   ├── relatorios/                # Registros consolidados da exploração
-    │   │   ├── t03-t04-registro.md
-    │   │   ├── t05-registro.md
-    │   │   ├── t06-registro.md
-    │   │   ├── t07-t09-registro.md
-    │   │   ├── t08-registro.md
-    │   │   └── t10-registro.md
-    │   ├── t03/evidencias/            # Evidências individuais por caso (T03-C01 a T03-C17)
-    │   ├── t04/evidencias/            # Evidências individuais por caso (T04-AR01 a T04-AR13)
-    │   ├── t05/evidencias/            # Evidências individuais (T05-EX, T05-MC, etc.)
-    │   ├── t06/evidencias/            # Evidências individuais (T06-CP, T06-EX, etc.)
-    │   ├── t08/evidencias/            # Evidências por turno (T08-MT01 a T08-MT10)
-    │   └── t10/evidencias/            # Evidências adversariais (T10-ADV01 a T10-ADV08)
     ├── metamorficos/                  # Evidências e relatórios dos testes metamórficos
     │   ├── relatorios/
-    │   │   └── t14-registro.md
-    │   └── t14-rodada-01/
-    │       ├── avaliacao.json
-    │       ├── manifesto.json
-    │       ├── resultados.json
-    │       └── evidencias/
     └── red-team/                      # Evidências dos testes adversariais
-        ├── .gitkeep
-        ├── casos-reaproveitados-exploracao.md
-        ├── exploracao-manual-casos.md
-        ├── exploracao-manual-registro.md
-        ├── log-red-team.md
-        ├── plano-red-team.md
         ├── exploracao/
-        │   ├── t18-exploracao-postman-2026-10-17.json
-        │   └── t18/evidencias/
         └── promptfoo/
-            └── validacao-original-2026-10-17.json
 ```
 > **Nota:** Diretórios reservados às próximas entregas estão sendo mantidos com `.gitkeep`, para preservação da hierarquia das pastas.
 
