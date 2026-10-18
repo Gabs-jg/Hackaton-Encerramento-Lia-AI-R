@@ -12,7 +12,7 @@
 
 ## Sobre o Projeto
 
-> *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para produção?"*
+### *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para produção?"*
 
 A partir deste desafio, a **Squad 2** estruturou uma campanha completa de Quality Engineering (QE) voltada para a avaliação da assistente virtual **Lia**, um agente de vendas e atendimento do e-commerce fictício **Pop & Doce**.
 
