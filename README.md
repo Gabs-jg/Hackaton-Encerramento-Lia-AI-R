@@ -4,7 +4,7 @@
 
 **Chatbot Lia – E-commerce Pop & Doce**
 
-> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração, automação de testes e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
+> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração, automação de testes já foram executadas. Agora, estamos na etapa de refinamento do *prompt* e comparativo baseline x final para fundamentar o nosso parecer técnico do grupo.
 
 </div>
 
