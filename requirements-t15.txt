@@ -1,0 +1,3 @@
+# Dependência usada para representar os testes e executar as métricas locais.
+# O cliente opcional do juiz AWS fica em requirements-juiz.txt.
+deepeval==4.3.0

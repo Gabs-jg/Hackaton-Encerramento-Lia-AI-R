@@ -1,0 +1,3 @@
+# Cliente AWS usado para enviar avaliações ao Bedrock e registrar o consumo.
+# Opcional: somente para --juiz bedrock. DeepEval permanece em requirements-t15.txt.
+boto3==1.43.114
