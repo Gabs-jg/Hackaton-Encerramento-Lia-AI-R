@@ -25,7 +25,7 @@ Para isso, a estratégia adotada leva em consideração a pasta `base-de-conheci
 * [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
 * [Passo-a-passo para validação da equipe (Trello)](https://trello.com/c/mlQrpA0X)
 
-## Arquitetura e Estrutura do Repositório 
+## Estrutura do Repositório 
 
 O repositório foi organizado de maneira modular para preservar a identificação ágil das informações, mantendo a rastreabilidade entre fontes, casos de teste e as evidências colectadas:
 
@@ -156,6 +156,95 @@ Hackaton-Encerramento-Lia-AI-R/
             └── validacao-original-2026-10-17.json
 ```
 > **Nota:** Diretórios reservados às próximas entregas estão sendo mantidos com `.gitkeep`, para preservação da hierarquia das pastas.
+
+
+## Arquitetura e Fluxo de Validação de QE
+
+```mermaid
+flowchart TD
+
+    subgraph group_reference["1. Base de Conhecimento e Mapeamento de Testes"]
+        node_official["Base Oficial <br/>[base-de-conhecimento-oficial/]"]
+        node_testdata["Massa de Testes <br/>[massa-de-teste.md]"]
+        node_case_specs["Casos Exploratórios <br/>[docs/exploracao/]"]
+        node_golden[("Golden Dataset <br/>[datasets/]")]
+    end
+
+    subgraph group_execution["2. Execução & Núcleo da Lia"]
+        node_prompts["Prompt de Sistema & Guardrails <br/>[prompts/]"]
+        node_lia{{"API da Lia <br/>(Assistente Virtual)"}}
+        node_postman["Suíte Postman <br/>[tests/postman/]"]
+    end
+
+    subgraph group_assessment["3. Automação, Avaliação & Red Team"]
+        node_automacao["Engine de Automação <br/>[tests/automacao/]"]
+        node_judge["Juiz LLM Especialista <br/>[juiz.py]"]
+        node_redteam["Promptfoo Red Team <br/>[tests/red-team/]"]
+    end
+
+    subgraph group_evidence["4. Evidências, Relatórios e Decisão"]
+        node_captures[("Evidências de Execução <br/>[results/exploracao/]")]
+        node_summaries["Resultados Consolidados <br/>(JSONs / Manifestos)"]
+        node_reports["Relatórios Comparativos <br/>[results/relatorios/]"]
+        node_decisions["Decisão Go/No-Go <br/>[docs/decisoes.md]"]
+    end
+
+    node_squad(("Equipe QE"))
+
+    %% Conexões do Fluxo Principal
+    node_squad -->|"Orquestra Testes"| node_postman
+    node_squad -->|"Executa Ataques"| node_redteam
+    node_case_specs -->|"Orienta Cenários"| node_postman
+    
+    node_official -->|"Alimenta Contexto"| node_lia
+    node_prompts -->|"Define Regras e Respostas"| node_lia
+    
+    node_postman -->|"Envia Requisições"| node_lia
+    node_lia -->|"Gera Respostas"| node_captures
+    
+    %% Fluxo do Golden e Juiz LLM
+    node_golden -->|"Baseia Validação"| node_automacao
+    node_lia -->|"Fornece Outputs"| node_automacao
+    node_automacao -->|"Processa via"| node_judge
+    node_judge -->|"Métricas & Julgamentos"| node_summaries
+
+    %% Fluxo Adversarial (Red Team)
+    node_redteam -->|"Executa Testes Adversariais"| node_lia
+    node_redteam -->|"Gera Logs de Ataque"| node_captures
+
+    %% Consolidação e Decisão
+    node_official -.->|"Gabarito"| node_reports
+    node_testdata -.->|"Gabarito"| node_reports
+    node_captures -->|"Consolida Logs"| node_summaries
+    node_summaries -->|"Gera Análise Comparativa"| node_reports
+    node_reports -->|"Embasa Parecer Final"| node_decisions
+
+    %% Links para o Repositório
+    click node_official "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial)"
+    click node_testdata "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md)"
+    click node_case_specs "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao)"
+    click node_golden "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets)"
+    click node_prompts "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts)"
+    click node_postman "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman)"
+    click node_automacao "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao)"
+    click node_redteam "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team)"
+    click node_captures "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao)"
+    click node_reports "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios)"
+    click node_decisions "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md)"
+
+    %% Estilos
+    classDef toneBlue fill:#dbeafe,stroke:#2563eb,stroke-width:1.5px,color:#172554
+    classDef toneAmber fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
+    classDef tonePurple fill:#f3e8ff,stroke:#9333ea,stroke-width:1.5px,color:#581c87
+    classDef toneMint fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d
+    classDef toneIndigo fill:#e0e7ff,stroke:#4f46e5,stroke-width:1.5px,color:#312e81
+
+    class node_official,node_testdata,node_case_specs,node_golden toneBlue
+    class node_postman,node_lia,node_prompts toneAmber
+    class node_automacao,node_judge,node_redteam tonePurple
+    class node_captures,node_summaries,node_reports,node_decisions toneMint
+    class node_squad toneIndigo
+``` 
 
 ---
 
