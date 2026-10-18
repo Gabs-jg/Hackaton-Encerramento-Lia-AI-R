@@ -1,34 +1,57 @@
-# *Hackathon* de Encerramento – Desafio 3 (Pop & Doce + *chatbot* Lia)
+# *Hackathon* de Encerramento – Desafio 3 
 
-> **STATUS:** Projeto iniciado.
+<div align="center">
 
-Projeto de Quality Engineering para avaliar a assistente de vendas Lia, propor melhorias no prompt e fundamentar uma decisão de Go/No-Go com evidências.
+**Chatbot Lia do e-commerce fictício Pop & Doce**
+> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
 
-## Situação Inicial
+</div>
 
-O repositório conta com os materiais oficiais (fornecidos pelo nosso instrutor [Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)) e a estrutura de trabalho. A exploração de T05/T06 possui coleção importável e resultados registrados. A automação T15/T16 já executa o golden e avalia as evidências; a revisão do golden, a calibração do juiz e os critérios finais de aprovação continuam em definição pela *Squad* 2, composta por Camile Marcele P. de Araújo, Fernanda B. dos Santos, Gustavo L. Brasileiro e João Gabriel O. Magalhães.
+## Sobre o projeto
 
-## Arquitetura do Projeto
+### *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para a rodução?"* 
 
-| CAMINHO | CONTEÚDO |
-| :---: | :---: |
-| `base-de-conhecimento-oficial/` | Base fornecida pelo orientador; Referência para os próximos passos e escolhas estratégicas de desenvolvimento |
-| `massa-de-teste.md` | Pedidos e clientes fictícios fornecidos para os testes |
-| `datasets/` | *Golden dataset* e casos metamórficos revisados |
-| `tests/` | Código e configurações da suíte automatizada |
-| `tests/postman/` | Coleções importáveis com casos, turnos e exemplos de respostas, sem credenciais |
-| `results/` | Evidências, resultados das execuções e comparação dos *prompts* |
-| `results/exploracao/` | JSON consolidado e evidências por caso, execução e turno |
-| `results/exploracao/relatorios/` | Análise de esperado × obtido, classificação e conclusões da exploração |
-| `results/red-team/` | Registro das tentativas adversariais e as respectivas evidências |
-| `prompts/` | Versões do *prompt* de sistema, seguidas das alterações |
-| `docs/` | Decisões, tabelas de regras, pareceres e materiais da apresentação |
+A partir deste desafio, a nossa **Squad** estruturou uma campanha de QE voltada para a avaliação da assistente virtual **Lia**, um agende de vendas da loja fictícia **Pop & Doce**. 
 
-Pastas reservadas a entregas futuras são mantidas com `.gitkeep`.
+O projeto tem como premissa principal submeter a assistente a baterias de testes exploratórios e de segurança (*Red Teaming*), para identificação de alucinações, *jailbreaks* e outras vulnerabilidade / inconsistências que poderiam gerar impacto reputacional negativo para o negócio em diversos âmbitos. A partir dos achados do grupo, foram propostas melhorias no *prompt* de sistema, comparando os resultados entre a *baseline* e a versão final para embasar, em fatos e dados, a decisão do parecer de produção ou impedimento de produção (**Go / No-Go**). 
 
-## Organização do trabalho
+Para isso, a estratégia adotada leva em consideração a pasta `base-de-conhecimento-oficial` e as massas de testes fornecidas como referência para funcionarem como **oráculo** do projeto, visto que a base interna do *chatbot* pode ter divergências intencionais como parte do *Hackaton* dos estagiários. 
 
-Responsáveis, tarefas e critérios de conclusão ficam no [quadro de execução](https://trello.com/b/M4EHkt4l). Dúvidas e decisões ficam no [quadro de planejamento](https://trello.com/b/PdUBDmTM). A [T02](https://trello.com/c/mlQrpA0X) reúne o padrão de registro e os passos para validá-lo com a equipe, com referência ao [template proposto pelo Gustavo](https://trello.com/c/3NH4HOUA).
+--- 
+
+## Por Onde Começar? 
+
+* [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
+* [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
+* [Passo-a-passo para validação da equipe (Trello)](https://trello.com/c/mlQrpA0X)
+
+## Arquitetura e Estrutura do Repositório 
+
+O repositório foi organizado de maneira modular para preservar a identificação ágil das informações, mantendo a rastreabilidade entre fontes, casos de teste e as evidências colectadas:
+
+```
+Hackaton-Encerramento-Lia-AI-R/
+├── README.md
+├── massa-de-teste.md                  # Pedidos, perfis e clientes fictícios fornecidos
+├── base-de-conhecimento-oficial/      # Oráculo de dados oficiais fornecidos pelo orientador
+│   ├── 01-catalogo-pipocas.md
+│   ├── 02-catalogo-balas.md
+│   ├── 03-kits-e-presentes.md
+│   ├── 04-politicas.md
+│   ├── 05-perguntas-frequentes.md
+│   └── 06-sobre-a-empresa.md
+├── datasets/                          # Golden dataset (40 casos) e testes metamórficos
+├── prompts/                           # Iterações e versões do prompt de sistema da Lia
+├── docs/                              # Decisões arquiteturais, matrizes de regras e pareceres
+│   └── exploracao/                    # Detalhamento dos casos
+├── tests/                             # Suíte automatizada e coleções de teste
+│   └── postman/                       # Coleções importáveis (turnos e cenários sem chaves)
+└── results/                           # Evidências, logs de execução e comparações
+    ├── exploracao/                    # JSONs consolidados, capturas por caso e relatórios
+    │   └── relatorios/                # Análise comparativa esperado × obtido
+    └── red-team/                      # Registros e evidências dos ataques adversariais
+```
+> **Nota:** Diretórios reservados às próximas entregas estão sendo mantidos com `.gitkeep`, para preservação da hierarquia das pastas.
 
 ---
 
@@ -41,15 +64,7 @@ Responsáveis, tarefas e critérios de conclusão ficam no [quadro de execução
 
 As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](docs/exploracao/t06-casos.md). Os relatórios [T05](results/exploracao/relatorios/t05-registro.md) e [T06](results/exploracao/relatorios/t06-registro.md) registram esperado × obtido, classificação e links das evidências. O [JSON de resultados](results/exploracao/t05-t06-resultados.json) reúne os 30 casos e 32 turnos, com origem Postman/curl identificada. A coleção foi montada a partir dessas evidências, preservadas também nos JSONs individuais.
 
-## Golden e pares metamórficos
-
-O [golden atual](datasets/golden-v0.3.json) reúne 48 casos, 86 turnos e cinco pares metamórficos, pendentes de revisão. O [golden v0.2](datasets/golden-v0.2.json) permanece como referência das rodadas históricas. Consulte a [organização e as pendências de T13/T14](docs/t13-t14-golden.md) e o [relatório da rodada exploratória dos pares](results/metamorficos/relatorios/t14-registro.md). A rodada dos pares não substitui a execução integral da suíte.
-
 ## Regras de Avaliação
-
-A [automação T15/T16](docs/t15-t16-automacao.md) executa o golden e avalia evidências com DeepEval, regras numéricas e revisão humana ou juiz Bedrock. Golden, calibração e thresholds continuam pendentes de aprovação; o guia inclui uma demonstração por replay sem chamadas pagas.
-
-O [registro do processo](docs/t15-t16-processo-automacao.md) explica as decisões, os pilotos e o polimento do juiz. As [sugestões de correção do prompt](docs/t15-t16-sugestoes-prompt.md) reúnem hipóteses para revisão e reteste.
 
 - A base oficial e a massa de teste são o **oráculo**. A base interna da Lia é deliberadamente diferente; as respostas da assistente não definem o gabarito.
 - Não realizar testes de carga/estresse. Coordenar no máximo quatro chamadas simultâneas no total da equipe.
@@ -58,16 +73,32 @@ O [registro do processo](docs/t15-t16-processo-automacao.md) explica as decisõe
 - Nunca publicar chaves, credenciais ou arquivos de configuração com segredos. Revisar também exportações do Postman e evidências.
 - Recursos próprios da AWS/modelos são opcionais, com orçamento de US$ 20 por integrante.
 
-## Entregas Previstas
+## Entregas Previstas da Campanha 
 
-- *Golden dataset* com pelo menos 40 casos nas oito categorias e cinco pares metamórficos.
-- Suíte automatizada, incluindo verificações de ferramentas em pedidos e cupons.
-- Registro de pelo menos 30 tentativas de *red teaming* em cinco categorias.
-- *Prompt* corrigido e comparação da mesma suíte com pelo menos três execuções por caso em cada versão, incluindo aprovação, latência e tokens.
-- Repositório reproduzível, decisões registradas, parecer *Go/No-Go* de até oito páginas e apresentação de 15–20 minutos com os quatro integrantes.
+Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis: 
 
-As instruções atuais da suíte estão no guia T15/T16; as pendências de calibração e implementação estão no registro do processo. Prazo e envio final devem ser acompanhados no Trello.
+- [x] ***Golden dataset* Robusto:** com, pelo menos, 40 casos nas oito categorias e cinco pares de metamórficos;
+- [ ] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*fuction calling*), validação de cupons e fluxo de pedidos; 
+- [x] **Campanha de Red Teaming:** Mapeamento e execução de, no mínimo, 30 ataques organizados e distribuíds em cinco categorias de vulnerabilidade;
+- [ ] **Análise Comparativa de *prompts:*** Avaliação da suíte (com mínimo de três execuções / caso), confrontando a *baseline* com a versão final do *prompt* atualizado. Avaliando, assim, métricas, latência e consumo de *tokens*; 
+- [ ] **Repositório Reproduzível + Parecer Final:** Repositório 100% reproduzível, contendo relatório final de *Go / No-Go* de até 8 páginas e apresentação técnica de 15~20 minutos para a banca avaliadora. 
 
-## Autoria
+---
 
-Este projeto foi desenvolvido pelos membros da *Squad 2*, durante o **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** na [Compass UOL / AI/R Company](https://aircompany.ai/pt/home/).
+## Autoria e Créditos
+
+Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do instrutor **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
+
+### Integrantes da Squad 2: 
+* **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)**
+* **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
+* **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)**
+* **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
+
+## Golden e pares metamórficos
+
+O [golden atual](datasets/golden-v0.3.json), revisão 0.3.1, reúne 48 casos, 86 turnos e cinco pares, pendentes de revisão. A [convenção provisória de arredondamento](docs/t13-t15-convencao-arredondamento.md) é decisão da equipe. Consulte a [documentação T13/T14](docs/t13-t14-golden.md). O [golden v0.2](datasets/golden-v0.2.json) permanece como referência histórica; suas evidências não comprovam a execução dos novos casos.
+
+## Automação T15/T16
+
+Consulte o [guia da automação](docs/t15-t16-automacao.md) e o [registro do processo](docs/t15-t16-processo-automacao.md). A integração local usa 48 casos e 86 turnos; a primeira run preservada corresponde à v0.2, com 46 casos e 82 turnos. A execução do golden atualizado ainda está pendente.
