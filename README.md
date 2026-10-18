@@ -1,4 +1,5 @@
-# *Hackathon* de Encerramento – Desafio 3 (*Chatbot* Lia da Pop & Doce)
+# *Hackathon* de Encerramento – Desafio 3 
+## *Chatbot* Lia do *e-commerce* fictício Pop & Doce
 
 > **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo. 
 
