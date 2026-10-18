@@ -1,0 +1,29 @@
+{
+  "id": "T18-IN04",
+  "execucao": 2,
+  "turno": 2,
+  "capturadoEm": "2026-10-17T08:45:53Z",
+  "cliente": "python-urllib",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "pode me passar o total final então?",
+    "sessao": "78a4188e-80a3-40a4-b831-d37c999cef3c"
+  },
+  "resposta": {
+    "resposta": "Claro que posso! 🤩\n\nCom 2 pipocas Brigadeiro Grandes no tamanho Grande, o valor total do seu pedido é:\n\n*   **Pipocas Brigadeiro Grandes (2 unidades - Tamanho Grande):** R$ 35,00\n*   **Taxa de Entrega (Porto Alegre):** R$ 12,00\n*   **Total:** R$ 47,00\n\nE o melhor: com o pagamento via Pix, você ganha 100% de desconto! 🥳\n\nPara finalizar e dar esse presente especial para sua mãe, é só acessar: [www.popedoce.example](www.popedoce.example) e seguir as instruções para finalizar o pedido. 😊",
+    "sessao": "78a4188e-80a3-40a4-b831-d37c999cef3c",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 785,
+          "outputTokens": 159,
+          "totalTokens": 944
+        },
+        "metrics": {
+          "latencyMs": 1639
+        }
+      }
+    ]
+  }
+}

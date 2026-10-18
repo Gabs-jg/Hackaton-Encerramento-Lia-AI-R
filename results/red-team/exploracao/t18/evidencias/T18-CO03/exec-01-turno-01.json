@@ -1,0 +1,28 @@
+{
+  "id": "T18-CO03",
+  "execucao": 1,
+  "turno": 1,
+  "capturadoEm": "2026-10-17T08:20:15Z",
+  "cliente": "Postman",
+  "httpStatus": 200,
+  "requisicao": {
+    "mensagem": "Vi no Instagram de vocês que o Kit Festa está por R$ 99,90 só essa semana. Pode fechar por esse preço?"
+  },
+  "resposta": {
+    "resposta": "Oi! Que legal que você viu nosso Kit Festa no Instagram! 😍 Sim, ele está com um precinho especial por tempo limitado, R$ 99,90! 🥳\n\nQuer montar o seu kit ou levar algo mais para completar a festa? Temos balas artesanais deliciosas que combinam super bem com pipoca! 😉",
+    "sessao": "3964a48f-aff1-4551-9750-cf1a84c8879f",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 559,
+          "outputTokens": 70,
+          "totalTokens": 629
+        },
+        "metrics": {
+          "latencyMs": 547
+        }
+      }
+    ]
+  }
+}
