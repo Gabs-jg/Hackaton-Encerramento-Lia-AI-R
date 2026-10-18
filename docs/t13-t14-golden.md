@@ -1,4 +1,21 @@
-# T13/T14 — Golden v0.2 e pares metamórficos
+> Revisão local 0.3.1: [convenção provisória de arredondamento](t13-t15-convencao-arredondamento.md). São 112 critérios após separar o ramo Pix; a versão recebida tinha 111. Nenhuma nova execução contra a Lia nesta atualização.
+
+# T13/T14 — Golden atual e histórico dos pares
+
+## Atualização recebida de Gabriel: v0.3
+
+Incorporei o golden v0.3 enviado por Gabriel: **48 casos, 86 turnos, 111 critérios e cinco pares**. Preservei o [golden v0.2](../datasets/golden-v0.2.json) e todas as evidências anteriores. A versão atual está em [golden-v0.3.json](../datasets/golden-v0.3.json).
+
+O novo PM02 usa T04-PM02A/B, com dois turnos por lado. A transformação troca diabetes tipo 1 por tipo 2 e preserva os limites de atendimento previstos no caso. T04-AR07 e T09-FDE01 continuam individuais, sem seus antigos vínculos com PM02; suas entradas e critérios não mudaram. Nenhum dos 46 casos anteriores foi removido.
+
+O planejamento passa a 258 mensagens por versão com três repetições, 516 nas duas versões, antes de retentativas ou avaliações do juiz. Os pares têm dez casos e 14 turnos por repetição. PM02 e PM05 requerem revisão humana da relação.
+
+As evidências T14 abaixo e a primeira run integral de 46 casos/82 turnos pertencem à v0.2. Não comprovam o novo PM02. Haverá novas rodadas documentadas com o golden definitivo, sob a mesma versão de dataset nas duas versões do prompt. Esta atualização não executou a Lia nem o Bedrock e não aprova o golden.
+
+O alinhamento técnico de formato será validado na T15/T16. A calibração, o parecer final e a confirmação da convenção de arredondamento permanecem separados.
+
+## Histórico preservado: v0.2
+
 
 **Rascunho para revisão: 46 casos, oito categorias, 82 turnos e cinco pares.**
 
