@@ -1,4 +1,6 @@
 # Suíte do red team da Lia (T18). Instruções em README.md.
+# Casos com metadata golden: true já estão no golden e rodam na suíte dele.
+# Rodar só os demais: npx promptfoo eval --filter-metadata golden=false
 description: Red team da Lia — Pop & Doce
 
 # O provider envia todos os turnos (vars t1, t2...); o prompt abaixo só identifica o caso no relatório.

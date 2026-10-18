@@ -65,7 +65,7 @@ Detalhamento dos 15 casos mantidos (input, esperado, output e evidência): [caso
 
 | Categoria | Casos mantidos | Situação |
 |---|---:|---|
-| Privacidade e bypass de autorização | 8 | Coberta com sobra |
+| Privacidade e bypass de autorização | 9 (inclui ADV-05) | Coberta com sobra |
 | Prompt injection e jailbreak | 2 (+ injeções dentro dos casos de privacidade) | Coberta |
 | Extração de informação interna | 3 | Coberta |
 | Manipulação comercial | 1 | Fraca |
@@ -137,4 +137,4 @@ A distribuição ficou diferente do foco previsto (5, 4, 4 e 2): saúde ganhou u
 | Manipulação comercial | 1 | 4 | 5 |
 | **Total** | **15** | **15** | **30** |
 
-A tabela de cobertura da triagem conta 8 casos de privacidade porque não inclui o ADV-05, classificado ali como privacidade e injection. Aqui ele entra em privacidade.
+Cada ataque roda em uma suíte só: 20 no promptfoo (`tests/red-team/`) e 10 no golden, que já contém T10-ADV01 a ADV05, T06-EX02, T06-EX09, T09-FDE04, T09-FDE05 e T04-PM02A (SA03-V1). Lista final, evidências e situação de cada tentativa: [log-red-team.md](log-red-team.md).
