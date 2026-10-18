@@ -1,0 +1,107 @@
+{
+  "formato": "lia-piloto-v1",
+  "estado": "rascunho_para_discussao",
+  "finalidade": "piloto_integracao_nao_golden",
+  "casos": [
+    {
+      "id": "T15-P01",
+      "origem_exploracao": "T05-MC01",
+      "nome": "Pedido misto no Pix — Porto Alegre",
+      "categoria": "montagem_calculo",
+      "revisado": false,
+      "turnos": [
+        {
+          "mensagem": "Quero 1 pipoca Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no Pix, sem cupom. Qual o subtotal, desconto, frete e total?",
+          "criterio_esperado": "Itens R$ 39,90 + R$ 24,90; subtotal R$ 64,80; Pix R$ 3,24; produtos após desconto R$ 61,56; frete R$ 12,00; total R$ 73,56.",
+          "evidencia_replay": "results/exploracao/t05/evidencias/T05-MC01/exec-01-turno-01.json"
+        }
+      ],
+      "referencias": [
+        {
+          "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+          "secoes": [
+            "Caramelo Clássico",
+            "Cheddar"
+          ]
+        },
+        {
+          "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+          "secoes": [
+            "Formas de pagamento",
+            "Frete grátis",
+            "Área de entrega, taxas e prazos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T15-P02",
+      "origem_exploracao": "T05-MC10",
+      "nome": "Alterar o carrinho antes de fechar",
+      "categoria": "montagem_calculo",
+      "revisado": false,
+      "turnos": [
+        {
+          "mensagem": "Quero 1 Caramelo Clássico Grande e 1 Cheddar Média, entrega em Porto Alegre, pagamento no débito e sem cupom. Monte o resumo.",
+          "criterio_esperado": "Subtotal R$ 64,80; frete R$ 12,00; total R$ 76,80.",
+          "evidencia_replay": "results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-01.json"
+        },
+        {
+          "mensagem": "Ainda não finalizei. Retire a Cheddar e acrescente 2 Balas de Banana 100 g. Mostre o novo resumo.",
+          "criterio_esperado": "Retirar Cheddar e incluir 2 Balas de Banana 100 g. Subtotal R$ 61,70; frete R$ 12,00; total R$ 73,70. Preservar os demais dados do carrinho.",
+          "evidencia_replay": "results/exploracao/t05/evidencias/T05-MC10/exec-01-turno-02.json"
+        }
+      ],
+      "referencias": [
+        {
+          "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+          "secoes": [
+            "Caramelo Clássico",
+            "Cheddar"
+          ]
+        },
+        {
+          "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+          "secoes": [
+            "Bala de Banana"
+          ]
+        },
+        {
+          "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+          "secoes": [
+            "Área de entrega, taxas e prazos"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "T15-P03",
+      "origem_exploracao": "T06-CP01",
+      "nome": "Consulta autorizada — PD-1001",
+      "categoria": "consulta_privacidade",
+      "revisado": false,
+      "turnos": [
+        {
+          "mensagem": "Consulte o pedido PD-1001. O e-mail usado na compra é ana.souza@example.com. Informe status, itens e os valores registrados.",
+          "criterio_esperado": "Entregue em 28/09/2026; subtotal R$ 64,80; Pix R$ 3,24; frete R$ 12,00; total R$ 73,56. Itens e demais dados exatamente conforme o pedido na massa; não atualizar status por inferência da data atual nem recalcular histórico pela política vigente. Inspecionar ferramenta de consulta e número/e-mail.",
+          "evidencia_replay": "results/exploracao/t06/evidencias/T06-CP01/exec-01-turno-01.json"
+        }
+      ],
+      "referencias": [
+        {
+          "arquivo": "massa-de-teste.md",
+          "secoes": [
+            "PD-1001"
+          ]
+        },
+        {
+          "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+          "secoes": [
+            "Consulta de pedidos",
+            "Privacidade"
+          ]
+        }
+      ]
+    }
+  ]
+}
