@@ -245,7 +245,7 @@ def main(argv=None):
     parser = argparse.ArgumentParser(
         description="T15: coleta sequencial com DeepEval; avaliação funcional separada em tests.automacao.avaliar."
     )
-    parser.add_argument("--dataset", type=Path, default=RAIZ / "datasets/pilotos/t15-piloto.json")
+    parser.add_argument("--dataset", type=Path, default=RAIZ / "datasets/golden-v0.3.json")
     parser.add_argument("--modo", choices=("replay", "api"), default="replay")
     parser.add_argument(
         "--replay-resultados", type=Path, help="Consolidado histórico T14; não faz chamadas."

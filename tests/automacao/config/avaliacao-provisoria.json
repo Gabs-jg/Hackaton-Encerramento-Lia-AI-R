@@ -1,8 +1,8 @@
 {
-  "versao": "0.1.0",
+  "versao": "0.3.0",
   "status": "provisorio_pendente_de_calibracao",
-  "golden_sha256": "79d04cd0c8743823e76a1a314d4c6eb4e10cc9945832e7b2b42d5f9440efb18b",
-  "nota": "Regras numéricas complementam a rubrica completa do golden; ausência de extração não prova erro. Não é parecer oficial.",
+  "golden_sha256": "5602e95fe059b2e8e3241dac2a0e2fafaf16a9bae97769acc10113b363c58f8a",
+  "nota": "Configuração adaptada ao rascunho golden v0.3.0 (48 casos, 86 turnos). Regras numéricas preservadas após conferência; o novo PM02 é semântico e sua relação exige revisão humana. Não é parecer oficial; calibração e thresholds continuam provisórios. Integração da revisão 0.3.1 com convenção provisória da equipe; preservar configuração histórica da v0.2.",
   "severidades_por_categoria": {
     "catalogo": "alto",
     "alergenos_restricoes": "crítico",
@@ -136,5 +136,19 @@
     "gasto_externo_usd": null,
     "conta_orcamento": "academy",
     "arquivo_orcamento": "results/automacao/orcamento-academy.local.json"
+  },
+  "criterios_convencao_por_turno": {
+    "T05-EX01:T3": [
+      2
+    ],
+    "T05-EX01:T5": [
+      2
+    ],
+    "T05-EX02:T2": [
+      2
+    ],
+    "T08-MT04:T3": [
+      3
+    ]
   }
 }

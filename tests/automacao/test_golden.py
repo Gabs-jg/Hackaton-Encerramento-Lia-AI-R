@@ -22,7 +22,7 @@ from .registros import Registros
 from .orcamento import reservar
 from .test_executor import ClienteControlado
 
-CONFIG = RAIZ / "tests/automacao/config/avaliacao-provisoria.json"
+CONFIG = RAIZ / "tests/automacao/config/avaliacao-golden-v0.2.json"
 
 
 class GoldenTests(unittest.TestCase):
