@@ -43,7 +43,7 @@ As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](doc
 
 ## Golden e pares metamórficos
 
-O [golden v0.2](datasets/golden-v0.2.json) reúne 46 casos, 82 turnos e cinco pares metamórficos, pendentes de revisão. Consulte a [organização e as pendências de T13/T14](docs/t13-t14-golden.md) e o [relatório da rodada exploratória dos pares](results/metamorficos/relatorios/t14-registro.md). A rodada dos pares não substitui a execução integral da suíte.
+O [golden atual](datasets/golden-v0.3.json) reúne 48 casos, 86 turnos e cinco pares metamórficos, pendentes de revisão. O [golden v0.2](datasets/golden-v0.2.json) permanece como referência das rodadas históricas. Consulte a [organização e as pendências de T13/T14](docs/t13-t14-golden.md) e o [relatório da rodada exploratória dos pares](results/metamorficos/relatorios/t14-registro.md). A rodada dos pares não substitui a execução integral da suíte.
 
 ## Regras de Avaliação
 
