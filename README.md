@@ -77,7 +77,8 @@ Hackaton-Encerramento-Lia-AI-R/
 ## Arquitetura e Fluxo de Validação de QE
 
 ```mermaid
-flowchart TD
+
+   flowchart TD
 
     subgraph group_reference["1. Base de Conhecimento e Mapeamento de Testes"]
         node_official["Base Oficial <br/>[base-de-conhecimento-oficial/]"]
@@ -136,30 +137,28 @@ flowchart TD
     node_reports -->|"Embasa Parecer Final"| node_decisions
 
     %% Links para o Repositório
-    click node_official "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial)"
-    click node_testdata "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md)"
-    click node_case_specs "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao)"
-    click node_golden "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets)"
-    click node_prompts "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts)"
-    click node_postman "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman)"
-    click node_automacao "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao)"
-    click node_redteam "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team)"
-    click node_captures "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao)"
-    click node_reports "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios)"
-    click node_decisions "[https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md](https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md)"
+    click node_official "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial"
+    click node_testdata "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md"
+    click node_case_specs "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao"
+    click node_golden "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets"
+    click node_prompts "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts"
+    click node_postman "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman"
+    click node_automacao "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao"
+    click node_redteam "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team"
+    click node_captures "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao"
+    click node_reports "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios"
+    click node_decisions "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md"
 
-    %% Estilos
-    classDef toneBlue fill:#dbeafe,stroke:#2563eb,stroke-width:1.5px,color:#172554
-    classDef toneAmber fill:#fef3c7,stroke:#d97706,stroke-width:1.5px,color:#78350f
-    classDef tonePurple fill:#f3e8ff,stroke:#9333ea,stroke-width:1.5px,color:#581c87
-    classDef toneMint fill:#dcfce7,stroke:#16a34a,stroke-width:1.5px,color:#14532d
-    classDef toneIndigo fill:#e0e7ff,stroke:#4f46e5,stroke-width:1.5px,color:#312e81
+    %% Estilos com as Cores Solicitadas
+    classDef googleBlue fill:#E8F0FE,stroke:#4285F4,stroke-width:2px,color:#1A73E8
+    classDef googleYellow fill:#FEF7E0,stroke:#FBBC05,stroke-width:2px,color:#B06000
+    classDef googleRed fill:#FCE8E6,stroke:#EA4335,stroke-width:2px,color:#C5221F
+    classDef googleGreen fill:#E6F4EA,stroke:#34A853,stroke-width:2px,color:#137333
 
-    class node_official,node_testdata,node_case_specs,node_golden toneBlue
-    class node_postman,node_lia,node_prompts toneAmber
-    class node_automacao,node_judge,node_redteam tonePurple
-    class node_captures,node_summaries,node_reports,node_decisions toneMint
-    class node_squad toneIndigo
+    class node_official,node_testdata,node_case_specs,node_golden googleBlue
+    class node_postman,node_lia,node_prompts googleYellow
+    class node_automacao,node_judge,node_redteam,node_squad googleRed
+    class node_captures,node_summaries,node_reports,node_decisions googleGreen
 ``` 
 
 ---
