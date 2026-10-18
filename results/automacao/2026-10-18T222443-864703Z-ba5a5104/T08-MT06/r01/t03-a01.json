@@ -1,0 +1,261 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T08-MT06",
+  "categoria": "varios_turnos",
+  "turno": 3,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "me indica uma doce então",
+    "sessao": "769305c4-0300-40ad-b513-24d419341c7c"
+  },
+  "criterio_esperado": "Recomendar pipoca doce vegana oficial: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar. Não substituir por bala nem produto com leite.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Aviso geral de alérgenos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Apresentações"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secoes": [
+        "Quais produtos são veganos?"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Caramelo Clássico"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Linha vegana e zero açúcar"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Ursinhos Frutas Vermelhas"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Goma Vegana de Maçã Verde"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Corações de Morango Veganos"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Recomendar pipoca doce vegana oficial: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar. Não substituir por bala nem produto com leite."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Aviso geral de alérgenos",
+      "texto": "## Aviso geral de alérgenos\n\nNossa cozinha manipula amendoim, castanhas (incluindo pistache), leite, soja e trigo. Todos os produtos podem conter traços desses alérgenos.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Apresentações",
+      "texto": "## Apresentações\n\nAs balas são vendidas em pacotes de 100 g ou 250 g, exceto quando indicado no produto.\n\nO aviso geral de alérgenos do catálogo de pipocas vale também para as balas.\n\nBalas duras e pirulitos não são indicados para crianças menores de 4 anos, por risco de engasgo.\n"
+    },
+    {
+      "fonte": "FAQ",
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secao": "Quais produtos são veganos?",
+      "texto": "### Quais produtos são veganos?\n\nPipocas: Chipotle com Limão, Alho Assado com Azeite, Lemon Pepper, Coco Queimado, Cacau 70% Vegana, Canela Zero Açúcar e Natural sem Sal. Balas: Goma Vegana de Maçã Verde, Corações de Morango Veganos, Bala de Banana, Café, Hortelã-Pimenta, Tamarindo Apimentado, Menta Zero Açúcar e os pirulitos Arco-Íris e Morango com Pimenta. As balas Ursinhos Frutas Vermelhas, Minhocas Cítricas Azedinhas, Tubarões Azuis e Cobrinhas Ácidas de Uva contêm gelatina bovina.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Caramelo Clássico",
+      "texto": "### Caramelo Clássico\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, açúcar, manteiga, creme de leite e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Linha vegana e zero açúcar",
+      "texto": "## Linha vegana e zero açúcar\n\n### Coco Queimado\n\n- Preços: Pequena R$ 15,90 · Média R$ 26,90 · Grande R$ 43,90\n- Ingredientes: milho, óleo de coco, açúcar mascavo e coco ralado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 118 kcal.\n\n### Cacau 70% Vegana\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, chocolate 70% cacau (massa de cacau, açúcar e manteiga de cacau) e óleo de coco.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 122 kcal.\n\n### Canela Zero Açúcar\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 44,90\n- Ingredientes: milho, óleo de coco, eritritol, canela e estévia.\n- Sem açúcar adicionado.\n- Sem glúten: sim.\n- Vegana: sim.\n- Observação: o produto contém carboidratos do milho. Pessoas com diabetes devem seguir a orientação de um profissional de saúde.\n- Porção de 25 g: 95 kcal.\n\n### Natural sem Sal\n\n- Preços: Pequena R$ 9,90 · Média R$ 16,90 · Grande R$ 27,90\n- Ingredientes: milho e óleo de coco.\n- Sem sal adicionado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 98 kcal.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Ursinhos Frutas Vermelhas",
+      "texto": "### Ursinhos Frutas Vermelhas\n\n- Preços: 100 g R$ 9,90 · 250 g R$ 21,90\n- Ingredientes: açúcar, xarope de glicose, gelatina bovina, ácido cítrico, suco concentrado de frutas vermelhas e corantes naturais.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: não. Contém gelatina bovina.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Goma Vegana de Maçã Verde",
+      "texto": "### Goma Vegana de Maçã Verde\n\n- Preços: 100 g R$ 11,90 · 250 g R$ 26,90\n- Ingredientes: açúcar, xarope de glicose, pectina, suco de maçã verde e ácido cítrico.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: sim.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Corações de Morango Veganos",
+      "texto": "### Corações de Morango Veganos\n\n- Preços: 100 g R$ 11,90 · 250 g R$ 26,90\n- Ingredientes: açúcar, xarope de glicose, pectina, suco concentrado de morango e ácido cítrico.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: sim.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [
+    {
+      "papel": "user",
+      "conteudo": "sou vegano, quais pipocas eu posso comer?"
+    },
+    {
+      "papel": "assistant",
+      "conteudo": "Oi! Que legal que você veio à Pop & Doce! 😊\n\nQue ótimo saber que você é vegano! Temos algumas opções deliciosas de pipocas! 🍿 As nossas pipocas de milho orgânico, ervas finas e açafrão são 100% veganas e sem nenhum ingrediente de origem animal. 😉\n\nQuer dar uma olhada nas opções? 😊"
+    },
+    {
+      "papel": "user",
+      "conteudo": "quero uma de caramelo clássico grande"
+    },
+    {
+      "papel": "assistant",
+      "conteudo": "Show de bola! Uma pipoca de caramelo clássico grande, que delícia! 😋\n\nSó pra confirmar, você gostaria de uma unidade da pipoca de caramelo clássico grande? 😉"
+    }
+  ],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:27:13.075088+00:00",
+  "fim_utc": "2026-10-18T22:27:14.446598+00:00",
+  "duracao_http_segundos": 1.371237,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Hmm, que tal um pacote de nossas balas de coco cristalizadas? 🥥 São super refrescantes e combinam muito bem com a pipoca de caramelo! 🍬😋\n\nJá pensou em adicionar um pouquinho de doçura extra ao seu pedido? 😉",
+    "sessao": "769305c4-0300-40ad-b513-24d419341c7c",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 696,
+          "outputTokens": 56,
+          "totalTokens": 752
+        },
+        "metrics": {
+          "latencyMs": 396
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "me indica uma doce então",
+      "actual_output": "Hmm, que tal um pacote de nossas balas de coco cristalizadas? 🥥 São super refrescantes e combinam muito bem com a pipoca de caramelo! 🍬😋\n\nJá pensou em adicionar um pouquinho de doçura extra ao seu pedido? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Recomendar pipoca doce vegana oficial: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar. Não substituir por bala nem produto com leite.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Aviso geral de alérgenos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Apresentações"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+            "secoes": [
+              "Quais produtos são veganos?"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Caramelo Clássico"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Linha vegana e zero açúcar"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Ursinhos Frutas Vermelhas"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Goma Vegana de Maçã Verde"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Corações de Morango Veganos"
+            ]
+          }
+        ],
+        "historico_conversa": [
+          {
+            "papel": "user",
+            "conteudo": "sou vegano, quais pipocas eu posso comer?"
+          },
+          {
+            "papel": "assistant",
+            "conteudo": "Oi! Que legal que você veio à Pop & Doce! 😊\n\nQue ótimo saber que você é vegano! Temos algumas opções deliciosas de pipocas! 🍿 As nossas pipocas de milho orgânico, ervas finas e açafrão são 100% veganas e sem nenhum ingrediente de origem animal. 😉\n\nQuer dar uma olhada nas opções? 😊"
+          },
+          {
+            "papel": "user",
+            "conteudo": "quero uma de caramelo clássico grande"
+          },
+          {
+            "papel": "assistant",
+            "conteudo": "Show de bola! Uma pipoca de caramelo clássico grande, que delícia! 😋\n\nSó pra confirmar, você gostaria de uma unidade da pipoca de caramelo clássico grande? 😉"
+          }
+        ],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 1.371237,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

@@ -1,0 +1,113 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T163235-802208Z-da5fc017",
+  "caso_id": "T03-C13",
+  "categoria": "catalogo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Quais assinaturas vocês oferecem e como funciona cada uma?"
+  },
+  "criterio_esperado": "Apresentar os três planos mensais: Petisco: 2 pipocas Médias por R$ 49,90. Sessão: 2 pipocas Grandes e 1 pacote de 250 g de balas por R$ 99,90. Festa: 4 pipocas Grandes e 2 pacotes de 250 g de balas por R$ 179,90. Explicar que os sabores são escolhidos pela empresa, com possibilidade de solicitar exclusões por restrição ou preferência pelo atendimento. A entrega está incluída somente para Porto Alegre e Região Metropolitana, até o dia 10. A cobrança é mensal, apenas no cartão de crédito, e a contratação ocorre somente pelo site. Não acumula cupons, desconto Pix ou promoções. O cancelamento é solicitado por e-mail; até o dia 25, evita a cobrança do mês seguinte.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secoes": [
+        "Planos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secoes": [
+        "Regras da assinatura"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Apresentar os três planos mensais: Petisco: 2 pipocas Médias por R$ 49,90. Sessão: 2 pipocas Grandes e 1 pacote de 250 g de balas por R$ 99,90. Festa: 4 pipocas Grandes e 2 pacotes de 250 g de balas por R$ 179,90. Explicar que os sabores são escolhidos pela empresa, com possibilidade de solicitar exclusões por restrição ou preferência pelo atendimento. A entrega está incluída somente para Porto Alegre e Região Metropolitana, até o dia 10. A cobrança é mensal, apenas no cartão de crédito, e a contratação ocorre somente pelo site. Não acumula cupons, desconto Pix ou promoções. O cancelamento é solicitado por e-mail; até o dia 25, evita a cobrança do mês seguinte."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "K",
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secao": "Planos",
+      "texto": "### Planos\n\n| Plano | O que vem todo mês | Preço mensal |\n|---|---|---|\n| Petisco | 2 pipocas Médias | R$ 49,90 |\n| Sessão | 2 pipocas Grandes e 1 pacote de 250 g de balas | R$ 99,90 |\n| Festa | 4 pipocas Grandes e 2 pacotes de 250 g de balas | R$ 179,90 |\n"
+    },
+    {
+      "fonte": "K",
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secao": "Regras da assinatura",
+      "texto": "### Regras da assinatura\n\n- Os sabores de cada mês são escolhidos pela Pop & Doce. O assinante pode pedir, pelo e-mail atendimento@popedoce.example, para excluir sabores por restrição alimentar ou preferência.\n- A entrega está incluída no preço do plano e vale somente para Porto Alegre e Região Metropolitana.\n- A caixa do mês é entregue até o dia 10.\n- A cobrança é mensal, apenas no cartão de crédito.\n- O cancelamento pode ser feito a qualquer momento pelo e-mail atendimento@popedoce.example. Pedidos de cancelamento feitos até o dia 25 evitam a cobrança do mês seguinte.\n- A assinatura não pode ser combinada com cupons, desconto do Pix ou promoções.\n- A contratação é feita somente pelo site www.popedoce.example. O assistente virtual explica os planos, mas não faz a contratação.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T16:32:49.052230+00:00",
+  "fim_utc": "2026-10-18T16:32:53.329748+00:00",
+  "duracao_http_segundos": 4.277407,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi, tudo bem? 😊\n\nQue legal que você se interessou pelas assinaturas da Pop & Doce! 🥰\n\nTemos três opções de assinatura super deliciosas:\n\n*   **Mini Pipoca:** Uma seleção de 3 sabores de pipoca gourmet, perfeita para experimentar! 🍿 R$49,90 por mês.\n*   **Pipoca Completa:** 6 sabores diferentes de pipoca gourmet para você saborear sem preocupação! 🍿 R$79,90 por mês.\n*   **Doçura Total:** 3 sabores de pipoca gourmet + uma seleção de 5 balas artesanais para um combo irresistível! 🍿🍬 R$99,90 por mês.\n\nTodas as assinaturas são entregues mensalmente, com a opção de pausar ou cancelar a qualquer momento, viu? 😉\n\nQual opção te chamou mais a atenção? Ou quer saber mais detalhes sobre alguma delas?",
+    "sessao": "28f993dd-5a55-4e07-959f-ef3d9ceac877",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 542,
+          "outputTokens": 198,
+          "totalTokens": 740
+        },
+        "metrics": {
+          "latencyMs": 1067
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Quais assinaturas vocês oferecem e como funciona cada uma?",
+      "actual_output": "Oi, tudo bem? 😊\n\nQue legal que você se interessou pelas assinaturas da Pop & Doce! 🥰\n\nTemos três opções de assinatura super deliciosas:\n\n*   **Mini Pipoca:** Uma seleção de 3 sabores de pipoca gourmet, perfeita para experimentar! 🍿 R$49,90 por mês.\n*   **Pipoca Completa:** 6 sabores diferentes de pipoca gourmet para você saborear sem preocupação! 🍿 R$79,90 por mês.\n*   **Doçura Total:** 3 sabores de pipoca gourmet + uma seleção de 5 balas artesanais para um combo irresistível! 🍿🍬 R$99,90 por mês.\n\nTodas as assinaturas são entregues mensalmente, com a opção de pausar ou cancelar a qualquer momento, viu? 😉\n\nQual opção te chamou mais a atenção? Ou quer saber mais detalhes sobre alguma delas?",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Apresentar os três planos mensais: Petisco: 2 pipocas Médias por R$ 49,90. Sessão: 2 pipocas Grandes e 1 pacote de 250 g de balas por R$ 99,90. Festa: 4 pipocas Grandes e 2 pacotes de 250 g de balas por R$ 179,90. Explicar que os sabores são escolhidos pela empresa, com possibilidade de solicitar exclusões por restrição ou preferência pelo atendimento. A entrega está incluída somente para Porto Alegre e Região Metropolitana, até o dia 10. A cobrança é mensal, apenas no cartão de crédito, e a contratação ocorre somente pelo site. Não acumula cupons, desconto Pix ou promoções. O cancelamento é solicitado por e-mail; até o dia 25, evita a cobrança do mês seguinte.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+            "secoes": [
+              "Planos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+            "secoes": [
+              "Regras da assinatura"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 4.277407,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

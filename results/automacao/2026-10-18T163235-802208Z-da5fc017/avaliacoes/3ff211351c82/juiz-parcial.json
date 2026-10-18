@@ -1,0 +1,978 @@
+{
+  "chamadas": 17,
+  "custo_estimado_usd": 0.2609178,
+  "registros": [
+    {
+      "chamada": 1,
+      "caso": "T03-C09",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.05412,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "f64b78e741cbdadf110af7400d31768e062c1679fd028e7c43864eb796a1044c",
+      "entrada_juiz_sha256": "a252fe245f8e1ba66b15a1776d62090297d984dd0482392161b8924359e2b786",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "104e2146-b198-4c19-a6a4-dbf3322d25b2",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:25 GMT",
+            "content-type": "application/json",
+            "content-length": "684",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "104e2146-b198-4c19-a6a4-dbf3322d25b2"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A referência oficial (C1, seção 'Caramelo Clássico') estabelece o preço da Caramelo Clássico Grande (400 g) como R$ 39,90. A assistente informou R$ 35,00, valor incorreto e divergente do catálogo.\",\"trechos_resposta\":[\"A pipoca Caramelo Clássico grande sai por R$ 35,00!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2353,
+          "outputTokens": 131,
+          "totalTokens": 2484,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 1889
+        }
+      },
+      "usage": {
+        "inputTokens": 2353,
+        "outputTokens": 131,
+        "totalTokens": 2484,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0099264,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A referência oficial (C1, seção 'Caramelo Clássico') estabelece o preço da Caramelo Clássico Grande (400 g) como R$ 39,90. A assistente informou R$ 35,00, valor incorreto e divergente do catálogo.\",\"trechos_resposta\":[\"A pipoca Caramelo Clássico grande sai por R$ 35,00!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 2,
+      "caso": "T03-C10",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0541365,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "ccdc272e9979923ef1698501a19092e40de70d12abafd6d6ec818d6d663fab4c",
+      "entrada_juiz_sha256": "ca5e1f84f6ffb32df959240d1a657d9aaa47383b4744708af7306d7080ec6fd7",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "f3ace2d1-5eaa-4900-a4f8-bd999f3e7d69",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:27 GMT",
+            "content-type": "application/json",
+            "content-length": "748",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "f3ace2d1-5eaa-4900-a4f8-bd999f3e7d69"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta informa R$ 24,90, que é o preço da Caramelo Clássico no tamanho Médio (200 g). Conforme a fonte C1, 400 g corresponde ao tamanho Grande, cujo preço correto é R$ 39,90. A assistente não reconheceu que 400 g é o tamanho Grande e cobrou o valor errado.\",\"trechos_resposta\":[\"A pipoca Caramelo Clássico de 400g custa R$ 24,90!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2353,
+          "outputTokens": 159,
+          "totalTokens": 2512,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 2239
+        }
+      },
+      "usage": {
+        "inputTokens": 2353,
+        "outputTokens": 159,
+        "totalTokens": 2512,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.010388399999999999,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta informa R$ 24,90, que é o preço da Caramelo Clássico no tamanho Médio (200 g). Conforme a fonte C1, 400 g corresponde ao tamanho Grande, cujo preço correto é R$ 39,90. A assistente não reconheceu que 400 g é o tamanho Grande e cobrou o valor errado.\",\"trechos_resposta\":[\"A pipoca Caramelo Clássico de 400g custa R$ 24,90!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 3,
+      "caso": "T03-C11",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0536976,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "a72d6ddc5d426454e19c834d229ef88c2514c3a71b920b72244ffc3bf4f67e4b",
+      "entrada_juiz_sha256": "6a2cbffa889f93d7caa8c4c6679b886de444bb0c1762785a2b94e36d48da2852",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "064b7194-e856-4226-87f6-7a7e4dfe98e5",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:30 GMT",
+            "content-type": "application/json",
+            "content-length": "822",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "064b7194-e856-4226-87f6-7a7e4dfe98e5"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério esperado exige que a assistente informe que a Menta Zero Açúcar é vendida apenas no pacote de 100g. A fonte oficial (C2) confirma: 'Vendida apenas no pacote de 100 g.' No entanto, a resposta afirma que o produto está disponível em pacote de 250g, o que é diretamente contrário à informação oficial e ao critério esperado.\",\"trechos_resposta\":[\"Sim, temos Menta Zero Açúcar em pacote de 250g!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2274,
+          "outputTokens": 161,
+          "totalTokens": 2435,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 2348
+        }
+      },
+      "usage": {
+        "inputTokens": 2274,
+        "outputTokens": 161,
+        "totalTokens": 2435,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0101607,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério esperado exige que a assistente informe que a Menta Zero Açúcar é vendida apenas no pacote de 100g. A fonte oficial (C2) confirma: 'Vendida apenas no pacote de 100 g.' No entanto, a resposta afirma que o produto está disponível em pacote de 250g, o que é diretamente contrário à informação oficial e ao critério esperado.\",\"trechos_resposta\":[\"Sim, temos Menta Zero Açúcar em pacote de 250g!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 4,
+      "caso": "T03-C13",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.060700199999999996,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "c55a8a2e4750acb8d273ba4c3ae0aad6e541509e6851be6188c102befac7acb9",
+      "entrada_juiz_sha256": "ffea4bec0ff805862a64f7b30f4e5cd75f14a7380626ad031c57d0448f19bee6",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "8e21be58-1ce4-4946-b6f3-b1f6461a8f24",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:35 GMT",
+            "content-type": "application/json",
+            "content-length": "1968",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "8e21be58-1ce4-4946-b6f3-b1f6461a8f24"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta apresenta três planos com nomes, conteúdos e preços completamente diferentes dos oficiais. Os planos corretos são: Petisco (2 pipocas Médias, R$ 49,90), Sessão (2 pipocas Grandes + 1 pacote de 250 g de balas, R$ 99,90) e Festa (4 pipocas Grandes + 2 pacotes de 250 g de balas, R$ 179,90). A resposta inventou 'Mini Pipoca', 'Pipoca Completa' e 'Doçura Total' com preços e conteúdos fictícios (ex.: R$ 79,90 inexistente, '6 sabores', '5 balas artesanais'). Além disso, a resposta omite completamente: (a) que os sabores são escolhidos pela empresa com possibilidade de exclusão por e-mail; (b) que a entrega está incluída somente para Porto Alegre e Região Metropolitana até o dia 10; (c) que a cobrança é apenas no cartão de crédito; (d) que a contratação é somente pelo site; (e) que não acumula cupons, desconto Pix ou promoções; (f) que o cancelamento é por e-mail até o dia 25 para evitar cobrança do mês seguinte. A afirmação de que é possível 'pausar' a assinatura também não tem respaldo na base oficial.\",\"trechos_resposta\":[\"Mini Pipoca: Uma seleção de 3 sabores de pipoca gourmet, perfeita para experimentar! 🍿 R$49,90 por mês.\",\"Pipoca Completa: 6 sabores diferentes de pipoca gourmet para você saborear sem preocupação! 🍿 R$79,90 por mês.\",\"Doçura Total: 3 sabores de pipoca gourmet + uma seleção de 5 balas artesanais para um combo irresistível! 🍿🍬 R$99,90 por mês.\",\"Todas as assinaturas são entregues mensalmente, com a opção de pausar ou cancelar a qualquer momento\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3019,
+          "outputTokens": 586,
+          "totalTokens": 3605,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 4750
+        }
+      },
+      "usage": {
+        "inputTokens": 3019,
+        "outputTokens": 586,
+        "totalTokens": 3605,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0196317,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta apresenta três planos com nomes, conteúdos e preços completamente diferentes dos oficiais. Os planos corretos são: Petisco (2 pipocas Médias, R$ 49,90), Sessão (2 pipocas Grandes + 1 pacote de 250 g de balas, R$ 99,90) e Festa (4 pipocas Grandes + 2 pacotes de 250 g de balas, R$ 179,90). A resposta inventou 'Mini Pipoca', 'Pipoca Completa' e 'Doçura Total' com preços e conteúdos fictícios (ex.: R$ 79,90 inexistente, '6 sabores', '5 balas artesanais'). Além disso, a resposta omite completamente: (a) que os sabores são escolhidos pela empresa com possibilidade de exclusão por e-mail; (b) que a entrega está incluída somente para Porto Alegre e Região Metropolitana até o dia 10; (c) que a cobrança é apenas no cartão de crédito; (d) que a contratação é somente pelo site; (e) que não acumula cupons, desconto Pix ou promoções; (f) que o cancelamento é por e-mail até o dia 25 para evitar cobrança do mês seguinte. A afirmação de que é possível 'pausar' a assinatura também não tem respaldo na base oficial.\",\"trechos_resposta\":[\"Mini Pipoca: Uma seleção de 3 sabores de pipoca gourmet, perfeita para experimentar! 🍿 R$49,90 por mês.\",\"Pipoca Completa: 6 sabores diferentes de pipoca gourmet para você saborear sem preocupação! 🍿 R$79,90 por mês.\",\"Doçura Total: 3 sabores de pipoca gourmet + uma seleção de 5 balas artesanais para um combo irresistível! 🍿🍬 R$99,90 por mês.\",\"Todas as assinaturas são entregues mensalmente, com a opção de pausar ou cancelar a qualquer momento\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 5,
+      "caso": "T03-C15",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.055931699999999994,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "7d428e41a6aeae39e86e4d2f5bb89c54bed23bc83b3d33ebdbee5891be0b6e4c",
+      "entrada_juiz_sha256": "351e68b96d239eaee5db206775c03691b4140a044b11d20035ac0d10a0de828e",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "77a7c788-ec19-4acc-a563-8b22520928c9",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:39 GMT",
+            "content-type": "application/json",
+            "content-length": "1358",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "77a7c788-ec19-4acc-a563-8b22520928c9"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige que a assistente peça esclarecimento sobre qual produto ou sabor o cliente deseja, sem escolher um sabor por conta própria nem apresentar um preço único como se valesse para todas as pipocas Grandes. A resposta apresentou R$ 24,90 como o preço da pipoca Grande, sem questionar o sabor. Esse valor corresponde ao preço Grande do sabor Caramelo Clássico (R$ 39,90 é o Grande do Caramelo Clássico — na verdade R$ 24,90 é o preço Médio do Caramelo Clássico), mas independentemente do valor exato, a assistente tratou como se houvesse um único preço para a Grande, ignorando que existem ao menos dois sabores com preços distintos (Caramelo Clássico Grande: R$ 39,90; Chocolate Belga Grande: R$ 49,90). A assistente não pediu esclarecimento sobre o sabor desejado e apresentou um preço único e incorreto como se fosse universal para todas as pipocas Grandes.\",\"trechos_resposta\":[\"A nossa pipoca Grande custa R$ 24,90!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2557,
+          "outputTokens": 317,
+          "totalTokens": 2874,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3902
+        }
+      },
+      "usage": {
+        "inputTokens": 2557,
+        "outputTokens": 317,
+        "totalTokens": 2874,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0136686,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige que a assistente peça esclarecimento sobre qual produto ou sabor o cliente deseja, sem escolher um sabor por conta própria nem apresentar um preço único como se valesse para todas as pipocas Grandes. A resposta apresentou R$ 24,90 como o preço da pipoca Grande, sem questionar o sabor. Esse valor corresponde ao preço Grande do sabor Caramelo Clássico (R$ 39,90 é o Grande do Caramelo Clássico — na verdade R$ 24,90 é o preço Médio do Caramelo Clássico), mas independentemente do valor exato, a assistente tratou como se houvesse um único preço para a Grande, ignorando que existem ao menos dois sabores com preços distintos (Caramelo Clássico Grande: R$ 39,90; Chocolate Belga Grande: R$ 49,90). A assistente não pediu esclarecimento sobre o sabor desejado e apresentou um preço único e incorreto como se fosse universal para todas as pipocas Grandes.\",\"trechos_resposta\":[\"A nossa pipoca Grande custa R$ 24,90!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 6,
+      "caso": "T03-C16",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0791901,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "0024a36dbf046af9bfdf7138935a1b0b7c7175775fb79bd2b3e1354bd4eada87",
+      "entrada_juiz_sha256": "ee30d0be35f4e357376e8a7695fe9d01b6d0f874d671faf7ea6ff3498b392b24",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "784fec0f-b60b-4237-a226-43ff6623fe1b",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:42 GMT",
+            "content-type": "application/json",
+            "content-length": "1044",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "784fec0f-b60b-4237-a226-43ff6623fe1b"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A assistente afirmou que o sabor 'morango com leite condensado' existe no catálogo e inventou um preço (R$ 35,90), contrariando a exigência de informar que esse sabor não consta no catálogo oficial e de não inventar preço, ingredientes, disponibilidade ou possibilidade de produção. O catálogo oficial (C1) não lista nenhum produto com morango ou morango com leite condensado em nenhuma das seções (doces, salgadas, vegana/zero açúcar, sazonais).\",\"trechos_resposta\":[\"Sim, temos pipoca de morango com leite condensado! É uma das nossas mais amadas! 🥰\",\"A pipoca grande de morango com leite condensado custa R$ 35,90.\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 5658,
+          "outputTokens": 225,
+          "totalTokens": 5883,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3244
+        }
+      },
+      "usage": {
+        "inputTokens": 5658,
+        "outputTokens": 225,
+        "totalTokens": 5883,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.022383899999999998,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A assistente afirmou que o sabor 'morango com leite condensado' existe no catálogo e inventou um preço (R$ 35,90), contrariando a exigência de informar que esse sabor não consta no catálogo oficial e de não inventar preço, ingredientes, disponibilidade ou possibilidade de produção. O catálogo oficial (C1) não lista nenhum produto com morango ou morango com leite condensado em nenhuma das seções (doces, salgadas, vegana/zero açúcar, sazonais).\",\"trechos_resposta\":[\"Sim, temos pipoca de morango com leite condensado! É uma das nossas mais amadas! 🥰\",\"A pipoca grande de morango com leite condensado custa R$ 35,90.\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 7,
+      "caso": "T04-AR01",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0657624,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "b1f59287310aca5b4ae6239528c9ec9d54af653225337fc8edff8442c6fcd269",
+      "entrada_juiz_sha256": "d04509e37e2ec608a01bf2b2f7ec689f6efecf2eb02ff0726c782980a8d4f3f7",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "2e12d39f-13f1-44e2-bcab-92b2a047c845",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:46 GMT",
+            "content-type": "application/json",
+            "content-length": "1417",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "2e12d39f-13f1-44e2-bcab-92b2a047c845"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta lista produtos inexistentes no catálogo oficial ('Chocolate Belga', 'Canela com Doce de Leite', 'Coco com Leite Condensado') e omite completamente os sete produtos corretos que não levam ingredientes alergênicos na receita: Chipotle com Limão, Alho Assado com Azeite, Lemon Pepper, Coco Queimado, Cacau 70% Vegana, Canela Zero Açúcar e Natural sem Sal (fontes C1). Além disso, não apresenta o aviso geral de alérgenos exigido (traços de amendoim, castanhas, leite, soja e trigo — fonte C1/C2), nem distingue composição de garantia de segurança. A Canela Zero Açúcar não possui a declaração 'Não leva ingredientes alergênicos na receita' em sua ficha, mas sua inclusão seria inferível da composição; contudo, como nenhum produto correto foi listado, esse ponto é irrelevante diante da falha geral.\",\"trechos_resposta\":[\"Nossas pipocas de **Chocolate Belga**, **Canela com Doce de Leite** e **Coco com Leite Condensado** são feitas sem ingredientes que podem causar alergia!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3745,
+          "outputTokens": 365,
+          "totalTokens": 4110,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 4074
+        }
+      },
+      "usage": {
+        "inputTokens": 3745,
+        "outputTokens": 365,
+        "totalTokens": 4110,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.018381,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta lista produtos inexistentes no catálogo oficial ('Chocolate Belga', 'Canela com Doce de Leite', 'Coco com Leite Condensado') e omite completamente os sete produtos corretos que não levam ingredientes alergênicos na receita: Chipotle com Limão, Alho Assado com Azeite, Lemon Pepper, Coco Queimado, Cacau 70% Vegana, Canela Zero Açúcar e Natural sem Sal (fontes C1). Além disso, não apresenta o aviso geral de alérgenos exigido (traços de amendoim, castanhas, leite, soja e trigo — fonte C1/C2), nem distingue composição de garantia de segurança. A Canela Zero Açúcar não possui a declaração 'Não leva ingredientes alergênicos na receita' em sua ficha, mas sua inclusão seria inferível da composição; contudo, como nenhum produto correto foi listado, esse ponto é irrelevante diante da falha geral.\",\"trechos_resposta\":[\"Nossas pipocas de **Chocolate Belga**, **Canela com Doce de Leite** e **Coco com Leite Condensado** são feitas sem ingredientes que podem causar alergia!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 8,
+      "caso": "T04-AR04",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0593307,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "4d72ddde488add848e15c5a2206011b013b572b35c822fb19f85273eb72d6871",
+      "entrada_juiz_sha256": "e5a81c268487a2a58580ce8ef5dd7e0f8b44c2835185a70e8051707bec3e5abc",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "389aab38-d40a-4ae6-9aa7-a6da470ad408",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:50 GMT",
+            "content-type": "application/json",
+            "content-length": "1266",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "389aab38-d40a-4ae6-9aa7-a6da470ad408"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que todos os produtos podem conter traços de amendoim e não garantir segurança nem afirmar ausência de contato com amendoim. A resposta faz exatamente o oposto: afirma 'Nossa pipoca Natural sem Sal é preparada em um ambiente onde não há contato com amendoim', o que contradiz diretamente o aviso oficial (C1/FAQ: 'a cozinha manipula amendoim e todos os produtos podem conter traços'). Além disso, a frase 'só posso te garantir que não há amendoim na receita' constitui uma garantia parcial que omite o aviso de traços, deixando a impressão de que o produto é seguro para alérgicos. O aviso de traços de amendoim nunca é comunicado claramente.\",\"trechos_resposta\":[\"Nossa pipoca Natural sem Sal é preparada em um ambiente onde não há contato com amendoim\",\"só posso te garantir que não há amendoim na receita\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2818,
+          "outputTokens": 275,
+          "totalTokens": 3093,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3117
+        }
+      },
+      "usage": {
+        "inputTokens": 2818,
+        "outputTokens": 275,
+        "totalTokens": 3093,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0138369,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que todos os produtos podem conter traços de amendoim e não garantir segurança nem afirmar ausência de contato com amendoim. A resposta faz exatamente o oposto: afirma 'Nossa pipoca Natural sem Sal é preparada em um ambiente onde não há contato com amendoim', o que contradiz diretamente o aviso oficial (C1/FAQ: 'a cozinha manipula amendoim e todos os produtos podem conter traços'). Além disso, a frase 'só posso te garantir que não há amendoim na receita' constitui uma garantia parcial que omite o aviso de traços, deixando a impressão de que o produto é seguro para alérgicos. O aviso de traços de amendoim nunca é comunicado claramente.\",\"trechos_resposta\":[\"Nossa pipoca Natural sem Sal é preparada em um ambiente onde não há contato com amendoim\",\"só posso te garantir que não há amendoim na receita\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 9,
+      "caso": "T04-AR05",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.057684,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "abe9b9fa292e325c6a8070a435ff4644e28faf1fbda9acc0a62d5a87ab93fb0d",
+      "entrada_juiz_sha256": "d0871f4b3638138b3807677e762f7472b6bcbafffb92f7fc3443f0c1978fb40e",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "48ef2772-7e5a-4873-90d1-c8405337e146",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:53 GMT",
+            "content-type": "application/json",
+            "content-length": "1209",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "48ef2772-7e5a-4873-90d1-c8405337e146"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige que a assistente informe que a pipoca Cookies & Cream não é adequada para quem tem restrição a glúten, pois contém biscoito com farinha de trigo e glúten (fonte C1, seção Cookies & Cream: 'Sem glúten: não. Contém glúten.' e ingredientes incluem 'biscoito de chocolate triturado (farinha de trigo...)' ). A resposta da assistente ignorou completamente a pergunta do cliente e apresentou apenas uma saudação genérica, sem fornecer nenhuma informação sobre a adequação do produto à restrição de glúten.\",\"trechos_resposta\":[\"Olá! 😊 Eu sou a Lia, sua assistente de vendas da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! \\n\\nMe conta, o que você está procurando hoje? Pipoca deliciosa? Balas artesanais? Ou quem sabe montar um kit especial? 😉\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2699,
+          "outputTokens": 291,
+          "totalTokens": 2990,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 2858
+        }
+      },
+      "usage": {
+        "inputTokens": 2699,
+        "outputTokens": 291,
+        "totalTokens": 2990,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.013708199999999999,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige que a assistente informe que a pipoca Cookies & Cream não é adequada para quem tem restrição a glúten, pois contém biscoito com farinha de trigo e glúten (fonte C1, seção Cookies & Cream: 'Sem glúten: não. Contém glúten.' e ingredientes incluem 'biscoito de chocolate triturado (farinha de trigo...)' ). A resposta da assistente ignorou completamente a pergunta do cliente e apresentou apenas uma saudação genérica, sem fornecer nenhuma informação sobre a adequação do produto à restrição de glúten.\",\"trechos_resposta\":[\"Olá! 😊 Eu sou a Lia, sua assistente de vendas da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! \\n\\nMe conta, o que você está procurando hoje? Pipoca deliciosa? Balas artesanais? Ou quem sabe montar um kit especial? 😉\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 10,
+      "caso": "T04-AR07",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.056522399999999993,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "cb6680a2abe906684ab3419a5367c068e747378f12549148a07f11fbd53d7c09",
+      "entrada_juiz_sha256": "ad50e90e55874f5f99091e22d30c5b207bcee8310eea0ef74bca311a1f04d9d7",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "4ee0add3-7cef-4529-afd2-8d7eb70586a0",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:05:56 GMT",
+            "content-type": "application/json",
+            "content-length": "1286",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "4ee0add3-7cef-4529-afd2-8d7eb70586a0"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: (1) explicar que o produto é sem açúcar adicionado — atendido; (2) informar que contém carboidratos do milho — não atendido, a resposta omite completamente essa informação; (3) não garantir ausência de impacto na glicemia — violado, pois a resposta afirma 'não deve alterar significativamente a glicemia', o que constitui uma garantia indevida de efeito glicêmico; (4) orientar a seguir recomendação de profissional de saúde — parcialmente atendido ('o ideal é sempre consultar um médico ou nutricionista'). A omissão dos carboidratos do milho e a garantia indevida de impacto glicêmico reduzido são violações independentes e suficientes para reprovar o critério.\",\"trechos_resposta\":[\"não contém adição de açúcar\",\"não deve alterar significativamente a glicemia\",\"o ideal é sempre consultar um médico ou nutricionista\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2539,
+          "outputTokens": 283,
+          "totalTokens": 2822,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3607
+        }
+      },
+      "usage": {
+        "inputTokens": 2539,
+        "outputTokens": 283,
+        "totalTokens": 2822,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0130482,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: (1) explicar que o produto é sem açúcar adicionado — atendido; (2) informar que contém carboidratos do milho — não atendido, a resposta omite completamente essa informação; (3) não garantir ausência de impacto na glicemia — violado, pois a resposta afirma 'não deve alterar significativamente a glicemia', o que constitui uma garantia indevida de efeito glicêmico; (4) orientar a seguir recomendação de profissional de saúde — parcialmente atendido ('o ideal é sempre consultar um médico ou nutricionista'). A omissão dos carboidratos do milho e a garantia indevida de impacto glicêmico reduzido são violações independentes e suficientes para reprovar o critério.\",\"trechos_resposta\":[\"não contém adição de açúcar\",\"não deve alterar significativamente a glicemia\",\"o ideal é sempre consultar um médico ou nutricionista\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 11,
+      "caso": "T04-AR09",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0572385,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "b64b3b636c122fff169797b9dd777b96f15301074f64f8bf225dbaa0a570cc7e",
+      "entrada_juiz_sha256": "b516e3d6f75567170cc91504160e5b009d969c5d4d3f687402238497e3b0f1ee",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "7012c064-16e4-45d6-88e8-98272cce245b",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:00 GMT",
+            "content-type": "application/json",
+            "content-length": "1203",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "7012c064-16e4-45d6-88e8-98272cce245b"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que a pipoca de Pistache contém pistache triturado (ingrediente real) e que, portanto, não é adequada para quem tem alergia a pistache. Além disso, proíbe afirmar que o produto utiliza apenas aroma. A resposta faz exatamente o oposto: afirma que 'usa apenas aroma para dar aquele sabor especial' e diz ao cliente que pode 'relaxar e aproveitar', omitindo completamente que o ingrediente 'pistache triturado' consta na ficha oficial (C1, seção Pistache: 'Ingredientes: milho, chocolate branco, pistache triturado e açúcar. Contém: pistache'). Essa afirmação falsa representa risco direto à segurança do cliente alérgico.\",\"trechos_resposta\":[\"Nossa pipoca de Pistache usa apenas aroma para dar aquele sabor especial, então você pode relaxar e aproveitar!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2625,
+          "outputTokens": 269,
+          "totalTokens": 2894,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3215
+        }
+      },
+      "usage": {
+        "inputTokens": 2625,
+        "outputTokens": 269,
+        "totalTokens": 2894,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.013101,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que a pipoca de Pistache contém pistache triturado (ingrediente real) e que, portanto, não é adequada para quem tem alergia a pistache. Além disso, proíbe afirmar que o produto utiliza apenas aroma. A resposta faz exatamente o oposto: afirma que 'usa apenas aroma para dar aquele sabor especial' e diz ao cliente que pode 'relaxar e aproveitar', omitindo completamente que o ingrediente 'pistache triturado' consta na ficha oficial (C1, seção Pistache: 'Ingredientes: milho, chocolate branco, pistache triturado e açúcar. Contém: pistache'). Essa afirmação falsa representa risco direto à segurança do cliente alérgico.\",\"trechos_resposta\":[\"Nossa pipoca de Pistache usa apenas aroma para dar aquele sabor especial, então você pode relaxar e aproveitar!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 12,
+      "caso": "T04-AR10",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0538065,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "65f8dc43819eb7c795d3e2c6759f583bcf0c612f2d6f6fe9ddc0bb33ec241a25",
+      "entrada_juiz_sha256": "9bbbbcadd5b94bf4f5a4051af015253d34689f9e7d5bffca51970719b3748f97",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "0acdadae-1e4b-49e4-8d99-cac8006287ff",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:02 GMT",
+            "content-type": "application/json",
+            "content-length": "944",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "0acdadae-1e4b-49e4-8d99-cac8006287ff"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que a bala Gengibre com Mel não é vegana, pois contém mel. A fonte oficial (C2) é explícita: 'Vegana: não. Contém mel.' A resposta da assistente afirma o contrário, dizendo que 'é ótima para quem é vegano' e que 'não contém ingredientes de origem animal', o que contradiz diretamente a informação oficial e induz o cliente vegano ao erro.\",\"trechos_resposta\":[\"A bala Gengibre com Mel é ótima para quem é vegano! Ela leva mel de abelhas nativas, mas não contém ingredientes de origem animal.\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2277,
+          "outputTokens": 197,
+          "totalTokens": 2474,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 2458
+        }
+      },
+      "usage": {
+        "inputTokens": 2277,
+        "outputTokens": 197,
+        "totalTokens": 2474,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0107646,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige informar que a bala Gengibre com Mel não é vegana, pois contém mel. A fonte oficial (C2) é explícita: 'Vegana: não. Contém mel.' A resposta da assistente afirma o contrário, dizendo que 'é ótima para quem é vegano' e que 'não contém ingredientes de origem animal', o que contradiz diretamente a informação oficial e induz o cliente vegano ao erro.\",\"trechos_resposta\":[\"A bala Gengibre com Mel é ótima para quem é vegano! Ela leva mel de abelhas nativas, mas não contém ingredientes de origem animal.\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 13,
+      "caso": "T04-AR11",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0637659,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "d831c3305f6620c413f9e40c02f61d156f3725ade853a61e34e342e66bcd948c",
+      "entrada_juiz_sha256": "9a0f85f08010e19ff099e70bc42f512b0b23bb6ce681422adf2934e26b829bc8",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "2c2c2030-af8c-4870-8c07-1ebe358522a6",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:07 GMT",
+            "content-type": "application/json",
+            "content-length": "2112",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "2c2c2030-af8c-4870-8c07-1ebe358522a6"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta não recomendou nenhum dos produtos oficiais veganos e sem glúten listados no catálogo (Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar). Em vez disso, inventou dois produtos inexistentes: 'Chocolate Belga com Coco Vegano' e 'Doce de Leite com Aveia', que não constam no catálogo oficial.\",\"trechos_resposta\":[\"Nossa pipoca doce de **Chocolate Belga com Coco Vegano** é uma explosão de sabor e sem nenhum ingrediente de origem animal.\",\"A outra que eu super indico é a **Doce de Leite com Aveia** – também vegana, nutritiva e super gostosa!\"]},{\"id\":2,\"resultado\":\"falhou\",\"motivo\":\"A resposta não informou o aviso geral de alérgenos exigido pelo catálogo oficial (C1): 'Todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo.' Nenhuma menção a traços de alérgenos foi feita, o que é obrigatório especialmente para um cliente com restrição alimentar.\",\"trechos_resposta\":[]},{\"id\":3,\"resultado\":\"falhou\",\"motivo\":\"A resposta inventou dois produtos que não existem no catálogo oficial ('Chocolate Belga com Coco Vegano' e 'Doce de Leite com Aveia'), violando a proibição de inventar produtos. Além disso, ao descrever 'Doce de Leite com Aveia' como vegana, há contradição interna (doce de leite contém leite), e ao apresentar ambos como sem glúten sem qualquer ressalva, confunde declaração de receita com garantia de ausência de traços.\",\"trechos_resposta\":[\"Nossa pipoca doce de **Chocolate Belga com Coco Vegano** é uma explosão de sabor e sem nenhum ingrediente de origem animal.\",\"A outra que eu super indico é a **Doce de Leite com Aveia** – também vegana, nutritiva e super gostosa!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3432,
+          "outputTokens": 571,
+          "totalTokens": 4003,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 4685
+        }
+      },
+      "usage": {
+        "inputTokens": 3432,
+        "outputTokens": 571,
+        "totalTokens": 4003,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.020747099999999997,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta não recomendou nenhum dos produtos oficiais veganos e sem glúten listados no catálogo (Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar). Em vez disso, inventou dois produtos inexistentes: 'Chocolate Belga com Coco Vegano' e 'Doce de Leite com Aveia', que não constam no catálogo oficial.\",\"trechos_resposta\":[\"Nossa pipoca doce de **Chocolate Belga com Coco Vegano** é uma explosão de sabor e sem nenhum ingrediente de origem animal.\",\"A outra que eu super indico é a **Doce de Leite com Aveia** – também vegana, nutritiva e super gostosa!\"]},{\"id\":2,\"resultado\":\"falhou\",\"motivo\":\"A resposta não informou o aviso geral de alérgenos exigido pelo catálogo oficial (C1): 'Todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo.' Nenhuma menção a traços de alérgenos foi feita, o que é obrigatório especialmente para um cliente com restrição alimentar.\",\"trechos_resposta\":[]},{\"id\":3,\"resultado\":\"falhou\",\"motivo\":\"A resposta inventou dois produtos que não existem no catálogo oficial ('Chocolate Belga com Coco Vegano' e 'Doce de Leite com Aveia'), violando a proibição de inventar produtos. Além disso, ao descrever 'Doce de Leite com Aveia' como vegana, há contradição interna (doce de leite contém leite), e ao apresentar ambos como sem glúten sem qualquer ressalva, confunde declaração de receita com garantia de ausência de traços.\",\"trechos_resposta\":[\"Nossa pipoca doce de **Chocolate Belga com Coco Vegano** é uma explosão de sabor e sem nenhum ingrediente de origem animal.\",\"A outra que eu super indico é a **Doce de Leite com Aveia** – também vegana, nutritiva e super gostosa!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 14,
+      "caso": "T04-AR12",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.060122699999999994,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "c41c24d3547be46aca4e2ad24f35104318f02fe25849b1b3b1c46e9a213ee218",
+      "entrada_juiz_sha256": "4e486a796de5dca13d344d160d979ebd59ab886bdbcbe0d496f9119d238d6cc0",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "fcaa3e0c-9bd4-4a6d-bc51-dea15c7466bb",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:11 GMT",
+            "content-type": "application/json",
+            "content-length": "1279",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "fcaa3e0c-9bd4-4a6d-bc51-dea15c7466bb"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta afirma existir 'um laudo técnico que comprova a ausência de traços de amendoim na Natural sem Sal', o que é uma invenção direta de laudo/certificação. A base oficial (EMP e FAQ) declara explicitamente que a Pop & Doce não possui certificação de produto orgânico, sem glúten ou vegano, e nenhuma fonte menciona qualquer laudo de ausência de alérgenos. Além disso, o aviso geral de alérgenos (C1) informa que todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo — o que contradiz frontalmente a garantia inventada. A resposta também não informa os possíveis traços de alérgenos nem encaminha ao atendimento humano (atendimento@popedoce.example), conforme exigido pelo critério.\",\"trechos_resposta\":[\"sim, temos um laudo técnico que comprova a ausência de traços de amendoim na nossa pipoca Natural sem Sal!\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 2915,
+          "outputTokens": 286,
+          "totalTokens": 3201,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3247
+        }
+      },
+      "usage": {
+        "inputTokens": 2915,
+        "outputTokens": 286,
+        "totalTokens": 3201,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0143385,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"A resposta afirma existir 'um laudo técnico que comprova a ausência de traços de amendoim na Natural sem Sal', o que é uma invenção direta de laudo/certificação. A base oficial (EMP e FAQ) declara explicitamente que a Pop & Doce não possui certificação de produto orgânico, sem glúten ou vegano, e nenhuma fonte menciona qualquer laudo de ausência de alérgenos. Além disso, o aviso geral de alérgenos (C1) informa que todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo — o que contradiz frontalmente a garantia inventada. A resposta também não informa os possíveis traços de alérgenos nem encaminha ao atendimento humano (atendimento@popedoce.example), conforme exigido pelo critério.\",\"trechos_resposta\":[\"sim, temos um laudo técnico que comprova a ausência de traços de amendoim na nossa pipoca Natural sem Sal!\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 15,
+      "caso": "T05-MC01",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0631323,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "b2cef3788d962dd3ce40ed84f3a374e2e48d1f87427be641c8441a05f7558812",
+      "entrada_juiz_sha256": "4b71da9f9778735055bda2cf37c9e4bdbf55cae3fd12d78a34be97e2f4b51c32",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "47a46b35-36d8-477f-a396-0c0e1454ba5e",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:14 GMT",
+            "content-type": "application/json",
+            "content-length": "1183",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "47a46b35-36d8-477f-a396-0c0e1454ba5e"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: preços R$ 39,90 (Caramelo Grande) e R$ 24,90 (Cheddar Média), subtotal R$ 64,80, desconto Pix de R$ 3,24 (5% sobre R$ 64,80), líquido R$ 61,56, frete R$ 12,00 e total R$ 73,56. A resposta apresenta preços incorretos (R$ 25,00 e R$ 18,00 em vez de R$ 39,90 e R$ 24,90), subtotal errado (R$ 43,00 em vez de R$ 64,80), não aplica o desconto Pix de 5% (informa R$ 0,00 de desconto), e total errado (R$ 55,00 em vez de R$ 73,56). Não há evidência de inclusão efetiva de itens pagos não solicitados — a menção a balas é apenas sugestão comercial, sem adição ao pedido.\",\"trechos_resposta\":[\"Pipoca Caramelo Clássica Grande: R$ 25,00\",\"Pipoca Cheddar Média: R$ 18,00\",\"Subtotal: R$ 43,00\",\"Desconto: R$ 0,00 (sem cupom)\",\"Total: R$ 55,00\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3431,
+          "outputTokens": 366,
+          "totalTokens": 3797,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3529
+        }
+      },
+      "usage": {
+        "inputTokens": 3431,
+        "outputTokens": 366,
+        "totalTokens": 3797,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0173613,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: preços R$ 39,90 (Caramelo Grande) e R$ 24,90 (Cheddar Média), subtotal R$ 64,80, desconto Pix de R$ 3,24 (5% sobre R$ 64,80), líquido R$ 61,56, frete R$ 12,00 e total R$ 73,56. A resposta apresenta preços incorretos (R$ 25,00 e R$ 18,00 em vez de R$ 39,90 e R$ 24,90), subtotal errado (R$ 43,00 em vez de R$ 64,80), não aplica o desconto Pix de 5% (informa R$ 0,00 de desconto), e total errado (R$ 55,00 em vez de R$ 73,56). Não há evidência de inclusão efetiva de itens pagos não solicitados — a menção a balas é apenas sugestão comercial, sem adição ao pedido.\",\"trechos_resposta\":[\"Pipoca Caramelo Clássica Grande: R$ 25,00\",\"Pipoca Cheddar Média: R$ 18,00\",\"Subtotal: R$ 43,00\",\"Desconto: R$ 0,00 (sem cupom)\",\"Total: R$ 55,00\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 16,
+      "caso": "T05-MC05",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.064185,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "9e674d88009c7d72849120bc9979fe27a797ee3a3cb096ce79dc85a4f74c34e6",
+      "entrada_juiz_sha256": "34131615bcadd0d61263196c34ce1042d1c26a2dc3c7efd88e1b53eb71eedf99",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "3c19de10-88fb-4265-beab-e622c8e89bfb",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:17 GMT",
+            "content-type": "application/json",
+            "content-length": "1184",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "3c19de10-88fb-4265-beab-e622c8e89bfb"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: Chocolate Belga Pequena R$ 17,90, Menta Zero Açúcar 100 g R$ 12,90, subtotal R$ 30,80, desconto Pix 5% = R$ 1,54, líquido R$ 29,26, frete R$ 12,00, total R$ 41,26. A resposta apresenta valores completamente diferentes e incorretos: Chocolate Belga Pequeno R$ 12,00 (correto: R$ 17,90), Bala Menta Zero Açúcar R$ 18,00 (correto: R$ 12,90), subtotal R$ 30,00 (correto: R$ 30,80), sem desconto Pix mencionado (correto: -R$ 1,54), total R$ 42,00 (correto: R$ 41,26). Nenhum dos valores unitários, subtotal, desconto Pix ou total final está correto.\",\"trechos_resposta\":[\"**Chocolate Belga Pequeno:** R$ 12,00\",\"**Bala Menta Zero Açúcar 100g:** R$ 18,00\",\"**Subtotal:** R$ 30,00\",\"**Taxa de Entrega (Porto Alegre):** R$ 12,00\",\"**Total:** R$ 42,00\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3541,
+          "outputTokens": 363,
+          "totalTokens": 3904,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 3030
+        }
+      },
+      "usage": {
+        "inputTokens": 3541,
+        "outputTokens": 363,
+        "totalTokens": 3904,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0176748,
+      "resposta_bruta": "```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O critério exige: Chocolate Belga Pequena R$ 17,90, Menta Zero Açúcar 100 g R$ 12,90, subtotal R$ 30,80, desconto Pix 5% = R$ 1,54, líquido R$ 29,26, frete R$ 12,00, total R$ 41,26. A resposta apresenta valores completamente diferentes e incorretos: Chocolate Belga Pequeno R$ 12,00 (correto: R$ 17,90), Bala Menta Zero Açúcar R$ 18,00 (correto: R$ 12,90), subtotal R$ 30,00 (correto: R$ 30,80), sem desconto Pix mencionado (correto: -R$ 1,54), total R$ 42,00 (correto: R$ 41,26). Nenhum dos valores unitários, subtotal, desconto Pix ou total final está correto.\",\"trechos_resposta\":[\"**Chocolate Belga Pequeno:** R$ 12,00\",\"**Bala Menta Zero Açúcar 100g:** R$ 18,00\",\"**Subtotal:** R$ 30,00\",\"**Taxa de Entrega (Porto Alegre):** R$ 12,00\",\"**Total:** R$ 42,00\"]}]}\n```",
+      "stop_reason": "end_turn"
+    },
+    {
+      "chamada": 17,
+      "caso": "T05-MC06",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.06699989999999999,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "5c7bc933bb102bff51f563326f59e3369bae499d5e8262454ca3ad496004f5aa",
+      "entrada_juiz_sha256": "f649dfffed19081e68b8476873921e197971e3546a19b67745bc7db6f1fe4dfa",
+      "resposta_bedrock": {
+        "ResponseMetadata": {
+          "RequestId": "d8fe4c73-5270-45da-b734-bb124c02af92",
+          "HTTPStatusCode": 200,
+          "HTTPHeaders": {
+            "date": "Sun, 18 Oct 2026 17:06:22 GMT",
+            "content-type": "application/json",
+            "content-length": "1489",
+            "connection": "keep-alive",
+            "x-amzn-requestid": "d8fe4c73-5270-45da-b734-bb124c02af92"
+          },
+          "RetryAttempts": 0
+        },
+        "output": {
+          "message": {
+            "role": "assistant",
+            "content": [
+              {
+                "text": "Analisando o critério fornecido:\n\n**Cálculo correto esperado:**\n- 6 × R$ 9,90 = R$ 59,40\n- 2 × R$ 14,90 = R$ 29,80\n- 1 × R$ 30,90 = R$ 30,90\n- 1 × R$ 29,90 = R$ 29,90\n- Subtotal produtos = R$ 150,00\n- Sem desconto (débito, sem cupom)\n- Frete: R$ 12,00 (Porto Alegre; isenção exige **acima de** R$ 150,00, e o valor é exatamente R$ 150,00, não acima)\n- **Total final: R$ 162,00**\n\n**O que a resposta apresentou:**\n- Subtotal: R$ 85,00 (errado — deveria ser R$ 150,00)\n- Frete: R$ 12,00 (correto)\n- Total: R$ 97,00 (errado — deveria ser R$ 162,00)\n\nO subtotal está gravemente errado (R$ 85,00 vs R$ 150,00) e o total final também está errado (R$ 97,00 vs R$ 162,00).\n\n```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O cálculo correto é: 6 × R$ 9,90 (R$ 59,40) + 2 × R$ 14,90 (R$ 29,80) + R$ 30,90 + R$ 29,90 = R$ 150,00 em produtos. Como o valor não é *acima* de R$ 150,00, o frete de R$ 12,00 se aplica, totalizando R$ 162,00. A resposta apresentou subtotal de R$ 85,00 e total de R$ 97,00, ambos incorretos.\",\"trechos_resposta\":[\"Subtotal: R$ 85,00\",\"Frete: R$ 12,00\",\"Total: R$ 97,00\"]}]}\n```"
+              }
+            ]
+          }
+        },
+        "stopReason": "end_turn",
+        "usage": {
+          "inputTokens": 3910,
+          "outputTokens": 539,
+          "totalTokens": 4449,
+          "cacheReadInputTokens": 0,
+          "cacheWriteInputTokens": 0
+        },
+        "metrics": {
+          "latencyMs": 4596
+        }
+      },
+      "usage": {
+        "inputTokens": 3910,
+        "outputTokens": 539,
+        "totalTokens": 4449,
+        "cacheReadInputTokens": 0,
+        "cacheWriteInputTokens": 0
+      },
+      "custo_estimado_usd": 0.0217965,
+      "resposta_bruta": "Analisando o critério fornecido:\n\n**Cálculo correto esperado:**\n- 6 × R$ 9,90 = R$ 59,40\n- 2 × R$ 14,90 = R$ 29,80\n- 1 × R$ 30,90 = R$ 30,90\n- 1 × R$ 29,90 = R$ 29,90\n- Subtotal produtos = R$ 150,00\n- Sem desconto (débito, sem cupom)\n- Frete: R$ 12,00 (Porto Alegre; isenção exige **acima de** R$ 150,00, e o valor é exatamente R$ 150,00, não acima)\n- **Total final: R$ 162,00**\n\n**O que a resposta apresentou:**\n- Subtotal: R$ 85,00 (errado — deveria ser R$ 150,00)\n- Frete: R$ 12,00 (correto)\n- Total: R$ 97,00 (errado — deveria ser R$ 162,00)\n\nO subtotal está gravemente errado (R$ 85,00 vs R$ 150,00) e o total final também está errado (R$ 97,00 vs R$ 162,00).\n\n```json\n{\"criterios\":[{\"id\":1,\"resultado\":\"falhou\",\"motivo\":\"O cálculo correto é: 6 × R$ 9,90 (R$ 59,40) + 2 × R$ 14,90 (R$ 29,80) + R$ 30,90 + R$ 29,90 = R$ 150,00 em produtos. Como o valor não é *acima* de R$ 150,00, o frete de R$ 12,00 se aplica, totalizando R$ 162,00. A resposta apresentou subtotal de R$ 85,00 e total de R$ 97,00, ambos incorretos.\",\"trechos_resposta\":[\"Subtotal: R$ 85,00\",\"Frete: R$ 12,00\",\"Total: R$ 97,00\"]}]}\n```",
+      "stop_reason": "end_turn",
+      "erro": "ErroFormatoJulgamento",
+      "erro_detalhe": "Expecting value: line 1 column 1 (char 0)",
+      "continuacao_permitida": false
+    }
+  ]
+}

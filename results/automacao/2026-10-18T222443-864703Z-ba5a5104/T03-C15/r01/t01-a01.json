@@ -1,0 +1,131 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T03-C15",
+  "categoria": "catalogo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Quanto custa a grande?"
+  },
+  "criterio_esperado": "Pedir esclarecimento sobre qual produto ou sabor o cliente deseja. Não escolher um sabor por conta própria nem apresentar um preço único como se valesse para todas as pipocas Grandes.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Tamanhos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Caramelo Clássico"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Chocolate Belga"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Pedir esclarecimento sobre qual produto ou sabor o cliente deseja. Não escolher um sabor por conta própria nem apresentar um preço único como se valesse para todas as pipocas Grandes."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Tamanhos",
+      "texto": "## Tamanhos\n\n- Pequena: 100 g\n- Média: 200 g\n- Grande: 400 g\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Caramelo Clássico",
+      "texto": "### Caramelo Clássico\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, açúcar, manteiga, creme de leite e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Chocolate Belga",
+      "texto": "### Chocolate Belga\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate belga 54% cacau (massa de cacau, açúcar, manteiga de cacau e lecitina de soja), açúcar e manteiga.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 130 kcal.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:25:03.712830+00:00",
+  "fim_utc": "2026-10-18T22:25:06.372825+00:00",
+  "duracao_http_segundos": 2.659958,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Seja bem-vinda à Pop & Doce Pipocaria Gourmet! \n\nA nossa pipoca \"Grande\" custa R$35,00. Uma porção gigante pra você se deliciar! 😋\n\nO que você gostaria de adicionar ao seu pedido? Balas artesanais, quem sabe? 😉",
+    "sessao": "eeee8abd-8cb4-479c-8a2f-6e35a40dcdca",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 535,
+          "outputTokens": 70,
+          "totalTokens": 605
+        },
+        "metrics": {
+          "latencyMs": 495
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Quanto custa a grande?",
+      "actual_output": "Olá! 😊 Seja bem-vinda à Pop & Doce Pipocaria Gourmet! \n\nA nossa pipoca \"Grande\" custa R$35,00. Uma porção gigante pra você se deliciar! 😋\n\nO que você gostaria de adicionar ao seu pedido? Balas artesanais, quem sabe? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Pedir esclarecimento sobre qual produto ou sabor o cliente deseja. Não escolher um sabor por conta própria nem apresentar um preço único como se valesse para todas as pipocas Grandes.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Tamanhos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Caramelo Clássico"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Chocolate Belga"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 2.659958,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

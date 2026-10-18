@@ -1,0 +1,113 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T03-C09",
+  "categoria": "catalogo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Quanto custa a pipoca Caramelo Clássico grande?"
+  },
+  "criterio_esperado": "Informar R$ 39,90 para Caramelo Clássico Grande (400 g).",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Tamanhos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Caramelo Clássico"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar R$ 39,90 para Caramelo Clássico Grande (400 g)."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Tamanhos",
+      "texto": "## Tamanhos\n\n- Pequena: 100 g\n- Média: 200 g\n- Grande: 400 g\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Caramelo Clássico",
+      "texto": "### Caramelo Clássico\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, açúcar, manteiga, creme de leite e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:24:44.039706+00:00",
+  "fim_utc": "2026-10-18T22:24:52.115832+00:00",
+  "duracao_http_segundos": 8.075679,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi! 😊 A pipoca Caramelo Clássico grande custa R$ 24,90! Uma delícia, né? 😉 Quer levar junto algumas balas pra acompanhar? Temos várias opções incríveis!",
+    "sessao": "89dc8f4c-88c5-478f-9452-405621c9c708",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 543,
+          "outputTokens": 46,
+          "totalTokens": 589
+        },
+        "metrics": {
+          "latencyMs": 6199
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Quanto custa a pipoca Caramelo Clássico grande?",
+      "actual_output": "Oi! 😊 A pipoca Caramelo Clássico grande custa R$ 24,90! Uma delícia, né? 😉 Quer levar junto algumas balas pra acompanhar? Temos várias opções incríveis!",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar R$ 39,90 para Caramelo Clássico Grande (400 g).",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Tamanhos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Caramelo Clássico"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 8.075679,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

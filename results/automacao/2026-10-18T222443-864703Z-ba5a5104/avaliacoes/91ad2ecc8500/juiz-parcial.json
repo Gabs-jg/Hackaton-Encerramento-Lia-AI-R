@@ -1,0 +1,20 @@
+{
+  "chamadas": 1,
+  "custo_estimado_usd": 0.0540573,
+  "registros": [
+    {
+      "chamada": 1,
+      "caso": "T03-C09",
+      "turno": 1,
+      "modelo": "us.anthropic.claude-sonnet-4-6",
+      "regiao": "us-east-2",
+      "reserva_usd": 0.0540573,
+      "rubrica_versao": "0.5",
+      "rubrica_sha256": "ceceeb8b0a7732130c6827097b8b35d00eb8cee03bf2a00f315453f493362ff5",
+      "evidencia_sha256": "b95325a21d5697194a45df99a019acab6cbd80e907c4202b22c185e0606a287c",
+      "entrada_juiz_sha256": "b999a879efdb334037e0e655b8f1739acc54e77788fd05c2699e54e1270cbd26",
+      "erro": "TokenRetrievalError",
+      "continuacao_permitida": false
+    }
+  ]
+}

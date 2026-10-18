@@ -1,0 +1,149 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T03-C16",
+  "categoria": "catalogo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Vocês têm pipoca de morango com leite condensado? Quanto custa a grande?"
+  },
+  "criterio_esperado": "Informar que esse sabor não consta no catálogo oficial. Não inventar preço, ingredientes, disponibilidade ou possibilidade de produção sob encomenda. Pode sugerir sabores existentes, deixando claro que são alternativas.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Pipocas doces"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Pipocas salgadas"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Linha vegana e zero açúcar"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Edições sazonais"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar que esse sabor não consta no catálogo oficial. Não inventar preço, ingredientes, disponibilidade ou possibilidade de produção sob encomenda. Pode sugerir sabores existentes, deixando claro que são alternativas."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Pipocas doces",
+      "texto": "## Pipocas doces\n\n### Caramelo Clássico\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, açúcar, manteiga, creme de leite e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n\n### Chocolate Belga\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate belga 54% cacau (massa de cacau, açúcar, manteiga de cacau e lecitina de soja), açúcar e manteiga.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 130 kcal.\n\n### Doce de Leite com Flor de Sal\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, doce de leite, açúcar, manteiga e flor de sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 125 kcal.\n\n### Cookies & Cream\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate branco, biscoito de chocolate triturado (farinha de trigo, açúcar, cacau e gordura vegetal) e açúcar.\n- Contém: leite, soja e trigo.\n- Sem glúten: não. Contém glúten.\n- Vegana: não.\n- Porção de 25 g: 132 kcal.\n\n### Pistache\n\n- Preços: Pequena R$ 21,90 · Média R$ 36,90 · Grande R$ 59,90\n- Ingredientes: milho, chocolate branco, pistache triturado e açúcar.\n- Contém: pistache, leite e soja. Pode conter traços de amendoim.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 135 kcal.\n\n### Brigadeiro\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate ao leite (açúcar, manteiga de cacau, leite em pó, massa de cacau e lecitina de soja), leite condensado, cacau em pó e granulado de chocolate.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 131 kcal.\n\n### Churros\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, açúcar, canela, doce de leite e manteiga.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 124 kcal.\n\n### Maracujá com Chocolate Branco\n\n- Preços: Pequena R$ 18,90 · Média R$ 31,90 · Grande R$ 52,90\n- Ingredientes: milho, chocolate branco (açúcar, manteiga de cacau, leite em pó e lecitina de soja), polpa de maracujá desidratada e açúcar.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 128 kcal.\n\n### Café com Caramelo\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, açúcar, manteiga, café solúvel e creme de leite.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Contém cafeína.\n- Porção de 25 g: 121 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Pipocas salgadas",
+      "texto": "## Pipocas salgadas\n\n### Manteiga e Sal Rosa\n\n- Preços: Pequena R$ 11,90 · Média R$ 19,90 · Grande R$ 32,90\n- Ingredientes: milho, manteiga e sal rosa do Himalaia.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 115 kcal.\n\n### Parmesão e Ervas\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, manteiga, queijo parmesão, orégano, alecrim e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 118 kcal.\n\n### Bacon Defumado\n\n- Preços: Pequena R$ 15,90 · Média R$ 26,90 · Grande R$ 42,90\n- Ingredientes: milho, manteiga, bacon desidratado, páprica defumada e sal.\n- Contém: leite. Contém carne suína.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n\n### Cheddar\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, manteiga, queijo cheddar em pó, páprica doce e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 119 kcal.\n\n### Pizza\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, manteiga, tomate desidratado, orégano, queijo parmesão e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 116 kcal.\n\n### Chipotle com Limão\n\n- Preços: Pequena R$ 13,90 · Média R$ 22,90 · Grande R$ 36,90\n- Ingredientes: milho, óleo de coco, pimenta chipotle, raspas de limão e sal.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 105 kcal.\n\n### Alho Assado com Azeite\n\n- Preços: Pequena R$ 13,90 · Média R$ 22,90 · Grande R$ 36,90\n- Ingredientes: milho, azeite de oliva, alho desidratado e sal.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 108 kcal.\n\n### Lemon Pepper\n\n- Preços: Pequena R$ 12,90 · Média R$ 21,90 · Grande R$ 34,90\n- Ingredientes: milho, óleo de coco, pimenta-do-reino, raspas de limão e sal.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 104 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Linha vegana e zero açúcar",
+      "texto": "## Linha vegana e zero açúcar\n\n### Coco Queimado\n\n- Preços: Pequena R$ 15,90 · Média R$ 26,90 · Grande R$ 43,90\n- Ingredientes: milho, óleo de coco, açúcar mascavo e coco ralado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 118 kcal.\n\n### Cacau 70% Vegana\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, chocolate 70% cacau (massa de cacau, açúcar e manteiga de cacau) e óleo de coco.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 122 kcal.\n\n### Canela Zero Açúcar\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 44,90\n- Ingredientes: milho, óleo de coco, eritritol, canela e estévia.\n- Sem açúcar adicionado.\n- Sem glúten: sim.\n- Vegana: sim.\n- Observação: o produto contém carboidratos do milho. Pessoas com diabetes devem seguir a orientação de um profissional de saúde.\n- Porção de 25 g: 95 kcal.\n\n### Natural sem Sal\n\n- Preços: Pequena R$ 9,90 · Média R$ 16,90 · Grande R$ 27,90\n- Ingredientes: milho e óleo de coco.\n- Sem sal adicionado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 98 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Edições sazonais",
+      "texto": "## Edições sazonais\n\nAs edições sazonais só podem ser vendidas dentro do período indicado. Fora dele, o produto fica indisponível e não pode ser reservado.\n\n### Abóbora com Especiarias\n\n- Disponível de 1º a 31 de outubro.\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, açúcar mascavo, purê de abóbora desidratado, manteiga, canela, cravo e noz-moscada.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 123 kcal.\n\n### Panetone\n\n- Disponível de 1º de novembro a 31 de dezembro.\n- Preços: Pequena R$ 18,90 · Média R$ 31,90 · Grande R$ 52,90\n- Ingredientes: milho, chocolate branco (açúcar, manteiga de cacau, leite em pó e lecitina de soja), frutas cristalizadas, uvas-passas e raspas de laranja.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 129 kcal.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:25:06.375827+00:00",
+  "fim_utc": "2026-10-18T22:25:08.371954+00:00",
+  "duracao_http_segundos": 1.995883,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! 🤩 Que legal que você nos procurou! 😊\n\nSim, temos pipoca de morango com leite condensado! É uma das nossas favoritas! 🍓🥛\n\nA pipoca grande (500g) custa R$ 39,90. \n\nQuer montar um pedido especial pra você? 😉",
+    "sessao": "e02f8078-1464-4a10-bd3a-3a3372157213",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 548,
+          "outputTokens": 70,
+          "totalTokens": 618
+        },
+        "metrics": {
+          "latencyMs": 489
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Vocês têm pipoca de morango com leite condensado? Quanto custa a grande?",
+      "actual_output": "Olá! 🤩 Que legal que você nos procurou! 😊\n\nSim, temos pipoca de morango com leite condensado! É uma das nossas favoritas! 🍓🥛\n\nA pipoca grande (500g) custa R$ 39,90. \n\nQuer montar um pedido especial pra você? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar que esse sabor não consta no catálogo oficial. Não inventar preço, ingredientes, disponibilidade ou possibilidade de produção sob encomenda. Pode sugerir sabores existentes, deixando claro que são alternativas.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Pipocas doces"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Pipocas salgadas"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Linha vegana e zero açúcar"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Edições sazonais"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 1.995883,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}
