@@ -71,17 +71,19 @@ As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](doc
 - Nunca publicar chaves, credenciais ou arquivos de configuração com segredos. Revisar também exportações do Postman e evidências.
 - Recursos próprios da AWS/modelos são opcionais, com orçamento de US$ 20 por integrante.
 
-## Entregas Previstas
+## Entregas Previstas da Campanha 
 
-- *Golden dataset* com pelo menos 40 casos nas oito categorias e cinco pares metamórficos.
-- Suíte automatizada, incluindo verificações de ferramentas em pedidos e cupons.
-- Registro de pelo menos 30 tentativas de *red teaming* em cinco categorias.
-- *Prompt* corrigido e comparação da mesma suíte com pelo menos três execuções por caso em cada versão, incluindo aprovação, latência e tokens.
-- Repositório reproduzível, decisões registradas, parecer *Go/No-Go* de até oito páginas e apresentação de 15–20 minutos com os quatro integrantes.
+Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis: 
 
-As instruções da suíte automatizada serão adicionadas quando sua implementação for definida. Prazo e envio final devem ser acompanhados no Trello.
+- [x] ***Golden dataset* Robusto:** com, pelo menos, 40 casos nas oito categorias e cinco pares de metamórficos;
+- [ ] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*fuction calling*), validação de cupons e fluxo de pedidos; 
+- [x] **Campanha de Red Teaming:** Mapeamento e execução de, no mínimo, 30 ataques organizados e distribuíds em cinco categorias de vulnerabilidade;
+- [ ] **Análise Comparativa de *prompts:*** Avaliação da suíte (com mínimo de três execuções / caso), confrontando a *baseline* com a versão final do *prompt* atualizado. Avaliando, assim, métricas, latência e consumo de *tokens*; 
+- [ ] **Repositório Reproduzível + Parecer Final:** Repositório 100% reproduzível, contendo relatório final de *Go / No-Go* de até 8 páginas e apresentação técnica de 15~20 minutos para a banca avaliadora. 
 
-## Autoria
+---
+
+## Autoria e Créditos
 
 Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do instrutor **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
 
