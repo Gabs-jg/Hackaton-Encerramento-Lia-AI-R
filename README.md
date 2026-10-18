@@ -21,8 +21,6 @@ Para isso, a estratégia adotada leva em consideração a pasta `base-de-conheci
 
 ## Por Onde Começar? 
 
-* [Regras de Campanha de Qualidade]()
-* [Caso e Relatórios da Fase Exploratória]()
 * [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
 * [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
 * [Passo-a-passo para validação da equipe (Trello)](https://trello.com/c/mlQrpA0X)
@@ -34,7 +32,7 @@ O repositório foi organizado de maneira modular para preservar a identificaçã
 ```
 Hackaton-Encerramento-Lia-AI-R/
 ├── README.md
-├── massa-de-teste.md                  # Pedidos, perfis e clientes fictícios fornecidos para execução
+├── massa-de-teste.md                  # Pedidos, perfis e clientes fictícios fornecidos
 ├── base-de-conhecimento-oficial/      # Oráculo de dados oficiais fornecidos pelo orientador
 │   ├── 01-catalogo-pipocas.md
 │   ├── 02-catalogo-balas.md
