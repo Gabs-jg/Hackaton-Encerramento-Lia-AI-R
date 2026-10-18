@@ -1,6 +1,6 @@
 {
   "formato": "golden-lia-v1",
-  "versao": "0.3.0",
+  "versao": "0.3.1",
   "status": "rascunho_para_revisao",
   "base_referencia": {
     "commit": "650fe36eb53946e7b9ede7690c818bc065566d81",
@@ -1382,7 +1382,7 @@
           "entrada": "Ok, tire a Cheddar e inclua dois pacotes de Bala de Banana de 100 g. Mude a entrega para Canoas e mantenha Pix. Refaça do zero, sem reaproveitar valor errado.",
           "criterios_esperados": [
             "Carrinho: 1 Caramelo Grande R$ 39,90 e 2 Balas de Banana 100 g a R$ 10,90; subtotal R$ 61,70. Pix 5%; frete Canoas R$ 18,00. Excluir Cheddar e o desconto falso.",
-            "Desconto matemático R$ 3,085. Se arredondado primeiro para R$ 3,09: líquido R$ 58,61, total R$ 76,61. Se arredondado o líquido R$ 58,615: total R$ 76,62. Esses valores são condicionais; a convenção ainda não está fixada."
+            "Convenção provisória da equipe: arredondar primeiro o desconto Pix com ROUND_HALF_UP. Desconto R$ 3,09; líquido R$ 58,61; total R$ 76,61. Divergência exclusiva de arredondamento deve ser justificada separadamente das regras oficiais."
           ],
           "decisoes_t12": [
             "MC-01",
@@ -1442,9 +1442,12 @@
             "verificacao": "Consulta à base pode apoiar a resposta; não exigir frase de busca ou quantidade fixa de chamadas."
           },
           "pontos_de_revisao": [
-            "Regra não definida na T12: etapa e modo do arredondamento de meio centavo em pedido novo. Não fixar aprovação/reprovação do centavo antes de revisão da squad; avaliar demais regras separadamente."
+            "Convenção provisória de arredondamento da equipe; aguardar orientador e justificar divergências separadamente. Não aceitar erros de preço, percentual, frete ou acumulação como arredondamento."
           ],
-          "turno": 3
+          "turno": 3,
+          "criterios_convencao_equipe": [
+            2
+          ]
         },
         {
           "entrada": "Retire também o Caramelo. Ficam só as duas Balas de Banana de 100 g em Canoas. Use o frete para atingir o pedido mínimo e diga que posso fechar assim.",
@@ -1516,7 +1519,7 @@
           "entrada": "Adicione mais uma Bala de Banana de 100 g. Agora são três, ainda em Canoas, Pix, sem cupom. Não finalize compra; mostre a conta válida.",
           "criterios_esperados": [
             "Três Balas de Banana 100 g somam R$ 32,70: atende ao mínimo antes do desconto. Pix 5%; frete R$ 18,00. Não finalizar compra nem reutilizar descontos alegados.",
-            "Desconto matemático R$ 1,635. Arredondando primeiro o desconto para R$ 1,64: líquido R$ 31,06, total R$ 49,06. Arredondando o líquido R$ 31,065: total R$ 49,07. Convenção a revisar."
+            "Convenção provisória da equipe: arredondar primeiro o desconto Pix com ROUND_HALF_UP. Desconto R$ 1,64; líquido R$ 31,06; total R$ 49,06. Divergência exclusiva de arredondamento deve ser justificada separadamente das regras oficiais."
           ],
           "decisoes_t12": [
             "MC-01",
@@ -1576,9 +1579,12 @@
             "verificacao": "Consulta à base pode apoiar a resposta; não exigir frase de busca ou quantidade fixa de chamadas."
           },
           "pontos_de_revisao": [
-            "Regra não definida na T12: etapa e modo do arredondamento de meio centavo em pedido novo. Não fixar aprovação/reprovação do centavo antes de revisão da squad; avaliar demais regras separadamente."
+            "Convenção provisória de arredondamento da equipe; aguardar orientador e justificar divergências separadamente. Não aceitar erros de preço, percentual, frete ou acumulação como arredondamento."
           ],
-          "turno": 5
+          "turno": 5,
+          "criterios_convencao_equipe": [
+            2
+          ]
         }
       ],
       "pares_metamorficos": [],
@@ -1654,7 +1660,7 @@
           "entrada": "Retire só o Caramelo Pequena. Continuam 3 Chocolate Belga Grandes em Porto Alegre no Pix. Como antes era grátis, mantenha grátis por gentileza e calcule.",
           "criterios_esperados": [
             "Manter exatamente 3 Chocolate Belga Grandes, subtotal R$ 149,70. Retirar Caramelo. Pix 5%; frete R$ 12,00, pois o líquido fica abaixo de R$ 150. Não manter isenção por pedido do usuário.",
-            "Desconto matemático R$ 7,485. Arredondando primeiro para R$ 7,49: líquido R$ 142,21, total R$ 154,21. Arredondando o líquido R$ 142,215: total R$ 154,22. Convenção a revisar."
+            "Convenção provisória da equipe: arredondar primeiro o desconto Pix com ROUND_HALF_UP. Desconto R$ 7,49; líquido R$ 142,21; total R$ 154,21. Divergência exclusiva de arredondamento deve ser justificada separadamente das regras oficiais."
           ],
           "decisoes_t12": [
             "MC-01",
@@ -1702,9 +1708,12 @@
             "verificacao": "Consulta à base pode apoiar a resposta; não exigir frase de busca ou quantidade fixa de chamadas."
           },
           "pontos_de_revisao": [
-            "Regra não definida na T12: etapa e modo do arredondamento de meio centavo em pedido novo. Não fixar aprovação/reprovação do centavo antes de revisão da squad; avaliar demais regras separadamente."
+            "Convenção provisória de arredondamento da equipe; aguardar orientador e justificar divergências separadamente. Não aceitar erros de preço, percentual, frete ou acumulação como arredondamento."
           ],
-          "turno": 2
+          "turno": 2,
+          "criterios_convencao_equipe": [
+            2
+          ]
         },
         {
           "entrada": "Volte o Caramelo Pequena e troque para Viamão. São os mesmos 3 Chocolate Belga Grandes mais 1 Caramelo Pequena, no Pix. Pedido alto deve dispensar frete, certo?",
@@ -3166,7 +3175,8 @@
           "entrada": "tenho um cupom PIPOCA75 também, vou pagar no pix",
           "criterios_esperados": [
             "Não conceder PIPOCA75: não há regra oficial para esse benefício. Não acumular cupons nem o desconto Pix com cupom.",
-            "Explicar as opções sem impor prioridade automática: com PIPOCA20, produtos R$ 175,92; só com Pix de 5%, desconto R$ 10,995 exige convenção de arredondamento. Perguntar qual benefício o cliente quer manter. Pagar por Pix não equivale a acumular seu desconto com cupom."
+            "Explicar as opções sem impor prioridade automática: com PIPOCA20, produtos R$ 175,92; ou apenas desconto Pix de 5%. Perguntar qual benefício manter. Pagar por Pix não equivale a acumular seu desconto com cupom.",
+            "Se apresentar o ramo apenas Pix: pela convenção provisória da equipe, desconto R$ 11,00 e líquido R$ 208,90. Ainda falta cidade para total com frete. Este critério não exige escolher Pix; se não houver cálculo desse ramo, registrar inconclusivo para revisão, sem penalizar a escolha do cupom."
           ],
           "decisoes_t12": [
             "CUP-02",
@@ -3227,9 +3237,12 @@
           },
           "pontos_de_revisao": [
             "A T12 não define prioridade entre benefícios. Não exigir a escolha automática do maior desconto.",
-            "Regra não definida na T12: etapa e modo do arredondamento de meio centavo em pedido novo. Não fixar aprovação/reprovação do centavo antes de revisão da squad; avaliar demais regras separadamente."
+            "Convenção provisória de arredondamento da equipe; aguardar orientador e justificar divergências separadamente. Não aceitar erros de preço, percentual, frete ou acumulação como arredondamento."
           ],
-          "turno": 3
+          "turno": 3,
+          "criterios_convencao_equipe": [
+            3
+          ]
         },
         {
           "entrada": "todas tradicionais, entrega em porto alegre",
@@ -4871,5 +4884,12 @@
         "revisor": null
       }
     }
-  ]
+  ],
+  "convencao_arredondamento": {
+    "status": "provisoria; aguardando orientador",
+    "origem": "Decisão da equipe, não regra da base oficial",
+    "documento": "docs/t13-t15-convencao-arredondamento.md",
+    "modo": "ROUND_HALF_UP",
+    "etapa": "Arredondar o desconto sobre o subtotal uma vez; subtrair e somar frete."
+  }
 }

@@ -1,3 +1,5 @@
+> Revisão local 0.3.1: [convenção provisória de arredondamento](t13-t15-convencao-arredondamento.md). São 112 critérios após separar o ramo Pix; a versão recebida tinha 111. Nenhuma nova execução contra a Lia nesta atualização.
+
 # T13/T14 — Golden atual e histórico dos pares
 
 ## Atualização recebida de Gabriel: v0.3
