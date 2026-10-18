@@ -163,7 +163,7 @@ Hackaton-Encerramento-Lia-AI-R/
 
 ---
 
-## Guia de Execução & Testes Exploratórios (T05 / T06)
+## Guia de Execução e Testes Exploratórios (Task 05 e 06)
 
 Para executar a bateria de testes exploratórios de privacidade e conformidade (T05 e T06), segue o procedimento padrão da equipe:
 
@@ -180,10 +180,10 @@ Para executar a bateria de testes exploratórios de privacidade e conformidade (
 
 ---
 
-## Golden Dataset & Testes Metamórficos
+## Golden Dataset e Testes Metamórficos
 
 - **Versão Vigente:** O [`golden-v0.3.json`](datasets/golden-v0.3.json) (revisão 0.3.1) consolida **48 casos, 86 turnos e 5 pares de testes metamórficos**.
-- **Regras Comerciais:** A padronização de cálculos segue a [Convenção Provisória de Arredondamento](docs/t13-t15-convencao-arredondamento.md) definida pela squad.
+- **Regras Comerciais:** A padronização de cálculos segue a [Convenção Provisória de Arredondamento](docs/t13-t15-convencao-arredondamento.md) definida pela *squad*.
 - **Histórico & Rastreabilidade:** Para entender os critérios de seleção e inclusão de casos, consulte a [Documentação T13/T14](docs/t13-t14-golden.md). O dataset [`golden-v0.2.json`](datasets/golden-v0.2.json) permanece mantido exclusivamente como histórico do projeto.
 
 ---
