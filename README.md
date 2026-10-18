@@ -1,5 +1,5 @@
 # *Hackathon* de Encerramento – Desafio 3 
-## *Chatbot* Lia do *e-commerce* fictício Pop & Doce
+*Chatbot* Lia do *e-commerce* fictício Pop & Doce
 
 > **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo. 
 
@@ -16,6 +16,7 @@ Para isso, a estratégia adotada leva em consideração a pasta `base-de-conheci
 --- 
 
 ## Por Onde Começar? 
+
 * [Regras de Campanha de Qualidade]()
 * [Caso e Relatórios da Fase Exploratória]()
 * [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
