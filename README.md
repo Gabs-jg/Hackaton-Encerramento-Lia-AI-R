@@ -221,7 +221,7 @@ Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis:
 
 ## Autoria e Créditos
 
-Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do instrutor **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
+Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do QA Manager **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
 
 ### Integrantes da Squad 2: 
 * **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)**
