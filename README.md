@@ -2,8 +2,8 @@
 
 <div align="center">
 
-> ***Chatbot* Lia do *e-commerce* fictício Pop & Doce**
->> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
+    ***Chatbot* Lia do *e-commerce* fictício Pop & Doce**
+> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
 
 </div>
 
