@@ -32,3 +32,8 @@ results/automacao/relatorios/*
 !results/automacao/relatorios/t19-runs-01-02.md
 .deepeval/
 !results/automacao/relatorios/t19-comparativo-runs-01-02.md
+
+# Arquivos auxiliares já preservados nas avaliações completas
+results/automacao/**/avaliacoes/*/turnos-parciais.json
+results/automacao/**/avaliacoes/*/juiz-parcial.json
+results/automacao/**/avaliacoes/*/revisao-template.json
