@@ -19,7 +19,7 @@ Reavaliar não chama a Lia novamente. Com `--juiz bedrock`, a reavaliação pode
 
 | Parte | Comportamento |
 |---|---|
-| Golden | Importa 46 casos, 82 turnos e 99 critérios sem mudar suas entradas; mantém o piloto antigo compatível. |
+| Golden | Importa 48 casos, 86 turnos e 112 critérios (revisão 0.3.1) sem mudar suas entradas; mantém o piloto antigo compatível. |
 | Fontes | Confere hashes de arquivos oficiais e T12, aceitando a diferença de fim de linha Windows/Linux. Extrai as seções citadas; identifica referências do enunciado que não estão disponíveis localmente. |
 | Sessões | Uma sessão nova por caso/repetição; preservada entre os turnos do caso. |
 | Versões | Original sem `prompt_sistema`; corrigida exige arquivo e envia o prompt em todos os turnos. |
@@ -42,10 +42,10 @@ Na raiz desta branch, usando Python 3.12:
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install -r requirements-t15.txt
-python -m tests.automacao.executar --dataset datasets/golden-v0.2.json --validar --repeticoes 3
+python -m tests.automacao.executar --dataset datasets/golden-v0.3.json --validar --repeticoes 3
 ```
 
-O plano completo atual tem **246 chamadas por versão**, ou **492 nas duas versões**, antes de retentativas. A validação não envia nenhuma delas. A execução é sequencial; combinar janelas com a squad para manter o limite global de quatro chamadas. Este processo não controla os computadores dos outros integrantes e não realiza carga.
+O plano completo atual tem **258 chamadas por versão**, ou **516 nas duas versões**, antes de retentativas. A validação não envia nenhuma delas. A execução é sequencial; combinar janelas com a squad para manter o limite global de quatro chamadas. Este processo não controla os computadores dos outros integrantes e não realiza carga.
 
 ## Demonstração sem custo
 
@@ -56,7 +56,7 @@ python -m tests.automacao.executar --dataset datasets/golden-v0.2.json --modo re
 O terminal informa a pasta criada. Copiar esse caminho para avaliar:
 
 ```powershell
-python -m tests.automacao.avaliar CAMINHO_DA_EXECUCAO
+python -m tests.automacao.avaliar CAMINHO_DA_EXECUCAO --config tests/automacao/config/avaliacao-golden-v0.2.json
 ```
 
 O replay dos dez casos/12 turnos reutiliza evidências históricas. Não comprova estabilidade, latência atual nem efeito de prompt corrigido. Replay só aceita versão original e uma leitura.
@@ -68,13 +68,13 @@ No teste local desta estrutura, os verificadores numéricos sinalizaram seis cas
 Configurar `LIA_API_KEY` no ambiente ou no `.env` ignorado pelo Git. Começar selecionando poucos casos:
 
 ```powershell
-python -m tests.automacao.executar --dataset datasets/golden-v0.2.json --modo api --caso T05-MC01 --caso T06-CP11 --fase-base nao_confirmada
+python -m tests.automacao.executar --dataset datasets/golden-v0.3.json --modo api --caso T05-MC01 --caso T06-CP11 --fase-base nao_confirmada
 ```
 
 Versão corrigida, quando o prompt dessa frente estiver disponível:
 
 ```powershell
-python -m tests.automacao.executar --dataset datasets/golden-v0.2.json --modo api --caso T05-MC01 --versao corrigida --prompt CAMINHO_DO_PROMPT --fase-base nao_confirmada
+python -m tests.automacao.executar --dataset datasets/golden-v0.3.json --modo api --caso T05-MC01 --versao corrigida --prompt CAMINHO_DO_PROMPT --fase-base nao_confirmada
 ```
 
 O [prompt técnico do piloto](../tests/automacao/fixtures/prompt-integracao.txt) serve apenas para testar o envio do campo; não é a correção oficial. A API sem `versao` gera aviso, não confirmação inventada. A fase da base é declaração da equipe.
@@ -228,3 +228,17 @@ python -m pip check
 ```
 
 Referências técnicas: [métricas personalizadas DeepEval](https://deepeval.com/docs/metrics-custom), [LLMTestCase](https://deepeval.com/docs/evaluation-test-cases), [AWS Bedrock Converse](https://docs.aws.amazon.com/boto3/latest/reference/services/bedrock-runtime/client/converse.html). A implementação usa `BaseMetric.measure()` local e os próprios registros, sem publicar execuções no Confident AI.
+
+## Integração do golden atualizado
+
+A revisão 0.3.1 deriva do golden 0.3.0 enviado pelo Gabriel. Adiciona a convenção provisória de arredondamento e separa o critério correspondente no ramo Pix de MT04. São 48 casos, 86 turnos, 112 critérios e cinco pares. PM02 agora usa T04-PM02A/B, com dois turnos por caso. Os dois casos do PM02 anterior continuam no golden, sem aquele vínculo.
+
+O executor usa `datasets/golden-v0.3.json` por padrão. A configuração padrão corresponde ao hash dessa revisão; suas 18 regras numéricas anteriores e os thresholds não mudaram. A configuração histórica `avaliacao-golden-v0.2.json` continua disponível para avaliar coletas antigas. Não basta trocar o hash de uma configuração local: copiar a estrutura atual e transferir apenas os dados já conferidos da seção `juiz`, preservando o arquivo de orçamento existente. Não sobrescrever credenciais nem reiniciar o saldo.
+
+O resultado da convenção aparece em `resultado_convencao` e `convencao_equipe` nos JSONs da avaliação. A divergência isolada fica inconclusiva no resultado funcional e pede justificativa humana, sem ser contada automaticamente como violação oficial. Não há tolerância geral de um centavo. A consulta ao orientador continua pendente.
+
+Respostas HTTP 200 com texto utilizável podem ser avaliadas mesmo com contrato técnico incompleto. As falhas de conteúdo permanecem visíveis; um conteúdo correto não aprova o contrato incompleto. Timeout, ausência de texto e divergências de sessão/versão não são recuperados dessa forma. O executor continua interrompendo a sequência em erro de contrato, sem inventar continuidade nem ferramentas.
+
+Verificação desta integração: **76 testes locais passaram**, incluindo oito novos testes de contagens, PM02, compatibilidade do hash, cálculos, classificação da convenção e texto com contrato incompleto. São testes simulados, não uma nova execução da Lia.
+
+A primeira run permanece como resultado da **v0.2: 46 casos e 82 turnos**. Seus arquivos não foram reescritos e não cobrem o PM02 novo. Após revisão do golden, serão necessárias novas rodadas da mesma versão contra os dois prompts; planejar o custo antes das 258 chamadas por versão. Não houve consumo de API ou AWS nesta atualização.

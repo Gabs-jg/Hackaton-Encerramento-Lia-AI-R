@@ -139,3 +139,11 @@ Os testes locais encontraram dois erros durante essa reorganização: um parâme
 Guardei a verificação da refatoração (arquivo local: `results/automacao/golden-run-01/2026-10-17T161300-734940Z-3ebe129f/verificacao-refatoracao.json`) junto à rodada. Para apresentar à equipe, vou seguir a ordem: golden, coleta, evidências, avaliação, revisão e orçamento; a divisão dos arquivos acompanha esse fluxo.
 
 Os comandos e a organização dos arquivos estão no [guia de execução](t15-t16-automacao.md). As propostas de mudança no agente estão em [sugestões de correção do prompt](t15-t16-sugestoes-prompt.md). Não fiz commit, push ou PR durante este trabalho.
+
+## Atualização para o golden do Gabriel
+
+Mantive a primeira run e sua configuração como histórico da v0.2. Integrei o golden 0.3.0 e identifiquei nossa convenção provisória como revisão 0.3.1, sem mudar as entradas. Atualizei o caminho padrão, o hash de configuração e as contagens. O PM02 novo tem quatro turnos e ainda não foi executado contra a Lia nesta atualização.
+
+Separei a avaliação da convenção de arredondamento das regras oficiais. Uma divergência exclusiva não sustenta sozinha uma reprovação de negócio; exige justificativa e permanece pendente do orientador. Os demais erros continuam sendo avaliados normalmente.
+
+Reproduzi com testes locais a interrupção indevida da avaliação semântica quando faltava um campo técnico. Ajustei a avaliação para aproveitar texto recebido com HTTP 200, preservando a limitação de observabilidade e impedindo aprovação completa. Não considerei ausência de ferramentas como prova de ausência de ações internas. A verificação completa passou com 76 testes, sem novas chamadas pagas. As próximas rodadas devem registrar o golden definitivo e sua configuração, sem substituir os arquivos históricos.
