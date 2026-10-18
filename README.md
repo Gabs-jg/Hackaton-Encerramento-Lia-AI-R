@@ -1,33 +1,38 @@
-# *Hackathon* de Encerramento – Desafio 3 
+# *Hackathon* de Encerramento – Desafio 3
 
 <div align="center">
 
-**Chatbot Lia do e-commerce fictício Pop & Doce**
-> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
+**Chatbot Lia – E-commerce Pop & Doce**
+
+> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração, automação de testes e refinamento do *prompt* estão em execução para fundamentar o parecer técnico do grupo.
 
 </div>
 
-## Sobre o projeto
+---
 
-### *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para a rodução?"* 
+## Sobre o Projeto
 
-A partir deste desafio, a nossa **Squad** estruturou uma campanha de QE voltada para a avaliação da assistente virtual **Lia**, um agende de vendas da loja fictícia **Pop & Doce**. 
+> *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para produção?"*
 
-O projeto tem como premissa principal submeter a assistente a baterias de testes exploratórios e de segurança (*Red Teaming*), para identificação de alucinações, *jailbreaks* e outras vulnerabilidade / inconsistências que poderiam gerar impacto reputacional negativo para o negócio em diversos âmbitos. A partir dos achados do grupo, foram propostas melhorias no *prompt* de sistema, comparando os resultados entre a *baseline* e a versão final para embasar, em fatos e dados, a decisão do parecer de produção ou impedimento de produção (**Go / No-Go**). 
+A partir deste desafio, a **Squad 2** estruturou uma campanha completa de Quality Engineering (QE) voltada para a avaliação da assistente virtual **Lia**, um agente de vendas e atendimento do e-commerce fictício **Pop & Doce**.
 
-Para isso, a estratégia adotada leva em consideração a pasta `base-de-conhecimento-oficial` e as massas de testes fornecidas como referência para funcionarem como **oráculo** do projeto, visto que a base interna do *chatbot* pode ter divergências intencionais como parte do *Hackaton* dos estagiários. 
+O projeto submete a assistente a baterias de testes exploratórios, regressão automatizada via *Golden Dataset* e testes de segurança (*Red Teaming*). O objetivo é identificar alucinações, falhas de cálculo, *jailbreaks* e vulnerabilidades que possam impactar negativamente o negócio. Com base nos achados, propomos melhorias estruturadas no *prompt* de sistema e comparamos os resultados entre a versão *baseline* e a versão final para fundamentar, em dados objetivos, a decisão final de implantação (**Go / No-Go**).
 
---- 
+> **Aviso de Oráculo:** A documentação contida na pasta `base-de-conhecimento-oficial/` e a `massa-de-teste.md` funcionam como o **oráculo** do projeto (a verdade absoluta do negócio). A base interna do *chatbot* contém divergências intencionais inseridas como parte do desafio.
 
-## Por Onde Começar? 
+---
 
-* [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
-* [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
-* [Passo-a-passo para validação da equipe (Trello)](https://trello.com/c/mlQrpA0X)
+## Links Úteis & Organização
 
-## Estrutura do Repositório 
+- [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
+- [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
+- [Passo a Passo para Validação da Equipe (Trello)](https://trello.com/c/mlQrpA0X)
 
-O repositório foi organizado de maneira modular para preservar a identificação ágil das informações, mantendo a rastreabilidade entre fontes, casos de teste e as evidências colectadas:
+---
+
+## Estrutura do Repositório
+
+O repositório foi organizado de forma modular para garantir o rastreio ágil das fontes, casos de teste e evidências coletadas
 
 ```
 Hackaton-Encerramento-Lia-AI-R/
@@ -159,14 +164,40 @@ flowchart TD
 
 ---
 
-## Executar a exploração T05/T06
+## Guia de Execução & Testes Exploratórios (T05 / T06)
 
-1. Importar [t05-t06-exploracao.postman_collection.json](tests/postman/t05-t06-exploracao.postman_collection.json) no Postman.
-2. Configurar `api_key` apenas no ambiente local. Como alternativa, usar `{{vault:lia_api_key}}` no header `x-api-key` da cópia local. Nunca exportar o valor da chave.
-3. Escolher a tarefa e o caso. Enviar **T1** e depois **T2**, quando existir, um turno por vez. Cada caso inicia sem `sessao`; os scripts mantêm a sessão apenas nos turnos do mesmo caso.
-4. Para consultar uma execução anterior sem reenviar, abrir o exemplo salvo na requisição. Esses exemplos incluem respostas incorretas; o gabarito é a base oficial e a massa de teste.
+Para executar a bateria de testes exploratórios de privacidade e conformidade (T05 e T06), segue o procedimento padrão da equipe:
 
-As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](docs/exploracao/t06-casos.md). Os relatórios [T05](results/exploracao/relatorios/t05-registro.md) e [T06](results/exploracao/relatorios/t06-registro.md) registram esperado × obtido, classificação e links das evidências. O [JSON de resultados](results/exploracao/t05-t06-resultados.json) reúne os 30 casos e 32 turnos, com origem Postman/curl identificada. A coleção foi montada a partir dessas evidências, preservadas também nos JSONs individuais.
+1. **Importação da Coleção:** Importar o arquivo [`t05-t06-exploracao.postman_collection.json`](tests/postman/t05-t06-exploracao.postman_collection.json) no Postman.
+2. **Gerenciamento de Segredos:** Configurar a variável `api_key` **exclusivamente no ambiente local**. Como alternativa, utilizar `{{vault:lia_api_key}}` no cabeçalho `x-api-key`. **Nunca exportar ou versionar a chave de API**.
+3. **Execução de Turnos:** Selecionar a tarefa e o caso pretendido. Disparar o turno **T1** e, em seguida, o **T2** (quando existente), um turno de cada vez.
+   > **Nota de Sessão:** Cada caso deve iniciar sem o parâmetro `sessao`. Os scripts da coleção gerenciam a persistência do ID de sessão automaticamente apenas entre os turnos do mesmo caso.
+4. **Consulta Histórica:** Para analisar respostas de execuções anteriores sem realizar chamadas ativas, abrir os exemplos salvos na requisição. *(Atenção: Os exemplos gravados contêm respostas históricas da IA com divergências; o único gabarito válido é o oráculo oficial).*
+
+### Mapeamento e Documentação
+- **Especificações de Casos:** [`T05-casos.md`](docs/exploracao/t05-casos.md) e [`T06-casos.md`](docs/exploracao/t06-casos.md).
+- **Relatórios Consolidados:** Registros detalhados de *Esperado × Obtido*, classificações e links de evidências em [`T05-registro.md`](results/exploracao/relatorios/t05-registro.md) e [`T06-registro.md`](results/exploracao/relatorios/t06-registro.md).
+- **Resultados em JSON:** O arquivo [`t05-t06-resultados.json`](results/exploracao/t05-t06-resultados.json) consolida os 30 casos e 32 turnos mapeados (origens Postman/cURL), cujas evidências brutas estão preservadas nos diretórios individuais de cada caso.
+
+---
+
+## Golden Dataset & Testes Metamórficos
+
+- **Versão Vigente:** O [`golden-v0.3.json`](datasets/golden-v0.3.json) (revisão 0.3.1) consolida **48 casos, 86 turnos e 5 pares de testes metamórficos**.
+- **Regras Comerciais:** A padronização de cálculos segue a [Convenção Provisória de Arredondamento](docs/t13-t15-convencao-arredondamento.md) definida pela squad.
+- **Histórico & Rastreabilidade:** Para entender os critérios de seleção e inclusão de casos, consulte a [Documentação T13/T14](docs/t13-t14-golden.md). O dataset [`golden-v0.2.json`](datasets/golden-v0.2.json) permanece mantido exclusivamente como histórico do projeto.
+
+---
+
+## Engine de Automação (T15 / T16)
+
+A infraestrutura de automação permite a avaliação em massa e regressão automatizada do agente via Juiz LLM:
+
+- **Documentação de Apoio:** Consulte o [Guia de Automação](docs/t15-t16-automacao.md) e o [Registro do Processo](docs/t15-t16-processo-automacao.md).
+- **Escopo do Pipeline:** A suíte local está configurada para processar os 48 casos e 86 turnos da versão v0.3.
+- **Baseline Preservada:** A primeira execução registrada (*Run 1*) utiliza a foto histórica da v0.2 (46 casos / 82 turnos). A rodada oficial com o dataset atualizado v0.3 encontra-se em fila de execução.
+
+---
 
 ## Regras de Avaliação
 
@@ -182,7 +213,7 @@ As expectativas estão nos casos [T05](docs/exploracao/t05-casos.md) e [T06](doc
 Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis: 
 
 - [x] ***Golden dataset* Robusto:** com, pelo menos, 40 casos nas oito categorias e cinco pares de metamórficos;
-- [ ] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*fuction calling*), validação de cupons e fluxo de pedidos; 
+- [x] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*fuction calling*), validação de cupons e fluxo de pedidos; 
 - [x] **Campanha de Red Teaming:** Mapeamento e execução de, no mínimo, 30 ataques organizados e distribuíds em cinco categorias de vulnerabilidade;
 - [ ] **Análise Comparativa de *prompts:*** Avaliação da suíte (com mínimo de três execuções / caso), confrontando a *baseline* com a versão final do *prompt* atualizado. Avaliando, assim, métricas, latência e consumo de *tokens*; 
 - [ ] **Repositório Reproduzível + Parecer Final:** Repositório 100% reproduzível, contendo relatório final de *Go / No-Go* de até 8 páginas e apresentação técnica de 15~20 minutos para a banca avaliadora. 
@@ -198,11 +229,3 @@ Este projeto foi desenvolvido pela **Squad 2**, durante o **ESTÁGIO | AWS AI FD
 * **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
 * **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)**
 * **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
-
-## Golden e pares metamórficos
-
-O [golden atual](datasets/golden-v0.3.json), revisão 0.3.1, reúne 48 casos, 86 turnos e cinco pares, pendentes de revisão. A [convenção provisória de arredondamento](docs/t13-t15-convencao-arredondamento.md) é decisão da equipe. Consulte a [documentação T13/T14](docs/t13-t14-golden.md). O [golden v0.2](datasets/golden-v0.2.json) permanece como referência histórica; suas evidências não comprovam a execução dos novos casos.
-
-## Automação T15/T16
-
-Consulte o [guia da automação](docs/t15-t16-automacao.md) e o [registro do processo](docs/t15-t16-processo-automacao.md). A integração local usa 48 casos e 86 turnos; a primeira run preservada corresponde à v0.2, com 46 casos e 82 turnos. A execução do golden atualizado ainda está pendente.
