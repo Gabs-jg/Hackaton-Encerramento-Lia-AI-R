@@ -53,8 +53,15 @@ Hackaton-Encerramento-Lia-AI-R/
 └── results/                           # Evidências, logs de execução e relatórios
     ├── exploracao/                    # Resultados da fase exploratória
     │   ├── relatorios/                # Registros consolidados da exploração
+    │   ├── t03-evidencias/
+    │   ├── t04-evidencias/
+    │   ├── t05-evidencias/
+    │   ├── t06-evidencias/
+    │   ├── t08-evidencias/
+    │   ├── t10-evidencias/
     ├── metamorficos/                  # Evidências e relatórios dos testes metamórficos
     │   ├── relatorios/
+    │   ├── t14-rodada-01/
     └── red-team/                      # Evidências dos testes adversariais
         ├── exploracao/
         └── promptfoo/
