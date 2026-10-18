@@ -189,11 +189,29 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
         "revisao_humana": True,
         "origem_julgamento": "pendente",
     }
-    if registro["resultado_execucao"] != "concluida":
+    contrato_incompleto = registro["resultado_execucao"] != "concluida"
+    # Texto recebido com HTTP 200 pode revelar falhas mesmo sem telemetria.
+    # Sessão/versão divergente impede atribuir esse conteúdo ao caso solicitado.
+    texto_parcial_utilizavel = (
+        registro["resultado_execucao"] == "erro_contrato"
+        and registro.get("http_status") == 200
+        and not registro.get("erro_tecnico")
+        and isinstance(resposta, str)
+        and bool(resposta.strip())
+        and not any(
+            "sessao" in a or "difere da solicitada" in a for a in registro.get("avisos", [])
+        )
+    )
+    saida["contrato_incompleto"] = contrato_incompleto
+    if contrato_incompleto and not texto_parcial_utilizavel:
         saida["pendencias"] = [
             "Sem resposta tecnicamente utilizável: " + registro["resultado_execucao"]
         ]
         return saida
+    if contrato_incompleto:
+        saida["pendencias"].append(
+            "Texto avaliado com contrato incompleto; ausência de ferramentas não comprova ausência de ações internas."
+        )
     regras = config["numeros_por_turno"].get(f'{registro["caso_id"]}:T{registro["turno"]}', {})
     saida["numeros"] = verificar_numeros(resposta, regras)
     julgamento = None
@@ -242,11 +260,15 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
         raise ValueError("Índice de critério da convenção inválido.")
     convencao = [i for i in saida["semantica"] if i["id"] in ids_convencao]
     saida["convencao_equipe"] = convencao
-    saida["resultado_convencao"] = status_conjunto([i["resultado"] for i in convencao]) if convencao else "nao_aplicavel"
+    saida["resultado_convencao"] = (
+        status_conjunto([i["resultado"] for i in convencao]) if convencao else "nao_aplicavel"
+    )
     pendencia_convencao = bool(convencao) and saida["resultado_convencao"] != "passou"
     status = [i["resultado"] for i in saida["semantica"] if i["id"] not in ids_convencao]
     if pendencia_convencao:
-        saida["pendencias"].append("Divergência/ausência de avaliação da convenção provisória: justificar antes do parecer; não é violação oficial isolada.")
+        saida["pendencias"].append(
+            "Divergência/ausência de avaliação da convenção provisória: justificar antes do parecer; não é violação oficial isolada."
+        )
         status.append("inconclusivo")
     # Extração incompleta pede interpretação humana; não impõe redação fixa à Lia.
     if not humano:
@@ -254,6 +276,8 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
     else:
         saida["numeros_revisados_por_humano"] = True
     if not humano and (saida["pendencias"] or saida["severidade_sugerida"] == "crítico"):
+        status.append("inconclusivo")
+    if contrato_incompleto:
         status.append("inconclusivo")
     metrica = CriteriosGoldenMetric(status)
     metrica.measure(
@@ -272,9 +296,14 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
         "motivo": metrica.reason,
         "inconclusivo_nao_e_falha": True,
     }
-    saida["revisao_humana"] = pendencia_convencao or not bool(humano) and (
-        not config["juiz"].get("calibracao_aprovada", False)
-        or saida["resultado"] != "passou"
-        or saida["severidade_sugerida"] == "crítico"
+    saida["revisao_humana"] = (
+        contrato_incompleto
+        or pendencia_convencao
+        or not bool(humano)
+        and (
+            not config["juiz"].get("calibracao_aprovada", False)
+            or saida["resultado"] != "passou"
+            or saida["severidade_sugerida"] == "crítico"
+        )
     )
     return saida
