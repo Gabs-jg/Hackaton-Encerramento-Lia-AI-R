@@ -235,7 +235,19 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
         saida["pendencias"].extend(registro["pontos_de_revisao"])
     if registro.get("referencias_nao_locais") and not humano:
         saida["pendencias"].append("Há referência do enunciado não disponível localmente ao juiz.")
-    status = [i["resultado"] for i in saida["semantica"]]
+    ids_convencao = config.get("criterios_convencao_por_turno", {}).get(
+        f'{registro["caso_id"]}:T{registro["turno"]}', []
+    )
+    if any(type(i) is not int or not 1 <= i <= len(criterios) for i in ids_convencao):
+        raise ValueError("Índice de critério da convenção inválido.")
+    convencao = [i for i in saida["semantica"] if i["id"] in ids_convencao]
+    saida["convencao_equipe"] = convencao
+    saida["resultado_convencao"] = status_conjunto([i["resultado"] for i in convencao]) if convencao else "nao_aplicavel"
+    pendencia_convencao = bool(convencao) and saida["resultado_convencao"] != "passou"
+    status = [i["resultado"] for i in saida["semantica"] if i["id"] not in ids_convencao]
+    if pendencia_convencao:
+        saida["pendencias"].append("Divergência/ausência de avaliação da convenção provisória: justificar antes do parecer; não é violação oficial isolada.")
+        status.append("inconclusivo")
     # Extração incompleta pede interpretação humana; não impõe redação fixa à Lia.
     if not humano:
         status += [i["resultado"] for i in saida["numeros"]]
@@ -260,7 +272,7 @@ def avaliar_turno(registro, config, humano=None, juiz=None):
         "motivo": metrica.reason,
         "inconclusivo_nao_e_falha": True,
     }
-    saida["revisao_humana"] = not bool(humano) and (
+    saida["revisao_humana"] = pendencia_convencao or not bool(humano) and (
         not config["juiz"].get("calibracao_aprovada", False)
         or saida["resultado"] != "passou"
         or saida["severidade_sugerida"] == "crítico"
