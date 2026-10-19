@@ -35,17 +35,16 @@ Premissas e limitações do modelo original:
 ### Organização e Divisão do Trabalho
 A gestão e divisão de tarefas da equipe foi estruturada via Trello, dividindo responsabilidades entre planejamento, execução, revisão cruzada de entregáveis e fechamento de evidências.
 
+---
+
+### Divisão de trabalho e acompanhamento
+
 <div align="center">
     
 <img width="1877" height="757" alt="Quadro de Execução de Tarefas no Trello - Squad 2" src="https://github.com/user-attachments/assets/37d7c8f8-b7ca-45d8-a3d6-693aea57daad" />
 Quadro de Execução de Tarefas no Trello
 
 </div>
----
-
-### Divisão de trabalho e acompanhamento
-
-![Quadro de execução no Trello com as colunas A fazer, João, Camile, Fernanda, Gustavo, Em revisão e Concluídas](docs/imagens/trello-execucao.jpg)
 
 O print registra a organização do quadro no momento da documentação. Os cartões conservam as metas originais; o estado da entrega, as execuções realizadas e as limitações estão descritos nas seções abaixo.
 
