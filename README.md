@@ -42,16 +42,15 @@ A gestão e divisão de tarefas da equipe foi estruturada via Trello, dividindo 
 <div align="center">
     
 <img width="1877" height="757" alt="Quadro de Execução de Tarefas no Trello - Squad 2" src="https://github.com/user-attachments/assets/37d7c8f8-b7ca-45d8-a3d6-693aea57daad" />
-Quadro de Execução de Tarefas no Trello
 
 </div>
 
-O print registra a organização do quadro no momento da documentação. Os cartões conservam as metas originais; o estado da entrega, as execuções realizadas e as limitações estão descritos nas seções abaixo.
+O print registra a organização do nosso Quadro de Entregas no Trello. Os cartões conservam as metas originais; o estado da entrega, as execuções realizadas e as limitações estão descritos nas seções abaixo.
 
 Cada integrante assume cartões e registra evidências. Priorizamos discussão por texto e usamos calls quando necessário. IDs das tarefas identificam branches, commits e PRs para rastrear o trabalho.
 
 | Integrante | Exploração | Contribuições à entrega |
-|---|---|---|
+|:---:|:---:|:---:|
 | [João Gabriel](https://github.com/Gabs-jg) | T03 catálogo; T04 alérgenos/restrições | Consolidação do golden, fontes, duas runs originais e revisões. |
 | [Camile](https://github.com/camimcl) | T05 montagem/cálculo; T06 consulta/privacidade | Organização inicial, padrões de evidência, tabelas de decisão, pares, retestes, automação, consolidação do prompt e run corrigida. |
 | [Fernanda](https://github.com/codebyfernanda) | T07 cupons; T09 fora de escopo | Critérios de risco e Go/No-Go, sugestões de prompt, parecer e relatório. |
