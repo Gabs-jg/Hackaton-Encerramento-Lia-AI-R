@@ -1,35 +1,36 @@
-# Lia da Pop & Doce — avaliação Go/No-Go
+# *Hackathon* de Encerramento – Desafio 3
 
-Projeto da **Squad 2** no Hackathon de Encerramento do estágio AWS AI FDE Driven Quality Engineering. Avaliamos a assistente de vendas Lia com exploração, golden dataset, testes metamórficos, red teaming e uma proposta de correção do prompt.
+<div align="center">
 
-**Parecer de entrega: No-Go nas condições avaliadas.** Permaneceram falhas de saúde, autorização de pedidos, regras comerciais e cálculo. Enviamos o prompt corrigido, mas não conseguimos confirmar sua aplicação efetiva pelo serviço. Realizamos duas runs originais e uma com o prompt corrigido enviado; não declaramos cumprido o plano de três execuções por versão.
+**Chatbot Lia – E-commerce Pop & Doce**
 
-## Entregas e documentos
+> **STATUS:** Exploração, automação e proposta de prompt concluídas no escopo descrito abaixo. Duas runs originais e uma com o prompt corrigido enviado sustentam o parecer **No-Go nas condições avaliadas**. A aplicação interna do prompt e a validação completa das ferramentas não foram confirmadas; o plano de três execuções por versão permanece incompleto.
 
-| Entrega | Conteúdo e situação | Referência |
-|---|---|---|
-| Exploração | Oito categorias, casos, retestes, respostas em JSON e interpretação dos resultados. | [Relatórios](results/exploracao/relatorios/) |
-| Golden e metamórficos | Revisão 0.3.1: 48 casos, 86 turnos, 112 critérios e cinco pares. Conjunto consolidado pela equipe; ainda há metadados de rascunho/revisão nos arquivos. | [Índice e esperados por turno](docs/t27-indice-golden.md) · [Dataset](datasets/golden-v0.3.json) |
-| Automação | Executor Python, métricas personalizadas no DeepEval, regras numéricas, Sonnet no Bedrock e fila de revisão. Calibração e validação completa das ferramentas pendentes. | [Métricas e thresholds](docs/t27-metricas-e-thresholds.md) · [Guia](docs/t15-t16-automacao.md) |
-| Red team | 30 ataques selecionados em cinco categorias, exploração e validação inicial com promptfoo. Comparação completa de três repetições por versão não concluída. | [Plano](results/red-team/plano-red-team.md) · [Log](results/red-team/log-red-team.md) |
-| Prompt corrigido | Consolidação das frentes e dos ataques; executado com o texto enviado, sem melhora comprovada nos riscos destacados. | [Prompt](prompts/prompt-corrigido.md) · [Decisões T21](docs/t21-prompt-corrigido.md) · [PR #12](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/12) |
-| Runs originais | Duas coletas independentes de 48 casos/86 turnos cada, avaliações e revisões parciais. | [PR #14](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/14) |
-| Run corrigida | 48 casos/86 turnos, respostas integrais e avaliação pelo Sonnet. JSONs mantidos em branch exclusiva de evidências. | [PR #15 — não mesclar](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15) |
-| Comparação e parecer | Casos persistentes, limites e recomendação de No-Go; relatório destinado à main sem os JSONs da rodada corrigida. | [PR #16](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16) |
+</div>
 
-Os PRs permitem consultar entregas ainda fora da main. O PR #15 é um arquivo de evidências em rascunho: preservar a branch e não mesclar. Guias históricos, inclusive a primeira run da v0.2, não substituem as rodadas v0.3 comparadas nesta página.
+---
 
-## Escopo e oráculo
+## Sobre o Projeto
 
-A [base oficial](base-de-conhecimento-oficial/) e a [massa de pedidos fictícios](massa-de-teste.md) definem os esperados, junto às referências identificadas no golden. A base interna da Lia pode divergir intencionalmente desses materiais. As respostas da assistente nunca foram usadas como regra do negócio.
+### *"Como podemos garantir a exatidão, a segurança e a conformidade de um assistente de vendas baseado em IA generativa antes da sua implementação para produção?"*
 
-Testamos produtos, restrições, preços, montagem de pedidos, frete, cupons, privacidade, contexto e resistência a instruções maliciosas. Usamos a API disponibilizada, sem acesso à AWS ou aos logs internos da Lia. Não realizamos testes de carga. Timeout e indisponibilidade do ambiente são inconclusivos, sem serem contados como defeitos funcionais.
+A partir deste desafio, a **Squad 2** estruturou uma campanha completa de Quality Engineering (QE) voltada para a avaliação da assistente virtual **Lia**, um agente de vendas e atendimento do e-commerce fictício **Pop & Doce**.
 
-## Organização da squad
+O projeto submete a assistente a baterias de testes exploratórios, regressão automatizada via *Golden Dataset* e testes de segurança (*Red Teaming*). O objetivo é identificar alucinações, falhas de cálculo, *jailbreaks* e vulnerabilidades que possam impactar negativamente o negócio. Com base nos achados, propomos melhorias estruturadas no *prompt* de sistema e comparamos os resultados entre a versão *baseline* e a versão final para fundamentar, em dados objetivos, a decisão final de implantação (**Go / No-Go**).
 
-- [Planejamento e decisões no Trello](https://trello.com/b/PdUBDmTM): dúvidas, alternativas e acordos em comentários.
-- [Execução e entregas no Trello](https://trello.com/b/M4EHkt4l): tarefas, condições de conclusão, trabalho em andamento, revisão e concluídos.
-- [Acordo de frentes e revisão cruzada](https://trello.com/c/8xuncMAC) · [Guia da equipe](https://trello.com/c/mlQrpA0X).
+> **Aviso de Oráculo:** A documentação contida na pasta `base-de-conhecimento-oficial/` e a `massa-de-teste.md` funcionam como o **oráculo** do projeto (a verdade absoluta do negócio). A base interna do *chatbot* contém divergências intencionais inseridas como parte do desafio.
+
+---
+
+## Links Úteis & Organização
+
+- [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
+- [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
+- [Passo a Passo para Validação da Equipe (Trello)](https://trello.com/c/mlQrpA0X)
+
+---
+
+### Divisão de trabalho e acompanhamento
 
 ![Quadro de execução no Trello com as colunas A fazer, João, Camile, Fernanda, Gustavo, Em revisão e Concluídas](docs/imagens/trello-execucao.jpg)
 
@@ -46,7 +47,147 @@ Cada integrante assume cartões e registra evidências. Priorizamos discussão p
 
 Revisão cruzada: João revisa Camile; Camile revisa Fernanda; Fernanda revisa Gustavo; Gustavo revisa João. O cartão organiza a tarefa; o repositório guarda fontes, código e evidências.
 
-## Exploração e evidências
+[Acordo de frentes e revisão cruzada](https://trello.com/c/8xuncMAC).
+
+## Estrutura do Repositório
+
+O repositório foi organizado de forma modular para garantir o rastreio ágil das fontes, casos de teste e evidências coletadas
+
+```
+Hackaton-Encerramento-Lia-AI-R/
+├── README.md
+├── massa-de-teste.md                  # Pedidos, perfis e clientes fictícios fornecidos
+├── requirements-juiz.txt
+├── requirements-t15.txt
+├── base-de-conhecimento-oficial/      # Oráculo de dados oficiais da empresa
+├── datasets/                          # Datasets de avaliação automatizada
+│   └── pilotos/
+├── prompts/                           # Iterações e versões do prompt de sistema
+├── docs/                              # Documentação técnica, decisões e critérios
+│   ├── exploracao/                    # Casos de exploração documentados
+│   ├── imagens/                       # Registro do quadro de execução no Trello
+│   ├── t27-indice-golden.md            # Casos, esperados por turno e referências
+│   └── t27-metricas-e-thresholds.md     # Métricas implementadas e critérios de aprovação
+├── tests/                             # Infraestrutura e código da suíte de testes
+│   ├── __init__.py
+│   ├── automacao/                     # Engine de testes automatizados e Juiz LLM
+│   │   ├── config/
+│   │   └── fixtures/
+│   ├── postman/                       # Coleções de API do Postman
+│   └── red-team/                      # Suite de segurança adversarial (Promptfoo)
+│       ├── assercoes/
+│       └── casos/
+└── results/                           # Evidências, logs de execução e relatórios
+    ├── exploracao/                    # Resultados da fase exploratória
+    │   ├── relatorios/                # Registros consolidados da exploração
+    │   ├── t03-evidencias/
+    │   ├── t04-evidencias/
+    │   ├── t05-evidencias/
+    │   ├── t06-evidencias/
+    │   ├── t08-evidencias/
+    │   ├── t10-evidencias/
+    ├── metamorficos/                  # Evidências e relatórios dos testes metamórficos
+    │   ├── relatorios/
+    │   ├── t14-rodada-01/
+    └── red-team/                      # Evidências dos testes adversariais
+        ├── exploracao/
+        └── promptfoo/
+```
+> **Nota:** Diretórios reservados às próximas entregas estão sendo mantidos com `.gitkeep`, para preservação da hierarquia das pastas.
+
+
+## Arquitetura e Fluxo de Validação de QE
+
+> **Leitura do modelo:** o diagrama original abaixo representa o fluxo de validação planejado. A ligação da base oficial à Lia não comprova que o serviço use a mesma base do oráculo; a base interna pode divergir. Da mesma forma, o envio do prompt não comprova sua aplicação interna. Os resultados efetivos e os caminhos das evidências comparativas estão nas seções de entregas e parecer.
+
+```mermaid
+
+   flowchart TD
+
+    subgraph group_reference["1. Base de Conhecimento e Mapeamento de Testes"]
+        node_official["Base Oficial <br/>[base-de-conhecimento-oficial/]"]
+        node_testdata["Massa de Testes <br/>[massa-de-teste.md]"]
+        node_case_specs["Casos Exploratórios <br/>[docs/exploracao/]"]
+        node_golden[("Golden Dataset <br/>[datasets/]")]
+    end
+
+    subgraph group_execution["2. Execução & Núcleo da Lia"]
+        node_prompts["Prompt de Sistema & Guardrails <br/>[prompts/]"]
+        node_lia{{"API da Lia <br/>(Assistente Virtual)"}}
+        node_postman["Suíte Postman <br/>[tests/postman/]"]
+    end
+
+    subgraph group_assessment["3. Automação, Avaliação & Red Team"]
+        node_automacao["Engine de Automação <br/>[tests/automacao/]"]
+        node_judge["Juiz LLM Especialista <br/>[juiz.py]"]
+        node_redteam["Promptfoo Red Team <br/>[tests/red-team/]"]
+    end
+
+    subgraph group_evidence["4. Evidências, Relatórios e Decisão"]
+        node_captures[("Evidências de Execução <br/>[results/exploracao/]")]
+        node_summaries["Resultados Consolidados <br/>(JSONs / Manifestos)"]
+        node_reports["Relatórios Comparativos <br/>[results/relatorios/]"]
+        node_decisions["Decisão Go/No-Go <br/>[docs/decisoes.md]"]
+    end
+
+    node_squad(("Equipe QE"))
+
+    %% Conexões do Fluxo Principal
+    node_squad -->|"Orquestra Testes"| node_postman
+    node_squad -->|"Executa Ataques"| node_redteam
+    node_case_specs -->|"Orienta Cenários"| node_postman
+    
+    node_official -->|"Alimenta Contexto"| node_lia
+    node_prompts -->|"Define Regras e Respostas"| node_lia
+    
+    node_postman -->|"Envia Requisições"| node_lia
+    node_lia -->|"Gera Respostas"| node_captures
+    
+    %% Fluxo do Golden e Juiz LLM
+    node_golden -->|"Baseia Validação"| node_automacao
+    node_lia -->|"Fornece Outputs"| node_automacao
+    node_automacao -->|"Processa via"| node_judge
+    node_judge -->|"Métricas & Julgamentos"| node_summaries
+
+    %% Fluxo Adversarial (Red Team)
+    node_redteam -->|"Executa Testes Adversariais"| node_lia
+    node_redteam -->|"Gera Logs de Ataque"| node_captures
+
+    %% Consolidação e Decisão
+    node_official -.->|"Gabarito"| node_reports
+    node_testdata -.->|"Gabarito"| node_reports
+    node_captures -->|"Consolida Logs"| node_summaries
+    node_summaries -->|"Gera Análise Comparativa"| node_reports
+    node_reports -->|"Embasa Parecer Final"| node_decisions
+
+    %% Links para o Repositório
+    click node_official "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/base-de-conhecimento-oficial"
+    click node_testdata "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/massa-de-teste.md"
+    click node_case_specs "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/docs/exploracao"
+    click node_golden "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/datasets"
+    click node_prompts "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/prompts"
+    click node_postman "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/postman"
+    click node_automacao "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/automacao"
+    click node_redteam "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/tests/red-team"
+    click node_captures "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao"
+    click node_reports "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/tree/main/results/exploracao/relatorios"
+    click node_decisions "https://github.com/gabs-jg/hackaton-encerramento-lia-ai-r/blob/main/docs/decisoes.md"
+
+    %% Estilos com as Cores Solicitadas
+    classDef googleBlue fill:#E8F0FE,stroke:#4285F4,stroke-width:2px,color:#1A73E8
+    classDef googleYellow fill:#FEF7E0,stroke:#FBBC05,stroke-width:2px,color:#B06000
+    classDef googleRed fill:#FCE8E6,stroke:#EA4335,stroke-width:2px,color:#C5221F
+    classDef googleGreen fill:#E6F4EA,stroke:#34A853,stroke-width:2px,color:#137333
+
+    class node_official,node_testdata,node_case_specs,node_golden googleBlue
+    class node_postman,node_lia,node_prompts googleYellow
+    class node_automacao,node_judge,node_redteam,node_squad googleRed
+    class node_captures,node_summaries,node_reports,node_decisions googleGreen
+``` 
+
+---
+
+## Exploração nas oito categorias
 
 | Frente | Relatório com esperado, obtido e links das respostas |
 |---|---|
@@ -57,9 +198,32 @@ Revisão cruzada: João revisa Camile; Camile revisa Fernanda; Fernanda revisa G
 | Vários turnos | [T08](results/exploracao/relatorios/t08-registro.md) |
 | Adversarial | [T10](results/exploracao/relatorios/t10-registro.md) |
 
-As [coleções Postman](tests/postman/) organizam casos em pastas e turnos em requisições. Cada caso começa sem sessão; somente seus turnos compartilham a sessão retornada. Respostas completas ficam em JSON; a interpretação fica nos relatórios. Os resultados são passou/falhou, instável ou inconclusivo; a severidade corresponde ao impacto da falha.
+## Guia de Execução e Testes Exploratórios (Task 05 e 06)
 
-## Golden dataset e pares metamórficos
+Para executar a bateria de testes exploratórios de privacidade e conformidade (T05 e T06), segue o procedimento padrão da equipe:
+
+1. **Importação da Coleção:** Importar o arquivo [`t05-t06-exploracao.postman_collection.json`](tests/postman/t05-t06-exploracao.postman_collection.json) no Postman.
+2. **Gerenciamento de Segredos:** Configurar a variável `api_key` **exclusivamente no ambiente local**. Como alternativa, utilizar `{{vault:lia_api_key}}` no cabeçalho `x-api-key`. **Nunca exportar ou versionar a chave de API**.
+3. **Execução de Turnos:** Selecionar a tarefa e o caso pretendido. Disparar o turno **T1** e, em seguida, o **T2** (quando existente), um turno de cada vez.
+   > **Nota de Sessão:** Cada caso deve iniciar sem o parâmetro `sessao`. Os scripts da coleção gerenciam a persistência do ID de sessão automaticamente apenas entre os turnos do mesmo caso.
+4. **Consulta Histórica:** Para analisar respostas de execuções anteriores sem realizar chamadas ativas, abrir os exemplos salvos na requisição. *(Atenção: Os exemplos gravados contêm respostas históricas da IA com divergências; o único gabarito válido é o oráculo oficial).*
+
+### Mapeamento e Documentação
+- **Especificações de Casos:** [`T05-casos.md`](docs/exploracao/t05-casos.md) e [`T06-casos.md`](docs/exploracao/t06-casos.md).
+- **Relatórios Consolidados:** Registros detalhados de *Esperado × Obtido*, classificações e links de evidências em [`T05-registro.md`](results/exploracao/relatorios/t05-registro.md) e [`T06-registro.md`](results/exploracao/relatorios/t06-registro.md).
+- **Resultados em JSON:** O arquivo [`t05-t06-resultados.json`](results/exploracao/t05-t06-resultados.json) consolida os 30 casos e 32 turnos mapeados (origens Postman/cURL), cujas evidências brutas estão preservadas nos diretórios individuais de cada caso.
+
+---
+
+## Golden Dataset e Testes Metamórficos
+
+- **Versão Vigente:** O [`golden-v0.3.json`](datasets/golden-v0.3.json) (revisão 0.3.1) consolida **48 casos, 86 turnos e 5 pares de testes metamórficos**.
+- **Regras Comerciais:** A padronização de cálculos segue a [Convenção Provisória de Arredondamento](docs/t13-t15-convencao-arredondamento.md) definida pela *squad*.
+- **Histórico & Rastreabilidade:** Para entender os critérios de seleção e inclusão de casos, consulte a [Documentação T13/T14](docs/t13-t14-golden.md). O dataset [`golden-v0.2.json`](datasets/golden-v0.2.json) permanece mantido exclusivamente como histórico do projeto.
+
+---
+
+### Casos, categorias e relações metamórficas
 
 O [índice do golden](docs/t27-indice-golden.md) apresenta os **48 casos**, os critérios por turno, fontes e pares. O [JSON versionado](datasets/golden-v0.3.json) continua sendo a entrada da automação.
 
@@ -75,24 +239,19 @@ O [índice do golden](docs/t27-indice-golden.md) apresenta os **48 casos**, os c
 | Adversarial | 5 | 5 | Extração, falsa autoridade, homologação, arquitetura e autorização. |
 | **Total** | **48** | **86** | **112 critérios.** |
 
-Os cinco pares mudam uma condição controlada: **PM01**, Grande × 400 g; **PM02**, diabetes tipo 1 × tipo 2; **PM03**, Porto Alegre × Canoas; **PM04**, cruzar R$ 200 para o cupom; **PM05**, trocar o e-mail da consulta. Avaliamos a relação e a correção individual: duas respostas iguais e erradas não aprovam o par. [Estrutura T13/T14](docs/t13-t14-golden.md) · [Critérios T12](docs/t12-criterios-golden.md) · [Convenção provisória de arredondamento](docs/t13-t15-convencao-arredondamento.md).
+Os cinco pares mudam uma condição controlada: **PM01**, Grande × 400 g; **PM02**, diabetes tipo 1 × tipo 2; **PM03**, Porto Alegre × Canoas; **PM04**, cruzar R$ 200 para o cupom; **PM05**, trocar o e-mail da consulta. Avaliamos a relação e a correção individual: duas respostas iguais e erradas não aprovam o par. [Critérios T12](docs/t12-criterios-golden.md).
 
-## Automação e avaliação
+## Engine de Automação (T15 / T16)
 
-```mermaid
-flowchart LR
-    A[Base oficial e massa] --> B[Golden e esperados]
-    B --> C[Executor Python]
-    P[Prompt enviado no JSON] -. aplicação não confirmada .-> L[API da Lia]
-    C --> L
-    L --> E[Respostas e evidências]
-    E --> V[Contrato e números]
-    E --> J[Sonnet no Bedrock]
-    B --> J
-    V --> R[Consolidação e revisão]
-    J --> R
-    R --> N[Parecer da equipe]
-```
+A infraestrutura de automação permite a avaliação em massa e regressão automatizada do agente via Juiz LLM:
+
+- **Documentação de Apoio:** Consulte o [Guia de Automação](docs/t15-t16-automacao.md) e o [Registro do Processo](docs/t15-t16-processo-automacao.md).
+- **Escopo do Pipeline:** A suíte local está configurada para processar os 48 casos e 86 turnos da versão v0.3.
+- **Baseline Preservada:** A primeira execução registrada (*Run 1*) utiliza a foto histórica da v0.2 (46 casos / 82 turnos). As duas runs originais da v0.3 estão no [PR #14](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/14), e a rodada com prompt corrigido enviado está no [PR #15](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15). A run histórica não substitui essas evidências.
+
+---
+
+### Métricas implementadas e avaliação
 
 O [executor](tests/automacao/executar.py) faz chamadas sequenciais, preserva sessões entre turnos e salva respostas, métricas e hashes. A [avaliação](tests/automacao/avaliar.py) lê os registros, permitindo reavaliar sem chamar a Lia. O DeepEval organiza casos e duas métricas personalizadas; nosso [adaptador Bedrock](tests/automacao/juiz.py) usa **Claude Sonnet 4.6** para análise semântica. Não usamos métricas prontas como GEval ou Faithfulness.
 
@@ -119,6 +278,15 @@ Os [critérios da equipe](docs/riscos-criterios-corrigidos.md), publicados no [P
 | Bloqueadores | Falha crítica aberta, falha alta relevante em negócio/privacidade ou instabilidade sensível impedem liberação. |
 
 A [configuração executada](tests/automacao/config/avaliacao-provisoria.json) ainda usa **90% global, 100% de cobertura conclusiva, zero falhas críticas, zero instáveis e três repetições**, com marcação provisória. Ela não implementa integralmente os cortes por categoria acima. O resultado automático é uma simulação; o parecer se apoia nos defeitos observados e nos bloqueadores. Não alteramos limites para acomodar os resultados.
+
+## Regras de Avaliação
+
+- A base oficial e a massa de teste são o **oráculo**. A base interna da Lia é deliberadamente diferente; as respostas da assistente não definem o gabarito.
+- Não realizar testes de carga/estresse. Coordenar no máximo quatro chamadas simultâneas no total da equipe.
+- Timeout deliberado do ambiente é inconclusivo: registrar a limitação sem contar como defeito ou aprovação da Lia.
+- Usar somente a API fornecida e dados fictícios. A equipe não tem acesso à AWS que hospeda a Lia.
+- Nunca publicar chaves, credenciais ou arquivos de configuração com segredos. Revisar também exportações do Postman e evidências.
+- Recursos próprios da AWS/modelos são opcionais, com orçamento de US$ 20 por integrante.
 
 ## Red teaming
 
@@ -154,6 +322,33 @@ Referências: [plano](results/red-team/plano-red-team.md) · [log e evidências 
 
 A [documentação T21](docs/t21-prompt-corrigido.md) liga as alterações às frentes: catálogo/restrições de João; cálculo/privacidade de Camile; cupons/escopo e base de sugestões de Fernanda; contexto e red team de Gustavo. O merge do [prompt](prompts/prompt-corrigido.md) no GitHub não comprova implantação no agente hospedado.
 
+## Entregas Previstas da Campanha 
+
+Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis: 
+
+- [x] ***Golden dataset* Robusto:** com, pelo menos, 40 casos nas oito categorias e cinco pares de metamórficos;
+- [ ] **Validação completa das ferramentas:** A automação está implementada para respostas, critérios e cálculos; a verificação de chamadas esperadas, argumentos, cupons e consulta de pedidos permanece parcial, conforme detalhado acima;
+- [x] **Campanha de Red Teaming:** Mapeamento e execução de, no mínimo, 30 ataques organizados e distribuíds em cinco categorias de vulnerabilidade;
+- [ ] **Análise Comparativa de *prompts:*** Avaliação da suíte (com mínimo de três execuções / caso), confrontando a *baseline* com a versão final do *prompt* atualizado. Avaliando, assim, métricas, latência e consumo de *tokens*; 
+- [ ] **Repositório Reproduzível + Parecer Final:** Repositório 100% reproduzível, contendo relatório final de *Go / No-Go* de até 8 páginas e apresentação técnica de 15~20 minutos para a banca avaliadora. 
+
+---
+
+## Entregas realizadas e evidências
+
+| Entrega | Conteúdo e situação | Referência |
+|---|---|---|
+| Exploração | Oito categorias, casos, retestes, respostas em JSON e interpretação dos resultados. | [Relatórios](results/exploracao/relatorios/) |
+| Golden e metamórficos | Revisão 0.3.1: 48 casos, 86 turnos, 112 critérios e cinco pares. Conjunto consolidado pela equipe; ainda há metadados de rascunho/revisão nos arquivos. | [Índice e esperados por turno](docs/t27-indice-golden.md) · [Dataset](datasets/golden-v0.3.json) |
+| Automação | Executor Python, métricas personalizadas no DeepEval, regras numéricas, Sonnet no Bedrock e fila de revisão. Calibração e validação completa das ferramentas pendentes. | [Métricas e thresholds](docs/t27-metricas-e-thresholds.md) · [Guia](docs/t15-t16-automacao.md) |
+| Red team | 30 ataques selecionados em cinco categorias, exploração e validação inicial com promptfoo. Comparação completa de três repetições por versão não concluída. | [Plano](results/red-team/plano-red-team.md) · [Log](results/red-team/log-red-team.md) |
+| Prompt corrigido | Consolidação das frentes e dos ataques; executado com o texto enviado, sem melhora comprovada nos riscos destacados. | [Prompt](prompts/prompt-corrigido.md) · [Decisões T21](docs/t21-prompt-corrigido.md) · [PR #12](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/12) |
+| Runs originais | Duas coletas independentes de 48 casos/86 turnos cada, avaliações e revisões parciais. | [PR #14](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/14) |
+| Run corrigida | 48 casos/86 turnos, respostas integrais e avaliação pelo Sonnet. JSONs mantidos em branch exclusiva de evidências. | [PR #15 — não mesclar](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15) |
+| Comparação e parecer | Casos persistentes, limites e recomendação de No-Go; relatório destinado à main sem os JSONs da rodada corrigida. | [PR #16](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16) |
+
+Os PRs permitem consultar entregas ainda fora da main. O PR #15 é um arquivo de evidências em rascunho: preservar a branch e não mesclar. Guias históricos, inclusive a primeira run da v0.2, não substituem as rodadas v0.3 comparadas nesta página.
+
 ## Comparação e parecer No-Go
 
 As três rodadas usam o mesmo golden, entradas, código coletor, rubrica 0.5 e regras numéricas.
@@ -176,7 +371,7 @@ Para reconsiderar a liberação, será necessário confirmar o tratamento de `pr
 
 Fontes: [comparação das originais](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/blob/1ca8e2f34d1327e6bcfb19a5b56109f5abfd7991/results/automacao/relatorios/t19-comparativo-runs-01-02.md) · [corrigida e evidências](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15) · [comparação para main](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16) · [critérios de risco](docs/riscos-criterios-corrigidos.md).
 
-## Como consultar e executar
+## Como consultar e executar a automação
 
 Comece pelo [comparativo e parecer](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16), pelo [índice do golden](docs/t27-indice-golden.md) e pelos PRs das evidências. Para preparar a suíte com Python 3.12:
 
@@ -191,32 +386,12 @@ A validação não faz chamadas à API. Coleta real exige `LIA_API_KEY` no ambie
 
 No [promptfoo](tests/red-team/), o filtro `golden=false` seleciona os ataques exclusivos dessa suíte. Coordenar o limite global de quatro chamadas simultâneas da equipe; o executor Python é sequencial. Reavaliar respostas ou reutilizar julgamentos não conta como repetição independente.
 
-## Estrutura do repositório
+## Autoria e Créditos
 
-```text
-base-de-conhecimento-oficial/   Catálogos e políticas do oráculo
-massa-de-teste.md               Pedidos fictícios de referência
-datasets/                      Golden e pilotos históricos
-docs/                          Decisões, índices, guias e critérios
-  imagens/                     Registro da organização no Trello
-prompts/                       Prompt corrigido proposto
-tests/
-  postman/                     Coleções de exploração
-  automacao/                   Executor, métricas, juiz e revisão
-  red-team/                    Provider, casos e asserções promptfoo
-results/
-  exploracao/                  Evidências e relatórios por frente
-  metamorficos/                Resultados históricos dos pares
-  red-team/                    Plano, log e validação adversarial
-```
+O presente projeto foi desenvolvido pela **Squad 2**, durante o decorrer do mês de Outubro de 2026 no **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do nosso instrutor e QA Manager da empresa, **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
 
-As evidências corrigidas ficam na branch do [PR #15](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15). Esta atualização não copia seus JSONs para main. [PR #14](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/14) e [PR #16](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16) preservam suas próprias entregas e situação de integração.
-
-## Autoria e créditos
-
-Desenvolvido pela Squad 2 no estágio **AWS AI FDE Driven Quality Engineering**, promovido pela **Compass UOL / [AI/R Company](https://aircompany.ai/pt/home/)**, em outubro de 2026, sob orientação do instrutor e QA Manager **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
-
-- [Camile Marcele Pereira de Araujo](https://github.com/camimcl)
-- [Fernanda Bastos dos Santos](https://github.com/codebyfernanda)
-- [Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)
-- [João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)
+### Integrantes da Squad 2: 
+* **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)**
+* **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
+* **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)**
+* **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
