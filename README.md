@@ -298,7 +298,7 @@ A exploração manual e funcional cobriu cenários de conformidade, privacidade,
 
 ---
 
-### Casos, categorias e relações metamórficas
+### Casos, Categorias e Relações Metamórficas
 
 O [índice do golden](docs/t27-indice-golden.md) apresenta os **48 casos**, os critérios por turno, fontes e pares. O [JSON versionado](datasets/golden-v0.3.json) continua sendo a entrada da automação.
 
@@ -326,7 +326,7 @@ A infraestrutura de automação permite a avaliação em massa e regressão auto
 
 ---
 
-### Métricas implementadas e avaliação
+### Métricas Implementadas e Avaliação
 
 O [executor](tests/automacao/executar.py) faz chamadas sequenciais, preserva sessões entre turnos e salva respostas, métricas e hashes. A [avaliação](tests/automacao/avaliar.py) lê os registros, permitindo reavaliar sem chamar a Lia. O DeepEval organiza casos e duas métricas personalizadas; nosso [adaptador Bedrock](tests/automacao/juiz.py) usa **Claude Sonnet 4.6** para análise semântica. Não usamos métricas prontas como GEval ou Faithfulness.
 
@@ -341,7 +341,7 @@ Uma violação não é compensada por acertos. Julgamento inválido, referência
 
 Detalhes e reprodução: [métricas e thresholds](docs/t27-metricas-e-thresholds.md) · [guia de execução](docs/t15-t16-automacao.md) · [processo e polimento](docs/t15-t16-processo-automacao.md) · [código](tests/automacao/).
 
-### Thresholds e critérios de liberação
+### Thresholds e Critérios de Liberação
 
 Os [critérios da equipe](docs/riscos-criterios-corrigidos.md), publicados no [PR #8](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/8), exigem:
 
@@ -371,7 +371,7 @@ O parecer técnico do grupo é de **No-Go para a entrada em produção**, embasa
 
 ---
 
-## Red teaming
+## Red Teaming
 
 Selecionamos **30 ataques em cinco categorias**, com falsa autoridade, logs de ferramenta forjados, instruções escondidas, mudança de persona, pressão comercial, extração e ofuscação de dados. São **15 casos reaproveitados e 15 novos**, contados uma vez por categoria principal.
 
@@ -392,7 +392,7 @@ O [export inicial do promptfoo](results/red-team/promptfoo/validacao-original-20
 
 Referências: [plano](results/red-team/plano-red-team.md) · [log e evidências por ataque](results/red-team/log-red-team.md) · [exploração manual](results/red-team/exploracao-manual-registro.md) · [casos detalhados](results/red-team/exploracao-manual-casos.md) · [reaproveitados](results/red-team/casos-reaproveitados-exploracao.md) · [provider](tests/red-team/provider-lia.js) · [asserções](tests/red-team/assercoes/).
 
-## Vulnerabilidades e correção proposta
+## Vulnerabilidades e Correção Proposta
 
 | Risco e caso | Comportamento observado | Tratamento no prompt candidato |
 |---|---|---|
@@ -417,7 +417,7 @@ Ao final do *hackaton*, o status das entregas da equipe é o seguinte:
 
 ---
 
-## Entregas realizadas e evidências
+## Entregas Realizadas e Evidências
 
 | Entrega | Conteúdo e situação | Referência |
 |---|---|---|
@@ -432,7 +432,7 @@ Ao final do *hackaton*, o status das entregas da equipe é o seguinte:
 
 Os PRs permitem consultar entregas ainda fora da main. O PR #15 é um arquivo de evidências em rascunho: preservar a branch e não mesclar. Guias históricos, inclusive a primeira run da v0.2, não substituem as rodadas v0.3 comparadas nesta página.
 
-## Comparação e parecer No-Go
+## Comparação e Parecer No-Go
 
 As três rodadas usam o mesmo golden, entradas, código coletor, rubrica 0.5 e regras numéricas.
 
@@ -454,7 +454,7 @@ Para reconsiderar a liberação, será necessário confirmar o tratamento de `pr
 
 Fontes: [comparação das originais](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/blob/1ca8e2f34d1327e6bcfb19a5b56109f5abfd7991/results/automacao/relatorios/t19-comparativo-runs-01-02.md) · [corrigida e evidências](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/15) · [comparação para main](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16) · [critérios de risco](docs/riscos-criterios-corrigidos.md).
 
-## Como consultar e executar a automação
+## Como Consultar e Executar a Automação
 
 Comece pelo [comparativo e parecer](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/pull/16), pelo [índice do golden](docs/t27-indice-golden.md) e pelos PRs das evidências. Para preparar a suíte com Python 3.12:
 
