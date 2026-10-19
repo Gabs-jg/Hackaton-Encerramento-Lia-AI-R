@@ -6,17 +6,17 @@
 
 > **STATUS:** Projeto de *Quality Engineering (QE)* finalizado e consolidação do parecer técnico (**No-Go**) realizado. As etapas de exploração, criação do Golden Dataset, automação, testes metamórficos, Red Teaming e avaliação do prompt corrigido foram executadas. A validação definitiva de ferramentas via Postman e a execução completa de 3 rodadas por versão permanecem como pendências operacionais.
 
-[![Oráculo Oficial](https://img.shields.io/badge/Or%C3%A1culo-Base%20Oficial%20%2B%20Massa%20de%20Teste-4285F4)](base-de-conhecimento-oficial/)
-![Metodologia](https://img.shields.io/badge/Metodologia-Quality%20Engineering%20%28QE%29-FBBC05)
-![Golden Dataset](https://img.shields.io/badge/Golden%20Dataset-48%20casos%20%7C%2086%20turnos-4285F4)
-![Metamórficos](https://img.shields.io/badge/Testes%20Metam%C3%B3rficos-5%20pares%20%7C%2010%20casos-34A853)
-![Juiz LLM](https://img.shields.io/badge/Juiz%20LLM-Claude%20Sonnet%204.6%20%7C%20Bedrock-EA4335)
+[![Oráculo Oficial](https://img.shields.io/badge/Or%C3%A1culo-Base%20Oficial%20%2B%20Massa%20de%20Teste-FBBC05)](base-de-conhecimento-oficial/)
+![Metodologia](https://img.shields.io/badge/Metodologia-Quality%20Engineering%20%28QE%29-4285F4)
+![Golden Dataset](https://img.shields.io/badge/Golden%20Dataset-48%20casos%20%7C%2086%20turnos-34A853)
+![Metamórficos](https://img.shields.io/badge/Testes%20Metam%C3%B3rficos-5%20pares%20%7C%2010%20casos-EA4335)
+![Juiz LLM](https://img.shields.io/badge/Juiz%20LLM-Claude%20Sonnet%204.6%20%7C%20Bedrock-FBBC05)
 ![DeepEval](https://img.shields.io/badge/DeepEval-2%20m%C3%A9tricas%20customizadas-4285F4)
-![Red Teaming](https://img.shields.io/badge/Red%20Teaming-30%20ataques%20%7C%205%20categorias-EA4335)
-![Análise Comparativa](https://img.shields.io/badge/An%C3%A1lise-Baseline%20%C3%97%20Prompt%20Corrigido-4285F4)
+![Red Teaming](https://img.shields.io/badge/Red%20Teaming-30%20ataques%20%7C%205%20categorias-34A853)
+![Análise Comparativa](https://img.shields.io/badge/An%C3%A1lise-Baseline%20%C3%97%20Prompt%20Corrigido-EA4335)
 <br>
-![Parecer Técnico](https://img.shields.io/badge/Parecer-NO--GO-EA4335)
 ![Status](https://img.shields.io/badge/Status-Falhas%20cr%C3%ADticas%20remanescentes-FBBC05)
+![Parecer Técnico](https://img.shields.io/badge/Parecer-NO--GO-EA4335)
 
 </div>
 
