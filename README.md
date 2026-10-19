@@ -38,7 +38,7 @@ A gestão e divisão de tarefas da equipe foi estruturada via Trello, dividindo 
 <div align="center">
     
 <img width="1877" height="757" alt="Quadro de Execução de Tarefas no Trello - Squad 2" src="https://github.com/user-attachments/assets/37d7c8f8-b7ca-45d8-a3d6-693aea57daad" />
-*Quadro de Execução de Tarefas no Trello*
+Quadro de Execução de Tarefas no Trello
 
 </div>
 ---
