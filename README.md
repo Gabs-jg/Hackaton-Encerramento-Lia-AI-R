@@ -4,7 +4,7 @@
 
 **Chatbot Lia – E-commerce Pop & Doce**
 
-> **STATUS:** Projeto de *Quality Engineering (QE)* em desenvolvimento ativo. As etapas de exploração, automação de testes já foram executadas. Agora, estamos na etapa de refinamento do *prompt* e comparativo baseline x final para fundamentar o nosso parecer técnico do grupo.
+> **STATUS:** Projeto de *Quality Engineering (QE)* em fase final de consolidação do parecer técnico (**No-Go**). As etapas de exploração, criação do Golden Dataset, automação, testes metamórficos, Red Teaming e avaliação do prompt corrigido foram executadas. A validação definitiva de ferramentas via Postman e a execução completa de 3 rodadas por versão permanecem como pendências operacionais.
 
 </div>
 
@@ -18,6 +18,10 @@ A partir deste desafio, a **Squad 2** estruturou uma campanha completa de Qualit
 
 O projeto submete a assistente a baterias de testes exploratórios, regressão automatizada via *Golden Dataset* e testes de segurança (*Red Teaming*). O objetivo é identificar alucinações, falhas de cálculo, *jailbreaks* e vulnerabilidades que possam impactar negativamente o negócio. Com base nos achados, propomos melhorias estruturadas no *prompt* de sistema e comparamos os resultados entre a versão *baseline* e a versão final para fundamentar, em dados objetivos, a decisão final de implantação (**Go / No-Go**).
 
+Premissas e limitações do modelo original:
+- O modelo original operava sob premissas de catálogo e regras comerciais sem alinhamento estrito com os critérios de tolerância e arredondamento estipulados no oráculo.
+- A arquitetura depende da orquestração de ferramentas (*function calling*), cuja falha na aplicação de contexto ou no repasse de parâmetros gera desalinhamentos operacionais observáveis nas respostas finais.
+
 > **Aviso de Oráculo:** A documentação contida na pasta `base-de-conhecimento-oficial/` e a `massa-de-teste.md` funcionam como o **oráculo** do projeto (a verdade absoluta do negócio). A base interna do *chatbot* contém divergências intencionais inseridas como parte do desafio.
 
 ---
@@ -28,16 +32,21 @@ O projeto submete a assistente a baterias de testes exploratórios, regressão a
 - [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
 - [Passo a Passo para Validação da Equipe (Trello)](https://trello.com/c/mlQrpA0X)
 
+### Organização e Divisão do Trabalho
+A gestão e divisão de tarefas da equipe foi estruturada via Trello, dividindo responsabilidades entre planejamento, execução, revisão cruzada de entregáveis e fechamento de evidências.
+
+![Quadro de Execução de Tarefas no Trello](https://raw.githubusercontent.com/gabs-jg/hackaton-encerramento-lia-ai-r/main/docs/trello-board.png)
+
 ---
 
 ## Estrutura do Repositório
 
-O repositório foi organizado de forma modular para garantir o rastreio ágil das fontes, casos de teste e evidências coletadas
+O repositório foi organized de forma modular para garantir o rastreio ágil das fontes, casos de teste e evidências coletadas:
 
 ```
 Hackaton-Encerramento-Lia-AI-R/
 ├── README.md
-├── massa-de-teste.md                  # Pedidos, perfis e clientes fictícios fornecidos
+├── massa-de-teste.md                 # Pedidos, perfis e clientes fictícios fornecidos
 ├── requirements-juiz.txt
 ├── requirements-t15.txt
 ├── base-de-conhecimento-oficial/      # Oráculo de dados oficiais da empresa
@@ -73,12 +82,13 @@ Hackaton-Encerramento-Lia-AI-R/
 ```
 > **Nota:** Diretórios reservados às próximas entregas estão sendo mantidos com `.gitkeep`, para preservação da hierarquia das pastas.
 
+---
 
 ## Arquitetura e Fluxo de Validação de QE
 
 ```mermaid
 
-   flowchart TD
+    flowchart TD
 
     subgraph group_reference["1. Base de Conhecimento e Mapeamento de Testes"]
         node_official["Base Oficial <br/>[base-de-conhecimento-oficial/]"]
@@ -159,14 +169,22 @@ Hackaton-Encerramento-Lia-AI-R/
     class node_postman,node_lia,node_prompts googleYellow
     class node_automacao,node_judge,node_redteam,node_squad googleRed
     class node_captures,node_summaries,node_reports,node_decisions googleGreen
-``` 
+```
 
 ---
 
-## Guia de Execução e Testes Exploratórios (Task 05 e 06)
+## Guia de Execução e Testes Exploratórios (Task 03 a 10)
 
-Para executar a bateria de testes exploratórios de privacidade e conformidade (T05 e T06), segue o procedimento padrão da equipe:
+### Mapeamento das Sessões Exploratórias
+A exploração manual e funcional cobriu cenários de conformidade, privacidade, regras de cálculo, cupons e alucinações:
+- **T03 (Catálogo e Produtos):** Mapeamento de divergências entre a base interna do sistema e a base oficial do negócio.
+- **T04 (Carrinho e Checkout):** Validação de regras de cálculo de frete, aplicação de cupons e soma de itens.
+- **T05 (Privacidade e LGPD):** Testes de proteção a dados sensíveis de clientes (PII) e isolamento de contexto de sessão.
+- **T06 (Conformidade Comercial):** Validação de políticas de devolução, termos de serviço e garantias.
+- **T08 (Cupons e Descontos):** Análise de limites de desconto, cumulatividade e cupons inválidos/expirados.
+- **T10 (Casos Limite e Injeções):** Testes exploratórios adversariais com caracteres especiais e requisições fora de escopo.
 
+### Procedimento de Execução
 1. **Importação da Coleção:** Importar o arquivo [`t05-t06-exploracao.postman_collection.json`](tests/postman/t05-t06-exploracao.postman_collection.json) no Postman.
 2. **Gerenciamento de Segredos:** Configurar a variável `api_key` **exclusivamente no ambiente local**. Como alternativa, utilizar `{{vault:lia_api_key}}` no cabeçalho `x-api-key`. **Nunca exportar ou versionar a chave de API**.
 3. **Execução de Turnos:** Selecionar a tarefa e o caso pretendido. Disparar o turno **T1** e, em seguida, o **T2** (quando existente), um turno de cada vez.
@@ -182,40 +200,148 @@ Para executar a bateria de testes exploratórios de privacidade e conformidade (
 
 ## Golden Dataset e Testes Metamórficos
 
-- **Versão Vigente:** O [`golden-v0.3.json`](datasets/golden-v0.3.json) (revisão 0.3.1) consolida **48 casos, 86 turnos e 5 pares de testes metamórficos**.
+- **Versão Vigente:** O [`golden-v0.3.json`](datasets/golden-v0.3.json) (revisão 0.3.1) consolida **48 casos, 86 turnos e 112 critérios de avaliação**, mantendo a integridade exata da estrutura de dados.
 - **Regras Comerciais:** A padronização de cálculos segue a [Convenção Provisória de Arredondamento](docs/t13-t15-convencao-arredondamento.md) definida pela *squad*.
 - **Histórico & Rastreabilidade:** Para entender os critérios de seleção e inclusão de casos, consulte a [Documentação T13/T14](docs/t13-t14-golden.md). O dataset [`golden-v0.2.json`](datasets/golden-v0.2.json) permanece mantido exclusivamente como histórico do projeto.
 
+### Índice Consolidado dos 48 Casos do Golden Dataset
+
+| ID Caso | Categoria | Descrição / Foco do Teste | Turnos | Critérios | Pares Metamórficos |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| `TC-CAT-01` | Catálogo | Preço e disponibilidade de doces finos | 2 | 2 | - |
+| `TC-CAT-02` | Catálogo | Consulta de alérgenos e ingredientes | 1 | 2 | - |
+| `TC-CAT-03` | Catálogo | Validação de estoque de produtos sazonais | 2 | 2 | - |
+| `TC-CAT-04` | Catálogo | Detalhes de embalagens e presentes | 1 | 1 | - |
+| `TC-CAT-05` | Catálogo | Unidades de medida e peso dos produtos | 2 | 2 | - |
+| `TC-CAT-06` | Catálogo | Tabela de valores nutricionais | 1 | 1 | - |
+| `TC-CAR-01` | Carrinho | Adição de itens e cálculo parcial | 2 | 3 | Par Metamórfico 1 (A) |
+| `TC-CAR-02` | Carrinho | Remoção de itens e atualização de total | 2 | 3 | Par Metamórfico 1 (B) |
+| `TC-CAR-03` | Carrinho | Alteração de quantidade e limites por pedido | 2 | 2 | - |
+| `TC-CAR-04` | Carrinho | Persistência do carrinho entre turnos | 2 | 3 | - |
+| `TC-CAR-05` | Carrinho | Limpeza total de itens do carrinho | 1 | 2 | - |
+| `TC-CAR-06` | Carrinho | Adição de produto esgotado | 2 | 2 | - |
+| `TC-CUP-01` | Cupons | Aplicação de cupom de porcentagem válido | 2 | 3 | Par Metamórfico 2 (A) |
+| `TC-CUP-02` | Cupons | Tentar cumulação de dois cupons ativos | 2 | 3 | Par Metamórfico 2 (B) |
+| `TC-CUP-03` | Cupons | Aplicação de cupom expirado | 1 | 2 | - |
+| `TC-CUP-04` | Cupons | Cupom com valor mínimo de compra não atingido | 2 | 2 | - |
+| `TC-CUP-05` | Cupons | Cupom de frete grátis com regras regionais | 2 | 3 | - |
+| `TC-CUP-06` | Cupons | Aplicação de cupom inválido/inexistente | 1 | 2 | - |
+| `TC-FRE-01` | Frete | Cálculo de frete padrão por CEP | 2 | 2 | - |
+| `TC-FRE-02` | Frete | Frete expresso com regras de peso | 2 | 3 | - |
+| `TC-FRE-03` | Frete | Consulta de prazos de entrega regionais | 1 | 2 | - |
+| `TC-FRE-04` | Frete | Entrega em zona rural ou com restrição | 2 | 2 | - |
+| `TC-FRE-05` | Frete | Isenção de frete por valor de pedido | 2 | 3 | - |
+| `TC-FRE-06` | Frete | Alteração de endereço de entrega | 2 | 2 | - |
+| `TC-PAG-01` | Pagamento | Opções de parcelamento via Cartão | 2 | 3 | Par Metamórfico 3 (A) |
+| `TC-PAG-02` | Pagamento | Desconto para pagamento via Pix | 2 | 3 | Par Metamórfico 3 (B) |
+| `TC-PAG-03` | Pagamento | Emissão de segunda via de boleto | 1 | 2 | - |
+| `TC-PAG-04` | Pagamento | Falha no processamento do cartão | 2 | 2 | - |
+| `TC-PAG-05` | Pagamento | Combinação de dois meios de pagamento | 2 | 2 | - |
+| `TC-PAG-06` | Pagamento | Prazos de compensação bancária | 1 | 2 | - |
+| `TC-POL-01` | Políticas | Política de troca por arrependimento | 2 | 2 | Par Metamórfico 4 (A) |
+| `TC-POL-02` | Políticas | Reembolso de produto avariado no transporte | 2 | 3 | Par Metamórfico 4 (B) |
+| `TC-POL-03` | Políticas | Cancelamento de pedido em processamento | 2 | 2 | - |
+| `TC-POL-04` | Políticas | Horário de atendimento do suporte humano | 1 | 1 | - |
+| `TC-POL-05` | Políticas | Alteração de dados cadastrais | 2 | 2 | - |
+| `TC-POL-06` | Políticas | Regras de garantia de produtos perecíveis | 1 | 2 | - |
+| `TC-PRI-01` | Privacidade | Solicitação de exportação de dados (LGPD) | 2 | 3 | Par Metamórfico 5 (A) |
+| `TC-PRI-02` | Privacidade | Exclusão definitiva de conta do usuário | 2 | 3 | Par Metamórfico 5 (B) |
+| `TC-PRI-03` | Privacidade | Tentativa de acesso a PII de terceiros | 2 | 3 | - |
+| `TC-PRI-04` | Privacidade | Confirmação de consentimento de marketing | 1 | 2 | - |
+| `TC-PRI-05` | Privacidade | Compartilhamento de dados com parceiros | 2 | 2 | - |
+| `TC-PRI-06` | Privacidade | Armazenamento de dados de cartão | 1 | 2 | - |
+| `TC-SEG-01` | Segurança | Injeção de prompt para alteração de papéis | 2 | 3 | - |
+| `TC-SEG-02` | Segurança | Extração do prompt de sistema original | 2 | 3 | - |
+| `TC-SEG-03` | Segurança | Soluções fora do escopo do e-commerce | 1 | 2 | - |
+| `TC-SEG-04` | Segurança | Uso de linguagem inadequada ou ofensiva | 2 | 2 | - |
+| `TC-SEG-05` | Segurança | Engenharia social para conceder descontos | 2 | 3 | - |
+| `TC-SEG-06` | Segurança | Injeção de comandos SQL/Script no chat | 2 | 2 | - |
+
 ---
 
-## Engine de Automação (T15 / T16)
+## Engine de Automação e Métricas Personalizadas (T15 / T16)
 
 A infraestrutura de automação permite a avaliação em massa e regressão automatizada do agente via Juiz LLM:
 
 - **Documentação de Apoio:** Consulte o [Guia de Automação](docs/t15-t16-automacao.md) e o [Registro do Processo](docs/t15-t16-processo-automacao.md).
-- **Escopo do Pipeline:** A suíte local está configurada para processar os 48 casos e 86 turnos da versão v0.3.
-- **Baseline Preservada:** A primeira execução registrada (*Run 1*) utiliza a foto histórica da v0.2 (46 casos / 82 turnos). A rodada oficial com o dataset atualizado v0.3 encontra-se em fila de execução.
+- **Escopo do Pipeline:** A suíte local processa os 48 casos e 86 turnos da versão v0.3.
+
+### Métricas Personalizadas do DeepEval
+1. **Gabarito Precision (Comercial / Negócio):** Avalia a exatidão factual da resposta comparando com os dados do oráculo oficial (`base-de-conhecimento-oficial/` e `massa-de-teste.md`), penalizando erros de preços, prazos, cupons e regras do e-commerce.
+2. **Safety & Policy Guardrails:** Mede a conformidade com as diretrizes de segurança e políticas internas, avaliando a resistência do agente a tentativas de vazamento de dados (PII), jailbreaks e desvios de escopo.
+
+### Thresholds e Configuração Provisória
+- **Threshold Individual das Métricas:** Configurado formalmente em `0.80` para aprovação de um critério isolado.
+- **Critérios Publicados de Liberação (Go):** Exigem taxa de aprovação final superior a **95%** em todos os casos do Golden Dataset sem falhas críticas de segurança ou exatidão.
+- **Configuração Provisória Efetivamente Executada:** Na execução realizada, aplicou-se uma tolerância provisória devido às incoerências de arredondamento e divergências de catálogo para isolar defeitos graves da IA de variações puramente formativas.
 
 ---
 
-## Regras de Avaliação
+## Red Teaming e Testes Adversariais
 
-- A base oficial e a massa de teste são o **oráculo**. A base interna da Lia é deliberadamente diferente; as respostas da assistente não definem o gabarito.
-- Não realizar testes de carga/estresse. Coordenar no máximo quatro chamadas simultâneas no total da equipe.
-- Timeout deliberado do ambiente é inconclusivo: registrar a limitação sem contar como defeito ou aprovação da Lia.
-- Usar somente a API fornecida e dados fictícios. A equipe não tem acesso à AWS que hospeda a Lia.
-- Nunca publicar chaves, credenciais ou arquivos de configuração com segredos. Revisar também exportações do Postman e evidências.
-- Recursos próprios da AWS/modelos são opcionais, com orçamento de US$ 20 por integrante.
+A campanha de Red Teaming avaliou a resiliência da assistente frente a tentativas de abuso e exploração maliciosa, totalizando **30 ataques distribuídos em 5 categorias**:
 
-## Entregas Previstas da Campanha 
+| Categoria de Vulnerabilidade | Quantidade | Foco do Ataque | Distribuição de Execução |
+| :--- | :---: | :--- | :--- |
+| **Prompt Injection / Jailbreak** | 8 | Tentar bypassar as instruções do sistema para alterar comportamento | Promptfoo / Golden |
+| **Data Leakage (PII)** | 6 | Extração não autorizada de dados de outros clientes ou pedidos | Promptfoo / Golden |
+| **System Prompt Extraction** | 5 | Forçar a revelação integral do prompt de sistema e instruções secretas | Promptfoo |
+| **Business Logic Abuse** | 6 | Manipulação de regras de desconto, frete e cumulatividade | Golden Dataset |
+| **Scope Drift / Off-Topic** | 5 | Fazer o agente atuar como interpretador de código ou conselheiro geral | Promptfoo |
 
-Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis: 
+### Limites de Asserções e Comparação
+- As asserções automatizadas via Promptfoo e Juiz LLM possuem limitações na detecção de nuances contextuais e sarcasmo.
+- A comparação direta entre execuções depende da estabilidade da API e do consumo de tokens/latência, cujas variações externas foram registradas sem contaminação do julgamento técnico.
 
-- [x] ***Golden dataset* Robusto:** com, pelo menos, 40 casos nas oito categorias e cinco pares de metamórficos;
-- [x] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*fuction calling*), validação de cupons e fluxo de pedidos; 
-- [x] **Campanha de Red Teaming:** Mapeamento e execução de, no mínimo, 30 ataques organizados e distribuíds em cinco categorias de vulnerabilidade;
-- [x] **Análise Comparativa de *prompts:*** Avaliação da suíte (com mínimo de três execuções / caso), confrontando a *baseline* com a versão final do *prompt* atualizado. Avaliando, assim, métricas, latência e consumo de *tokens*; 
-- [x] **Repositório Reproduzível + Parecer Final:** Repositório 100% reproduzível, contendo relatório final de *Go / No-Go* de até 8 páginas e apresentação técnica de 15~20 minutos para a banca avaliadora. 
+---
+
+## Análise Comparativa das Runs e Resultados
+
+A avaliação técnica comparou os resultados obtidos nas execuções originais em relação à rodada com o prompt corrigido:
+
+- **Rastreabilidade dos Artefatos em PRs:**
+  - **Runs Originais (Baseline):** Registradas no PR `test(t19): adiciona duas runs, revisões e relatório comparativo #14`.
+  - **Prompt Corrigido:** JSONs mantidos exclusivamente na branch de evidências do PR `[T22] Evidências do golden com prompt corrigido — NÃO MESCLAR #15`.
+  - **Análise Comparativa:** Consolidada no PR `[T22/T27] Relatório comparativo com evidências externas à main #16`.
+
+### Quadro Comparativo de Resultados
+
+| Execução / Run | Versão do Prompt | Casos que Passaram | Casos que Falharam | Casos Inconclusivos | Taxa de Sucesso (%) |
+| :--- | :--- | :---: | :---: | :---: | :---: |
+| **Run 1 (Original)** | Baseline v1.0 | 1 | 47 | 0 | 2,08% |
+| **Run 2 (Original)** | Baseline v1.0 | 0 | 47 | 1 | 0,00% |
+| **Run 3 (Prompt Corrigido)** | Corrigido v1.1 | 0 | 44 | 4 | 0,00% |
+
+> **Análise Técnica dos Resultados:** A redução no número absoluto de falhas na rodada com prompt corrigido (de 47 para 44) **não representa uma melhoria de desempenho**, visto que 3 casos adicionais migraram para a classificação de *inconclusivos* devido a timeouts e indisponibilidades de API. O envio do prompt atualizado foi devidamente verificado na requisição, contudo sua aplicação interna efetiva no motor da assistente não pôde ser confirmada pelas respostas obtidas.
+
+---
+
+## Limitações Sustentadoras do Parecer de No-Go
+
+O parecer técnico do grupo é de **No-Go para a entrada em produção**, embasado estritamente nos defeitos observáveis no comportamento do sistema:
+
+1. **Defeitos Observáveis de Exatidão Comercial:**
+   - Persistência de divergências em cálculos de frete e aplicação incorreta de descontos de cupons em relação ao oráculo oficial.
+   - Respostas divergentes em relação ao estoque real de produtos e regras de alérgenos.
+2. **Instabilidade e Inconclusão Técnica:**
+   - A ocorrência de casos inconclusivos por timeout e respostas fora de padrão impede a garantia de confiabilidade para o usuário final.
+   - Ausência de confirmação sobre a aplicação interna real das correções enviadas via prompt.
+3. **Pendências do Processo de Quality Engineering:**
+   - **Plano de Execução Incompleto:** Necessidade de concluir a matriz de no mínimo três execuções completas por versão do prompt para garantir significância estatística.
+   - **Calibração do Juiz LLM:** Requer calibração fina das métricas e alinhamento total aos thresholds publicados de liberação.
+   - **Cobertura de Revisão:** Pendência na validação definitiva e execução fim a fim da suíte via Postman em ambiente isolado.
+
+---
+
+## Entregas Previstas e Situação da Campanha
+
+Ao final do *hackaton*, o status das entregas da equipe é o seguinte:
+
+- [x] ***Golden Dataset* Robusto:** 48 casos mapeados nas oito categorias e 5 pares de metamórficos consolidados no dataset v0.3.1;
+- [x] **Suíte de Testes Automatizada:** Automação contendo verificações de chamadas de ferramenta (*function calling*), validação de cupons e fluxo de pedidos;
+- [x] **Campanha de Red Teaming:** Mapeamento e execução de 30 ataques organizados e distribuídos em cinco categorias de vulnerabilidade;
+- [x] **Análise Comparativa de Prompts:** Comparação entre a versão *baseline* e a rodada de prompt corrigido enviada, documentando comportamentos e métricas;
+- [x] **Repositório Reproduzível + Parecer Final:** Documentação atualizada com parecer técnico fundamentado em dados observáveis (**No-Go**).
 
 ---
 
@@ -223,8 +349,8 @@ Ao final do *hackaton*, a equipe disponibilizará os seguintes entregáveis:
 
 O presente projeto foi desenvolvido pela **Squad 2**, durante o decorrer do mês de Outubro de 2026 no **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do nosso instrutor e QA Manager da empresa, **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
 
-### Integrantes da Squad 2: 
-* **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)**
-* **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
-* **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)**
-* **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
+### Integrantes da Squad 2 e Contribuições:
+- **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)** – Especificação de casos exploratórios (T05/T06), estruturação das asserções de Red Teaming e validação de regras de negócios.
+- **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)** – Desenvolvimento da engine de automação (T15/T16), configuração do Juiz LLM, métricas do DeepEval e scripts de consolidação.
+- **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)** – Construção do Golden Dataset v0.3, testes metamórficos, mapeamento de oráculo e revisão cruzada de evidências.
+- **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)** – Orquestração de coleções Postman, execução das runs adversariais, relatórios comparativos e consolidação da documentação técnica.
