@@ -4,7 +4,7 @@
 
 **Chatbot Lia – E-commerce Pop & Doce**
 
-> **STATUS:** Projeto de *Quality Engineering (QE)* em fase final de consolidação do parecer técnico (**No-Go**). As etapas de exploração, criação do Golden Dataset, automação, testes metamórficos, Red Teaming e avaliação do prompt corrigido foram executadas. A validação definitiva de ferramentas via Postman e a execução completa de 3 rodadas por versão permanecem como pendências operacionais.
+> **STATUS:** Projeto de *Quality Engineering (QE)* finalizado e consolidação do parecer técnico (**No-Go**) realizado. As etapas de exploração, criação do Golden Dataset, automação, testes metamórficos, Red Teaming e avaliação do prompt corrigido foram executadas. A validação definitiva de ferramentas via Postman e a execução completa de 3 rodadas por versão permanecem como pendências operacionais.
 
 </div>
 
