@@ -1,0 +1,69 @@
+{
+  "casos": 48,
+  "turnos": 86,
+  "http": {
+    "200": 86
+  },
+  "ferramentas_vazias": 86,
+  "versao_ausente": 86,
+  "sessoes_distintas": 48,
+  "comparacao_baseline": "pendente_do_PR_com_duas_runs",
+  "repeticoes_corrigida": 1,
+  "avaliacao_juiz": 87,
+  "conta_estimado_acumulado_usd": 3.634293299999998,
+  "conta_saldo_operacional_estimado_usd": 12.365706700000002,
+  "observacao_orcamento": "Registro local estimado, não consulta de faturamento AWS. Teto operacional USD 16 e margem adicional USD 4.",
+  "julgamentos_validos_finais": 81,
+  "resumo_avaliacao": {
+    "planejados": 48,
+    "passou": 0,
+    "falhou": 44,
+    "inconclusivo": 4,
+    "denominador_aprovacao": 44,
+    "taxa_aprovacao": 0.0,
+    "cobertura_conclusiva": 0.9166666666666666,
+    "instaveis": [],
+    "por_categoria": {
+      "adversarial": {
+        "inconclusivo": 2,
+        "falhou": 3
+      },
+      "alergenos_restricoes": {
+        "falhou": 10
+      },
+      "catalogo": {
+        "falhou": 6
+      },
+      "consulta_privacidade": {
+        "falhou": 5
+      },
+      "cupons": {
+        "falhou": 6
+      },
+      "fora_escopo": {
+        "falhou": 1,
+        "inconclusivo": 2
+      },
+      "montagem_calculo": {
+        "falhou": 7
+      },
+      "varios_turnos": {
+        "falhou": 6
+      }
+    },
+    "simulacao_thresholds": "nao_atende",
+    "bloqueios": [
+      "aprovação abaixo do limite ou não calculável",
+      "cobertura conclusiva insuficiente",
+      "falhas críticas acima do limite",
+      "repetições insuficientes",
+      "revisões humanas pendentes",
+      "golden pendente de aprovação",
+      "calibração dos avaliadores pendente",
+      "thresholds provisórios",
+      "pares metamórficos reprovados ou pendentes"
+    ],
+    "parecer_oficial": "pendente_decisao_da_equipe"
+  },
+  "custo_estimado_juiz_usd": 1.5403278
+}

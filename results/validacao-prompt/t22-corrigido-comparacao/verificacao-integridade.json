@@ -1,0 +1,19 @@
+{
+  "requisicoes_reconstruidas": 86,
+  "corpos_preservados": 86,
+  "chave_api_ausente": true,
+  "arquivos_sha256": {
+    "avaliacao.json": "90f1aa0d13b985b482934ef4bec27dfa41987f8cc8f2fde299d206fcd947421e",
+    "config.json": "cc61f2badcda4b0b5c35f0efe1f53ed22b6eeca56dc9e74e620db99a003c4f99",
+    "dataset-executado.json": "2c97535d03c3658dd71ab45edd051c64b7ea9a08229234f19889e10db0980fb5",
+    "estatisticas.json": "ec31d1c00318ae707bf781d16daccd428ce0e9c5fb28adcc5910a474b1bf5a0e",
+    "historico-avaliacoes.json": "dbbd47805128fa57300e1c16e6df903f738b64b345389c803174a929c43ca9ad",
+    "julgamentos.json": "1f424537f23d410c2e728400231fc4d5c3fd92c32dc66597717c5d00db30b1b7",
+    "manifesto-execucao.json": "4d0611ea5eca871c472ea9f8c9dbf5f4b21f942871c6c12360ca534671a62480",
+    "prompt-enviado.txt": "e3374c76c534567df3260f7e83ce94d61761c131ea828aa789251ba0dd4cb355",
+    "README.md": "66bd5378104fdb1cd9cb5a4c0ce46e3f01b94c4728d6447c712166857a44f540",
+    "respostas.json": "6ff230e7c69e94bc2ed7d6aeb9991b7fb1ba20c5c6a8c1f444839226be77d254",
+    "revisao-template.json": "1112f9cfddabc22cc245ac8da017bdeaa717ca097043a6212bfcc186e775b9ae",
+    "rubrica.txt": "3849758465d8132944786fd593228e072385038ea53ed48e262386c47897251a"
+  }
+}
