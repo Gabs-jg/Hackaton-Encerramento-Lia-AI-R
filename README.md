@@ -354,7 +354,7 @@ Ao final do *hackaton*, o status das entregas da equipe é o seguinte:
 O presente projeto foi desenvolvido pela **Squad 2**, durante o decorrer do mês de Outubro de 2026 no **ESTÁGIO | AWS AI FDE DRIVEN QUALITY ENGINEERING** promovido pela **Compass UOL** / [AI/R Company](https://aircompany.ai/pt/home/), sob orientação do nosso instrutor e QA Manager da empresa, **[Jacques de Jesus Figueredo Schmitz Jr.](https://github.com/juniorschmitz)**.
 
 ### Integrantes da Squad 2 e Contribuições:
-- **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)** – Especificação de casos exploratórios (T05/T06), estruturação das asserções de Red Teaming e validação de regras de negócios.
-- **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)** – Desenvolvimento da engine de automação (T15/T16), configuração do Juiz LLM, métricas do DeepEval e scripts de consolidação.
-- **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)** – Construção do Golden Dataset v0.3, testes metamórficos, mapeamento de oráculo e revisão cruzada de evidências.
-- **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)** – Orquestração de coleções Postman, execução das runs adversariais, relatórios comparativos e consolidação da documentação técnica.
+- **[Camile Marcele Pereira de Araujo](https://github.com/camimcl)** 
+- **[Fernanda Bastos dos Santos](https://github.com/codebyfernanda)**
+- **[Gustavo Linkevick Brasileiro](https://github.com/gustavolkbr)** 
+- **[João Gabriel Oliveira Magalhães](https://github.com/Gabs-jg)**
