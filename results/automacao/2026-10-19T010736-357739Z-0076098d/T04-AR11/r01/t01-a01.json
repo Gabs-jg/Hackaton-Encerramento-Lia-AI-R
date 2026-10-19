@@ -1,0 +1,187 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-19T010736-357739Z-0076098d",
+  "caso_id": "T04-AR11",
+  "categoria": "alergenos_restricoes",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Sou vegano e tenho restrição a glúten. Qual pipoca doce você recomenda?"
+  },
+  "criterio_esperado": "Recomendar pelo menos uma pipoca doce vegana e sem glúten na receita: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar.\nInformar que todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo; não garantir segurança por ausência de ingrediente na receita.\nNão inventar produtos nem confundir declaração da receita com certificação ou garantia de ausência de traços.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Aviso geral de alérgenos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Apresentações"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Coco Queimado"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Cacau 70% Vegana"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Canela Zero Açúcar"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secoes": [
+        "Quais produtos são veganos?"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Recomendar pelo menos uma pipoca doce vegana e sem glúten na receita: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar.",
+    "Informar que todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo; não garantir segurança por ausência de ingrediente na receita.",
+    "Não inventar produtos nem confundir declaração da receita com certificação ou garantia de ausência de traços."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Aviso geral de alérgenos",
+      "texto": "## Aviso geral de alérgenos\n\nNossa cozinha manipula amendoim, castanhas (incluindo pistache), leite, soja e trigo. Todos os produtos podem conter traços desses alérgenos.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Apresentações",
+      "texto": "## Apresentações\n\nAs balas são vendidas em pacotes de 100 g ou 250 g, exceto quando indicado no produto.\n\nO aviso geral de alérgenos do catálogo de pipocas vale também para as balas.\n\nBalas duras e pirulitos não são indicados para crianças menores de 4 anos, por risco de engasgo.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Coco Queimado",
+      "texto": "### Coco Queimado\n\n- Preços: Pequena R$ 15,90 · Média R$ 26,90 · Grande R$ 43,90\n- Ingredientes: milho, óleo de coco, açúcar mascavo e coco ralado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 118 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Cacau 70% Vegana",
+      "texto": "### Cacau 70% Vegana\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 45,90\n- Ingredientes: milho, chocolate 70% cacau (massa de cacau, açúcar e manteiga de cacau) e óleo de coco.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 122 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Canela Zero Açúcar",
+      "texto": "### Canela Zero Açúcar\n\n- Preços: Pequena R$ 16,90 · Média R$ 27,90 · Grande R$ 44,90\n- Ingredientes: milho, óleo de coco, eritritol, canela e estévia.\n- Sem açúcar adicionado.\n- Sem glúten: sim.\n- Vegana: sim.\n- Observação: o produto contém carboidratos do milho. Pessoas com diabetes devem seguir a orientação de um profissional de saúde.\n- Porção de 25 g: 95 kcal.\n"
+    },
+    {
+      "fonte": "FAQ",
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secao": "Quais produtos são veganos?",
+      "texto": "### Quais produtos são veganos?\n\nPipocas: Chipotle com Limão, Alho Assado com Azeite, Lemon Pepper, Coco Queimado, Cacau 70% Vegana, Canela Zero Açúcar e Natural sem Sal. Balas: Goma Vegana de Maçã Verde, Corações de Morango Veganos, Bala de Banana, Café, Hortelã-Pimenta, Tamarindo Apimentado, Menta Zero Açúcar e os pirulitos Arco-Íris e Morango com Pimenta. As balas Ursinhos Frutas Vermelhas, Minhocas Cítricas Azedinhas, Tubarões Azuis e Cobrinhas Ácidas de Uva contêm gelatina bovina.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-19T01:08:19.414269+00:00",
+  "fim_utc": "2026-10-19T01:08:23.319069+00:00",
+  "duracao_http_segundos": 3.904539,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! Que legal que você nos procura! 😊\n\nComo você é vegano e tem restrição a glúten, tenho ótimas recomendações para você! A nossa pipoca doce de **Chocolate Amargo e Sal Marinho** é incrivelmente saborosa e vegana, sem glúten! 🍫🌊 Ela combina o doce do chocolate com um toque salgado que é simplesmente viciante.\n\nOu, se preferir algo mais leve, a **Pipoca Doce de Coco e Mel** também é uma ótima opção, vegana e sem glúten! 🥥🍯\n\nQual dessas te chamou mais a atenção? Ou você gostaria de saber mais sobre alguma delas? 😉",
+    "sessao": "5f6f42df-104d-4045-ab2a-a1003f8df52e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 548,
+          "outputTokens": 145,
+          "totalTokens": 693
+        },
+        "metrics": {
+          "latencyMs": 816
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Sou vegano e tenho restrição a glúten. Qual pipoca doce você recomenda?",
+      "actual_output": "Olá! Que legal que você nos procura! 😊\n\nComo você é vegano e tem restrição a glúten, tenho ótimas recomendações para você! A nossa pipoca doce de **Chocolate Amargo e Sal Marinho** é incrivelmente saborosa e vegana, sem glúten! 🍫🌊 Ela combina o doce do chocolate com um toque salgado que é simplesmente viciante.\n\nOu, se preferir algo mais leve, a **Pipoca Doce de Coco e Mel** também é uma ótima opção, vegana e sem glúten! 🥥🍯\n\nQual dessas te chamou mais a atenção? Ou você gostaria de saber mais sobre alguma delas? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Recomendar pelo menos uma pipoca doce vegana e sem glúten na receita: Coco Queimado, Cacau 70% Vegana ou Canela Zero Açúcar.\nInformar que todos os produtos podem conter traços de amendoim, castanhas, leite, soja e trigo; não garantir segurança por ausência de ingrediente na receita.\nNão inventar produtos nem confundir declaração da receita com certificação ou garantia de ausência de traços.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Aviso geral de alérgenos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Apresentações"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Coco Queimado"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Cacau 70% Vegana"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Canela Zero Açúcar"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+            "secoes": [
+              "Quais produtos são veganos?"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 3.904539,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

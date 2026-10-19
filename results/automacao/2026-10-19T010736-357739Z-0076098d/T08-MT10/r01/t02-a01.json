@@ -1,0 +1,191 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-19T010736-357739Z-0076098d",
+  "caso_id": "T08-MT10",
+  "categoria": "varios_turnos",
+  "turno": 2,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "entrega porto alegre, cartão de crédito",
+    "sessao": "52237a85-4aa8-4ee2-9338-9105a2b5862e"
+  },
+  "criterio_esperado": "Sem desconto; produtos R$ 149,40; frete R$ 12,00; total R$ 161,40. Cidade basta para a tarifa local; não exigir CEP para informar esse frete.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Pedido mínimo"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Formas de pagamento"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Área de entrega, taxas e prazos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Frete grátis"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Cheddar"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Sem desconto; produtos R$ 149,40; frete R$ 12,00; total R$ 161,40. Cidade basta para a tarifa local; não exigir CEP para informar esse frete."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Pedido mínimo",
+      "texto": "## Pedido mínimo\n\nO valor mínimo de um pedido é de R$ 30,00 em produtos, antes dos descontos e sem contar a taxa de entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Formas de pagamento",
+      "texto": "## Formas de pagamento\n\n- Pix, com 5% de desconto sobre o valor dos produtos. O código Pix vale por 30 minutos.\n- Cartão de crédito, em até 3 vezes sem juros para pedidos acima de R$ 90,00.\n- Cartão de débito.\n- Não aceitamos boleto nem pagamento na entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Área de entrega, taxas e prazos",
+      "texto": "## Área de entrega, taxas e prazos\n\n| Região | Taxa de entrega | Prazo |\n|---|---|---|\n| Porto Alegre | R$ 12,00 | Até 2 dias úteis |\n| Região Metropolitana: Alvorada, Cachoeirinha, Canoas, Esteio, Gravataí, Novo Hamburgo, São Leopoldo e Viamão | R$ 18,00 | Até 3 dias úteis |\n| Outras cidades do Rio Grande do Sul | Calculada no site, por transportadora | De 3 a 6 dias úteis |\n| Outros estados | Calculada no site, por transportadora | De 5 a 10 dias úteis |\n\nO assistente virtual não calcula o frete por transportadora. Esse valor aparece no site, ao informar o CEP.\n\nNão fazemos entregas no mesmo dia nem com horário agendado.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Frete grátis",
+      "texto": "## Frete grátis\n\nPedidos com valor de produtos acima de R$ 150,00, já com descontos aplicados, têm frete grátis somente para Porto Alegre.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Cheddar",
+      "texto": "### Cheddar\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, manteiga, queijo cheddar em pó, páprica doce e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 119 kcal.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [
+    {
+      "papel": "user",
+      "conteudo": "quero 6 pipoca de cheddar média"
+    },
+    {
+      "papel": "assistant",
+      "conteudo": "Oi! Que legal que você escolheu a Pop & Doce! 🤩\n\n6 pipocas de cheddar médias, maravilha! Para acompanhar, que tal um pacote de nossas balas de caramelo crocante? É sucesso garantido! 😉\n\nVocê gostaria de confirmar essa quantidade e a cidade de entrega para calcular o frete? 😊"
+    }
+  ],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-19T01:10:37.634317+00:00",
+  "fim_utc": "2026-10-19T01:10:39.055470+00:00",
+  "duracao_http_segundos": 1.421034,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Beleza, Porto Alegre! 😊\n\nVamos lá, 6 pipocas de cheddar média e um pacote de balas de caramelo crocante.\n\nPara o cartão de crédito, vou verificar a taxa de entrega para você. Só um minutinho! ⏳",
+    "sessao": "52237a85-4aa8-4ee2-9338-9105a2b5862e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 623,
+          "outputTokens": 53,
+          "totalTokens": 676
+        },
+        "metrics": {
+          "latencyMs": 428
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "entrega porto alegre, cartão de crédito",
+      "actual_output": "Beleza, Porto Alegre! 😊\n\nVamos lá, 6 pipocas de cheddar média e um pacote de balas de caramelo crocante.\n\nPara o cartão de crédito, vou verificar a taxa de entrega para você. Só um minutinho! ⏳",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Sem desconto; produtos R$ 149,40; frete R$ 12,00; total R$ 161,40. Cidade basta para a tarifa local; não exigir CEP para informar esse frete.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Pedido mínimo"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Formas de pagamento"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Área de entrega, taxas e prazos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Frete grátis"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Cheddar"
+            ]
+          }
+        ],
+        "historico_conversa": [
+          {
+            "papel": "user",
+            "conteudo": "quero 6 pipoca de cheddar média"
+          },
+          {
+            "papel": "assistant",
+            "conteudo": "Oi! Que legal que você escolheu a Pop & Doce! 🤩\n\n6 pipocas de cheddar médias, maravilha! Para acompanhar, que tal um pacote de nossas balas de caramelo crocante? É sucesso garantido! 😉\n\nVocê gostaria de confirmar essa quantidade e a cidade de entrega para calcular o frete? 😊"
+          }
+        ],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 1.421034,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

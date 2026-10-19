@@ -1,0 +1,1813 @@
+{
+  "execucao": {
+    "id": "2026-10-19T010736-357739Z-0076098d",
+    "tarefa": "T15",
+    "modo": "api",
+    "versao_solicitada": "original",
+    "fase_base": "nao_confirmada",
+    "inicio_utc": "2026-10-19T01:07:36.453356+00:00",
+    "dataset_sha256": "0ef588a25b9428821451624d67f2e4a8abf6516c97c091aa838fe463ca181741",
+    "prompt_sha256": null,
+    "commit": "3317147cf7bdb73bdc5c2b67a2338070ecbbcb89",
+    "codigo_com_alteracoes_locais": true,
+    "codigo_sha256": {
+      "avaliacao.py": "ec60cbd6de938cb69e69ab5f6d7c17c9cc4b2e662eaa04c90cb940039d4bd07b",
+      "avaliar.py": "ca85d2682e4f685818692e61eae76577b4c039a8d9586568a9acccf39f8f9c84",
+      "calibrar.py": "75eb3d75276d6e4fc105c14988aed6adaeec4ae4b417e4dd1bf0f2f3c9a74f10",
+      "casos.py": "aa3f6b716a5d622540f4da9a80b5428eaaec5e99929dde3dfd88002c81c79369",
+      "cliente.py": "541070796366f84653fd0d49e4c6535de1eb09d56d1b1c94bc6a01cfcc022e0f",
+      "executar.py": "cd7d9200175a190634942f6a3daeedb2c66de459d2bb3c281a049cf10c391df7",
+      "funcional.py": "589c84d5ad9506dd889efb8bac3d454a40cb22d33beaa5de4c90e3cef37f12e9",
+      "golden.py": "a91a084d7e5c5d4fd13cceb356dc68c25fa883fb24ea72b2781849a47831ddb2",
+      "juiz.py": "78fa736c6fc3081d9dfadf2728c544aac48cbebc99a2b4713bc5aeefd9ea18c2",
+      "julgamentos.py": "82a89782095b5cb367c2a7e3670ad16aedf59d756f8999f7e17017721c5403c9",
+      "orcamento.py": "93b8e2bf0dee6dcf69bdb0682227c4d54ba4e05903796edd3759777e545aed22",
+      "registros.py": "d750f8bc3c9a5b3e3356930546dee34f241b6d8073c452ce02674497951a9ffb",
+      "test_executor.py": "e123664652d066200c8afc73c3ef7c215268c14a71e6d81f595a33c1e0abe7ed",
+      "test_golden.py": "03b8c15a3000d22f21da6fed34d7e42650c02a02193032824571880bf1659f8e",
+      "test_integracao_v03.py": "11c0c2ca6cac93e4130643d365d50a1bb4de3597dd539eff003cf61532f335f4",
+      "__init__.py": "ca6a5d8dffd240463c6aa8a71626659768529c79b2091a916f4a850d671f7aee"
+    },
+    "python": "3.12.10",
+    "deepeval": "4.3.0",
+    "repeticoes": 1,
+    "concorrencia": 1,
+    "retentativas_429": 0,
+    "timeout_segundos": 180,
+    "endpoint": "https://rm4naioqykxiti2srofnqz6hqa0ctlav.lambda-url.us-east-1.on.aws/",
+    "golden_sha256": "5602e95fe059b2e8e3241dac2a0e2fafaf16a9bae97769acc10113b363c58f8a",
+    "dataset_arquivo_sha256": "02002a6d2dc8e669be9ac70cc81e9e299e9482965f23229acbbd65c27993c4d4",
+    "dataset_status": "rascunho_para_revisao",
+    "casos_planejados": 48,
+    "turnos_planejados": 86,
+    "data_referencia_aplicada_ao_agente": false,
+    "finalidade": "execucao_golden_provisorio",
+    "estado": "finalizada",
+    "chamadas_api_tentadas": 86,
+    "fim_utc": "2026-10-19T01:11:15.275735+00:00"
+  },
+  "casos": [
+    {
+      "id": "T03-C09",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C09/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03-C10",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C10/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03-C11",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C11/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03-C13",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C13/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03-C15",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C15/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T03-C16",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T03-C16/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR04",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR04/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR05",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR05/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR07",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR07/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR09",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR09/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR10",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR10/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR11",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR11/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-AR12",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-AR12/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-MC01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC05",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-MC05/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC06",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-MC06/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-MC07",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-MC07/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-EX01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX01/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX01/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX01/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX01/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-EX02",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX02/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX02/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX02/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX02/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-EX02/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T05-PM03B",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T05-PM03B/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP13",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-CP13/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-CP11",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-CP11/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-CP11/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-EX02",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX02/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX02/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX02/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX02/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-EX09",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX09/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX09/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-EX09/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T06-PM05B",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-PM05B/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T06-PM05B/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-CEX01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-CEX01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-CEX02",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-CEX02/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-CEX03",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-CEX03/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-PRE01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-PRE01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-PM04A",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-PM04A/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T07-PM04B",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T07-PM04B/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT01/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT01/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT04",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT04/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT04/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT04/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT04/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT05",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT05/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT05/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT05/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT05/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT05/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT06",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT06/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT06/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT06/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT06/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT06/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT07",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT07/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT07/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT07/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT07/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT07/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T08-MT10",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT10/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT10/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 3,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT10/r01/t03-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 4,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT10/r01/t04-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 5,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T08-MT10/r01/t05-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T09-FDE01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T09-FDE01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T09-FDE05",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T09-FDE05/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T09-FDE04",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T09-FDE04/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10-ADV01",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T10-ADV01/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10-ADV02",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T10-ADV02/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10-ADV03",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T10-ADV03/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10-ADV04",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T10-ADV04/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T10-ADV05",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T10-ADV05/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-PM02A",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-PM02A/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-PM02A/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    },
+    {
+      "id": "T04-PM02B",
+      "origem_exploracao": null,
+      "repeticao": 1,
+      "resultado_execucao": "concluida",
+      "turnos": [
+        {
+          "turno": 1,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-PM02B/r01/t01-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        },
+        {
+          "turno": 2,
+          "tentativa": 1,
+          "http_status": 200,
+          "resultado_execucao": "concluida",
+          "avisos": [
+            "versao ausente; versão retornada não confirmada"
+          ],
+          "arquivo": "T04-PM02B/r01/t02-a01.json",
+          "deepeval": {
+            "metrica": "Contrato técnico da resposta API",
+            "score": 1.0,
+            "resultado_contrato": "passou",
+            "descricao": "Envelope técnico válido; conteúdo funcional não julgado."
+          }
+        }
+      ]
+    }
+  ],
+  "avaliacao_funcional": "nao_avaliado",
+  "observacao": "Integração T15; aprovação técnica não é aprovação funcional da Lia."
+}

@@ -1,0 +1,95 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-19T010736-357739Z-0076098d",
+  "caso_id": "T03-C11",
+  "categoria": "catalogo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Vocês têm Menta Zero Açúcar em pacote de 250g?"
+  },
+  "criterio_esperado": "Não, é vendida apenas no pacote de 100g",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Menta Zero Açúcar"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Não, é vendida apenas no pacote de 100g"
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Menta Zero Açúcar",
+      "texto": "### Menta Zero Açúcar\n\n- Preço: 100 g R$ 12,90. Vendida apenas no pacote de 100 g.\n- Ingredientes: xilitol, aroma natural de menta e estévia.\n- Sem açúcar adicionado.\n- Vegana: sim.\n- Aviso: o consumo excessivo pode ter efeito laxativo. Mantenha longe de cães, pois o xilitol é tóxico para eles.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-19T01:07:46.179122+00:00",
+  "fim_utc": "2026-10-19T01:07:49.891621+00:00",
+  "duracao_http_segundos": 3.711878,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi! 😊 Que bom ter você por aqui! \n\nSim, temos Menta Zero Açúcar em pacote de 250g! É super refrescante e perfeita para qualquer ocasião. 🥰\n\nQuer adicionar mais alguma coisa ao seu pedido? Balas artesanais combinam demais com pipoca, sabia? 😉",
+    "sessao": "af056986-d549-4d8f-8f4e-83cef6b56c70",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 546,
+          "outputTokens": 65,
+          "totalTokens": 611
+        },
+        "metrics": {
+          "latencyMs": 524
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Vocês têm Menta Zero Açúcar em pacote de 250g?",
+      "actual_output": "Oi! 😊 Que bom ter você por aqui! \n\nSim, temos Menta Zero Açúcar em pacote de 250g! É super refrescante e perfeita para qualquer ocasião. 🥰\n\nQuer adicionar mais alguma coisa ao seu pedido? Balas artesanais combinam demais com pipoca, sabia? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Não, é vendida apenas no pacote de 100g",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Menta Zero Açúcar"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 3.711878,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

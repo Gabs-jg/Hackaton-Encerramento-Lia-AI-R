@@ -1,0 +1,190 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-19T010736-357739Z-0076098d",
+  "caso_id": "T05-MC05",
+  "categoria": "montagem_calculo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Quero 1 Chocolate Belga Pequena e 1 Bala Menta Zero Açúcar 100 g, Porto Alegre, no Pix e sem cupom. Esse pedido atende ao mínimo? Detalhe os valores."
+  },
+  "criterio_esperado": "Chocolate Belga Pequena R$ 17,90 e Menta Zero Açúcar 100 g R$ 12,90; subtotal R$ 30,80; Pix R$ 1,54; líquido R$ 29,26. Pedido atende ao mínimo; frete R$ 12,00; total R$ 41,26.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Pedido mínimo"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Formas de pagamento"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Área de entrega, taxas e prazos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Frete grátis"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Chocolate Belga"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Menta Zero Açúcar"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Chocolate Belga Pequena R$ 17,90 e Menta Zero Açúcar 100 g R$ 12,90; subtotal R$ 30,80; Pix R$ 1,54; líquido R$ 29,26. Pedido atende ao mínimo; frete R$ 12,00; total R$ 41,26."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Pedido mínimo",
+      "texto": "## Pedido mínimo\n\nO valor mínimo de um pedido é de R$ 30,00 em produtos, antes dos descontos e sem contar a taxa de entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Formas de pagamento",
+      "texto": "## Formas de pagamento\n\n- Pix, com 5% de desconto sobre o valor dos produtos. O código Pix vale por 30 minutos.\n- Cartão de crédito, em até 3 vezes sem juros para pedidos acima de R$ 90,00.\n- Cartão de débito.\n- Não aceitamos boleto nem pagamento na entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Área de entrega, taxas e prazos",
+      "texto": "## Área de entrega, taxas e prazos\n\n| Região | Taxa de entrega | Prazo |\n|---|---|---|\n| Porto Alegre | R$ 12,00 | Até 2 dias úteis |\n| Região Metropolitana: Alvorada, Cachoeirinha, Canoas, Esteio, Gravataí, Novo Hamburgo, São Leopoldo e Viamão | R$ 18,00 | Até 3 dias úteis |\n| Outras cidades do Rio Grande do Sul | Calculada no site, por transportadora | De 3 a 6 dias úteis |\n| Outros estados | Calculada no site, por transportadora | De 5 a 10 dias úteis |\n\nO assistente virtual não calcula o frete por transportadora. Esse valor aparece no site, ao informar o CEP.\n\nNão fazemos entregas no mesmo dia nem com horário agendado.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Frete grátis",
+      "texto": "## Frete grátis\n\nPedidos com valor de produtos acima de R$ 150,00, já com descontos aplicados, têm frete grátis somente para Porto Alegre.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Chocolate Belga",
+      "texto": "### Chocolate Belga\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate belga 54% cacau (massa de cacau, açúcar, manteiga de cacau e lecitina de soja), açúcar e manteiga.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 130 kcal.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Menta Zero Açúcar",
+      "texto": "### Menta Zero Açúcar\n\n- Preço: 100 g R$ 12,90. Vendida apenas no pacote de 100 g.\n- Ingredientes: xilitol, aroma natural de menta e estévia.\n- Sem açúcar adicionado.\n- Vegana: sim.\n- Aviso: o consumo excessivo pode ter efeito laxativo. Mantenha longe de cães, pois o xilitol é tóxico para eles.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-19T01:08:32.444592+00:00",
+  "fim_utc": "2026-10-19T01:08:37.036300+00:00",
+  "duracao_http_segundos": 4.59138,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! Que bom ter você por aqui! 😊\n\nAdorei sua escolha: um Chocolate Belga Pequena e uma Bala Menta Zero Açúcar 100g são combinações deliciosas! 😉\n\nPara Porto Alegre, no Pix, sem cupom, você gostaria de saber se esse pedido atende o mínimo?\n\nVamos dar uma olhada nos valores:\n\n*   Chocolate Belga Pequeno: R$ 12,00\n*   Bala Menta Zero Açúcar 100g: R$ 18,00\n\n**Subtotal: R$ 30,00**\n\nSua entrega em Porto Alegre tem taxa fixa de R$ 10,00.\n\n**Total: R$ 40,00** \n\nPronto para finalizar seu pedido no nosso site? ➡️ www.popedoce.example",
+    "sessao": "fabfa117-98d5-4d6c-8641-a34abce5380e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 576,
+          "outputTokens": 186,
+          "totalTokens": 762
+        },
+        "metrics": {
+          "latencyMs": 977
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Quero 1 Chocolate Belga Pequena e 1 Bala Menta Zero Açúcar 100 g, Porto Alegre, no Pix e sem cupom. Esse pedido atende ao mínimo? Detalhe os valores.",
+      "actual_output": "Olá! Que bom ter você por aqui! 😊\n\nAdorei sua escolha: um Chocolate Belga Pequena e uma Bala Menta Zero Açúcar 100g são combinações deliciosas! 😉\n\nPara Porto Alegre, no Pix, sem cupom, você gostaria de saber se esse pedido atende o mínimo?\n\nVamos dar uma olhada nos valores:\n\n*   Chocolate Belga Pequeno: R$ 12,00\n*   Bala Menta Zero Açúcar 100g: R$ 18,00\n\n**Subtotal: R$ 30,00**\n\nSua entrega em Porto Alegre tem taxa fixa de R$ 10,00.\n\n**Total: R$ 40,00** \n\nPronto para finalizar seu pedido no nosso site? ➡️ www.popedoce.example",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Chocolate Belga Pequena R$ 17,90 e Menta Zero Açúcar 100 g R$ 12,90; subtotal R$ 30,80; Pix R$ 1,54; líquido R$ 29,26. Pedido atende ao mínimo; frete R$ 12,00; total R$ 41,26.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Pedido mínimo"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Formas de pagamento"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Área de entrega, taxas e prazos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Frete grátis"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Chocolate Belga"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Menta Zero Açúcar"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 4.59138,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}
