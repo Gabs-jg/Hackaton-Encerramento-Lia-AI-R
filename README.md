@@ -28,6 +28,7 @@ Premissas e limitações do modelo original:
 
 ## Links Úteis & Organização
 
+- [Relatório Final com Parecer No-Go](https://github.com/Gabs-jg/Hackaton-Encerramento-Lia-AI-R/blob/main/docs/RELAT%C3%93RIO%20FINAL%20LIA%20-%20NO-GO%20(Squad%202).pdf)
 - [Quadro de Planejamento e Decisões da Squad (Trello)](https://trello.com/b/PdUBDmTM)
 - [Quadro de Execução de Tarefas (Trello)](https://trello.com/b/M4EHkt4l)
 - [Passo a Passo para Validação da Equipe (Trello)](https://trello.com/c/mlQrpA0X)
