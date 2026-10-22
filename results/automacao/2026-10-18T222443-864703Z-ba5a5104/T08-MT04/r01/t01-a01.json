@@ -1,0 +1,262 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T08-MT04",
+  "categoria": "varios_turnos",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "quero o kit festa"
+  },
+  "criterio_esperado": "Informar Kit Festa por R$ 219,90: 4 pipocas Grandes e 4 pacotes de 250 g de balas sortidas. Sabores à escolha, sem Pistache/sazonais e sem substituição para baratear. Pedido com pelo menos 2 dias úteis de antecedência; solicitar escolhas/dados faltantes.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Pedido mínimo"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Formas de pagamento"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Área de entrega, taxas e prazos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Frete grátis"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Descontos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Cupons públicos vigentes"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Cupons encerrados"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secoes": [
+        "Kit Festa"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secoes": [
+        "Regras gerais dos kits"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Promoções"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar Kit Festa por R$ 219,90: 4 pipocas Grandes e 4 pacotes de 250 g de balas sortidas. Sabores à escolha, sem Pistache/sazonais e sem substituição para baratear. Pedido com pelo menos 2 dias úteis de antecedência; solicitar escolhas/dados faltantes."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Pedido mínimo",
+      "texto": "## Pedido mínimo\n\nO valor mínimo de um pedido é de R$ 30,00 em produtos, antes dos descontos e sem contar a taxa de entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Formas de pagamento",
+      "texto": "## Formas de pagamento\n\n- Pix, com 5% de desconto sobre o valor dos produtos. O código Pix vale por 30 minutos.\n- Cartão de crédito, em até 3 vezes sem juros para pedidos acima de R$ 90,00.\n- Cartão de débito.\n- Não aceitamos boleto nem pagamento na entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Área de entrega, taxas e prazos",
+      "texto": "## Área de entrega, taxas e prazos\n\n| Região | Taxa de entrega | Prazo |\n|---|---|---|\n| Porto Alegre | R$ 12,00 | Até 2 dias úteis |\n| Região Metropolitana: Alvorada, Cachoeirinha, Canoas, Esteio, Gravataí, Novo Hamburgo, São Leopoldo e Viamão | R$ 18,00 | Até 3 dias úteis |\n| Outras cidades do Rio Grande do Sul | Calculada no site, por transportadora | De 3 a 6 dias úteis |\n| Outros estados | Calculada no site, por transportadora | De 5 a 10 dias úteis |\n\nO assistente virtual não calcula o frete por transportadora. Esse valor aparece no site, ao informar o CEP.\n\nNão fazemos entregas no mesmo dia nem com horário agendado.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Frete grátis",
+      "texto": "## Frete grátis\n\nPedidos com valor de produtos acima de R$ 150,00, já com descontos aplicados, têm frete grátis somente para Porto Alegre.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Descontos",
+      "texto": "## Descontos\n\nOs únicos descontos possíveis são o desconto do Pix, os cupons públicos vigentes e a promoção vigente. O atendimento não concede descontos extras.\n\nO desconto do Pix não pode ser combinado com cupons.\n\nA promoção vigente vale apenas para pipocas compradas avulsas, fora de kits e da assinatura.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Cupons públicos vigentes",
+      "texto": "## Cupons públicos vigentes\n\n- PRIMEIRACOMPRA: 10% sobre o valor dos produtos, válido uma única vez por cliente, na primeira compra.\n- PIPOCA20: 20% sobre o valor dos produtos, para pedidos com produtos acima de R$ 200,00.\n- É permitido apenas um cupom por pedido.\n- Cupons não valem para pedidos corporativos nem para a assinatura.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Cupons encerrados",
+      "texto": "## Cupons encerrados\n\n- NATAL2025: encerrado em 31/12/2025.\n- BLACKPOP: encerrado em 30/11/2025.\n- CARNAPOP: encerrado em 28/02/2026.\n- PASCOAPOP: encerrado em 05/04/2026.\n\nCupons encerrados não podem ser aplicados.\n"
+    },
+    {
+      "fonte": "K",
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secao": "Kit Festa",
+      "texto": "### Kit Festa\n\n- Preço: R$ 219,90\n- Inclui: 4 pipocas Grandes de sabores à escolha e 4 pacotes de 250 g de balas sortidas.\n- Serve até 20 pessoas.\n- O pedido deve ser feito com pelo menos 2 dias úteis de antecedência.\n"
+    },
+    {
+      "fonte": "K",
+      "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+      "secao": "Regras gerais dos kits",
+      "texto": "## Regras gerais dos kits\n\n- A pipoca Pistache e as edições sazonais não fazem parte de nenhum kit.\n- Os sabores dos kits são escolhidos pelo cliente no momento do pedido.\n- Não é possível trocar itens do kit por outros produtos nem retirar itens para reduzir o preço.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Promoções",
+      "texto": "## Promoções\n\n### Vigente\n\n- Na compra de 2 pipocas Grandes de qualquer sabor, o cliente ganha 1 pacote de 100 g de balas de goma à escolha. Válida até 31/12/2026.\n\n### Encerradas\n\n- Leve 3, pague 2 em pacotes de balas de 100 g: encerrada em 30/09/2026.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:26:54.901894+00:00",
+  "fim_utc": "2026-10-18T22:26:57.040978+00:00",
+  "duracao_http_segundos": 2.139287,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi! 😊 Seja muito bem-vindo(a) à Pop & Doce Pipocaria Gourmet! ✨\n\nQue legal que você está querendo montar um kit festa! 🥰 Temos opções incríveis! Para te ajudar a escolher, qual tipo de pipoca você prefere? Temos sabores clássicos, doces e salgados, com toppings diferenciados. E quais balas artesanais você gostaria de incluir no kit? 😉",
+    "sessao": "11fb99af-c20c-4751-a6db-2f1b5e08ce82",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 533,
+          "outputTokens": 86,
+          "totalTokens": 619
+        },
+        "metrics": {
+          "latencyMs": 533
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "quero o kit festa",
+      "actual_output": "Oi! 😊 Seja muito bem-vindo(a) à Pop & Doce Pipocaria Gourmet! ✨\n\nQue legal que você está querendo montar um kit festa! 🥰 Temos opções incríveis! Para te ajudar a escolher, qual tipo de pipoca você prefere? Temos sabores clássicos, doces e salgados, com toppings diferenciados. E quais balas artesanais você gostaria de incluir no kit? 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar Kit Festa por R$ 219,90: 4 pipocas Grandes e 4 pacotes de 250 g de balas sortidas. Sabores à escolha, sem Pistache/sazonais e sem substituição para baratear. Pedido com pelo menos 2 dias úteis de antecedência; solicitar escolhas/dados faltantes.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Pedido mínimo"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Formas de pagamento"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Área de entrega, taxas e prazos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Frete grátis"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Descontos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Cupons públicos vigentes"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Cupons encerrados"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+            "secoes": [
+              "Kit Festa"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/03-kits-e-presentes.md",
+            "secoes": [
+              "Regras gerais dos kits"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Promoções"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 2.139287,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

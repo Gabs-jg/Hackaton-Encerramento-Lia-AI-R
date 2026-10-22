@@ -1,0 +1,95 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T04-AR10",
+  "categoria": "alergenos_restricoes",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Sou vegano. A bala Gengibre com Mel é adequada para mim?"
+  },
+  "criterio_esperado": "Informar que não é vegana, pois contém mel.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Gengibre com Mel"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar que não é vegana, pois contém mel."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Gengibre com Mel",
+      "texto": "### Gengibre com Mel\n\n- Preços: 100 g R$ 9,90 · 250 g R$ 22,90\n- Ingredientes: açúcar, xarope de glicose, mel e gengibre.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: não. Contém mel.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:25:19.946394+00:00",
+  "fim_utc": "2026-10-18T22:25:23.744722+00:00",
+  "duracao_http_segundos": 3.798549,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! Que legal que você nos procurou! 😊\n\nÓtima pergunta! Nossa bala Gengibre com Mel é 100% vegana, feita com ingredientes naturais e sem nenhum ingrediente de origem animal. \n\nFicou com vontade de experimentar uma pipoca e uma bala para acompanhar? 😉 Temos pacotes que combinam super bem!\n",
+    "sessao": "f177f61a-7929-4269-87b7-2e6144f33de5",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 545,
+          "outputTokens": 76,
+          "totalTokens": 621
+        },
+        "metrics": {
+          "latencyMs": 552
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Sou vegano. A bala Gengibre com Mel é adequada para mim?",
+      "actual_output": "Olá! Que legal que você nos procurou! 😊\n\nÓtima pergunta! Nossa bala Gengibre com Mel é 100% vegana, feita com ingredientes naturais e sem nenhum ingrediente de origem animal. \n\nFicou com vontade de experimentar uma pipoca e uma bala para acompanhar? 😉 Temos pacotes que combinam super bem!\n",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar que não é vegana, pois contém mel.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Gengibre com Mel"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 3.798549,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

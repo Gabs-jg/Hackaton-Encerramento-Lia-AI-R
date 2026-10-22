@@ -1,0 +1,149 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T163235-802208Z-da5fc017",
+  "caso_id": "T04-AR05",
+  "categoria": "alergenos_restricoes",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Tenho restrição a glúten. Posso comer a pipoca Cookies & Cream?"
+  },
+  "criterio_esperado": "Informar que não é adequada à restrição, pois contém biscoito com farinha de trigo e glúten.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Aviso geral de alérgenos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Apresentações"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Cookies & Cream"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secoes": [
+        "As pipocas têm glúten?"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar que não é adequada à restrição, pois contém biscoito com farinha de trigo e glúten."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Aviso geral de alérgenos",
+      "texto": "## Aviso geral de alérgenos\n\nNossa cozinha manipula amendoim, castanhas (incluindo pistache), leite, soja e trigo. Todos os produtos podem conter traços desses alérgenos.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Apresentações",
+      "texto": "## Apresentações\n\nAs balas são vendidas em pacotes de 100 g ou 250 g, exceto quando indicado no produto.\n\nO aviso geral de alérgenos do catálogo de pipocas vale também para as balas.\n\nBalas duras e pirulitos não são indicados para crianças menores de 4 anos, por risco de engasgo.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Cookies & Cream",
+      "texto": "### Cookies & Cream\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate branco, biscoito de chocolate triturado (farinha de trigo, açúcar, cacau e gordura vegetal) e açúcar.\n- Contém: leite, soja e trigo.\n- Sem glúten: não. Contém glúten.\n- Vegana: não.\n- Porção de 25 g: 132 kcal.\n"
+    },
+    {
+      "fonte": "FAQ",
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secao": "As pipocas têm glúten?",
+      "texto": "### As pipocas têm glúten?\n\nO milho é naturalmente sem glúten. A pipoca Cookies & Cream contém trigo. Como a cozinha manipula trigo, todos os produtos podem conter traços.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T16:33:09.909611+00:00",
+  "fim_utc": "2026-10-18T16:33:13.458416+00:00",
+  "duracao_http_segundos": 3.548367,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! 😊 Eu sou a Lia, sua assistente de vendas da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! \n\nMe conta, o que você está procurando hoje? Pipoca deliciosa? Balas artesanais? Ou quem sabe montar um kit especial? 😉\n",
+    "sessao": "673c9df2-148f-478f-a109-abc546ba009c",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 548,
+          "outputTokens": 63,
+          "totalTokens": 611
+        },
+        "metrics": {
+          "latencyMs": 433
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Tenho restrição a glúten. Posso comer a pipoca Cookies & Cream?",
+      "actual_output": "Olá! 😊 Eu sou a Lia, sua assistente de vendas da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! \n\nMe conta, o que você está procurando hoje? Pipoca deliciosa? Balas artesanais? Ou quem sabe montar um kit especial? 😉\n",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar que não é adequada à restrição, pois contém biscoito com farinha de trigo e glúten.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Aviso geral de alérgenos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Apresentações"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Cookies & Cream"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+            "secoes": [
+              "As pipocas têm glúten?"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 3.548367,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

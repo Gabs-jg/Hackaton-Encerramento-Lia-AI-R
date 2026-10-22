@@ -1,0 +1,208 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T05-MC07",
+  "categoria": "montagem_calculo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala de Café 100 g. Porto Alegre, Pix, sem cupom. Detalhe o frete e o total."
+  },
+  "criterio_esperado": "4 × R$ 30,90 + R$ 24,90 + R$ 8,90 = R$ 157,40. Pix R$ 7,87; líquido R$ 149,53; frete R$ 12,00; total R$ 161,53. Não usar o subtotal para conceder isenção.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Pedido mínimo"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Formas de pagamento"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Área de entrega, taxas e prazos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Frete grátis"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Toffee de Caramelo Salgado"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Bala de Banana"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Café"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "4 × R$ 30,90 + R$ 24,90 + R$ 8,90 = R$ 157,40. Pix R$ 7,87; líquido R$ 149,53; frete R$ 12,00; total R$ 161,53. Não usar o subtotal para conceder isenção."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Pedido mínimo",
+      "texto": "## Pedido mínimo\n\nO valor mínimo de um pedido é de R$ 30,00 em produtos, antes dos descontos e sem contar a taxa de entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Formas de pagamento",
+      "texto": "## Formas de pagamento\n\n- Pix, com 5% de desconto sobre o valor dos produtos. O código Pix vale por 30 minutos.\n- Cartão de crédito, em até 3 vezes sem juros para pedidos acima de R$ 90,00.\n- Cartão de débito.\n- Não aceitamos boleto nem pagamento na entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Área de entrega, taxas e prazos",
+      "texto": "## Área de entrega, taxas e prazos\n\n| Região | Taxa de entrega | Prazo |\n|---|---|---|\n| Porto Alegre | R$ 12,00 | Até 2 dias úteis |\n| Região Metropolitana: Alvorada, Cachoeirinha, Canoas, Esteio, Gravataí, Novo Hamburgo, São Leopoldo e Viamão | R$ 18,00 | Até 3 dias úteis |\n| Outras cidades do Rio Grande do Sul | Calculada no site, por transportadora | De 3 a 6 dias úteis |\n| Outros estados | Calculada no site, por transportadora | De 5 a 10 dias úteis |\n\nO assistente virtual não calcula o frete por transportadora. Esse valor aparece no site, ao informar o CEP.\n\nNão fazemos entregas no mesmo dia nem com horário agendado.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Frete grátis",
+      "texto": "## Frete grátis\n\nPedidos com valor de produtos acima de R$ 150,00, já com descontos aplicados, têm frete grátis somente para Porto Alegre.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Toffee de Caramelo Salgado",
+      "texto": "### Toffee de Caramelo Salgado\n\n- Preços: 100 g R$ 13,90 · 250 g R$ 30,90\n- Ingredientes: açúcar, creme de leite, manteiga e flor de sal.\n- Contém: leite.\n- Vegana: não.\n- Embaladas individualmente.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Bala de Banana",
+      "texto": "### Bala de Banana\n\n- Preços: 100 g R$ 10,90 · 250 g R$ 24,90\n- Ingredientes: banana, açúcar e suco de limão.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: sim.\n- Embaladas individualmente.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Café",
+      "texto": "### Café\n\n- Preços: 100 g R$ 8,90 · 250 g R$ 19,90\n- Ingredientes: açúcar, xarope de glicose e café solúvel.\n- Não leva ingredientes alergênicos na receita.\n- Vegana: sim.\n- Contém cafeína.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:25:37.433021+00:00",
+  "fim_utc": "2026-10-18T22:25:40.343236+00:00",
+  "duracao_http_segundos": 2.90999,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! Que delícia que você escolheu a Pop & Doce! 😊\n\nEntão, você quer:\n\n*   4 Toffee de Caramelo Salgado (250g)\n*   1 Bala de Banana (250g)\n*   1 Bala de Café (100g)\n\nPerfeito! Para Porto Alegre, o frete é de R$ 15,00. 🚚\n\n**Resumo do seu pedido:**\n\n*   Toffee de Caramelo Salgado (250g): R$ 35,00\n*   Bala de Banana (250g): R$ 20,00\n*   Bala de Café (100g): R$ 15,00\n*   Frete: R$ 15,00\n\n**Total: R$ 70,00**\n\nPara finalizar, que tal levar um pacote de nossas Balinhas de Coco para acompanhar a pipoca? 🥥😋\n\nO pedido é finalizado no nosso site: [www.popedoce.example](http://www.popedoce.example). Lá você informa o endereço completo e faz o pagamento via Pix! 😉",
+    "sessao": "92f5c2c4-8e22-4069-b842-afc05684d91b",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 588,
+          "outputTokens": 260,
+          "totalTokens": 848
+        },
+        "metrics": {
+          "latencyMs": 1391
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Quero 4 Toffee de Caramelo Salgado 250 g, 1 Bala de Banana 250 g e 1 Bala de Café 100 g. Porto Alegre, Pix, sem cupom. Detalhe o frete e o total.",
+      "actual_output": "Olá! Que delícia que você escolheu a Pop & Doce! 😊\n\nEntão, você quer:\n\n*   4 Toffee de Caramelo Salgado (250g)\n*   1 Bala de Banana (250g)\n*   1 Bala de Café (100g)\n\nPerfeito! Para Porto Alegre, o frete é de R$ 15,00. 🚚\n\n**Resumo do seu pedido:**\n\n*   Toffee de Caramelo Salgado (250g): R$ 35,00\n*   Bala de Banana (250g): R$ 20,00\n*   Bala de Café (100g): R$ 15,00\n*   Frete: R$ 15,00\n\n**Total: R$ 70,00**\n\nPara finalizar, que tal levar um pacote de nossas Balinhas de Coco para acompanhar a pipoca? 🥥😋\n\nO pedido é finalizado no nosso site: [www.popedoce.example](http://www.popedoce.example). Lá você informa o endereço completo e faz o pagamento via Pix! 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "4 × R$ 30,90 + R$ 24,90 + R$ 8,90 = R$ 157,40. Pix R$ 7,87; líquido R$ 149,53; frete R$ 12,00; total R$ 161,53. Não usar o subtotal para conceder isenção.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Pedido mínimo"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Formas de pagamento"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Área de entrega, taxas e prazos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Frete grátis"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Toffee de Caramelo Salgado"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Bala de Banana"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Café"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 2.90999,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

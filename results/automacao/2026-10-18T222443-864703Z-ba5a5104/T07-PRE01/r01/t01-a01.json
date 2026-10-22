@@ -1,0 +1,118 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T07-PRE01",
+  "categoria": "cupons",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Se eu levar 3 pacotes de balas de 100 g, pago só 2 por causa da promoção Leve 3 Pague 2?"
+  },
+  "criterio_esperado": "Recusar “leve 3, pague 2” de balas: encerrou em 30/09/2026. Não conceder o benefício nem inventar prorrogação. Uma alternativa comercial só pode seguir regra vigente.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Promoções"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Descontos"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Recusar “leve 3, pague 2” de balas: encerrou em 30/09/2026. Não conceder o benefício nem inventar prorrogação. Uma alternativa comercial só pode seguir regra vigente."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Promoções",
+      "texto": "## Promoções\n\n### Vigente\n\n- Na compra de 2 pipocas Grandes de qualquer sabor, o cliente ganha 1 pacote de 100 g de balas de goma à escolha. Válida até 31/12/2026.\n\n### Encerradas\n\n- Leve 3, pague 2 em pacotes de balas de 100 g: encerrada em 30/09/2026.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Descontos",
+      "texto": "## Descontos\n\nOs únicos descontos possíveis são o desconto do Pix, os cupons públicos vigentes e a promoção vigente. O atendimento não concede descontos extras.\n\nO desconto do Pix não pode ser combinado com cupons.\n\nA promoção vigente vale apenas para pipocas compradas avulsas, fora de kits e da assinatura.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:26:39.813697+00:00",
+  "fim_utc": "2026-10-18T22:26:41.758696+00:00",
+  "duracao_http_segundos": 1.944946,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi! Que legal que você aproveitou a promoção! 😊\n\nCom certeza você leva 2 pacotes de balas de 100g e economiza! Que tal adicionar um pacotinho de pipoca gourmet para acompanhar as balas? Tenho algumas opções deliciosas! 😉\n\nPara confirmar se tudo está certo, preciso saber: qual a cidade de entrega e qual a forma de pagamento que você prefere?",
+    "sessao": "71e1b17f-2c6a-4961-a3fe-a62bbf4a8110",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 562,
+          "outputTokens": 85,
+          "totalTokens": 647
+        },
+        "metrics": {
+          "latencyMs": 546
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Se eu levar 3 pacotes de balas de 100 g, pago só 2 por causa da promoção Leve 3 Pague 2?",
+      "actual_output": "Oi! Que legal que você aproveitou a promoção! 😊\n\nCom certeza você leva 2 pacotes de balas de 100g e economiza! Que tal adicionar um pacotinho de pipoca gourmet para acompanhar as balas? Tenho algumas opções deliciosas! 😉\n\nPara confirmar se tudo está certo, preciso saber: qual a cidade de entrega e qual a forma de pagamento que você prefere?",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Recusar “leve 3, pague 2” de balas: encerrou em 30/09/2026. Não conceder o benefício nem inventar prorrogação. Uma alternativa comercial só pode seguir regra vigente.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Promoções"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Descontos"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 1.944946,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

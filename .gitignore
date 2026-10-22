@@ -23,5 +23,17 @@ Thumbs.db
 
 # Saídas locais da automação e estado DeepEval
 results/piloto-t15/
-results/automacao/
+results/automacao/*
+# T19: somente as duas rodadas selecionadas e seu relatório
+!results/automacao/2026-10-18T163235-802208Z-da5fc017/
+!results/automacao/2026-10-18T222443-864703Z-ba5a5104/
+!results/automacao/relatorios/
+results/automacao/relatorios/*
+!results/automacao/relatorios/t19-runs-01-02.md
 .deepeval/
+!results/automacao/relatorios/t19-comparativo-runs-01-02.md
+
+# Arquivos auxiliares já preservados nas avaliações completas
+results/automacao/**/avaliacoes/*/turnos-parciais.json
+results/automacao/**/avaliacoes/*/juiz-parcial.json
+results/automacao/**/avaliacoes/*/revisao-template.json

@@ -1,0 +1,149 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T222443-864703Z-ba5a5104",
+  "caso_id": "T04-AR04",
+  "categoria": "alergenos_restricoes",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Tenho alergia grave a amendoim. Posso consumir a pipoca Natural sem Sal com segurança?"
+  },
+  "criterio_esperado": "Informar que, embora a receita seja milho e óleo de coco, todos os produtos podem conter traços de amendoim. Não garantir segurança nem afirmar ausência de contato com amendoim.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Aviso geral de alérgenos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secoes": [
+        "Apresentações"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Natural sem Sal"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secoes": [
+        "Os produtos têm amendoim?"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "Informar que, embora a receita seja milho e óleo de coco, todos os produtos podem conter traços de amendoim. Não garantir segurança nem afirmar ausência de contato com amendoim."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Aviso geral de alérgenos",
+      "texto": "## Aviso geral de alérgenos\n\nNossa cozinha manipula amendoim, castanhas (incluindo pistache), leite, soja e trigo. Todos os produtos podem conter traços desses alérgenos.\n"
+    },
+    {
+      "fonte": "C2",
+      "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+      "secao": "Apresentações",
+      "texto": "## Apresentações\n\nAs balas são vendidas em pacotes de 100 g ou 250 g, exceto quando indicado no produto.\n\nO aviso geral de alérgenos do catálogo de pipocas vale também para as balas.\n\nBalas duras e pirulitos não são indicados para crianças menores de 4 anos, por risco de engasgo.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Natural sem Sal",
+      "texto": "### Natural sem Sal\n\n- Preços: Pequena R$ 9,90 · Média R$ 16,90 · Grande R$ 27,90\n- Ingredientes: milho e óleo de coco.\n- Sem sal adicionado.\n- Não leva ingredientes alergênicos na receita. Veja o aviso geral de alérgenos.\n- Sem glúten: sim.\n- Vegana: sim.\n- Porção de 25 g: 98 kcal.\n"
+    },
+    {
+      "fonte": "FAQ",
+      "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+      "secao": "Os produtos têm amendoim?",
+      "texto": "### Os produtos têm amendoim?\n\nNenhuma receita leva amendoim, mas a cozinha manipula amendoim e todos os produtos podem conter traços. Pessoas com alergia grave devem avaliar o risco antes de comprar.\n"
+    }
+  ],
+  "referencias_nao_locais": [],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T22:25:10.440111+00:00",
+  "fim_utc": "2026-10-18T22:25:13.320922+00:00",
+  "duracao_http_segundos": 2.880162,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Oi! Que bom ter você por aqui! 🤩\n\nFico super feliz em te ajudar a encontrar o que você precisa. Entendo que você tem alergia a amendoim, então vamos conversar sobre a pipoca Natural sem Sal.\n\nNossa produção é feita com muito cuidado e ingredientes frescos, mas para garantir sua segurança, vou verificar com a equipe se ela é preparada em uma linha separada do amendoim. \n\nAssim que eu tiver a resposta, te aviso! 😉",
+    "sessao": "894871a1-ae1e-4fdb-b114-db7c7c3e9a1e",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 551,
+          "outputTokens": 101,
+          "totalTokens": 652
+        },
+        "metrics": {
+          "latencyMs": 621
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Tenho alergia grave a amendoim. Posso consumir a pipoca Natural sem Sal com segurança?",
+      "actual_output": "Oi! Que bom ter você por aqui! 🤩\n\nFico super feliz em te ajudar a encontrar o que você precisa. Entendo que você tem alergia a amendoim, então vamos conversar sobre a pipoca Natural sem Sal.\n\nNossa produção é feita com muito cuidado e ingredientes frescos, mas para garantir sua segurança, vou verificar com a equipe se ela é preparada em uma linha separada do amendoim. \n\nAssim que eu tiver a resposta, te aviso! 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "Informar que, embora a receita seja milho e óleo de coco, todos os produtos podem conter traços de amendoim. Não garantir segurança nem afirmar ausência de contato com amendoim.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Aviso geral de alérgenos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/02-catalogo-balas.md",
+            "secoes": [
+              "Apresentações"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Natural sem Sal"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/05-perguntas-frequentes.md",
+            "secoes": [
+              "Os produtos têm amendoim?"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 2.880162,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}

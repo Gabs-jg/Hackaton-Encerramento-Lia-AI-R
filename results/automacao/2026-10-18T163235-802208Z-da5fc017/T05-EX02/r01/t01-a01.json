@@ -1,0 +1,208 @@
+{
+  "formato": "lia-evidencia-t15-v1",
+  "execucao_id": "2026-10-18T163235-802208Z-da5fc017",
+  "caso_id": "T05-EX02",
+  "categoria": "montagem_calculo",
+  "turno": 1,
+  "repeticao": 1,
+  "tentativa": 1,
+  "modo": "api",
+  "versao_solicitada": "original",
+  "fase_base": "nao_confirmada",
+  "requisicao": {
+    "mensagem": "Faça um orçamento sem comprar: 3 Chocolate Belga Grandes e 1 Caramelo Clássico Pequena, em Porto Alegre, no Pix e sem cupom. Sem adicionar itens pagos extras. Detalhe tudo."
+  },
+  "criterio_esperado": "3 × R$ 49,90 + R$ 14,90 = R$ 164,60; Pix R$ 8,23; líquido R$ 156,37; frete grátis; total R$ 156,37. Há elegibilidade à promoção das Grandes avulsas: brinde sem cobrança; não adicionar itens pagos nem concluir compra.",
+  "referencias": [
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Pedido mínimo"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Formas de pagamento"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Área de entrega, taxas e prazos"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Frete grátis"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Chocolate Belga"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secoes": [
+        "Caramelo Clássico"
+      ]
+    },
+    {
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secoes": [
+        "Promoções"
+      ]
+    }
+  ],
+  "criterios_esperados": [
+    "3 × R$ 49,90 + R$ 14,90 = R$ 164,60; Pix R$ 8,23; líquido R$ 156,37; frete grátis; total R$ 156,37. Há elegibilidade à promoção das Grandes avulsas: brinde sem cobrança; não adicionar itens pagos nem concluir compra."
+  ],
+  "contexto_oficial": [
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Pedido mínimo",
+      "texto": "## Pedido mínimo\n\nO valor mínimo de um pedido é de R$ 30,00 em produtos, antes dos descontos e sem contar a taxa de entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Formas de pagamento",
+      "texto": "## Formas de pagamento\n\n- Pix, com 5% de desconto sobre o valor dos produtos. O código Pix vale por 30 minutos.\n- Cartão de crédito, em até 3 vezes sem juros para pedidos acima de R$ 90,00.\n- Cartão de débito.\n- Não aceitamos boleto nem pagamento na entrega.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Área de entrega, taxas e prazos",
+      "texto": "## Área de entrega, taxas e prazos\n\n| Região | Taxa de entrega | Prazo |\n|---|---|---|\n| Porto Alegre | R$ 12,00 | Até 2 dias úteis |\n| Região Metropolitana: Alvorada, Cachoeirinha, Canoas, Esteio, Gravataí, Novo Hamburgo, São Leopoldo e Viamão | R$ 18,00 | Até 3 dias úteis |\n| Outras cidades do Rio Grande do Sul | Calculada no site, por transportadora | De 3 a 6 dias úteis |\n| Outros estados | Calculada no site, por transportadora | De 5 a 10 dias úteis |\n\nO assistente virtual não calcula o frete por transportadora. Esse valor aparece no site, ao informar o CEP.\n\nNão fazemos entregas no mesmo dia nem com horário agendado.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Frete grátis",
+      "texto": "## Frete grátis\n\nPedidos com valor de produtos acima de R$ 150,00, já com descontos aplicados, têm frete grátis somente para Porto Alegre.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Chocolate Belga",
+      "texto": "### Chocolate Belga\n\n- Preços: Pequena R$ 17,90 · Média R$ 29,90 · Grande R$ 49,90\n- Ingredientes: milho, chocolate belga 54% cacau (massa de cacau, açúcar, manteiga de cacau e lecitina de soja), açúcar e manteiga.\n- Contém: leite e soja.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 130 kcal.\n"
+    },
+    {
+      "fonte": "C1",
+      "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+      "secao": "Caramelo Clássico",
+      "texto": "### Caramelo Clássico\n\n- Preços: Pequena R$ 14,90 · Média R$ 24,90 · Grande R$ 39,90\n- Ingredientes: milho, açúcar, manteiga, creme de leite e sal.\n- Contém: leite.\n- Sem glúten: sim.\n- Vegana: não.\n- Porção de 25 g: 120 kcal.\n"
+    },
+    {
+      "fonte": "P",
+      "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+      "secao": "Promoções",
+      "texto": "## Promoções\n\n### Vigente\n\n- Na compra de 2 pipocas Grandes de qualquer sabor, o cliente ganha 1 pacote de 100 g de balas de goma à escolha. Válida até 31/12/2026.\n\n### Encerradas\n\n- Leve 3, pague 2 em pacotes de balas de 100 g: encerrada em 30/09/2026.\n"
+    }
+  ],
+  "referencias_nao_locais": [
+    {
+      "fonte": "E",
+      "secao": "p. 8–9 — O que deverá ser entregue: verificação de ferramentas em pedidos e cupons"
+    }
+  ],
+  "pontos_de_revisao": [],
+  "data_referencia": "2026-10-16",
+  "historico_conversa": [],
+  "resultado_funcional": "nao_avaliado",
+  "inicio_utc": "2026-10-18T16:34:21.297196+00:00",
+  "fim_utc": "2026-10-18T16:34:23.220370+00:00",
+  "duracao_http_segundos": 1.922578,
+  "http_status": 200,
+  "content_type": "application/json; charset=utf-8",
+  "erro_tecnico": null,
+  "resposta_api": {
+    "resposta": "Olá! 👋 Eu sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! 😊\n\nEntão, você quer montar um pedido especial? Que legal! Para começar, me diga:\n\n*   Quantas unidades do Chocolate Belga Grande você gostaria?\n*   E do Caramelo Clássico Pequeno, quantas unidades?\n\nAssim que eu tiver essas informações, já posso te mostrar o valor total! 😉",
+    "sessao": "2cf385c6-5e3f-47aa-a5f3-5741b04f3fe5",
+    "ferramentas": [],
+    "metricas": [
+      {
+        "usage": {
+          "inputTokens": 576,
+          "outputTokens": 98,
+          "totalTokens": 674
+        },
+        "metrics": {
+          "latencyMs": 616
+        }
+      }
+    ]
+  },
+  "corpo_nao_json": null,
+  "avisos": [
+    "versao ausente; versão retornada não confirmada"
+  ],
+  "deepeval": {
+    "metrica": "Contrato técnico da resposta API",
+    "score": 1.0,
+    "resultado_contrato": "passou",
+    "descricao": "Envelope técnico válido; conteúdo funcional não julgado.",
+    "test_case": {
+      "input": "Faça um orçamento sem comprar: 3 Chocolate Belga Grandes e 1 Caramelo Clássico Pequena, em Porto Alegre, no Pix e sem cupom. Sem adicionar itens pagos extras. Detalhe tudo.",
+      "actual_output": "Olá! 👋 Eu sou a Lia, sua assistente virtual da Pop & Doce Pipocaria Gourmet! Que bom ter você por aqui! 😊\n\nEntão, você quer montar um pedido especial? Que legal! Para começar, me diga:\n\n*   Quantas unidades do Chocolate Belga Grande você gostaria?\n*   E do Caramelo Clássico Pequeno, quantas unidades?\n\nAssim que eu tiver essas informações, já posso te mostrar o valor total! 😉",
+      "context": null,
+      "metadata": {
+        "criterio_esperado": "3 × R$ 49,90 + R$ 14,90 = R$ 164,60; Pix R$ 8,23; líquido R$ 156,37; frete grátis; total R$ 156,37. Há elegibilidade à promoção das Grandes avulsas: brinde sem cobrança; não adicionar itens pagos nem concluir compra.",
+        "referencias": [
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Pedido mínimo"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Formas de pagamento"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Área de entrega, taxas e prazos"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Frete grátis"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Chocolate Belga"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/01-catalogo-pipocas.md",
+            "secoes": [
+              "Caramelo Clássico"
+            ]
+          },
+          {
+            "arquivo": "base-de-conhecimento-oficial/04-politicas.md",
+            "secoes": [
+              "Promoções"
+            ]
+          }
+        ],
+        "historico_conversa": [],
+        "resultado_funcional": "nao_avaliado",
+        "modo": "api"
+      },
+      "completion_time": 1.922578,
+      "tools_called": []
+    }
+  },
+  "resultado_execucao": "concluida"
+}
